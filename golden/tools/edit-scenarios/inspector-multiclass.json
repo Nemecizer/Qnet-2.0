@@ -1,0 +1,25 @@
+{
+ "description": "Per-class service laws on a multi-class re-entrant network (Kumar–Seidman, four classes): the sheet's class rows, a family change on one class, Copy to All Classes, the moments entry mode, the class-1 law mirrored into the station's default law, the pane's per-class coalescing key, and updateServiceDistribution called directly.",
+ "start": "KumarSeidman90.d2.c4.reentrant.inf",
+ "steps": [
+  {"op": "nodeSheet", "node": "S1", "classes": {"0": {"params": {"rate": "2"}}}},
+  {"op": "nodeSheet", "node": "S1", "classes": {"3": {"family": "gamma", "params": {"shape": "3"}}}},
+  {"op": "nodeSheet", "node": "S2", "copyToAllClassesFrom": 1},
+  {"op": "nodeSheet", "node": "S2", "classes": {"1": {"family": "constant"}}, "copyToAllClassesFrom": 1},
+  {"op": "nodeSheet", "node": "S2", "classEntryMode": "moments", "classes": {"2": {"mean": "0.25", "scv": "0.5"}}},
+  {"op": "undo"},
+  {"op": "nodeSheet", "node": "S1", "servers": "2", "classes": {"0": {"family": "lognormal"}, "3": {"family": "exponential"}}},
+  {"op": "nodeClick", "node": "S2"},
+  {"op": "nodePane", "classes": {"1": {"params": {"rate": "4"}}}},
+  {"op": "nodePane", "classes": {"1": {"params": {"rate": "5"}}}},
+  {"op": "nodePane", "classes": {"2": {"params": {"rate": "6"}}}},
+  {"op": "undo"},
+  {"op": "undo"},
+  {"op": "updateServiceDistribution", "node": "S2", "class": 2, "distribution": "weibull", "parameters": ""},
+  {"op": "updateServiceDistribution", "node": "S2", "class": 2, "distribution": "weibull", "parameters": "shape=1.5,scale=1.0"},
+  {"op": "updateServiceDistribution", "node": "S1", "class": 7, "distribution": "pareto", "parameters": "shape=3,scale=1"},
+  {"op": "nodeSheet", "node": "Src2", "distribution": {"family": "exponential", "params": {"rate": "0.5"}}},
+  {"op": "undo"},
+  {"op": "redo"}
+ ]
+}

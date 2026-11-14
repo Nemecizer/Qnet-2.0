@@ -1,0 +1,60 @@
+NETWORK ANALYSIS — Brownian Heavy-Traffic Reliability
+=====================================================
+
+NETWORK SUMMARY
+---------------
+Stations:         3
+Customer classes: 3
+Buffer model:     infinite
+
+KEY PRIMITIVES
+--------------
+  Station   servers    μ_eff        α          ρ   c²_s_eff   buffer
+  S1              1   1.0000   0.4500     0.4500     1.0000        ∞
+  S2              1   1.0000   0.4000     0.4000     1.0000        ∞
+  S3              1   1.0000   0.4200     0.4200     1.0000        ∞
+
+  Class       λ (ext)     c²_a
+  C1           0.4500   1.0000
+  C2           0.4000   1.0000
+  C3           0.4200   1.0000
+
+OVERALL RELIABILITY ASSESSMENT
+------------------------------
+Score: 55 / 100  (LOW)
+Findings: 0 critical, 3 warning, 0 info
+
+Several primitives violate the assumptions used by SRBM. Treat absolute E[X] values with caution — use them for relative comparisons only, and verify against simulation.
+
+FINDINGS (grouped by severity)
+------------------------------
+
+[WARNING ] 1. Station 1 is lightly loaded (ρ = 0.450, below heavy-traffic regime)
+  Why:     SRBM is the heavy-traffic limit where ρ → 1. At low ρ the stationary distribution has a large atom at zero that the diffusion smooths out; the approximation systematically underestimates P(X=0) and overestimates mean queue length. Error ranges roughly 20–50% below ρ = 0.5.
+  Fix:     Raise α_1 (route more traffic through station 1) or reduce μ_1 (currently 1.0000) so that ρ_1 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+  Affects: E[X_1], sojourn_1, class waiting times
+
+[WARNING ] 2. Station 2 is lightly loaded (ρ = 0.400, below heavy-traffic regime)
+  Why:     SRBM is the heavy-traffic limit where ρ → 1. At low ρ the stationary distribution has a large atom at zero that the diffusion smooths out; the approximation systematically underestimates P(X=0) and overestimates mean queue length. Error ranges roughly 20–50% below ρ = 0.5.
+  Fix:     Raise α_2 (route more traffic through station 2) or reduce μ_2 (currently 1.0000) so that ρ_2 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+  Affects: E[X_2], sojourn_2, class waiting times
+
+[WARNING ] 3. Station 3 is lightly loaded (ρ = 0.420, below heavy-traffic regime)
+  Why:     SRBM is the heavy-traffic limit where ρ → 1. At low ρ the stationary distribution has a large atom at zero that the diffusion smooths out; the approximation systematically underestimates P(X=0) and overestimates mean queue length. Error ranges roughly 20–50% below ρ = 0.5.
+  Fix:     Raise α_3 (route more traffic through station 3) or reduce μ_3 (currently 1.0000) so that ρ_3 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+  Affects: E[X_3], sojourn_3, class waiting times
+
+PERFORMANCE METRIC RELIABILITY
+------------------------------
+  E[X_i] (queue length):          MODERATE    ρ below heavy-traffic regime — E[X] systematically biased
+  Throughput (Γ_i):               HIGH        Γ = α; derived exactly from traffic equations
+  Utilization (ρ_i):              HIGH        ρ = α / (s·μ); derived exactly from primitives
+  Sojourn time:                   MODERATE    sojourn = E[X]/Γ; inherits E[X] reliability
+  Per-class W, T, N:              MODERATE    Little's law applied to E[X]; inherits its reliability
+
+TOP ACTIONABLE SUGGESTIONS
+--------------------------
+1. Raise α_1 (route more traffic through station 1) or reduce μ_1 (currently 1.0000) so that ρ_1 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+2. Raise α_2 (route more traffic through station 2) or reduce μ_2 (currently 1.0000) so that ρ_2 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+3. Raise α_3 (route more traffic through station 3) or reduce μ_3 (currently 1.0000) so that ρ_3 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+

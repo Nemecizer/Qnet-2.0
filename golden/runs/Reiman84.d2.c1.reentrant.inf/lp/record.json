@@ -1,0 +1,212 @@
+{
+  "completedAt" : "2026-11-11T04:56:20Z",
+  "elapsedSeconds" : 0.9941490888595581,
+  "id" : "1BA5F371-02C6-41B7-B401-CFDF82D3E8E7",
+  "measurements" : [
+    {
+      "estimate" : 0.663078,
+      "id" : "25BF4200-305B-4F62-8E66-84CBED49C1EF",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.677502,
+      "id" : "D0B2EBB6-FDEB-4750-9A95-466DBB22945D",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+      "stationName" : "S2",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "BAR Linear Program",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.lp",
+    "implementation" : "BNAlp\/fBNAlp",
+    "layer" : "SRBM diffusion",
+    "shortName" : "LP"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+      "D0D40D08-A893-4677-915F-6DFE3C7D3B41"
+    ],
+    "networkFingerprint" : "db563deb5ef0107c34d581871982c65a00e09b9f665fe20b09e696a9078a619b",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "18AE78AC-0D98-4199-9402-3BA235DFD54D",
+          "id" : "1396146E-F49C-46B6-89AD-3F0F4CCCAABF",
+          "routingProbability" : 1,
+          "toNodeID" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947",
+          "id" : "91B67C2E-F548-4D0D-A81A-30ACC847B303",
+          "routingProbability" : 1,
+          "toNodeID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+          "id" : "454EE9EB-35C6-4D3C-9772-4E584C35BC05",
+          "routingProbability" : 1,
+          "toNodeID" : "1AC45D5F-9622-4398-8F56-8001E64E29A7"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "1AC45D5F-9622-4398-8F56-8001E64E29A7",
+          "id" : "E5E3D8B1-9C97-498A-9088-321489CE55AD",
+          "routingProbability" : 1,
+          "toNodeID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+          "id" : "177C1F84-6065-477D-BAEB-E4AB9EE6E355",
+          "routingProbability" : 0.6666666666666667,
+          "toNodeID" : "647D1A28-BDA0-4163-B2A7-FC52164B7C0A"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+          "id" : "B8A8574B-6367-434F-858E-532C545AC826",
+          "routingProbability" : 0.3333333333333333,
+          "toNodeID" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.5",
+          "id" : "18AE78AC-0D98-4199-9402-3BA235DFD54D",
+          "kind" : "source",
+          "name" : "Src",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            200,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.5",
+          "id" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            300,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "1AC45D5F-9622-4398-8F56-8001E64E29A7",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            400,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.5",
+          "id" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            500,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "647D1A28-BDA0-4163-B2A7-FC52164B7C0A",
+          "kind" : "sink",
+          "name" : "Sink",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "Reiman84.d2.c1.reentrant.inf.bnet",
+    "parameters" : {
+      "basis normalization" : "false",
+      "basis size" : "6",
+      "grid size" : "100",
+      "grid type" : "exponential",
+      "multi-level" : "false",
+      "smoothness" : "0.0",
+      "solver" : "automatic"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/Reiman84.d2.c1.reentrant.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Running Linear Program (BNAlp, Saure-Glynn-Zeevi 2008)\nauto-scaled for d=2: grid_n=100, basis_m=6\n\nSRBM Parameters:\n  dimension     = 2\n  grid_n        = 100\n  basis_m       = 6\n  grid_type     = 0 (0=exp, 1=dya, 2=expran)\n  max_moments   = 4\n  solver        = (default)\n  output_prefix = srbm_out\n  drift         = -0.3333 -0.0000\n  covariance:\n       0.6667  -0.4444\n      -0.4444   0.6667\n  reflection:\n       1.0000  -0.3333\n      -1.0000   1.0000\n  grid_spacing  = 0.0000 0.0000\n  tightness K   = 100000 100000 100000 100000 100000\n  smoothness_w  = 0 (disabled)\n  basis_norm    = 0 (raw monomials)\n  Auto rho      = 1.0000 1.0000\n  Effective grid_spacing (rho\/4) = 0.2500 0.2500\n\n[Parse] 0.000 s\n[Grid]  10000 points, 0.003 s\n  Face 1 boundary: 100 points\n  Face 2 boundary: 100 points\n[Index] 28 basis functions, 0.000 s\n[Basis] 0.000 s\n[Eval interior] 0.001 s\n[Eval boundary] 0.000 s\n[Build LP] 62 rows, 10201 cols, 541209 nnz, 0.011 s\n[Solve] Using solver: highs\n[Solve] Optimal u* = 0.0000000000e+00, 0.649 s\n\nMoments:\n  Order     E[Z_1^k]      E[Z_2^k]    \n  k=1          0.663078      0.677502\n  k=2          0.894424      0.874529\n  k=3          1.781387      1.771807\n  k=4          4.701013      4.752187\n\nOutput files:\n  Wrote srbm_out_marginal_1.csv (100 points)\n  Wrote srbm_out_marginal_2.csv (100 points)\n  Wrote srbm_out_distribution.csv (10000 points)\n\n[Total] 0.674 s\nE[X_1] = 0.663078\nE[X_2] = 0.677502\n\nLinear Program (Saure-Glynn-Zeevi 2008 LP)\n==========================================\n\nSolver: highs  |  grid_n = 100  |  basis_m = 6\n[Build LP] 62 rows, 10201 cols, 541209 nnz, 0.011 s\n[Solve] Optimal u* = 0.0000000000e+00, 0.649 s\n[Total] 0.674s\n\nNode   Servers  E[Y] (workload)  L = mu·E[Y]     mu_i      \n1      1        0.6631           0.9946           1.5000    \n2      1        0.6775           1.0163           1.5000    \n\nNetwork Totals:\n  Total E[N]:             2.0109\n  Average queue length:   1.0054\nElapsed time: 0.757s\n\n",
+  "startedAt" : "2026-11-11T04:56:19Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

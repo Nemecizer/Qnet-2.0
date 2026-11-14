@@ -1,0 +1,427 @@
+{
+  "completedAt" : "2026-11-11T04:39:57Z",
+  "elapsedSeconds" : 0.9464049339294434,
+  "id" : "2C3606C7-148F-4433-8BBC-FA86A43D61B5",
+  "measurements" : [
+    {
+      "estimate" : 17.175,
+      "id" : "A3DDB339-FB52-40A8-9D96-D1709E0239A7",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 9.804721,
+      "id" : "15BB889C-2315-4349-AB14-25BC3C52EDF6",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+      "stationName" : "S2",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 7.571119,
+      "id" : "77F07A1C-E3D6-4B52-951E-2311D6C59E74",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "3AE28E1C-103C-492D-B554-DF8F95AE3D64",
+      "stationName" : "S3",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "BAR Linear Program",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.lp",
+    "implementation" : "BNAlp\/fBNAlp",
+    "layer" : "SRBM diffusion",
+    "shortName" : "LP"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+      "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+      "3AE28E1C-103C-492D-B554-DF8F95AE3D64"
+    ],
+    "networkFingerprint" : "43bb97dd07bf3a8d98a8b56b7f6085342032714a7459d3bc60690254c43d7108",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "96C1EAB7-4224-45CA-814E-BF7D993EDE48",
+          "id" : "6292589A-290D-4064-857D-C6F2195C498D",
+          "routingProbability" : 1,
+          "toNodeID" : "4F0B3AB0-43B1-43C0-B9D7-784D24A67C23"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "4F0B3AB0-43B1-43C0-B9D7-784D24A67C23",
+          "id" : "34825D04-9042-478A-B6EF-6DB1F0975E31",
+          "routingProbability" : 1,
+          "toNodeID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+          "id" : "40A8F8BE-E38C-4897-9DEA-C19D2C9B2D76",
+          "routingProbability" : 1,
+          "toNodeID" : "5F5D2535-E251-448C-8012-89B4030E8546"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "5F5D2535-E251-448C-8012-89B4030E8546",
+          "id" : "008B528A-57E3-4A58-9559-0C700354FF27",
+          "routingProbability" : 1,
+          "toNodeID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+          "id" : "3944DAEC-10D6-479E-82FA-B05414DA759C",
+          "routingProbability" : 1,
+          "toNodeID" : "C93B6AFC-EA57-42BA-9861-C206B4884E44"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C93B6AFC-EA57-42BA-9861-C206B4884E44",
+          "id" : "D8F5CE05-3AA7-4B5C-8F04-390104DDD352",
+          "routingProbability" : 1,
+          "toNodeID" : "3AE28E1C-103C-492D-B554-DF8F95AE3D64"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "3AE28E1C-103C-492D-B554-DF8F95AE3D64",
+          "id" : "89A1867E-0BC1-484C-A201-AC8D4DD70E7E",
+          "routingProbability" : 1,
+          "toNodeID" : "FD05C4B5-03A5-4B57-B0F4-401A5059E407"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "3ACBB775-A412-4026-8DE6-07BD70E1EC7A",
+          "id" : "93713176-EFBB-4A33-AA8F-F4A04EBC9614",
+          "routingProbability" : 1,
+          "toNodeID" : "4F0B3AB0-43B1-43C0-B9D7-784D24A67C23"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "4F0B3AB0-43B1-43C0-B9D7-784D24A67C23",
+          "id" : "5FE22A28-1395-4277-8DDF-03FABA869F52",
+          "routingProbability" : 1,
+          "toNodeID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+          "id" : "E52EDD03-481D-4C95-9363-D356B07C090F",
+          "routingProbability" : 1,
+          "toNodeID" : "5F5D2535-E251-448C-8012-89B4030E8546"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "5F5D2535-E251-448C-8012-89B4030E8546",
+          "id" : "48FB0279-D290-4E06-A80E-51DD61442DF4",
+          "routingProbability" : 1,
+          "toNodeID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+          "id" : "C83D6656-0209-439E-B37A-C78CCA193A85",
+          "routingProbability" : 1,
+          "toNodeID" : "C93B6AFC-EA57-42BA-9861-C206B4884E44"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "C93B6AFC-EA57-42BA-9861-C206B4884E44",
+          "id" : "5CBC217D-FFD2-45B3-A602-C2D79FF0F2C9",
+          "routingProbability" : 1,
+          "toNodeID" : "3AE28E1C-103C-492D-B554-DF8F95AE3D64"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "3AE28E1C-103C-492D-B554-DF8F95AE3D64",
+          "id" : "60524968-A810-48BA-B5F2-83B3A33AE17F",
+          "routingProbability" : 1,
+          "toNodeID" : "FD05C4B5-03A5-4B57-B0F4-401A5059E407"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "22024663-2740-48C2-AC3A-48960FD02DFD",
+          "id" : "CE4A4F0C-17AD-49E5-9CA9-3E226E2885C7",
+          "routingProbability" : 1,
+          "toNodeID" : "4F0B3AB0-43B1-43C0-B9D7-784D24A67C23"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "4F0B3AB0-43B1-43C0-B9D7-784D24A67C23",
+          "id" : "DA0CB72E-3C61-4345-A8AF-0AB7E1955E6B",
+          "routingProbability" : 1,
+          "toNodeID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+          "id" : "F875544A-EE15-48A3-90D5-03A257A66266",
+          "routingProbability" : 1,
+          "toNodeID" : "5F5D2535-E251-448C-8012-89B4030E8546"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "5F5D2535-E251-448C-8012-89B4030E8546",
+          "id" : "537C599E-E670-4213-9F5A-0B1D87AC0049",
+          "routingProbability" : 1,
+          "toNodeID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+          "id" : "588A9F99-AED7-43E1-970C-BFDB8616AC8E",
+          "routingProbability" : 1,
+          "toNodeID" : "C93B6AFC-EA57-42BA-9861-C206B4884E44"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "C93B6AFC-EA57-42BA-9861-C206B4884E44",
+          "id" : "338CF26A-2639-46B4-96AC-E5073498F429",
+          "routingProbability" : 1,
+          "toNodeID" : "3AE28E1C-103C-492D-B554-DF8F95AE3D64"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "3AE28E1C-103C-492D-B554-DF8F95AE3D64",
+          "id" : "D2E5B2B8-546E-4491-892B-8C3F88F1C060",
+          "routingProbability" : 1,
+          "toNodeID" : "FD05C4B5-03A5-4B57-B0F4-401A5059E407"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "constant",
+          "distributionParameters" : "value=3",
+          "id" : "96C1EAB7-4224-45CA-814E-BF7D993EDE48",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            246.765625,
+            91.53125
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "4F0B3AB0-43B1-43C0-B9D7-784D24A67C23",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            387.99609375,
+            214.3515625
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "gamma",
+          "distributionParameters" : "shape=.9,scale=1.0",
+          "id" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            484.58984375,
+            215.24609375
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "gamma",
+              "distributionParameters" : "shape=.9,scale=1.0"
+            },
+            "1" : {
+              "distribution" : "gamma",
+              "distributionParameters" : "shape=.9,scale=1.0"
+            },
+            "2" : {
+              "distribution" : "gamma",
+              "distributionParameters" : "shape=.9,scale=1.0"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "5F5D2535-E251-448C-8012-89B4030E8546",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            572.58984375,
+            215.24609375
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "constant",
+          "distributionParameters" : "value=.9",
+          "id" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            660.58984375,
+            215.24609375
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "constant",
+              "distributionParameters" : "value=.9"
+            },
+            "1" : {
+              "distribution" : "constant",
+              "distributionParameters" : "value=.9"
+            },
+            "2" : {
+              "distribution" : "constant",
+              "distributionParameters" : "value=.9"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C93B6AFC-EA57-42BA-9861-C206B4884E44",
+          "kind" : "buffer",
+          "name" : "B3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            735.0546875,
+            214.74462890625
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.1111111111",
+          "id" : "3AE28E1C-103C-492D-B554-DF8F95AE3D64",
+          "kind" : "station",
+          "name" : "S3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            810.33203125,
+            214.75634765625
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.1111111111"
+            },
+            "1" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.2"
+            },
+            "2" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.1111111111"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "FD05C4B5-03A5-4B57-B0F4-401A5059E407",
+          "kind" : "sink",
+          "name" : "Sink2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            894.69140625,
+            215.49853515625
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=.4",
+          "id" : "3ACBB775-A412-4026-8DE6-07BD70E1EC7A",
+          "kind" : "source",
+          "name" : "Src2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            177.01953125,
+            210.97900390625
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "gamma",
+          "distributionParameters" : "shape=3,scale=1.0",
+          "id" : "22024663-2740-48C2-AC3A-48960FD02DFD",
+          "kind" : "source",
+          "name" : "Src3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            266.90234375,
+            301.71337890625
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "3d3ctandem.inf.bnet",
+    "parameters" : {
+      "basis normalization" : "false",
+      "basis size" : "5",
+      "grid size" : "25",
+      "grid type" : "exponential",
+      "multi-level" : "false",
+      "smoothness" : "0.0",
+      "solver" : "automatic"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/3d3ctandem.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Running Linear Program (BNAlp, Saure-Glynn-Zeevi 2008)\nauto-scaled for d=3: grid_n=25, basis_m=5\n\nSRBM Parameters:\n  dimension     = 3\n  grid_n        = 25\n  basis_m       = 5\n  grid_type     = 0 (0=exp, 1=dya, 2=expran)\n  max_moments   = 4\n  solver        = (default)\n  output_prefix = srbm_out\n  drift         = -0.0400 0.0000 -0.0278\n  covariance:\n       1.3740  -0.9600   0.0000\n      -0.9600   0.9600  -0.0000\n       0.0000  -0.0000   0.8189\n  reflection:\n       1.0000   0.0000   0.0000\n      -1.0000   1.0000   0.0000\n       0.0000  -0.9722   1.0000\n  grid_spacing  = 0.0000 0.0000 0.0000\n  tightness K   = 100000 100000 100000 100000 100000 100000 100000\n  smoothness_w  = 0 (disabled)\n  basis_norm    = 0 (raw monomials)\n  Auto rho      = 0.0800 0.0800 0.1333\n  Effective grid_spacing (rho\/4) = 0.0200 0.0200 0.0333\n\n[Parse] 0.000 s\n[Grid]  15625 points, 0.002 s\n  Face 1 boundary: 625 points\n  Face 2 boundary: 625 points\n  Face 3 boundary: 625 points\n[Index] 56 basis functions, 0.000 s\n[Basis] 0.000 s\n[Eval interior] 0.002 s\n[Eval boundary] 0.000 s\n[Build LP] 120 rows, 17501 cols, 1767546 nnz, 0.016 s\n[Solve] Using solver: highs\n[Solve] Optimal u* = 0.0000000000e+00, 0.814 s\n\nMoments:\n  Order     E[Z_1^k]      E[Z_2^k]      E[Z_3^k]    \n  k=1         17.175000      9.804721      7.571119\n  k=2        589.961250    176.886687    127.826847\n  k=3      30397.753406   4670.168104   3508.005180\n  k=4      2088325.659009  173104.597201  134241.697480\n\nOutput files:\n  Wrote srbm_out_marginal_1.csv (25 points)\n  Wrote srbm_out_marginal_2.csv (25 points)\n  Wrote srbm_out_marginal_3.csv (25 points)\n  Wrote srbm_out_distribution.csv (15625 points)\n\n[Total] 0.844 s\nE[X_1] = 17.175000\nE[X_2] = 9.804721\nE[X_3] = 7.571119\n\nLinear Program (Saure-Glynn-Zeevi 2008 LP)\n==========================================\n\nSolver: highs  |  grid_n = 25  |  basis_m = 5\n[Build LP] 120 rows, 17501 cols, 1767546 nnz, 0.016 s\n[Solve] Optimal u* = 0.0000000000e+00, 0.814 s\n[Total] 0.844s\n\nNode   Servers  E[Y] (workload)  L = mu·E[Y]     mu_i      \n1      1        17.1750          19.0833          1.1111    \n2      1        9.8047           10.8941          1.1111    \n3      1        7.5711           8.6527           1.1429    \n\nNetwork Totals:\n  Total E[N]:             38.6302\n  Average queue length:   12.8767\nElapsed time: 0.866s\n\n",
+  "startedAt" : "2026-11-11T04:39:56Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

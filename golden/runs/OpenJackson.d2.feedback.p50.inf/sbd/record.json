@@ -1,0 +1,254 @@
+{
+  "completedAt" : "2026-11-11T04:56:08Z",
+  "elapsedSeconds" : 0.4983159303665161,
+  "id" : "5D42B8B0-AFD1-4D20-B18C-00C5E5319385",
+  "measurements" : [
+    {
+      "estimate" : 0.7,
+      "id" : "3170FA3E-371F-498A-BCD9-1D37BE2EC042",
+      "metric" : "Utilization",
+      "stationID" : "55D31CA6-6F9C-4B68-97B7-317924BC251A",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.7,
+      "id" : "3ED3BB63-A1AA-441D-8E87-12D5919FAE2E",
+      "metric" : "Utilization",
+      "stationID" : "6DD20FBF-8AFE-4458-A7A1-E19F61C76A7A",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 2,
+      "id" : "37EE27A2-C0B7-4D99-AB4A-942D6E8ED817",
+      "metric" : "Throughput",
+      "stationID" : "55D31CA6-6F9C-4B68-97B7-317924BC251A",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 1,
+      "id" : "448258EB-7B61-4019-88C8-C24EA4B1C8E8",
+      "metric" : "Throughput",
+      "stationID" : "6DD20FBF-8AFE-4458-A7A1-E19F61C76A7A",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 1.167,
+      "id" : "554F47FF-F8C5-4977-A0AC-2C75C98260FF",
+      "metric" : "Mean sojourn time",
+      "stationID" : "55D31CA6-6F9C-4B68-97B7-317924BC251A",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 2.333,
+      "id" : "9BE9D86E-1F9B-4B22-8CE2-64ED1A899E12",
+      "metric" : "Mean sojourn time",
+      "stationID" : "6DD20FBF-8AFE-4458-A7A1-E19F61C76A7A",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 2.333,
+      "id" : "FE610A4D-0E6E-48C7-9363-5664B763FD33",
+      "metric" : "Mean number in system",
+      "stationID" : "55D31CA6-6F9C-4B68-97B7-317924BC251A",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 2.333,
+      "id" : "C360B6CF-C04D-4228-AC6E-1ADD3131E656",
+      "metric" : "Mean number in system",
+      "stationID" : "6DD20FBF-8AFE-4458-A7A1-E19F61C76A7A",
+      "stationName" : "S2",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Sequential Bottleneck Decomposition",
+    "fidelity" : "Queueing approximation",
+    "identifier" : "queue-approx.sbd",
+    "implementation" : "BNAsbd",
+    "layer" : "Queue approximation",
+    "shortName" : "SBD"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "55D31CA6-6F9C-4B68-97B7-317924BC251A",
+      "6DD20FBF-8AFE-4458-A7A1-E19F61C76A7A"
+    ],
+    "networkFingerprint" : "6a732dc88d621c7135a06199f99200f68147eecdaa26b29c5c4a08cd2899ed06",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "FFB3FF73-973B-44B6-BCB5-D1D73C39EC77",
+          "id" : "23180E1E-63AB-4ACF-BA8C-00E85C8B369F",
+          "routingProbability" : 1,
+          "toNodeID" : "EC5CE226-A351-46F2-BFE8-E2E27F349C56"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EC5CE226-A351-46F2-BFE8-E2E27F349C56",
+          "id" : "CB757010-163E-49F0-8499-5795A8CE4ED6",
+          "routingProbability" : 1,
+          "toNodeID" : "55D31CA6-6F9C-4B68-97B7-317924BC251A"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "55D31CA6-6F9C-4B68-97B7-317924BC251A",
+          "id" : "F22B8345-1762-4D01-8673-932D68AF9F2C",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A017FE43-4C17-4606-8A65-E708E52EB211"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "55D31CA6-6F9C-4B68-97B7-317924BC251A",
+          "id" : "385AF03E-60B9-413A-9E16-57050CA1D28B",
+          "routingProbability" : 0.5,
+          "toNodeID" : "EC5CE226-A351-46F2-BFE8-E2E27F349C56"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A017FE43-4C17-4606-8A65-E708E52EB211",
+          "id" : "505963BA-0FA3-4DFA-9AF7-D1218634D949",
+          "routingProbability" : 1,
+          "toNodeID" : "6DD20FBF-8AFE-4458-A7A1-E19F61C76A7A"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "6DD20FBF-8AFE-4458-A7A1-E19F61C76A7A",
+          "id" : "275A8E43-43D0-4ADA-B579-BED413F80299",
+          "routingProbability" : 1,
+          "toNodeID" : "6694AB9B-2CB6-4C25-85DD-0BB4849441B6"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=1.0",
+          "id" : "FFB3FF73-973B-44B6-BCB5-D1D73C39EC77",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EC5CE226-A351-46F2-BFE8-E2E27F349C56",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            200,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=2.857142857142857",
+          "id" : "55D31CA6-6F9C-4B68-97B7-317924BC251A",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            300,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A017FE43-4C17-4606-8A65-E708E52EB211",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            400,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.4285714285714286",
+          "id" : "6DD20FBF-8AFE-4458-A7A1-E19F61C76A7A",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            500,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "6694AB9B-2CB6-4C25-85DD-0BB4849441B6",
+          "kind" : "sink",
+          "name" : "Sink",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "OpenJackson.d2.feedback.p50.inf.bnet",
+    "parameters" : {
+
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/OpenJackson.d2.feedback.p50.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] Single-threaded (analytical solver)\nRunning SBD ...  [ ]                                                       0.0s\r\u001b[KRunning SBD ...  [done]                                                    0.1s\n\nNetwork load: rho_max = 0.7000 at S1  (moderate load — SRBM\/FEM are heavy-traffic limits; expect deviation from simulation)\nRouting graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference\n──  Open Jackson network — exact M\/M\/s product form  ──\n           SBD            Exact E[N]  (Jackson)\n           ===            ============\n\nrho_1      0.700 (+0.0%)  0.700\nrho_2      0.700 (+0.0%)  0.700\n\nGamma_1    2.000 (+0.0%)  2.000\nGamma_2    1.000 (+0.0%)  1.000\n\nsojourn_1  1.167 (+0.0%)  1.167\nsojourn_2  2.333 (+0.0%)  2.333\n\nE[Q_1]     2.333 (+0.0%)  2.333\nE[Q_2]     2.333 (+0.0%)  2.333\n\nQNET_SBD_STATUS_V1 fallback_used=no\nElapsed time: 0.141s\n\n",
+  "startedAt" : "2026-11-11T04:56:08Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

@@ -1,0 +1,21 @@
+{
+ "description": "Pointer-tool link gestures and the class legend: dragging a link moves both its ends as one \"Move Link\" step, Escape puts a link drag back, moveLink (the model's own Move Link), a link double-click opens the link inspector, legend clicks pin and clear a class filter, and an empty-canvas click clears it.",
+ "start": "2d2cfin",
+ "steps": [
+  {"op": "dragLink", "link": {"from": "Src2", "to": "B1"}, "by": [-20, -90]},
+  {"op": "undo"},
+  {"op": "dragLink", "link": {"from": "Src2", "to": "B1"}, "by": [-20, -90], "escape": true},
+  {"op": "dragLink", "link": {"from": "Src2", "to": "B1"}, "by": [2, 1]},
+  {"op": "moveLink", "link": {"from": "S2", "to": "Sink1", "class": 1}, "by": [15, 30]},
+  {"op": "undo"},
+  {"op": "linkDoubleClick", "link": {"from": "Src1", "to": "B1"}},
+  {"op": "legendClick", "class": 1},
+  {"op": "legendClick", "class": 0},
+  {"op": "legendClick", "class": 0},
+  {"op": "legendClick", "class": 1},
+  {"op": "canvasClick", "at": [700, 600]},
+  {"op": "legendClick", "class": 1},
+  {"op": "setTool", "tool": "addLink"},
+  {"op": "canvasClick", "at": [700, 600]}
+ ]
+}

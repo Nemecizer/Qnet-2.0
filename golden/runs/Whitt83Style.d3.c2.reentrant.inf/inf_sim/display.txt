@@ -1,0 +1,27 @@
+[A[2K[Threads] Using 18 CPU cores (OpenMP)
+Running simulation ...  [                              ]  starting ...[KRunning simulation ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  8/8          (100%)     0.1s
+
+Network load: rho_max = 0.528 at S2  (moderate load — SRBM/FEM are heavy-traffic limits; expect deviation from simulation)
+Routing graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference
+──  SRBM skew-symmetric case — Harrison–Williams 1987 exact product form  ──
+           Simulation             Exact E[X]  (skew-sym)
+           ==========             ============
+
+rho_1      0.278 ± 0.001 (+0.0%)  0.278
+rho_2      0.528 ± 0.001 (+0.0%)  0.528
+rho_3      0.500 ± 0.001 (+0.0%)  0.500
+
+Gamma_1    0.556 ± 0.001 (+0.0%)  0.556
+Gamma_2    1.055 ± 0.001 (-0.1%)  1.056
+Gamma_3    0.999 ± 0.001 (-0.1%)  1.000
+
+sojourn_1  0.695 (+0.4%)          0.692
+sojourn_2  1.060 (+0.1%)          1.059
+sojourn_3  0.999 (-0.1%)          1.000
+
+E[Q_1]     0.386 ± 0.003 (+0.3%)  0.385
+E[Q_2]     1.118 ± 0.008 (+0.0%)  1.118
+E[Q_3]     0.998 ± 0.006 (-0.2%)  1.000
+
+Elapsed time: 0.194s
+

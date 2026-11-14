@@ -1,0 +1,27 @@
+{
+  "id": "E06",
+  "title": "Skew-symmetric 2-D RBM with a nonsymmetric R",
+  "evidence": "published_exact",
+  "source": "Plans.md section 4, E06; P24 (Dai-Zhang BAR LP) PDF p17, Table 3, example 3",
+  "model": {
+    "domain": "orthant",
+    "dimension": 2,
+    "drift": [-0.85, 0.0],
+    "covariance": [
+      [1.0, -0.425],
+      [-0.425, 1.0]
+    ],
+    "reflection": [
+      [1.0, -0.6],
+      [-0.25, 1.0]
+    ]
+  },
+  "expected": {
+    "mean": [0.5, 2.0],
+    "second_moment": [0.5, 8.0],
+    "covariance_offdiagonal_zero": true,
+    "product_form_rates": [2.0, 0.5],
+    "boundary_rates": [1.0, 0.25]
+  },
+  "notes": "R is not symmetric, so a solver that reads R by rows instead of columns solves a different SRBM."
+}

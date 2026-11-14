@@ -1,0 +1,102 @@
+/* The guided tour's callout and spotlight ring (new in 2.1, ROADMAP C2). Colours from tokens only;
+   both are fixed to the window they are in (the main one, or a detached pane's). */
+.tour-ring {
+  position: fixed;
+  z-index: var(--z-popover);
+  pointer-events: none;
+  border-radius: var(--r-md);
+  box-shadow: 0 0 0 2px var(--accent-fill), 0 0 0 6px var(--sel);
+  transition: left var(--dur-2) var(--ease), top var(--dur-2) var(--ease), width var(--dur-2) var(--ease), height var(--dur-2) var(--ease);
+  animation: tour-pulse 1.6s var(--ease) 3;
+}
+@keyframes tour-pulse {
+  0%, 100% { box-shadow: 0 0 0 2px var(--accent-fill), 0 0 0 4px var(--sel); }
+  50% { box-shadow: 0 0 0 2px var(--accent-fill), 0 0 0 9px var(--sel); }
+}
+:root[data-motion="reduce"] .tour-ring { animation: none; transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-motion]) .tour-ring { animation: none; transition: none; }
+}
+
+.tour-callout {
+  position: fixed;
+  z-index: var(--z-popover);
+  width: 340px;
+  max-width: calc(100vw - 24px);
+  box-sizing: border-box;
+  padding: var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-pop);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  transition: left var(--dur-2) var(--ease), top var(--dur-2) var(--ease);
+}
+:root[data-contrast="more"] .tour-callout { border-width: 1.5px; }
+@media (prefers-contrast: more) { :root:not([data-contrast]) .tour-callout { border-width: 1.5px; } }
+:root[data-motion="reduce"] .tour-callout { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-motion]) .tour-callout { transition: none; }
+}
+
+/* The pointer: a square turned 45°, half hidden under the callout's edge. */
+.tour-arrow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.tour-callout[data-side="bottom"] .tour-arrow { top: 0; border-right: 0; border-bottom: 0; }
+.tour-callout[data-side="top"] .tour-arrow { top: 100%; border-left: 0; border-top: 0; }
+.tour-callout[data-side="right"] .tour-arrow { left: 0; border-right: 0; border-top: 0; }
+.tour-callout[data-side="left"] .tour-arrow { left: 100%; border-left: 0; border-bottom: 0; }
+
+.tour-head { display: flex; align-items: center; gap: var(--sp-3); }
+.tour-progress { color: var(--muted); font-size: var(--fs-xs); font-weight: var(--fw-medium); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tour-track { flex: 1; display: flex; gap: var(--sp-1); }
+.tour-track span { flex: 1; height: 3px; border-radius: 2px; background: var(--hairline); }
+.tour-track span[data-state="past"] { background: var(--muted); }
+.tour-track span[data-state="now"] { background: var(--accent-fill); }
+.tour-title { margin: 0; font-size: var(--fs-md); font-weight: var(--fw-semibold); color: var(--text); }
+.tour-text { margin: 0; line-height: var(--lh-body); color: var(--text); }
+.tour-note { margin: 0; line-height: var(--lh-body); color: var(--text-2); font-size: var(--fs-sm); }
+.tour-actions { display: flex; align-items: center; gap: var(--sp-3); margin-top: var(--sp-2); }
+.tour-next { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: var(--sp-2); }
+.tour-next button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-1);
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+  color: var(--text);
+  text-align: left;
+  cursor: default;
+}
+.tour-next button:hover { background: var(--hover); }
+.tour-next strong { font-weight: var(--fw-semibold); }
+.tour-next small { color: var(--text-2); font-size: var(--fs-sm); }
+/* The last card (gap FIX-106): at 340 px it was 420 px tall and, in the window's corner, lay over
+   the Results pane's header in any window under about 800 px high. Wider, with its three
+   suggestions side by side, it is some 150 px shorter and stands clear under that header; in a
+   narrow window it is the column it was. No card is ever taller than the window. */
+.tour-callout { max-height: calc(100vh - 24px); overflow-y: auto; }
+.tour-callout[data-step="finished"] { width: 600px; }
+.tour-callout[data-step="finished"] .tour-next { flex-direction: row; align-items: stretch; }
+.tour-callout[data-step="finished"] .tour-next li { flex: 1 1 0; min-width: 0; display: flex; }
+.tour-callout[data-step="finished"] .tour-next button { flex: 1; }
+@media (max-width: 680px) {
+  .tour-callout[data-step="finished"] { width: 340px; }
+  .tour-callout[data-step="finished"] .tour-next { flex-direction: column; }
+}
+.tour-subhead { margin: var(--sp-2) 0 0; font-size: var(--fs-sm); font-weight: var(--fw-semibold); color: var(--text-2); }

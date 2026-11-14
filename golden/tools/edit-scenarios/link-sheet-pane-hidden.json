@@ -1,0 +1,27 @@
+{
+ "description": "The link inspector sheet with the docked Inspector pane hidden (\"inspectorPane\": false), so every edit is the sheet's alone: the same probability, Balance to 1, entry-class and exit-class edits as inspector-link, then undo / redo. Compare with inspector-link, where the shown pane keeps a stale draft of the selected link and writes it back when the selection moves.",
+ "start": "KumarSeidman90.d2.c4.reentrant.inf",
+ "inspectorPane": false,
+ "steps": [
+  {"op": "linkSheet", "link": {"from": "S1", "to": "Sink"}, "probability": "0.4"},
+  {"op": "setTool", "tool": "addLink"},
+  {"op": "nodeClick", "node": "S1"},
+  {"op": "nodeClick", "node": "S2"},
+  {"op": "setTool", "tool": "select"},
+  {"op": "linkSheet", "link": {"from": "S1", "to": "S2"}, "balance": true},
+  {"op": "linkSheet", "link": {"from": "S1", "to": "S2"}, "balance": true},
+  {"op": "linkSheet", "link": {"from": "S1", "to": "S2"}, "probability": "1.5"},
+  {"op": "linkSheet", "link": {"from": "S1", "to": "S2"}, "probability": "0."},
+  {"op": "linkSheet", "link": {"from": "S1", "to": "S2"}},
+  {"op": "linkSheet", "link": {"from": "B2", "to": "S2", "class": 1}, "entryClass": 2},
+  {"op": "linkSheet", "link": {"from": "B2", "to": "S2", "class": 1}, "entryClass": 0},
+  {"op": "linkSheet", "link": {"from": "S1", "to": "B2"}, "exitClass": "same"},
+  {"op": "linkSheet", "link": {"from": "S1", "to": "B2"}, "exitClass": 4},
+  {"op": "linkSheet", "link": {"from": "S1", "to": "B2"}, "exitClass": 2, "probability": "0.9"},
+  {"op": "undo"},
+  {"op": "undo"},
+  {"op": "redo"},
+  {"op": "redo"},
+  {"op": "deselectAll"}
+ ]
+}

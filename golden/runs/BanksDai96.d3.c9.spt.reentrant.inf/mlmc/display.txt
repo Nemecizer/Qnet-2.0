@@ -1,0 +1,61 @@
+[A[2KRunning SRBM MLMC (γ=0.050, ε=0.010) ... 
+SRBM MLMC replication 1 diagnostics:
+Sigma nnz ratio: L has 6 non-zeros of 3^2 = 9  (66.67%); using SPARSE CSC path
+R     nnz ratio: 9 non-zeros of 3^2 = 9  (100.00%); using SPARSE CSC LCP column update
+Dimension d   = 3
+gamma         = 0.050
+epsilon       = 0.010
+seed          = 2454886589211414945
+T             = 147.783
+L (levels)    = 3
+N (samples)   = 25260
+ratio (1/gam) = 20
+backend       = openmp
+threads       = 18
+
+antithetic    = off
+adaptive      = off
+
+  Completed 1263 / 25260 (5%)
+  Completed 2526 / 25260 (10%)
+  Completed 3789 / 25260 (15%)
+  Completed 5052 / 25260 (20%)
+  Completed 6315 / 25260 (25%)
+  Completed 7578 / 25260 (30%)
+  Completed 8841 / 25260 (35%)
+  Completed 10104 / 25260 (40%)
+  Completed 11367 / 25260 (45%)
+  Completed 12630 / 25260 (50%)
+  Completed 13893 / 25260 (55%)
+  Completed 15156 / 25260 (60%)
+  Completed 16419 / 25260 (65%)
+  Completed 17682 / 25260 (70%)
+  Completed 18945 / 25260 (75%)
+  Completed 20208 / 25260 (80%)
+  Completed 21471 / 25260 (85%)
+  Completed 22734 / 25260 (90%)
+  Completed 23997 / 25260 (95%)
+  Completed 25260 / 25260 (100%)
+done.
+
+SRBM MLMC (Blanchet-Chen-Glynn-Si)
+==============================================
+# Dimension: 3
+# gamma=0.050  epsilon=0.010  T=147.783  L=3  N=25260  seed=2454886589211414945
+# backend=openmp  threads=18  elapsed=7.504s
+# antithetic=off adaptive=off
+# Replications: 1 (independent top-level streams)
+# Replication seeds: 2454886589211414945
+# Replication 1: seed=2454886589211414945 N=25260 stop=fixed-count
+#
+
+Per-Station Mean Queue Length (L_i = mu_i * E[Y_i]):
+  L_1 =     8.224  ±  0.368 (95%)    (workload E[Y_1] =  2.467 ± 0.111, mu_i = 3.333)
+  L_2 =     8.012  ±  0.383 (95%)    (workload E[Y_2] =  2.404 ± 0.115, mu_i = 3.333)
+  L_3 =     1.694  ±  0.035 (95%)    (workload E[Y_3] =  0.339 ± 0.007, mu_i = 5.000)
+
+Average queue length: 5.977 (no joint CI: one run does not identify cross-station covariance)
+Total Gaussian RVs (summed over replications): 1368335817
+QNET_MLMC_STATUS_V1 adaptive=no precision_met=na cap_hits=0
+Elapsed time: 8.013s
+

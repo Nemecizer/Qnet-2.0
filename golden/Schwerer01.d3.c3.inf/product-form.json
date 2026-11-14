@@ -1,0 +1,82 @@
+{
+  "classes" : [
+    {
+      "external_arrival_rates" : {
+        "s1" : 0.45
+      },
+      "id" : "c1",
+      "routing" : [
+        {
+          "destinations" : [
+
+          ],
+          "exit_probability" : 1,
+          "from_station" : "s1"
+        }
+      ]
+    },
+    {
+      "external_arrival_rates" : {
+        "s2" : 0.4
+      },
+      "id" : "c2",
+      "routing" : [
+        {
+          "destinations" : [
+
+          ],
+          "exit_probability" : 1,
+          "from_station" : "s2"
+        }
+      ]
+    },
+    {
+      "external_arrival_rates" : {
+        "s3" : 0.42
+      },
+      "id" : "c3",
+      "routing" : [
+        {
+          "destinations" : [
+
+          ],
+          "exit_probability" : 1,
+          "from_station" : "s3"
+        }
+      ]
+    }
+  ],
+  "description" : "Exact open FCFS BCMP/Jackson model exported from Qnet; M/M/c local factors are normalized analytically without state-space truncation.",
+  "model_type" : "open_bcmp",
+  "name" : "Schwerer01.d3.c3.inf",
+  "schema_version" : 1,
+  "solver" : {
+    "max_servers" : 100000
+  },
+  "stations" : [
+    {
+      "id" : "s1",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 1
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s2",
+      "servers" : 1,
+      "service_times" : {
+        "c2" : 1
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s3",
+      "servers" : 1,
+      "service_times" : {
+        "c3" : 1
+      },
+      "type" : "fcfs"
+    }
+  ]
+}

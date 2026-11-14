@@ -1,0 +1,266 @@
+{
+  "completedAt" : "2026-11-11T04:53:30Z",
+  "elapsedSeconds" : 0.8533860445022583,
+  "id" : "178932CF-9C4B-49BA-BFA8-B863D2D57005",
+  "measurements" : [
+    {
+      "estimate" : 0.45,
+      "id" : "AC88BB20-5F60-4122-969D-D1496E00EFEB",
+      "metric" : "Utilization",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000005",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.9,
+      "id" : "7E1BE6DD-C431-43A0-9182-7D6BD06E6918",
+      "metric" : "Utilization",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000003",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.45,
+      "id" : "D1217D25-EB36-4F63-839E-B4E8424109E1",
+      "metric" : "Throughput",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000005",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.9,
+      "id" : "81111818-592C-45B7-AE1D-62A9FFCC60B1",
+      "metric" : "Throughput",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000003",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 1.151,
+      "id" : "7495844B-5D1E-48A0-97D0-CF6260052897",
+      "metric" : "Mean sojourn time",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000005",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 7.5,
+      "id" : "21C0C2D2-F778-457D-B069-DB94C2B1F308",
+      "metric" : "Mean sojourn time",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000003",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 0.518,
+      "id" : "CA3C6755-3B55-453B-ACEF-DD2243A54910",
+      "metric" : "Mean number in system",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000005",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 6.75,
+      "id" : "CED924B4-A981-4C18-96E8-CD97B4325FCC",
+      "metric" : "Mean number in system",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000003",
+      "stationName" : "S2",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Method Comparison",
+    "fidelity" : "Mixed-method evidence",
+    "identifier" : "comparison.mixed",
+    "layer" : "Mixed model layers",
+    "shortName" : "Comparison"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "A1AAAAAA-3100-0001-0000-000000000005",
+      "A1AAAAAA-3100-0001-0000-000000000003"
+    ],
+    "networkFingerprint" : "170ca5517c2696a64f1c1957846007a7bc02b0164ca4f7716a54c64348e97240",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3100-0001-0000-000000000001",
+          "id" : "A1AAAAAA-3100-0002-0000-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "A1AAAAAA-3100-0001-0000-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3100-0001-0000-000000000002",
+          "id" : "A1AAAAAA-3100-0002-0000-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "A1AAAAAA-3100-0001-0000-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3100-0001-0000-000000000003",
+          "id" : "A1AAAAAA-3100-0002-0000-000000000003",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3100-0001-0000-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3100-0001-0000-000000000003",
+          "id" : "A1AAAAAA-3100-0002-0000-000000000004",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3100-0001-0000-000000000006"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3100-0001-0000-000000000004",
+          "id" : "A1AAAAAA-3100-0002-0000-000000000005",
+          "routingProbability" : 1,
+          "toNodeID" : "A1AAAAAA-3100-0001-0000-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3100-0001-0000-000000000005",
+          "id" : "A1AAAAAA-3100-0002-0000-000000000006",
+          "routingProbability" : 1,
+          "toNodeID" : "A1AAAAAA-3100-0001-0000-000000000006"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.9",
+          "id" : "A1AAAAAA-3100-0001-0000-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1AAAAAA-3100-0001-0000-000000000002",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            200,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "erlang",
+          "distributionParameters" : "k=2,rate=2.0",
+          "id" : "A1AAAAAA-3100-0001-0000-000000000003",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            300,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1AAAAAA-3100-0001-0000-000000000004",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            400,
+            300
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "erlang",
+          "distributionParameters" : "k=2,rate=2.0",
+          "id" : "A1AAAAAA-3100-0001-0000-000000000005",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            500,
+            300
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1AAAAAA-3100-0001-0000-000000000006",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "GuangChenDaiGlynn25.sec3.1.2d.inf.bnet",
+    "parameters" : {
+      "RQNA solver found" : "true",
+      "SBD solver found" : "true",
+      "simulation replications" : "8",
+      "simulation time" : "200000",
+      "simulation warm-up" : "10000",
+      "spectral degree" : "8"
+    },
+    "replicationSeeds" : [
+      12345,
+      12346,
+      12347,
+      12348,
+      12349,
+      12350,
+      12351,
+      12352
+    ],
+    "seed" : 12345,
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/GuangChenDaiGlynn25.sec3.1.2d.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] 18 CPU cores for parallel solvers (Sim\/Spectral\/FE); analytical solvers (QNA\/SBD\/LP) are single-threaded\nRunning spectral method ...  [                              ]  starting ...\r\u001b[KRunning spectral method ...  [\u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m ]  88\/88        (100%)     0.1s\nRunning QNA ...              [ ]                                                       0.0s\r\u001b[KRunning QNA ...              [done]                                                    0.0s\nRunning RQNA ...             [ ]                                                       0.0s\r\u001b[KRunning RQNA ...             [done]                                                    0.0s\nRunning SBD ...              [ ]                                                       0.0s\r\u001b[KRunning SBD ...              [done]                                                    0.0s\nRunning simulation ...       [                              ]  starting ...\r\u001b[KRunning simulation ...       [\u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m ]  8\/8          (100%)     0.1s\n\nNetwork load: rho_max = 0.9000 at S2  (near heavy-traffic — small O(1) deviation expected)\n──  Asymptotic product form — GCDG 2025 Cor. 3 (feed-forward, station relabel applied)  ──\n           Spectral        QNA            RQNA           SBD            Simulation                Average of Algorithms  Asymptotic E[X]\n           ========        ===            ====           ===            ==========                =====================  ============\n\nrho_1      0.450 (+0.0%)   0.450 (+0.0%)  0.450 (+0.0%)  0.450 (+0.0%)  0.450 ± 8.00e-04 (+0.0%)  0.450 (+0.0%)          0.450\nrho_2      0.900 (+0.0%)   0.900 (+0.0%)  0.900 (+0.0%)  0.900 (+0.0%)  0.900 ± 0.003 (+0.0%)     0.900 (+0.0%)          0.900\n\nGamma_1    0.450 (+0.0%)   0.450 (+0.0%)  0.450 (+0.0%)  0.450 (+0.0%)  0.450 ± 0.001 (+0.0%)     0.450 (+0.0%)          0.450\nGamma_2    0.900 (+0.0%)   0.900 (+0.0%)  0.900 (+0.0%)  0.900 (+0.0%)  0.900 ± 0.002 (+0.0%)     0.900 (+0.0%)          0.900\n\nsojourn_1  1.151 (-20.6%)  1.517 (+4.7%)  1.405 (-3.0%)  1.511 (+4.3%)  1.449 (+0.0%)             1.396 (-3.7%)          1.364\nsojourn_2  7.500 (-3.0%)   7.750 (+0.2%)  7.750 (+0.2%)  7.750 (+0.2%)  7.731 (+0.0%)             7.687 (-0.6%)          7.500\n\nE[Q_1]     0.518 (-20.7%)  0.683 (+4.6%)  0.632 (-3.2%)  0.680 (+4.1%)  0.653 ± 0.002 (+0.0%)     0.628 (-3.8%)          0.614\nE[Q_2]     6.750 (-3.0%)   6.975 (+0.3%)  6.975 (+0.3%)  6.975 (+0.3%)  6.957 ± 0.242 (+0.0%)     6.919 (-0.5%)          6.750\n\nQNET_COMPARISON_STATUS_V1 partial=no successful=5\nElapsed time: 0.595s\n\n",
+  "startedAt" : "2026-11-11T04:53:29Z",
+  "status" : "completed",
+  "warnings" : [
+    "The structured table records the first value in each comparison row; the retained raw output contains every method column."
+  ]
+}

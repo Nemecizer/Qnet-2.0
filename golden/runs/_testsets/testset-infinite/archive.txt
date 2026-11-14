@@ -1,0 +1,33 @@
+══════════════════════════════════════════════════════════════════
+Infinite Test Set — 3 cases
+  Stations:  2…3
+  Classes:   1…2
+  ρ range:   0.50…0.85
+  Topology:  feed-forward
+  Base seed: 20261110
+  Reference: Sim
+──────────────────────────────────────────────────────────────────
+  [1/3] d=3 K=1 ρ=0.736 [ ]  [1/3] d=3 K=1 ρ=0.736 done in 0.08s
+  [2/3] d=3 K=1 ρ=0.539 [ ]  [2/3] d=3 K=1 ρ=0.539 done in 0.08s
+  [3/3] d=2 K=1 ρ=0.712 [ ]  [3/3] d=2 K=1 ρ=0.712 done in 0.06s
+
+Algorithm                Mean %err       P50       P90       Max  Worst station      N
+──────────────────────────────────────────────────────────────────────────────────────────
+Spectral                     9.91%     9.96%    13.51%    13.51%        17.81%      3
+QNA                          0.32%     0.31%     0.36%     0.36%         0.60%      3
+RQNA                         0.56%     0.43%     0.88%     0.88%         1.57%      3
+SBD                          0.25%     0.31%     0.31%     0.31%         0.43%      3
+Average of Algorithms        2.58%     2.59%     3.49%     3.49%         4.82%      3
+Sim (ref)                      —       —       —       —           —      3
+
+All numeric columns are percent errors.  Per case, err = mean over
+stations of |algo_k - ref_k| / |ref_k| * 100%, with ref = Sim.
+Mean = average across cases; P50 / P90 = 50th / 90th percentile;
+Max = single worst case; N = cases that contributed to the row.
+Worst station = the single largest |algo_k - ref_k|/|ref_k|*100 seen at
+any station in any case (highlights where this algorithm struggles).
+Average of Algorithms: per case and per station, the unweighted mean
+of every non-reference algorithm cell, then the same error summary.
+══════════════════════════════════════════════════════════════════════════════════════════
+Elapsed time: 0.077s
+

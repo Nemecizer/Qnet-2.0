@@ -1,0 +1,82 @@
+# fBNA Queueing Network Export
+# Generated: 11/10/26, 14:11:07
+
+# num_classes
+8
+
+# dimension
+4
+
+# arrival_distributions
+poisson lambda=0.519825
+poisson lambda=0.343948
+poisson lambda=0.381351
+poisson lambda=0.258395
+poisson lambda=0.477000
+poisson lambda=0.521567
+poisson lambda=0.286394
+poisson lambda=0.148681
+
+# arrival_stations
+1 2 3 4 1 2 3 4
+
+# servers_per_station
+1 1 1 1
+
+# buffer_sizes
+1 1 1 1
+
+# service_distributions
+erlang k=3,rate=3.4655 | erlang k=3,rate=3.4655 | erlang k=3,rate=3.4655 | erlang k=3,rate=3.4655 | erlang k=2,rate=2.1200 | erlang k=2,rate=2.1200 | erlang k=2,rate=2.1200 | erlang k=2,rate=2.1200
+gamma shape=2.321,scale=0.428 | gamma shape=2.321,scale=0.428 | gamma shape=2.321,scale=0.428 | gamma shape=2.321,scale=0.428 | exponential rate=1.2566 | exponential rate=1.2566 | exponential rate=1.2566 | exponential rate=1.2566
+exponential rate=1.1602 | exponential rate=1.1602 | exponential rate=1.1602 | exponential rate=1.1602 | uniform min=0.217,max=1.745 | uniform min=0.217,max=1.745 | uniform min=0.217,max=1.745 | uniform min=0.217,max=1.745
+uniform min=0.122,max=1.972 | uniform min=0.122,max=1.972 | uniform min=0.122,max=1.972 | uniform min=0.122,max=1.972 | uniform min=0.270,max=1.772 | uniform min=0.270,max=1.772 | uniform min=0.270,max=1.772 | uniform min=0.270,max=1.772
+
+# routing_matrix_class_1
+0.000000 0.209776 0.147294 0.044120
+0.000000 0.000000 0.141660 0.119289
+0.000000 0.000000 0.000000 0.180873
+0.000000 0.000000 0.000000 0.000000
+
+# routing_matrix_class_2
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.141660 0.119289
+0.000000 0.000000 0.000000 0.180873
+0.000000 0.000000 0.000000 0.000000
+
+# routing_matrix_class_3
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 0.180873
+0.000000 0.000000 0.000000 0.000000
+
+# routing_matrix_class_4
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 0.000000
+
+# routing_matrix_class_5
+0.000000 0.092039 0.182233 0.138038
+0.000000 0.000000 0.151018 0.133775
+0.000000 0.000000 0.000000 0.328249
+0.000000 0.000000 0.000000 0.000000
+
+# routing_matrix_class_6
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.151018 0.133775
+0.000000 0.000000 0.000000 0.328249
+0.000000 0.000000 0.000000 0.000000
+
+# routing_matrix_class_7
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 0.328249
+0.000000 0.000000 0.000000 0.000000
+
+# routing_matrix_class_8
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 0.000000
+

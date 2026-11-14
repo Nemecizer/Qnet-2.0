@@ -1,0 +1,25 @@
+# BNET -> BNAlp SRBM input (LP solver)
+# Produced by BNASRBMExporter
+# d = 1
+# mu_eff per station (1/tau) = 1.0000
+# mean queue length L_i = mu_eff_i * E[Y_i]
+
+dimension  1
+grid_n     100
+basis_m    6
+grid_type  exponential
+
+drift
+    -0.10000
+
+covariance
+     1.80000
+
+reflection
+     1.00000
+
+grid_spacing
+  0.0
+
+tightness_bounds
+  100000 100000 100000

@@ -1,0 +1,20 @@
+Fitting adaptive low-rank BAR ...  [ ]                                                       0.0s[KFitting adaptive low-rank BAR ...  [/]                                                       0.3s[KFitting adaptive low-rank BAR ...  [-]                                                       0.5s[KFitting adaptive low-rank BAR ...  [\]                                                       0.8s[KFitting adaptive low-rank BAR ...  [|]                                                       1.0s[KFitting adaptive low-rank BAR ...  [/]                                                       1.3s[KFitting adaptive low-rank BAR ...  [-]                                                       1.5s[KFitting adaptive low-rank BAR ...  [\]                                                       1.8s[KFitting adaptive low-rank BAR ...  [|]                                                       2.0s[KFitting adaptive low-rank BAR ...  [/]                                                       2.3s[KFitting adaptive low-rank BAR ...  [-]                                                       2.5s[KFitting adaptive low-rank BAR ...  [\]                                                       2.8s[KFitting adaptive low-rank BAR ...  [|]                                                       3.1s[KFitting adaptive low-rank BAR ...  [/]                                                       3.4s[KFitting adaptive low-rank BAR ...  [-]                                                       3.6s[KFitting adaptive low-rank BAR ...  [\]                                                       3.9s[KFitting adaptive low-rank BAR ...  [|]                                                       4.2s[KFitting adaptive low-rank BAR ...  [/]                                                       4.4s[KFitting adaptive low-rank BAR ...  [done]                                                    4.6s
+Adaptive low-rank BAR analysis
+Model layer: stationary orthant SRBM diffusion
+Claim: adaptive low-rank BAR approximation (not a certified moment bound)
+Rank: 12  converged: no
+
+E[Z_1] = 8.731129357    Var[Z_1] = 78.56235032
+E[Z_2] = 5.17356534    Var[Z_2] = 29.60203032
+
+Held-out relative BAR RMS = 0.00745045
+Held-out relative BAR max = 0.0140731
+Skew-symmetry residual    = 0.153064
+Simplex mass error        = 1.39e-17
+WARNING: The requested refinement criteria were not met before max_rank; increase max_rank/log_rate_span or cross-check with another method.
+WARNING: Held-out BAR residuals test the fitted transform but do not bound error in the reported moments.
+
+  L_1 = 19.402518    (workload E[Z_1] = 8.731129, mu_i = 2.222223)
+  L_2 = 17.245223    (workload E[Z_2] = 5.173565, mu_i = 3.333334)
+Elapsed time: 4.691s
+

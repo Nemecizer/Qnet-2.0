@@ -1,0 +1,276 @@
+{
+  "completedAt" : "2026-11-11T05:01:14Z",
+  "elapsedSeconds" : 1.5540670156478882,
+  "id" : "8D3B138D-1AA0-4C82-98F8-348B1A3D7129",
+  "measurements" : [
+    {
+      "estimate" : 2.262639,
+      "id" : "C7CD57FD-C20A-421B-8D76-4B940A80BE62",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "C3D4E5F6-3333-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 7.424491,
+      "id" : "A73EBF02-1435-467F-A9DE-295E5BC18213",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "C3D4E5F6-3333-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.885156,
+      "id" : "9E541C84-7DA6-4F4A-A6D1-8EDBCB864C7E",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "C3D4E5F6-3333-1111-1111-000000000007",
+      "stationName" : "S3",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "BAR Linear Program",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.lp",
+    "implementation" : "BNAlp\/fBNAlp",
+    "layer" : "SRBM diffusion",
+    "shortName" : "LP"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "C3D4E5F6-3333-1111-1111-000000000003",
+      "C3D4E5F6-3333-1111-1111-000000000005",
+      "C3D4E5F6-3333-1111-1111-000000000007"
+    ],
+    "networkFingerprint" : "84542989365a298db848db812ac9203f7d08037b2dbc73780bce3b89d061faac",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000001",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000002",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000003",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000004",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000004",
+          "routingProbability" : 1,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000005",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000005",
+          "routingProbability" : 0.5,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000006"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000005",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000006",
+          "routingProbability" : 0.5,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000006",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000007",
+          "routingProbability" : 1,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000007"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000007",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000008",
+          "routingProbability" : 0.5,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000007",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000009",
+          "routingProbability" : 0.5,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000008"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=0.225",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            190,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            280,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000004",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            370,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000005",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000006",
+          "kind" : "buffer",
+          "name" : "B3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            550,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000007",
+          "kind" : "station",
+          "name" : "S3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            640,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000008",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            730,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "DaiNguyenReiman94.d3.c1.1.inf.bnet",
+    "parameters" : {
+      "basis normalization" : "false",
+      "basis size" : "5",
+      "grid size" : "25",
+      "grid type" : "exponential",
+      "multi-level" : "false",
+      "smoothness" : "0.0",
+      "solver" : "automatic"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/DaiNguyenReiman94.d3.c1.1.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Running Linear Program (BNAlp, Saure-Glynn-Zeevi 2008)\nauto-scaled for d=3: grid_n=25, basis_m=5\n\nSRBM Parameters:\n  dimension     = 3\n  grid_n        = 25\n  basis_m       = 5\n  grid_type     = 0 (0=exp, 1=dya, 2=expran)\n  max_moments   = 4\n  solver        = (default)\n  output_prefix = srbm_out\n  drift         = -0.2750 0.5000 -0.5000\n  covariance:\n       1.3500  -1.1250   0.0000\n      -1.1250   1.8000  -0.6750\n       0.0000  -0.6750   0.9000\n  reflection:\n       1.0000  -0.5000   0.0000\n      -1.0000   1.0000  -0.5000\n       0.0000  -0.5000   1.0000\n  grid_spacing  = 0.0000 0.0000 0.0000\n  tightness K   = 100000 100000 100000 100000 100000 100000 100000\n  smoothness_w  = 0 (disabled)\n  basis_norm    = 0 (raw monomials)\n  Auto rho      = 0.6500 0.2000 1.1000\n  Effective grid_spacing (rho\/4) = 0.1625 0.0500 0.2750\n\n[Parse] 0.000 s\n[Grid]  15625 points, 0.001 s\n  Face 1 boundary: 625 points\n  Face 2 boundary: 625 points\n  Face 3 boundary: 625 points\n[Index] 56 basis functions, 0.000 s\n[Basis] 0.000 s\n[Eval interior] 0.004 s\n[Eval boundary] 0.001 s\n[Build LP] 120 rows, 17501 cols, 1827794 nnz, 0.022 s\n[Solve] Using solver: highs\n[Solve] Optimal u* = 0.0000000000e+00, 1.377 s\n\nMoments:\n  Order     E[Z_1^k]      E[Z_2^k]      E[Z_3^k]    \n  k=1          2.262639      7.424491      0.885156\n  k=2         10.276966    139.991976      1.591077\n  k=3         65.231204   3754.807368      4.295580\n  k=4        485.942103  135883.809181     15.464038\n\nOutput files:\n  Wrote srbm_out_marginal_1.csv (25 points)\n  Wrote srbm_out_marginal_2.csv (25 points)\n  Wrote srbm_out_marginal_3.csv (25 points)\n  Wrote srbm_out_distribution.csv (15625 points)\n\n[Total] 1.426 s\nE[X_1] = 2.262639\nE[X_2] = 7.424491\nE[X_3] = 0.885156\n\nLinear Program (Saure-Glynn-Zeevi 2008 LP)\n==========================================\n\nSolver: highs  |  grid_n = 25  |  basis_m = 5\n[Build LP] 120 rows, 17501 cols, 1827794 nnz, 0.022 s\n[Solve] Optimal u* = 0.0000000000e+00, 1.377 s\n[Total] 1.426s\n\nNode   Servers  E[Y] (workload)  L = mu·E[Y]     mu_i      \n1      1        2.2626           2.2626           1.0000    \n2      1        7.4245           7.4245           1.0000    \n3      1        0.8852           0.8852           1.0000    \n\nNetwork Totals:\n  Total E[N]:             10.5723\n  Average queue length:   3.5241\nElapsed time: 1.462s\n\n",
+  "startedAt" : "2026-11-11T05:01:13Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

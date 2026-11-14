@@ -1,0 +1,4 @@
+# found by validation/fuzz/fuzz_mc_solver.py in 0.90.34's mc_solver: bnet_parser.c:376 wrote net->P[c] with a customer class outside 0..7 (stack-buffer-overflow)
+# made from OpenJackson.d2.feedback.p70.inf.bnet by m_grow (seed 20261112, case 342)
+args=-c -n 1
+exit=1

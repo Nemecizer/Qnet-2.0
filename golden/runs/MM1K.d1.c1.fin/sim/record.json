@@ -1,0 +1,199 @@
+{
+  "completedAt" : "2026-11-11T04:55:47Z",
+  "elapsedSeconds" : 0.4264030456542969,
+  "id" : "6CD5E522-5BA2-4B02-A344-67C7307DEF32",
+  "measurements" : [
+    {
+      "estimate" : 0.861,
+      "id" : "68C2A113-701A-4BA5-B8D4-FBF4E3314FBF",
+      "metric" : "Utilization",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.857,
+        "upperBound" : 0.865
+      },
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.861,
+      "id" : "6A59E814-6A5A-44E1-9F44-C75645C52E5A",
+      "metric" : "Throughput",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.859,
+        "upperBound" : 0.863
+      },
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 4.958,
+      "id" : "0DF01B1E-81D7-4237-A6AB-31F39D721167",
+      "metric" : "Mean sojourn time",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 4.893,
+        "upperBound" : 5.023000000000001
+      },
+      "unit" : "time"
+    },
+    {
+      "estimate" : 4.269,
+      "id" : "E135C6CD-E03D-4BCE-9762-AD9645FE7B70",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 4.213,
+        "upperBound" : 4.325
+      },
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Monte Carlo",
+    "fidelity" : "Queue simulation",
+    "identifier" : "queue.des",
+    "implementation" : "BNAsim\/fBNAsim",
+    "layer" : "Queueing process",
+    "shortName" : "Monte Carlo"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Finite capacity",
+    "exportStationIDs" : [
+      "EE000001-0001-0001-0001-000000000003"
+    ],
+    "networkFingerprint" : "4a61f9da5223f27e8e2ed5351813d746071f68158092d346416cfbfbc9bb1e9b",
+    "networkSnapshot" : {
+      "infiniteBuffers" : false,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000001",
+          "id" : "EE000001-0001-0001-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000002",
+          "id" : "EE000001-0001-0001-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000003",
+          "id" : "EE000001-0001-0001-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000004"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.9",
+          "id" : "EE000001-0001-0001-0001-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            220,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            340,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000004",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "MM1K.d1.c1.fin.bnet",
+    "parameters" : {
+      "blocking" : "BAS+ext-loss",
+      "fixed seed" : "true",
+      "parallelism" : "2",
+      "replications" : "8",
+      "simulation time" : "200000",
+      "warm-up" : "10000"
+    },
+    "replicationSeeds" : [
+      12345,
+      12345,
+      12346,
+      12346,
+      12347,
+      12347,
+      12348,
+      12348
+    ],
+    "seed" : 12345,
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/MM1K.d1.c1.fin.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] Using 18 CPU cores (OpenMP)\nRunning simulation ...  [                              ]  starting ...\r\u001b[KRunning simulation ...  [\u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m ]  8\/8          (100%)     0.1s\n\nNetwork load: rho_max = 0.9000 at S1  (near heavy-traffic — small O(1) deviation expected)\n──  SRBM skew-symmetric case — Harrison–Williams 1987 exact product form  ──\n           Simulation              Exact E[X]  (skew-sym)\n           ==========              ============\n\nrho_1      0.861 ± 0.004 (-4.3%)   0.900\n\nGamma_1    0.861 ± 0.002 (-4.3%)   0.900\n\nsojourn_1  4.958 ± 0.065 (-53.0%)  10.556\n\nE[X_1]     4.269 ± 0.056 (-55.1%)  9.500\n\nElapsed time: 0.145s\n\n",
+  "startedAt" : "2026-11-11T04:55:47Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

@@ -1,0 +1,22 @@
+Fitting adaptive low-rank BAR ...  [ ]                                                       0.0s[KFitting adaptive low-rank BAR ...  [/]                                                       0.2s[KFitting adaptive low-rank BAR ...  [-]                                                       0.5s[KFitting adaptive low-rank BAR ...  [\]                                                       0.7s[KFitting adaptive low-rank BAR ...  [|]                                                       1.0s[KFitting adaptive low-rank BAR ...  [/]                                                       1.2s[KFitting adaptive low-rank BAR ...  [-]                                                       1.5s[KFitting adaptive low-rank BAR ...  [\]                                                       1.7s[KFitting adaptive low-rank BAR ...  [|]                                                       1.9s[KFitting adaptive low-rank BAR ...  [/]                                                       2.2s[KFitting adaptive low-rank BAR ...  [-]                                                       2.4s[KFitting adaptive low-rank BAR ...  [\]                                                       2.6s[KFitting adaptive low-rank BAR ...  [|]                                                       2.9s[KFitting adaptive low-rank BAR ...  [/]                                                       3.1s[KFitting adaptive low-rank BAR ...  [-]                                                       3.5s[KFitting adaptive low-rank BAR ...  [\]                                                       3.7s[KFitting adaptive low-rank BAR ...  [|]                                                       3.9s[KFitting adaptive low-rank BAR ...  [/]                                                       4.2s[KFitting adaptive low-rank BAR ...  [-]                                                       4.4s[KFitting adaptive low-rank BAR ...  [\]                                                       4.6s[KFitting adaptive low-rank BAR ...  [|]                                                       4.9s[KFitting adaptive low-rank BAR ...  [done]                                                    5.0s
+Adaptive low-rank BAR analysis
+Model layer: stationary orthant SRBM diffusion
+Claim: adaptive low-rank BAR approximation (not a certified moment bound)
+Rank: 12  converged: no
+
+E[Z_1] = 2.909344032    Var[Z_1] = 12.39343884
+E[Z_2] = 2.881264505    Var[Z_2] = 8.527320555
+E[Z_3] = 0.3549916259    Var[Z_3] = 0.1289763158
+
+Held-out relative BAR RMS = 0.00143655
+Held-out relative BAR max = 0.00564529
+Skew-symmetry residual    = 0.0507408
+Simplex mass error        = 2.22e-16
+WARNING: The requested refinement criteria were not met before max_rank; increase max_rank/log_rate_span or cross-check with another method.
+WARNING: Held-out BAR residuals test the fitted transform but do not bound error in the reported moments.
+
+  L_1 = 9.697813    (workload E[Z_1] = 2.909344, mu_i = 3.333333)
+  L_2 = 9.604215    (workload E[Z_2] = 2.881265, mu_i = 3.333333)
+  L_3 = 1.774958    (workload E[Z_3] = 0.354992, mu_i = 5.000000)
+Elapsed time: 5.072s
+

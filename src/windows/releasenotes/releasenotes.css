@@ -1,0 +1,38 @@
+/* The Release Notes window: a fixed bar over a page set within the 640 pt reading measure
+   (0.90.34 ReleaseNotesWindow.swift). Tokens only. */
+
+.rn { display: flex; flex-direction: column; height: 100%; background: var(--surface); color: var(--text); }
+.rn-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-3) var(--sp-7);
+  border-bottom: 1px solid var(--hairline);
+  background: var(--chrome);
+  font-size: var(--fs-sm);
+}
+.rn-count { display: inline-flex; align-items: center; gap: var(--sp-3); color: var(--text-2); font-variant-numeric: tabular-nums; }
+.rn-link { padding: 0; border: none; background: transparent; color: var(--accent-text); font-size: var(--fs-sm); cursor: pointer; }
+.rn-link:hover { text-decoration: underline; }
+.rn-copy { display: inline-flex; align-items: center; gap: var(--sp-2); min-width: 72px; justify-content: center; }
+
+.rn-scroll { flex: 1; overflow-y: auto; }
+.rn-page { max-width: calc(640px + 2 * var(--sp-7)); padding: var(--sp-7); display: flex; flex-direction: column; gap: var(--sp-7); line-height: 1.5; }
+.rn-header h1 { margin: 0; font-size: var(--fs-xl); font-weight: var(--fw-semibold); }
+.rn-header p { margin: var(--sp-2) 0 0; font-size: var(--fs-lg); color: var(--text-2); font-variant-numeric: tabular-nums; }
+.rn-warning { display: flex; gap: var(--sp-4); margin: 0; padding: var(--sp-5); border-radius: var(--r-md); background: var(--warn-bg); }
+.rn-warning svg { flex: none; color: var(--warn-text); margin-top: 2px; }
+
+.rn-entry { padding-bottom: var(--sp-7); border-bottom: 1px solid var(--hairline); user-select: text; -webkit-user-select: text; cursor: auto; }
+.rn-entry:last-child { border-bottom: none; }
+.rn-entry-head { display: flex; align-items: baseline; gap: var(--sp-5); }
+.rn-entry-head h2 { margin: 0; font-size: var(--fs-lg); font-weight: var(--fw-semibold); font-variant-numeric: tabular-nums; }
+.rn-badge { padding: 1px var(--sp-3); border-radius: var(--r-sm); background: var(--info-bg); color: var(--accent-text); font-size: var(--fs-xs); font-weight: var(--fw-medium); }
+.rn-date { margin: var(--sp-2) 0 0; font-size: var(--fs-sm); color: var(--text-2); font-variant-numeric: tabular-nums; }
+.rn-notes { margin: var(--sp-5) 0 0; padding-left: var(--sp-6); display: flex; flex-direction: column; gap: var(--sp-4); }
+.rn-notes li::marker { color: var(--text-2); }
+.rn-disclosure { display: flex; align-items: baseline; gap: var(--sp-4); width: 100%; padding: 0; border: none; background: transparent; color: var(--text); text-align: left; cursor: default; }
+.rn-disclosure svg { align-self: center; color: var(--text-2); }
+.rn-disclosure-version { font-weight: var(--fw-semibold); font-variant-numeric: tabular-nums; }
+.rn-disclosure-dash { color: var(--muted); }
+.rn-disclosure-date { color: var(--text-2); font-variant-numeric: tabular-nums; }

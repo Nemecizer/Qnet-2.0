@@ -1,0 +1,64 @@
+{
+  "canvasPanOffset" : [
+    0,
+    0
+  ],
+  "canvasScale" : 1,
+  "infiniteBuffers" : false,
+  "links" : [
+
+  ],
+  "nodes" : [
+    {
+      "bufferSize" : 1,
+      "distribution" : "poisson",
+      "distributionParameters" : "lambda=1.0",
+      "id" : "FDB6330E-99CA-4F32-8839-52D31381A7B0",
+      "kind" : "source",
+      "name" : "Src1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        100,
+        150
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "poisson",
+      "distributionParameters" : "lambda=1.0",
+      "id" : "57C4B540-418E-4E61-9741-A3460C0EE81A",
+      "kind" : "source",
+      "name" : "Src2",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        100,
+        350
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "93C32414-0B1B-41D8-BA77-42C7731DE2EB",
+      "kind" : "buffer",
+      "name" : "B1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        260,
+        250
+      ],
+      "serviceDistributions" : {
+
+      }
+    }
+  ]
+}

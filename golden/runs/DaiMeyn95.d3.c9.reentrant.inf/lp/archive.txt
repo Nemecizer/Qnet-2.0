@@ -1,0 +1,76 @@
+Running Linear Program (BNAlp, Saure-Glynn-Zeevi 2008)
+auto-scaled for d=3: grid_n=25, basis_m=5
+
+SRBM Parameters:
+  dimension     = 3
+  grid_n        = 25
+  basis_m       = 5
+  grid_type     = 0 (0=exp, 1=dya, 2=expran)
+  max_moments   = 4
+  solver        = (default)
+  output_prefix = srbm_out
+  drift         = 0.6333 1.3333 -0.6667
+  covariance:
+       0.5400  -0.1800  -0.0600
+      -0.1800   0.5400  -0.1200
+      -0.0600  -0.1200   0.0600
+  reflection:
+       1.0000  -0.3333  -1.0000
+      -0.3333   1.0000  -2.0000
+      -0.1111  -0.2222   1.0000
+  grid_spacing  = 0.0000 0.0000 0.0000
+  tightness K   = 100000 100000 100000 100000 100000 100000 100000
+  smoothness_w  = 0 (disabled)
+  basis_norm    = 0 (raw monomials)
+  Auto rho      = 0.2001 0.2001 1.4000
+  Effective grid_spacing (rho/4) = 0.0500 0.0500 0.3500
+
+[Parse] 0.001 s
+[Grid]  15625 points, 0.003 s
+  Face 1 boundary: 625 points
+  Face 2 boundary: 625 points
+  Face 3 boundary: 625 points
+[Index] 56 basis functions, 0.000 s
+[Basis] 0.000 s
+[Eval interior] 0.005 s
+[Eval boundary] 0.000 s
+[Build LP] 120 rows, 17501 cols, 1840472 nnz, 0.115 s
+[Solve] Using solver: highs
+[Solve] Optimal u* = 7.0677508295e-03, 19.098 s
+
+Moments:
+  Order     E[Z_1^k]      E[Z_2^k]      E[Z_3^k]    
+  k=1          1.209763      0.847154      0.039699
+  k=2          3.085640      3.352825      0.004997
+  k=3         22.682849     28.795027      0.001482
+  k=4        258.614906    320.124439      0.002387
+
+Output files:
+  Wrote srbm_out_marginal_1.csv (25 points)
+  Wrote srbm_out_marginal_2.csv (25 points)
+  Wrote srbm_out_marginal_3.csv (25 points)
+  Wrote srbm_out_distribution.csv (15625 points)
+
+[Total] 19.239 s
+E[X_1] = 1.209763
+E[X_2] = 0.847154
+E[X_3] = 0.039699
+
+Linear Program (Saure-Glynn-Zeevi 2008 LP)
+==========================================
+
+Solver: highs  |  grid_n = 25  |  basis_m = 5
+[Build LP] 120 rows, 17501 cols, 1840472 nnz, 0.115 s
+[Solve] Optimal u* = 7.0677508295e-03, 19.098 s
+[Total] 19.239s
+
+Node   Servers  E[Y] (workload)  L = mu·E[Y]     mu_i      
+1      1        1.2098           4.0325           3.3333    
+2      1        0.8472           2.8238           3.3333    
+3      1        0.0397           0.3970           10.0000   
+
+Network Totals:
+  Total E[N]:             7.2534
+  Average queue length:   2.4178
+Elapsed time: 19.433s
+

@@ -1,0 +1,156 @@
+{
+  "canvasPanOffset" : [
+    0,
+    0
+  ],
+  "canvasScale" : 1,
+  "infiniteBuffers" : false,
+  "links" : [
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "C9AA4232-56DB-4116-968D-120B34FA2CBC",
+      "id" : "F8862A16-0801-404F-809E-BEA1F0FEEFB0",
+      "routingProbability" : 1,
+      "toNodeID" : "5058D8D8-376D-4710-AB7E-67007ED5CB1B"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "2CB23372-5841-4BC3-AD03-77E6039B9312",
+      "id" : "739B601B-7474-4B5C-BB44-05BBD9669CC3",
+      "routingProbability" : 1,
+      "toNodeID" : "BC28EED0-BD87-4CD5-8CAC-8DDE8F34374A"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "38D47C9C-0E0C-42B9-9087-F7EB7B928C0A",
+      "id" : "5B3BA75A-BC35-4FB8-A813-B28813BAA0E2",
+      "routingProbability" : 1,
+      "toNodeID" : "C9AA4232-56DB-4116-968D-120B34FA2CBC"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "5058D8D8-376D-4710-AB7E-67007ED5CB1B",
+      "id" : "3A74CA03-7B11-4026-A67C-ECD9FB564FCE",
+      "routingProbability" : 1,
+      "toNodeID" : "2CB23372-5841-4BC3-AD03-77E6039B9312"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "BC28EED0-BD87-4CD5-8CAC-8DDE8F34374A",
+      "id" : "1170A7D7-CA57-4D22-8C90-9E96084BF313",
+      "routingProbability" : 0.9,
+      "toNodeID" : "C9AA4232-56DB-4116-968D-120B34FA2CBC"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "BC28EED0-BD87-4CD5-8CAC-8DDE8F34374A",
+      "id" : "7A0A23FB-D68A-4254-AB9E-DF65193DDDDD",
+      "routingProbability" : 0.09999999999999998,
+      "toNodeID" : "69BB1464-DA7C-4715-949F-BF887547A69B"
+    }
+  ],
+  "nodes" : [
+    {
+      "bufferSize" : 1,
+      "distribution" : "poisson",
+      "distributionParameters" : "lambda=1000.0",
+      "id" : "38D47C9C-0E0C-42B9-9087-F7EB7B928C0A",
+      "kind" : "source",
+      "name" : "Src1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        80,
+        220
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 500,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "C9AA4232-56DB-4116-968D-120B34FA2CBC",
+      "kind" : "buffer",
+      "name" : "B1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        200,
+        220
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=631.31313",
+      "id" : "5058D8D8-376D-4710-AB7E-67007ED5CB1B",
+      "kind" : "station",
+      "name" : "S1",
+      "numberOfServers" : 16,
+      "picture" : "",
+      "position" : [
+        265,
+        220
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 500,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "2CB23372-5841-4BC3-AD03-77E6039B9312",
+      "kind" : "buffer",
+      "name" : "B2",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        330,
+        220
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=631.31313",
+      "id" : "BC28EED0-BD87-4CD5-8CAC-8DDE8F34374A",
+      "kind" : "station",
+      "name" : "S2",
+      "numberOfServers" : 16,
+      "picture" : "",
+      "position" : [
+        395,
+        220
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "69BB1464-DA7C-4715-949F-BF887547A69B",
+      "kind" : "sink",
+      "name" : "Sink1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        500,
+        220
+      ],
+      "serviceDistributions" : {
+
+      }
+    }
+  ]
+}

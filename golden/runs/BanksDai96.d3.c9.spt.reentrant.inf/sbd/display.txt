@@ -1,0 +1,27 @@
+[A[2K[Threads] Single-threaded (analytical solver)
+Running SBD ...  [ ]                                                       0.0s[KRunning SBD ...  [done]                                                    0.2s
+
+Network load: rho_max = 0.900 at S1  (near heavy-traffic — small O(1) deviation expected)
+Routing graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference
+           SBD
+           ===
+
+rho_1      0.900
+rho_2      0.900
+rho_3      0.600
+
+Gamma_1    3.000
+Gamma_2    3.000
+Gamma_3    3.000
+
+sojourn_1  3.047
+sojourn_2  3.056
+sojourn_3  0.550
+
+E[Q_1]     9.140
+E[Q_2]     9.169
+E[Q_3]     1.649
+
+QNET_SBD_STATUS_V1 fallback_used=no
+Elapsed time: 0.256s
+

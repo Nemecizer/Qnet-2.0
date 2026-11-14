@@ -1,0 +1,55 @@
+NETWORK ANALYSIS — Brownian Heavy-Traffic Reliability
+=====================================================
+
+NETWORK SUMMARY
+---------------
+Stations:         3
+Customer classes: 1
+Buffer model:     finite
+
+KEY PRIMITIVES
+--------------
+  Station   servers    μ_eff        α          ρ   c²_s_eff   buffer
+  S1              1   1.1111   1.0000     0.9000     0.2500        4
+  S2              1   1.1111   1.0000     0.9000     1.0000        6
+  S3              1   1.1111   1.0000     0.9000     2.0000        6
+
+  Class       λ (ext)     c²_a
+  C1           1.0000   1.0000
+
+OVERALL RELIABILITY ASSESSMENT
+------------------------------
+Score: 91 / 100  (HIGH)
+Findings: 0 critical, 0 warning, 3 info
+
+The network sits comfortably inside the assumptions of heavy-traffic SRBM theory. E[X] estimates should be within ~5–10% of simulation for most primitives.
+
+FINDINGS (grouped by severity)
+------------------------------
+
+[INFO    ] 1. Station 1 buffer is modest (a = 4)
+  Why:     Small buffers mean blocking effects dominate; the SRBM answer is still meaningful but the loss / blocking probability will not match classical Jackson intuition.
+  Fix:     If you want the infinite-buffer Harrison-Reiman answer, toggle 'Infinite Buffers' instead. If you want manufacturing blocking, this is correct as-is.
+
+[INFO    ] 2. Station 2 buffer is modest (a = 6)
+  Why:     Small buffers mean blocking effects dominate; the SRBM answer is still meaningful but the loss / blocking probability will not match classical Jackson intuition.
+  Fix:     If you want the infinite-buffer Harrison-Reiman answer, toggle 'Infinite Buffers' instead. If you want manufacturing blocking, this is correct as-is.
+
+[INFO    ] 3. Station 3 buffer is modest (a = 6)
+  Why:     Small buffers mean blocking effects dominate; the SRBM answer is still meaningful but the loss / blocking probability will not match classical Jackson intuition.
+  Fix:     If you want the infinite-buffer Harrison-Reiman answer, toggle 'Infinite Buffers' instead. If you want manufacturing blocking, this is correct as-is.
+
+PERFORMANCE METRIC RELIABILITY
+------------------------------
+  E[X_i] (queue length):          HIGH        primitives inside heavy-traffic sweet spot
+  Throughput (Γ_i):               HIGH        Γ = α; derived exactly from traffic equations
+  Utilization (ρ_i):              HIGH        ρ = α / (s·μ); derived exactly from primitives
+  Sojourn time:                   HIGH        sojourn = E[X]/Γ; inherits E[X] reliability
+  Per-class W, T, N:              HIGH        Little's law applied to E[X]; inherits its reliability
+
+TOP ACTIONABLE SUGGESTIONS
+--------------------------
+1. If you want the infinite-buffer Harrison-Reiman answer, toggle 'Infinite Buffers' instead. If you want manufacturing blocking, this is correct as-is.
+2. If you want the infinite-buffer Harrison-Reiman answer, toggle 'Infinite Buffers' instead. If you want manufacturing blocking, this is correct as-is.
+3. If you want the infinite-buffer Harrison-Reiman answer, toggle 'Infinite Buffers' instead. If you want manufacturing blocking, this is correct as-is.
+

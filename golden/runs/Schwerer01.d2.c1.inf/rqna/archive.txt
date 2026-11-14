@@ -1,0 +1,22 @@
+[Threads] Single-threaded (analytical solver)
+Running RQNA ...  [ ]                                                       0.0s[KRunning RQNA ...  [done]                                                    0.0s
+
+Network load: rho_max = 0.6000 at S1  (moderate load — SRBM/FEM are heavy-traffic limits; expect deviation from simulation)
+──  Asymptotic product form — GCDG 2025 Cor. 3 (lower-triangular R, feed-forward)  ──
+           RQNA           Asymptotic E[X]
+           ====           ============
+
+rho_1      0.600 (+0.0%)  0.600
+rho_2      0.600 (+0.0%)  0.600
+
+Gamma_1    0.600 (+0.0%)  0.600
+Gamma_2    0.600 (+0.0%)  0.600
+
+sojourn_1  1.750 (+0.0%)  1.250
+sojourn_2  1.934 (+0.0%)  2.500
+
+E[Q_1]     1.050 (+0.0%)  0.750
+E[Q_2]     1.160 (+0.0%)  1.500
+
+Elapsed time: 0.082s
+

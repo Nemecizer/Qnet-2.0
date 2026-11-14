@@ -1,0 +1,22 @@
+[Threads] Single-threaded (analytical solver)
+Running finite LP method (highs) ...  [ ]                                                       0.0s[KRunning finite LP method (highs) ...  [done]                                                    0.1s
+
+Network load: rho_max = 1.0000 at S1  (heavy-traffic regime — analytical methods are most accurate here)
+Buffer regime: K*(1-rho) = 0.00 at S1 (K=25, rho=1.000) — small for the heavy-traffic limit (target ~1-5); SRBM may overstate E[X] / understate loss by 10-20%
+           Finite LP
+           =========
+
+rho_1      0.985
+rho_2      0.980
+
+Gamma_1    0.985
+Gamma_2    0.980
+
+sojourn_1  14.361
+sojourn_2  12.755
+
+E[X_1]     14.153
+E[X_2]     12.500
+
+Elapsed time: 0.073s
+

@@ -1,0 +1,50 @@
+========================================================================
+NETWORK PRIMITIVES (Brownian / SRBM)
+========================================================================
+
+Structure:
+  Stations (d):         3
+  Customer classes (K): 1
+  Buffer sizes a:       [2, 2, 2]
+  Servers s_i:          [1, 1, 1]
+
+External arrival rates λ_k (per class):
+  Class 1:     0.40000
+  Total:       0.40000
+
+Per-station primitives:
+  i | servers |        α_i |        μ_i |        c_i |       ρ_i |      b_i
+  ------------------------------------------------------------------------
+  1 |     1   |    0.89796 |    1.00000 |    1.00000 |   0.89796 | -0.10204
+  2 |     1   |    0.59184 |    1.00000 |    1.00000 |   0.59184 | -0.40816
+  3 |     1   |    0.35714 |    1.00000 |    1.00000 |   0.35714 | -0.64286
+
+  α_i = Σ_k α^(k)_i     offered arrival rate at station i
+  μ_i = Σ_k (α^(k)_i/α_i) μ^(k)_i     throughput-weighted service rate
+  c_i = s_i · μ_i       station capacity
+  ρ_i = α_i / c_i       nominal traffic intensity
+  b_i = α_i - c_i       station netput
+  θ = (I - Pᵀ) b        SRBM drift (reflection R = I - Pᵀ)
+
+Per-class throughput α^(k)_i:
+          station 1  station 2  station 3 
+  class 1     0.89796    0.59184    0.35714 
+
+Aggregated routing matrix P (row i → col j):
+              →1        →2        →3    
+  from 1     0.0000    0.5000    0.2000 
+  from 2     0.6000    0.0000    0.3000 
+  from 3     0.4000    0.4000    0.0000 
+
+Reflection matrix R (d × 2d, columns = [lower_1, upper_1, lower_2, upper_2, …]):
+  row 1:  +1.000  -1.000  -0.600  +0.000  -0.400  +0.000 
+  row 2:  -0.500  +0.000  +1.000  -1.000  -0.400  +0.000 
+  row 3:  -0.200  +0.000  -0.300  +0.000  +1.000  -1.000 
+
+Covariance matrix Σ (diffusion coefficient):
+     1.21184   -0.43061   -0.21449 
+    -0.43061    0.74694   -0.20510 
+    -0.21449   -0.20510    0.49112 
+
+[1;31m!! Warning:[0m station 3 has low utilization (ρ = 0.3571). The SRBM heavy-traffic approximation is most accurate when ρ is close to 1; results here may diverge from simulation.
+[1;31m!! Warning:[0m traffic intensities are unbalanced (ρ ranges from 0.357 to 0.898). Balanced heavy-traffic theory assumes all stations near ρ = 1 simultaneously; single-bottleneck behavior may dominate.

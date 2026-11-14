@@ -1,0 +1,115 @@
+/* The Agreement view (src/panes/results/agreement/). Tokens only (src/styles.css): marks take the
+   tier colours, text stays in text tokens. Healthy is quiet: an "agree" or "exact" verdict is
+   green ink beside its icon on a neutral surface, never a green surface. */
+
+.agr-view { flex: 1; min-height: 0; display: flex; flex-direction: column; background: var(--surface-2); }
+.agr-scroll { flex: 1; min-height: 0; overflow: auto; padding: var(--sp-5); display: flex; flex-direction: column; gap: var(--sp-5); }
+.agr-empty { flex: 1; }
+.agr-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-4); }
+.agr-actions .btn { display: inline-flex; align-items: center; gap: var(--sp-2); white-space: nowrap; }
+.agr-link { border: 0; padding: 0; border-radius: var(--r-sm); background: transparent; color: var(--accent-text); font: inherit; font-size: var(--fs-sm); cursor: default; }
+.agr-link:hover { text-decoration: underline; }
+.agr-muted { color: var(--muted); font-weight: var(--fw-regular); }
+
+/* The sequential runner's line. */
+.agr-progress {
+  flex: none; display: flex; align-items: center; gap: var(--sp-4);
+  padding: var(--sp-3) var(--sp-5); border-bottom: 1px solid var(--hairline); background: var(--info-bg); font-size: var(--fs-sm);
+}
+.agr-progress[data-finished] { background: var(--surface-3); }
+.agr-progress .btn { display: inline-flex; align-items: center; gap: var(--sp-2); }
+/* The ring and its turn are styles.css's spinner (which stops under reduced motion). */
+.agr-spinner { flex: none; width: 12px; height: 12px; }
+
+/* The verdict banner. */
+.agr-banner {
+  flex: none; display: flex; align-items: flex-start; gap: var(--sp-5);
+  padding: var(--sp-5); border: 1px solid var(--hairline); border-radius: var(--r-lg); background: var(--surface);
+}
+.agr-banner-icon { flex: none; display: inline-grid; place-items: center; margin-top: 1px; color: var(--muted); }
+.agr-banner[data-verdict="exact"] .agr-banner-icon,
+.agr-banner[data-verdict="agree"] .agr-banner-icon { color: var(--good-text); }
+.agr-banner[data-verdict="close"] { background: var(--info-bg); }
+.agr-banner[data-verdict="close"] .agr-banner-icon { color: var(--accent-text); }
+.agr-banner[data-verdict="disagree"] { background: var(--warn-bg); border-color: var(--warning-border); }
+.agr-banner[data-verdict="disagree"] .agr-banner-icon { color: var(--warn-text); }
+.agr-banner-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--sp-2); }
+.agr-banner-text h3 { margin: 0; font-size: var(--fs-md); font-weight: var(--fw-semibold); color: var(--text); }
+.agr-banner-text p { margin: 0; color: var(--text-2); font-size: var(--fs-sm); }
+.agr-banner .agr-actions { flex: none; max-width: 50%; justify-content: flex-end; }
+
+/* The methods read, and one method's explanation. */
+.agr-methods { flex: none; display: flex; flex-wrap: wrap; gap: var(--sp-3); }
+.agr-method {
+  display: inline-flex; align-items: center; gap: var(--sp-2); height: var(--ctl-sm); padding: 0 var(--sp-4);
+  border: 1px solid var(--hairline); border-radius: var(--r-pill); background: var(--surface); color: var(--text); font: inherit; font-size: var(--fs-sm); cursor: default;
+}
+.agr-method:hover { background: var(--hover); }
+.agr-method[aria-expanded="true"] { border-color: var(--accent); background: var(--sel); color: var(--sel-text); }
+.agr-method-tier { color: var(--muted); }
+.agr-method[aria-expanded="true"] .agr-method-tier { color: var(--sel-muted); }
+.agr-explain { flex: none; padding: var(--sp-4) var(--sp-5); border: 1px solid var(--hairline); border-radius: var(--r-lg); background: var(--surface); font-size: var(--fs-sm); }
+.agr-explain-head { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-3); }
+.agr-explain dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: var(--sp-2) var(--sp-5); }
+.agr-explain dt { color: var(--muted); }
+.agr-explain dd { margin: 0; color: var(--text-2); }
+.agr-explain p { margin: 0; }
+
+.agr-glyph { flex: none; vertical-align: -2px; }
+.agr-glyph[data-tier="exact"], .agr-mark[data-tier="exact"] .agr-mark-shape { fill: var(--tier-exact); stroke: var(--tier-exact); }
+.agr-glyph[data-tier="simulation"], .agr-mark[data-tier="simulation"] .agr-mark-shape { fill: var(--tier-simulation); stroke: var(--tier-simulation); }
+.agr-glyph[data-tier="approximation"], .agr-mark[data-tier="approximation"] .agr-mark-shape { fill: var(--tier-approximation); stroke: var(--tier-approximation); }
+.agr-glyph[data-tier="diffusion"], .agr-mark[data-tier="diffusion"] .agr-mark-shape { fill: var(--tier-diffusion); stroke: var(--tier-diffusion); }
+.agr-glyph[data-tier="bound"], .agr-mark[data-tier="bound"] .agr-mark-shape { fill: var(--tier-bound); stroke: var(--tier-bound); }
+.agr-glyph[data-tier="mixed"], .agr-mark[data-tier="mixed"] .agr-mark-shape { fill: var(--muted); stroke: var(--muted); }
+.agr-glyph { stroke-width: 0; }
+
+/* Sort and filters. */
+.agr-controls { flex: none; display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-3); }
+.agr-check { display: inline-flex; align-items: center; gap: var(--sp-2); font-size: var(--fs-sm); color: var(--text-2); }
+
+/* One row per quantity. */
+/* border-collapse: separate, so the card's corners are round like the banner's and the charts'. */
+.agr-table { flex: none; width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; font-size: var(--fs-sm); background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--r-lg); }
+.agr-table tbody:last-child tr:last-child > * { border-bottom: 0; }
+.agr-table th, .agr-table td { padding: var(--sp-2) var(--sp-4); text-align: left; vertical-align: middle; border-bottom: 1px solid var(--hairline); }
+.agr-table thead th { color: var(--muted); font-weight: var(--fw-medium); font-size: var(--fs-xs); white-space: nowrap; background: var(--surface-2); }
+.agr-group th { background: var(--surface-3); color: var(--text); font-weight: var(--fw-semibold); }
+.agr-quantity { font-weight: var(--fw-regular); color: var(--text); min-width: 150px; }
+.agr-reference { white-space: nowrap; }
+.agr-value { display: block; font-variant-numeric: tabular-nums; color: var(--text); }
+.agr-source { display: block; color: var(--text-2); font-size: var(--fs-xs); }
+.agr-axis-cell { width: 38%; min-width: 180px; padding-left: 0; padding-right: 0; }
+.agr-table .agr-axis-cell { padding-left: 0; padding-right: 0; }
+.agr-gap { color: var(--text-2); font-variant-numeric: tabular-nums; min-width: 150px; }
+.agr-verdict { white-space: nowrap; color: var(--text-2); }
+.agr-verdict[data-verdict="exact"], .agr-verdict[data-verdict="agree"] { color: var(--good-text); }
+.agr-verdict[data-verdict="close"] { color: var(--accent-text); }
+.agr-verdict[data-verdict="disagree"] { color: var(--warn-text); font-weight: var(--fw-semibold); }
+.agr-norows { margin: 0; padding: var(--sp-5); }
+
+/* The deviation axis. */
+.agr-axis { display: block; overflow: visible; }
+.agr-axis-head text { fill: var(--muted); font-size: var(--fs-2xs); }
+.agr-axis-line { stroke: var(--border); stroke-width: 1; }
+.agr-axis-tick { stroke: var(--border); stroke-width: 1; }
+.agr-axis-zero { stroke: var(--text-2); stroke-width: 1; }
+.agr-agree-band { fill: var(--surface-3); }
+.agr-band { fill: var(--tier-simulation); fill-opacity: 0.22; stroke: var(--tier-simulation); stroke-width: 1; }
+.agr-whisker { stroke-width: 1.5; stroke: var(--muted); }
+.agr-whisker[data-tier="exact"] { stroke: var(--tier-exact); }
+.agr-whisker[data-tier="simulation"] { stroke: var(--tier-simulation); }
+.agr-whisker[data-tier="diffusion"] { stroke: var(--tier-diffusion); }
+.agr-mark { outline: none; cursor: default; }
+.agr-mark-hit { fill: transparent; stroke: none; }
+.agr-mark-shape { stroke-width: 0; paint-order: stroke; }
+.agr-mark .agr-mark-shape { filter: drop-shadow(0 0 0.6px var(--surface)); }
+.agr-mark-ring { fill: none; stroke: var(--focus-ring); stroke-width: 2; }
+.agr-mark[data-dimmed] { opacity: 0.25; }
+
+/* Labels that qualify a value ("partial", "bound"), and the note under an uncertain reference. */
+.agr-tag { margin-left: var(--sp-2); padding: 0 var(--sp-2); border: 1px solid var(--hairline); border-radius: var(--r-sm); color: var(--text-2); font-size: var(--fs-2xs); }
+.agr-note { white-space: normal; max-width: 26ch; color: var(--text-2); }
+/* A partial run's mark is hollow; a bound's is a capped bar. */
+.agr-mark[data-partial] .agr-mark-shape { fill: var(--surface); stroke-width: 1.5; }
+.agr-mark[data-bound] .agr-mark-shape { fill: none; stroke-width: 2; }

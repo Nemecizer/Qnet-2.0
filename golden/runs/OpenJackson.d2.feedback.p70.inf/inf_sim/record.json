@@ -1,0 +1,295 @@
+{
+  "completedAt" : "2026-11-11T04:56:05Z",
+  "elapsedSeconds" : 0.38002192974090576,
+  "id" : "B42F8744-C799-4901-B762-C8D3362421B8",
+  "measurements" : [
+    {
+      "estimate" : 0.7,
+      "id" : "372BD6EA-0F6C-456F-8AA2-725611D8C36D",
+      "metric" : "Utilization",
+      "stationID" : "35E1B6F9-5466-4903-861E-7D5807C85A31",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.699,
+        "upperBound" : 0.701
+      },
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.699,
+      "id" : "9EACA918-C515-413C-9719-700D05ACCECB",
+      "metric" : "Utilization",
+      "stationID" : "4B7B4EF6-A449-403E-98C1-EB400E88D7EF",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.697,
+        "upperBound" : 0.701
+      },
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 3.331,
+      "id" : "0151D25D-A90F-4E1F-93E9-46C523CAA358",
+      "metric" : "Throughput",
+      "stationID" : "35E1B6F9-5466-4903-861E-7D5807C85A31",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 3.323,
+        "upperBound" : 3.339
+      },
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 1,
+      "id" : "BD00336E-873F-4B76-BAB8-A48BF7AADA7F",
+      "metric" : "Throughput",
+      "stationID" : "4B7B4EF6-A449-403E-98C1-EB400E88D7EF",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.997,
+        "upperBound" : 1.003
+      },
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.705,
+      "id" : "6330F051-4ADD-4903-A17E-5141CB5925C1",
+      "metric" : "Mean sojourn time",
+      "stationID" : "35E1B6F9-5466-4903-861E-7D5807C85A31",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 2.323,
+      "id" : "E3DF3218-1F3B-447D-A866-36D5098EACA9",
+      "metric" : "Mean sojourn time",
+      "stationID" : "4B7B4EF6-A449-403E-98C1-EB400E88D7EF",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 2.348,
+      "id" : "A359AD0F-633B-447D-90EF-14A70DE11E84",
+      "metric" : "Mean number in system",
+      "stationID" : "35E1B6F9-5466-4903-861E-7D5807C85A31",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 2.316,
+        "upperBound" : 2.38
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 2.323,
+      "id" : "661B4A33-3485-4DAD-8E76-98B030D662C4",
+      "metric" : "Mean number in system",
+      "stationID" : "4B7B4EF6-A449-403E-98C1-EB400E88D7EF",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 2.301,
+        "upperBound" : 2.3449999999999998
+      },
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Monte Carlo",
+    "fidelity" : "Queue simulation",
+    "identifier" : "queue.des",
+    "implementation" : "BNAsim\/fBNAsim",
+    "layer" : "Queueing process",
+    "shortName" : "Monte Carlo"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "35E1B6F9-5466-4903-861E-7D5807C85A31",
+      "4B7B4EF6-A449-403E-98C1-EB400E88D7EF"
+    ],
+    "networkFingerprint" : "789f777d4d57b10f0888529352e02393f32c8d5a6d9b82b2a0c4cf4edeff6576",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "16EF3453-20C2-4D6A-851A-0F7025F20AE9",
+          "id" : "7587D7D0-2F56-426D-9575-38F68B1A5065",
+          "routingProbability" : 1,
+          "toNodeID" : "2451DD16-3174-49D9-AD9F-48055E77C093"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "2451DD16-3174-49D9-AD9F-48055E77C093",
+          "id" : "3A65EF01-7CD1-4A6A-9182-A5E4B4C8A838",
+          "routingProbability" : 1,
+          "toNodeID" : "35E1B6F9-5466-4903-861E-7D5807C85A31"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "35E1B6F9-5466-4903-861E-7D5807C85A31",
+          "id" : "6C13A1C8-4B81-4E83-A84A-1539B9FA0C66",
+          "routingProbability" : 0.30000000000000004,
+          "toNodeID" : "CD053722-9F02-499A-9BF1-D827A450B7F7"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "35E1B6F9-5466-4903-861E-7D5807C85A31",
+          "id" : "ED16EF2F-BFA8-4B4C-B55E-0037EB36C0C9",
+          "routingProbability" : 0.7,
+          "toNodeID" : "2451DD16-3174-49D9-AD9F-48055E77C093"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "CD053722-9F02-499A-9BF1-D827A450B7F7",
+          "id" : "F7097EF3-CE2C-478A-9EDE-E0267041D50B",
+          "routingProbability" : 1,
+          "toNodeID" : "4B7B4EF6-A449-403E-98C1-EB400E88D7EF"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "4B7B4EF6-A449-403E-98C1-EB400E88D7EF",
+          "id" : "0256F1D6-2DB2-459E-A78B-008FF14AAAD7",
+          "routingProbability" : 1,
+          "toNodeID" : "C9F0C99E-2C83-48EA-BB72-E6D268C1DEFF"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=1.0",
+          "id" : "16EF3453-20C2-4D6A-851A-0F7025F20AE9",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "2451DD16-3174-49D9-AD9F-48055E77C093",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            200,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=4.761904761904762",
+          "id" : "35E1B6F9-5466-4903-861E-7D5807C85A31",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            300,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "CD053722-9F02-499A-9BF1-D827A450B7F7",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            400,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.4285714285714286",
+          "id" : "4B7B4EF6-A449-403E-98C1-EB400E88D7EF",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            500,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C9F0C99E-2C83-48EA-BB72-E6D268C1DEFF",
+          "kind" : "sink",
+          "name" : "Sink",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "OpenJackson.d2.feedback.p70.inf.bnet",
+    "parameters" : {
+      "fixed seed" : "true",
+      "replications" : "8",
+      "simulation time" : "200000",
+      "warm-up" : "10000"
+    },
+    "replicationSeeds" : [
+      12345,
+      12346,
+      12347,
+      12348,
+      12349,
+      12350,
+      12351,
+      12352
+    ],
+    "seed" : 12345,
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/OpenJackson.d2.feedback.p70.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] Using 18 CPU cores (OpenMP)\nRunning simulation ...  [                              ]  starting ...\r\u001b[KRunning simulation ...  [\u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m ]  8\/8          (100%)     0.1s\n\nNetwork load: rho_max = 0.7000 at S1  (moderate load — SRBM\/FEM are heavy-traffic limits; expect deviation from simulation)\nRouting graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference\n──  Open Jackson network — exact M\/M\/s product form  ──\n           Simulation             Exact E[N]  (Jackson)\n           ==========             ============\n\nrho_1      0.700 ± 0.001 (+0.0%)  0.700\nrho_2      0.699 ± 0.002 (-0.1%)  0.700\n\nGamma_1    3.331 ± 0.008 (-0.1%)  3.333\nGamma_2    1.000 ± 0.003 (+0.0%)  1.000\n\nsojourn_1  0.705 (+0.7%)          0.700\nsojourn_2  2.323 (-0.4%)          2.333\n\nE[Q_1]     2.348 ± 0.032 (+0.6%)  2.333\nE[Q_2]     2.323 ± 0.022 (-0.4%)  2.333\n\nElapsed time: 0.181s\n\n",
+  "startedAt" : "2026-11-11T04:56:05Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

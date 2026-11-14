@@ -1,0 +1,82 @@
+{
+  "blocking" : "bas",
+  "classes" : [
+    {
+      "external_arrivals" : {
+        "s1" : 1
+      },
+      "id" : "c1",
+      "name" : "Class 1"
+    },
+    {
+      "external_arrivals" : {
+        "s2" : 1
+      },
+      "id" : "c2",
+      "name" : "Class 2"
+    },
+    {
+      "external_arrivals" : {
+
+      },
+      "id" : "c3",
+      "name" : "Class 3"
+    },
+    {
+      "external_arrivals" : {
+
+      },
+      "id" : "c4",
+      "name" : "Class 4"
+    }
+  ],
+  "name" : "KumarSeidman90.d2.c4.reentrant.inf",
+  "routes" : [
+    {
+      "class" : "c1",
+      "from" : "s1",
+      "probability" : 1,
+      "to" : "s2",
+      "to_class" : "c3"
+    },
+    {
+      "class" : "c2",
+      "from" : "s2",
+      "probability" : 1,
+      "to" : "s1",
+      "to_class" : "c4"
+    }
+  ],
+  "schema_version" : 1,
+  "solver" : {
+    "damping" : 0.5,
+    "max_iterations" : 1000,
+    "tolerance" : 1e-10
+  },
+  "stations" : [
+    {
+      "capacity" : 11,
+      "id" : "s1",
+      "name" : "S1",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 10,
+        "c2" : 1,
+        "c3" : 1,
+        "c4" : 1.6666669999999999
+      }
+    },
+    {
+      "capacity" : 11,
+      "id" : "s2",
+      "name" : "S2",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1,
+        "c2" : 10,
+        "c3" : 1.6666669999999999,
+        "c4" : 1
+      }
+    }
+  ]
+}

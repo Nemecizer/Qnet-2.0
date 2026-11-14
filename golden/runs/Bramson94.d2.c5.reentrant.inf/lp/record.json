@@ -1,0 +1,267 @@
+{
+  "completedAt" : "2026-11-11T04:44:04Z",
+  "elapsedSeconds" : 1.1764919757843018,
+  "id" : "730FC982-4C58-4655-914D-DE276B10734F",
+  "measurements" : [
+    {
+      "estimate" : 7.806993,
+      "id" : "B31E3780-DEB7-4CAC-B129-12D9286878DB",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "D7C5B5BA-FB7E-563A-8C23-0DBDAE13F21E",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 4.458848,
+      "id" : "6BF149F2-35EA-419E-9942-B1D21FD7A889",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "097FE131-FFAD-5031-B193-03AC6745827C",
+      "stationName" : "S2",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "BAR Linear Program",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.lp",
+    "implementation" : "BNAlp\/fBNAlp",
+    "layer" : "SRBM diffusion",
+    "shortName" : "LP"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "D7C5B5BA-FB7E-563A-8C23-0DBDAE13F21E",
+      "097FE131-FFAD-5031-B193-03AC6745827C"
+    ],
+    "networkFingerprint" : "8acbd8ffb7b8687b093515e4545550d5cc7aa1ddb1f8c3e8b2aadc5627254049",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B22EC49F-98C2-567E-ACDA-A16D473A224D",
+          "id" : "1F8641E3-1D6E-57AC-9DCE-20691C7DE3BD",
+          "routingProbability" : 1,
+          "toNodeID" : "8CA6E12D-12B8-520A-807E-90FED8F0CEFE"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "8CA6E12D-12B8-520A-807E-90FED8F0CEFE",
+          "id" : "DD579264-27C4-546C-A0AB-984B61DFEBFA",
+          "routingProbability" : 1,
+          "toNodeID" : "D7C5B5BA-FB7E-563A-8C23-0DBDAE13F21E"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "0C9A64D7-5D35-5564-AC33-B4D86867537E",
+          "id" : "19C8F468-3FC2-567F-9023-D46F477ABD72",
+          "routingProbability" : 1,
+          "toNodeID" : "097FE131-FFAD-5031-B193-03AC6745827C"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "0C9A64D7-5D35-5564-AC33-B4D86867537E",
+          "id" : "04401099-05FA-5C16-8E30-544EA31D2B95",
+          "routingProbability" : 1,
+          "toNodeID" : "097FE131-FFAD-5031-B193-03AC6745827C"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "0C9A64D7-5D35-5564-AC33-B4D86867537E",
+          "id" : "9C3070C8-D041-5751-A9AD-5B17B53E1003",
+          "routingProbability" : 1,
+          "toNodeID" : "097FE131-FFAD-5031-B193-03AC6745827C"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "8CA6E12D-12B8-520A-807E-90FED8F0CEFE",
+          "id" : "5C748508-4400-52B6-AD4B-2A84B74F762B",
+          "routingProbability" : 1,
+          "toNodeID" : "D7C5B5BA-FB7E-563A-8C23-0DBDAE13F21E"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D7C5B5BA-FB7E-563A-8C23-0DBDAE13F21E",
+          "id" : "B6A52351-FAEB-5AEF-BB15-2DB4B551D4C2",
+          "routingProbability" : 1,
+          "toNodeID" : "0C9A64D7-5D35-5564-AC33-B4D86867537E"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "097FE131-FFAD-5031-B193-03AC6745827C",
+          "id" : "DFA43A1B-D17C-587E-8F4E-EEB5FFECC5C3",
+          "routingProbability" : 1,
+          "toCustomerClass" : 1,
+          "toNodeID" : "0C9A64D7-5D35-5564-AC33-B4D86867537E"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "097FE131-FFAD-5031-B193-03AC6745827C",
+          "id" : "45BD4B25-9E82-5116-BF33-7180048379E5",
+          "routingProbability" : 1,
+          "toCustomerClass" : 2,
+          "toNodeID" : "0C9A64D7-5D35-5564-AC33-B4D86867537E"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "097FE131-FFAD-5031-B193-03AC6745827C",
+          "id" : "9E5CA613-5571-5AC5-942D-4A8F6D3B5B50",
+          "routingProbability" : 1,
+          "toNodeID" : "8CA6E12D-12B8-520A-807E-90FED8F0CEFE"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "D7C5B5BA-FB7E-563A-8C23-0DBDAE13F21E",
+          "id" : "D16F9644-DA1A-5426-87A4-8DEDC9042530",
+          "routingProbability" : 1,
+          "toNodeID" : "D76A52A0-4602-586B-90C0-1F331FDA37AA"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=1.0",
+          "id" : "B22EC49F-98C2-567E-ACDA-A16D473A224D",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            200,
+            60
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "8CA6E12D-12B8-520A-807E-90FED8F0CEFE",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            440,
+            120
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "0C9A64D7-5D35-5564-AC33-B4D86867537E",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            440,
+            280
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "D7C5B5BA-FB7E-563A-8C23-0DBDAE13F21E",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            120
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=100.000000"
+            },
+            "2" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.123596"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "097FE131-FFAD-5031-B193-03AC6745827C",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            280
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.136364"
+            },
+            "1" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=100.000000"
+            },
+            "2" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=100.000000"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "D76A52A0-4602-586B-90C0-1F331FDA37AA",
+          "kind" : "sink",
+          "name" : "Sink",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            820,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "Bramson94.d2.c5.reentrant.inf.bnet",
+    "parameters" : {
+      "basis normalization" : "false",
+      "basis size" : "6",
+      "grid size" : "100",
+      "grid type" : "exponential",
+      "multi-level" : "false",
+      "smoothness" : "0.0",
+      "solver" : "automatic"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/Bramson94.d2.c5.reentrant.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Running Linear Program (BNAlp, Saure-Glynn-Zeevi 2008)\nauto-scaled for d=2: grid_n=100, basis_m=6\n\nSRBM Parameters:\n  dimension     = 2\n  grid_n        = 100\n  basis_m       = 6\n  grid_type     = 0 (0=exp, 1=dya, 2=expran)\n  max_moments   = 4\n  solver        = (default)\n  output_prefix = srbm_out\n  drift         = -0.0500 0.0000\n  covariance:\n       1.8367  -0.6963\n      -0.6963   0.3782\n  reflection:\n       1.0000  -0.5000\n      -0.3333   0.3333\n  grid_spacing  = 0.0000 0.0000\n  tightness K   = 100000 100000 100000 100000 100000\n  smoothness_w  = 0 (disabled)\n  basis_norm    = 0 (raw monomials)\n  Auto rho      = 0.2000 0.2000\n  Effective grid_spacing (rho\/4) = 0.0500 0.0500\n\n[Parse] 0.001 s\n[Grid]  10000 points, 0.007 s\n  Face 1 boundary: 100 points\n  Face 2 boundary: 100 points\n[Index] 28 basis functions, 0.000 s\n[Basis] 0.000 s\n[Eval interior] 0.002 s\n[Eval boundary] 0.000 s\n[Build LP] 62 rows, 10201 cols, 541209 nnz, 0.012 s\n[Solve] Using solver: highs\n[Solve] Optimal u* = 0.0000000000e+00, 0.803 s\n\nMoments:\n  Order     E[Z_1^k]      E[Z_2^k]    \n  k=1          7.806993      4.458848\n  k=2        113.865490     36.031623\n  k=3       2371.786690    420.080488\n  k=4      63347.260839   6294.846453\n\nOutput files:\n  Wrote srbm_out_marginal_1.csv (100 points)\n  Wrote srbm_out_marginal_2.csv (100 points)\n  Wrote srbm_out_distribution.csv (10000 points)\n\n[Total] 0.887 s\nE[X_1] = 7.806993\nE[X_2] = 4.458848\n\nLinear Program (Saure-Glynn-Zeevi 2008 LP)\n==========================================\n\nSolver: highs  |  grid_n = 100  |  basis_m = 6\n[Build LP] 62 rows, 10201 cols, 541209 nnz, 0.012 s\n[Solve] Optimal u* = 0.0000000000e+00, 0.803 s\n[Total] 0.887s\n\nNode   Servers  E[Y] (workload)  L = mu·E[Y]     mu_i      \n1      1        7.8070           17.3489          2.2222    \n2      1        4.4588           14.8628          3.3333    \n\nNetwork Totals:\n  Total E[N]:             32.2117\n  Average queue length:   16.1059\nElapsed time: 0.967s\n\n",
+  "startedAt" : "2026-11-11T04:44:03Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

@@ -1,0 +1,26 @@
+[A[2K[Threads] Single-threaded (analytical solver)
+Running QNA ...  [ ]                                                       0.0s[KRunning QNA ...  [done]                                                    0.0s
+
+Network load: rho_max = 0.898 at S1  (near heavy-traffic — small O(1) deviation expected)
+Routing graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference
+           QNA
+           ===
+
+rho_1      0.898
+rho_2      0.592
+rho_3      0.357
+
+Gamma_1    0.898
+Gamma_2    0.592
+Gamma_3    0.357
+
+sojourn_1  7.328
+sojourn_2  1.996
+sojourn_3  1.408
+
+E[Q_1]     6.580
+E[Q_2]     1.181
+E[Q_3]     0.503
+
+Elapsed time: 0.088s
+

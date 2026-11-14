@@ -1,0 +1,70 @@
+Running Linear Program (BNAlp, Saure-Glynn-Zeevi 2008)
+auto-scaled for d=2: grid_n=100, basis_m=6
+
+SRBM Parameters:
+  dimension     = 2
+  grid_n        = 100
+  basis_m       = 6
+  grid_type     = 0 (0=exp, 1=dya, 2=expran)
+  max_moments   = 4
+  solver        = (default)
+  output_prefix = srbm_out
+  drift         = -0.4000 0.0000
+  covariance:
+       0.6000   0.0000
+       0.0000   0.6000
+  reflection:
+       1.0000   0.0000
+      -1.0000   1.0000
+  grid_spacing  = 0.0000 0.0000
+  tightness K   = 100000 100000 100000 100000 100000
+  smoothness_w  = 0 (disabled)
+  basis_norm    = 0 (raw monomials)
+  Auto rho      = 0.8000 0.8000
+  Effective grid_spacing (rho/4) = 0.2000 0.2000
+
+[Parse] 0.000 s
+[Grid]  10000 points, 0.002 s
+  Face 1 boundary: 100 points
+  Face 2 boundary: 100 points
+[Index] 28 basis functions, 0.000 s
+[Basis] 0.000 s
+[Eval interior] 0.001 s
+[Eval boundary] 0.000 s
+[Build LP] 62 rows, 10201 cols, 539027 nnz, 0.007 s
+[Solve] Using solver: highs
+[Solve] Optimal u* = 0.0000000000e+00, 0.721 s
+
+Moments:
+  Order     E[Z_1^k]      E[Z_2^k]    
+  k=1          0.750000      0.990841
+  k=2          1.125000      2.611261
+  k=3          2.531250     10.142491
+  k=4          7.593750     55.647236
+
+Output files:
+  Wrote srbm_out_marginal_1.csv (100 points)
+  Wrote srbm_out_marginal_2.csv (100 points)
+  Wrote srbm_out_distribution.csv (10000 points)
+
+[Total] 0.743 s
+E[X_1] = 0.750000
+E[X_2] = 0.990841
+
+Linear Program (Saure-Glynn-Zeevi 2008 LP)
+==========================================
+
+Solver: highs  |  grid_n = 100  |  basis_m = 6
+[Build LP] 62 rows, 10201 cols, 539027 nnz, 0.007 s
+[Solve] Optimal u* = 0.0000000000e+00, 0.721 s
+[Total] 0.743s
+
+Node   Servers  E[Y] (workload)  L = mu·E[Y]     mu_i      
+1      1        0.7500           0.7500           1.0000    
+2      1        0.9908           0.9908           1.0000    
+
+Network Totals:
+  Total E[N]:             1.7408
+  Average queue length:   0.8704
+Elapsed time: 0.845s
+

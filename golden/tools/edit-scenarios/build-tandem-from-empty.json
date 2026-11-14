@@ -1,0 +1,32 @@
+{
+ "description": "Build Src1 → B1 → S1 → Sink1 on an empty canvas with the four add tools and the Link tool's click chain, then undo and redo across it.",
+ "start": null,
+ "viewport": [1200, 800],
+ "steps": [
+  {"op": "setTool", "tool": "addSource"},
+  {"op": "canvasClick", "at": [100, 200]},
+  {"op": "setTool", "tool": "addBuffer"},
+  {"op": "canvasClick", "at": [230, 200]},
+  {"op": "setTool", "tool": "addStation"},
+  {"op": "canvasClick", "at": [360, 200]},
+  {"op": "setTool", "tool": "addSink"},
+  {"op": "canvasClick", "at": [490, 200]},
+  {"op": "setTool", "tool": "addLink"},
+  {"op": "nodeClick", "node": "Src1"},
+  {"op": "nodeClick", "node": "B1"},
+  {"op": "nodeClick", "node": "S1"},
+  {"op": "nodeClick", "node": "Sink1"},
+  {"op": "nodeClick", "node": "Sink1"},
+  {"op": "undo"},
+  {"op": "undo"},
+  {"op": "undo"},
+  {"op": "redo"},
+  {"op": "redo"},
+  {"op": "redo"},
+  {"op": "redo"},
+  {"op": "canvasClick", "at": [300, 400]},
+  {"op": "setTool", "tool": "select"},
+  {"op": "nodeClick", "node": "S1"},
+  {"op": "canvasClick", "at": [300, 400]}
+ ]
+}

@@ -1,0 +1,79 @@
+/* The pane layout: the split tree, its dividers and corner grips, the panes' headers with the
+   2-pt focus rule, the detached pane windows and the top bar's workspace controls. Tokens only. */
+
+.pane-layout { flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+
+.split { flex: 1; display: flex; min-width: 0; min-height: 0; }
+.split-v { flex-direction: column; }
+.split-h { flex-direction: row; }
+.split-item { position: relative; display: flex; min-width: 0; min-height: 0; }
+
+/* A thin divider with a wider hit area, as NSSplitView's thin style. */
+.split-divider { position: relative; z-index: 3; flex: none; background: var(--hairline); touch-action: none; }
+.split-divider-h { width: 1px; cursor: col-resize; }
+.split-divider-v { height: 1px; cursor: row-resize; }
+.split-divider::before { content: ""; position: absolute; }
+.split-divider-h::before { inset: 0 -3px; }
+.split-divider-v::before { inset: -3px 0; }
+.split-divider:focus-visible { outline-offset: 0; }
+
+/* Corner grips: 24 × 24 at a T-junction, drawn on the vertical divider's end. */
+.corner-grip {
+  position: absolute; z-index: 4; left: calc(50% - 12px); width: 24px; height: 24px;
+  cursor: crosshair; touch-action: none;
+}
+.corner-grip-end { bottom: -12px; }
+.corner-grip-start { top: -12px; }
+.corner-grip-l { display: block; pointer-events: none; }
+.corner-grip-l path { fill: none; stroke: var(--text-2); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Where a pane appears, and the element its tree lives in (moved between slots and windows). */
+.pane-slot { flex: 1; display: flex; min-width: 0; min-height: 0; overflow: hidden; }
+.pane-host { flex: 1; display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.pane-host > * { flex: 1; min-height: 0; }
+
+/* Showing a pane fades it in (DS.Motion.standard, 250 ms), unless Reduce Motion is on. */
+@keyframes pane-fade { from { opacity: 0; } }
+.pane-fade-in { animation: pane-fade 250ms ease-in-out; }
+:root[data-motion="reduce"] .pane-fade-in { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-motion]) .pane-fade-in { animation: none; }
+}
+
+/* A pane: header over body. */
+.pane { display: flex; flex-direction: column; min-width: 0; min-height: 0; background: var(--surface); }
+.pane-header { position: relative; flex: none; background: var(--surface); border-bottom: 1px solid var(--hairline); }
+.pane-header-row { display: flex; align-items: center; gap: var(--sp-4); height: 28px; padding: 0 var(--sp-3) 0 var(--sp-4); }
+.pane-header-title { margin: 0; font-size: var(--fs-md); font-weight: var(--fw-semibold); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pane-header-trailing { display: flex; align-items: center; gap: var(--sp-2); }
+.pane-header-subtitle {
+  padding: 0 var(--sp-4) var(--sp-2); font-family: var(--mono); font-size: var(--fs-sm); color: var(--muted);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.pane-empty { flex: 1; display: flex; align-items: center; justify-content: center; padding: var(--sp-6); text-align: center; }
+.pane-empty p { margin: 0; max-width: 32em; }
+.pane-window-btn { flex: none; }
+
+/* The focus rule: 2 pt of accent along the top of the focused pane's header (the canvas: its tab bar). */
+.pane-header::before, .canvas-tabbar::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; z-index: 1;
+  background: var(--accent); opacity: 0; pointer-events: none;
+  transition: opacity var(--dur-1) var(--ease);
+}
+.pane-header[data-focused]::before, .canvas-tabbar[data-focused]::before { opacity: 1; }
+.canvas-tabbar { position: relative; flex: none; }
+
+/* The canvas status bar ends with the canvas's window control. */
+.canvas-statusbar { display: flex; align-items: center; gap: var(--sp-4); padding: 0 var(--sp-2) 0 var(--sp-5); background: var(--chrome); }
+.canvas-statusbar-main { flex: 1; min-width: 0; }
+.canvas-statusbar .pane-window-btn { width: 20px; height: 20px; }
+.canvas-placeholder { background: var(--surface); }
+
+/* A detached pane's window: the pane fills it. */
+.pane-window { position: fixed; inset: 0; display: flex; background: var(--surface); }
+
+/* The top bar's workspace controls. */
+.workspace-toolbar { display: flex; align-items: center; gap: var(--sp-2); }
+.toolbar-btn { width: 28px; height: 26px; }
+.toolbar-btn[aria-pressed="true"] { background: var(--surface-3); color: var(--text); }
+.toolbar-btn[aria-expanded="true"] { background: var(--hover); color: var(--text); }

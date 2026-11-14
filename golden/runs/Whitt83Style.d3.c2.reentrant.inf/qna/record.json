@@ -1,0 +1,387 @@
+{
+  "completedAt" : "2026-11-11T04:57:01Z",
+  "elapsedSeconds" : 0.4978240728378296,
+  "id" : "0B111D87-DC9B-4D0B-84DF-66949FBE9C1D",
+  "measurements" : [
+    {
+      "estimate" : 0.278,
+      "id" : "AB15CF2C-BB78-479A-99DF-B96734680E60",
+      "metric" : "Utilization",
+      "stationID" : "1E655771-B358-4903-8E3C-547D585B3E16",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.528,
+      "id" : "6F2554D5-7B8F-49AA-B8FC-BBB738C06607",
+      "metric" : "Utilization",
+      "stationID" : "2A2B4811-8EB4-42B9-BC0B-7D94832AEDC6",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.5,
+      "id" : "190FBDF6-99BA-4AE4-8469-71F02FA17700",
+      "metric" : "Utilization",
+      "stationID" : "5BAD2269-3BE3-4F13-A46D-7C83DE094943",
+      "stationName" : "S3",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.556,
+      "id" : "1FFF65B9-E2ED-4344-8249-CD9FCFAF5F56",
+      "metric" : "Throughput",
+      "stationID" : "1E655771-B358-4903-8E3C-547D585B3E16",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 1.056,
+      "id" : "2A6CD9D6-0479-48AE-809D-FE014536B2FA",
+      "metric" : "Throughput",
+      "stationID" : "2A2B4811-8EB4-42B9-BC0B-7D94832AEDC6",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 1,
+      "id" : "94944113-DA03-4C25-A643-A9EC399616D7",
+      "metric" : "Throughput",
+      "stationID" : "5BAD2269-3BE3-4F13-A46D-7C83DE094943",
+      "stationName" : "S3",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.692,
+      "id" : "B515E2BA-66E7-4E04-BAE7-7224DC41DA3C",
+      "metric" : "Mean sojourn time",
+      "stationID" : "1E655771-B358-4903-8E3C-547D585B3E16",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 1.059,
+      "id" : "99DEB03D-4D15-4208-B4D8-BD8A74695C01",
+      "metric" : "Mean sojourn time",
+      "stationID" : "2A2B4811-8EB4-42B9-BC0B-7D94832AEDC6",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 1,
+      "id" : "6B931B88-0C2B-4FA5-95A7-C7DB4D00182F",
+      "metric" : "Mean sojourn time",
+      "stationID" : "5BAD2269-3BE3-4F13-A46D-7C83DE094943",
+      "stationName" : "S3",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 0.385,
+      "id" : "B276CAE9-FC3C-470D-989B-69ABFEECCCAF",
+      "metric" : "Mean number in system",
+      "stationID" : "1E655771-B358-4903-8E3C-547D585B3E16",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 1.118,
+      "id" : "F0DF6986-94F9-49D8-B4EB-CA001C4366F9",
+      "metric" : "Mean number in system",
+      "stationID" : "2A2B4811-8EB4-42B9-BC0B-7D94832AEDC6",
+      "stationName" : "S2",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 1,
+      "id" : "5793DDBA-F925-4A72-96E6-483B9BE02276",
+      "metric" : "Mean number in system",
+      "stationID" : "5BAD2269-3BE3-4F13-A46D-7C83DE094943",
+      "stationName" : "S3",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Whitt QNA",
+    "fidelity" : "Queueing approximation",
+    "identifier" : "queue-approx.qna",
+    "implementation" : "BNAqna",
+    "layer" : "Queue approximation",
+    "shortName" : "QNA"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "1E655771-B358-4903-8E3C-547D585B3E16",
+      "2A2B4811-8EB4-42B9-BC0B-7D94832AEDC6",
+      "5BAD2269-3BE3-4F13-A46D-7C83DE094943"
+    ],
+    "networkFingerprint" : "50e051850663092a91e50d1f40adca8f76ee8ddff9cbe9ae595fe7cb54e2bd06",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "06DA034F-7FE1-4271-BF54-F173E099F09F",
+          "id" : "79A4E79E-9139-44D4-9BD4-471192BADD25",
+          "routingProbability" : 1,
+          "toNodeID" : "71C0750A-6CBF-4311-BD00-22E229942D57"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "71C0750A-6CBF-4311-BD00-22E229942D57",
+          "id" : "2E1B0538-3608-4B7D-8F73-DE52B004656D",
+          "routingProbability" : 1,
+          "toNodeID" : "1E655771-B358-4903-8E3C-547D585B3E16"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "1E655771-B358-4903-8E3C-547D585B3E16",
+          "id" : "98E01555-9D5A-4D62-83CD-A12668DCAD5B",
+          "routingProbability" : 1,
+          "toNodeID" : "1D8295ED-BC9A-43D6-B25E-1117A8DAB2A2"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "1D8295ED-BC9A-43D6-B25E-1117A8DAB2A2",
+          "id" : "33F78AA3-DA4C-44EE-9318-65F87F9D8431",
+          "routingProbability" : 1,
+          "toNodeID" : "2A2B4811-8EB4-42B9-BC0B-7D94832AEDC6"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "2A2B4811-8EB4-42B9-BC0B-7D94832AEDC6",
+          "id" : "385437DA-0093-4E39-82F8-47EE8AF2FE60",
+          "routingProbability" : 0.9,
+          "toNodeID" : "4BEBE87F-0B58-47CC-BB7B-5D7BBA64A4BC"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "2A2B4811-8EB4-42B9-BC0B-7D94832AEDC6",
+          "id" : "FEBC0C72-18BF-43EB-A72F-C6C3E0D819FB",
+          "routingProbability" : 0.1,
+          "toNodeID" : "71C0750A-6CBF-4311-BD00-22E229942D57"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "4BEBE87F-0B58-47CC-BB7B-5D7BBA64A4BC",
+          "id" : "02B3D0BD-058F-4906-A941-CD55E6AEFC94",
+          "routingProbability" : 1,
+          "toNodeID" : "5BAD2269-3BE3-4F13-A46D-7C83DE094943"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "5BAD2269-3BE3-4F13-A46D-7C83DE094943",
+          "id" : "640525D9-B2D7-455A-ADF3-E09BCCE8A808",
+          "routingProbability" : 1,
+          "toNodeID" : "0D0DA393-8589-466C-9118-05B9E038FFC2"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "716C1211-221E-4EBC-AF3C-BCE05C0BC52E",
+          "id" : "16114797-0F73-4F41-A5C2-AEB7C3B55DF1",
+          "routingProbability" : 1,
+          "toNodeID" : "1D8295ED-BC9A-43D6-B25E-1117A8DAB2A2"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "1D8295ED-BC9A-43D6-B25E-1117A8DAB2A2",
+          "id" : "2CB523AB-A75E-4A4F-91E8-C0468EA7CB86",
+          "routingProbability" : 1,
+          "toNodeID" : "2A2B4811-8EB4-42B9-BC0B-7D94832AEDC6"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "2A2B4811-8EB4-42B9-BC0B-7D94832AEDC6",
+          "id" : "6BF77543-D8E1-416A-9EA1-A9FD739E2877",
+          "routingProbability" : 1,
+          "toNodeID" : "4BEBE87F-0B58-47CC-BB7B-5D7BBA64A4BC"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "4BEBE87F-0B58-47CC-BB7B-5D7BBA64A4BC",
+          "id" : "B73C56E4-D593-40C7-8114-FF3825DC8181",
+          "routingProbability" : 1,
+          "toNodeID" : "5BAD2269-3BE3-4F13-A46D-7C83DE094943"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "5BAD2269-3BE3-4F13-A46D-7C83DE094943",
+          "id" : "5AAE62DE-07AA-4200-8B9B-E667CC26607F",
+          "routingProbability" : 1,
+          "toNodeID" : "0D0DA393-8589-466C-9118-05B9E038FFC2"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.5",
+          "id" : "06DA034F-7FE1-4271-BF54-F173E099F09F",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            100
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.5",
+          "id" : "716C1211-221E-4EBC-AF3C-BCE05C0BC52E",
+          "kind" : "source",
+          "name" : "Src2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            300
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "71C0750A-6CBF-4311-BD00-22E229942D57",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            200,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=2.0",
+          "id" : "1E655771-B358-4903-8E3C-547D585B3E16",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            280,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "1D8295ED-BC9A-43D6-B25E-1117A8DAB2A2",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            400,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=2.0",
+          "id" : "2A2B4811-8EB4-42B9-BC0B-7D94832AEDC6",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            480,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "4BEBE87F-0B58-47CC-BB7B-5D7BBA64A4BC",
+          "kind" : "buffer",
+          "name" : "B3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=2.0",
+          "id" : "5BAD2269-3BE3-4F13-A46D-7C83DE094943",
+          "kind" : "station",
+          "name" : "S3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            680,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "0D0DA393-8589-466C-9118-05B9E038FFC2",
+          "kind" : "sink",
+          "name" : "Sink",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            800,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "Whitt83Style.d3.c2.reentrant.inf.bnet",
+    "parameters" : {
+
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/Whitt83Style.d3.c2.reentrant.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] Single-threaded (analytical solver)\nRunning QNA ...  [ ]                                                       0.0s\r\u001b[KRunning QNA ...  [done]                                                    0.0s\n\nNetwork load: rho_max = 0.5278 at S2  (moderate load — SRBM\/FEM are heavy-traffic limits; expect deviation from simulation)\nRouting graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference\n──  SRBM skew-symmetric case — Harrison–Williams 1987 exact product form  ──\n           QNA            Exact E[X]  (skew-sym)\n           ===            ============\n\nrho_1      0.278 (+0.0%)  0.278\nrho_2      0.528 (+0.0%)  0.528\nrho_3      0.500 (+0.0%)  0.500\n\nGamma_1    0.556 (+0.0%)  0.556\nGamma_2    1.056 (+0.0%)  1.056\nGamma_3    1.000 (+0.0%)  1.000\n\nsojourn_1  0.692 (+0.0%)  0.692\nsojourn_2  1.059 (+0.0%)  1.059\nsojourn_3  1.000 (+0.0%)  1.000\n\nE[Q_1]     0.385 (+0.0%)  0.385\nE[Q_2]     1.118 (+0.0%)  1.118\nE[Q_3]     1.000 (+0.0%)  1.000\n\nElapsed time: 0.082s\n\n",
+  "startedAt" : "2026-11-11T04:57:00Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

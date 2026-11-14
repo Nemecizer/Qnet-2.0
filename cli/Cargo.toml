@@ -1,0 +1,22 @@
+[package]
+name = "qnet-cli"
+version = "2.1.2"
+description = "The qnet command-line tool: Qnet's model, analysis, exporters and solver runs without a window"
+edition = "2021"
+authors = ["Dr Joseph Edward Nemec"]
+license = "MIT"
+publish = false
+
+# Not "qnet": that is the app's own binary (src-tauri), and the two would overwrite each other in
+# the shared target folder. It ships under this name, as Qnet.app/Contents/MacOS/qnet-cli.
+[[bin]]
+name = "qnet-cli"
+path = "src/main.rs"
+
+[dependencies]
+qnet-core = { path = "../core" }
+# `qnet-cli run`: the run specifications, the supervisor and the results store (P3).
+qnet-runner = { path = "../runner" }
+# The local time for the finite simulator file's "# Generated:" line, without a date crate, and
+# the SIGINT handler that stops a run.
+libc = "0.2"

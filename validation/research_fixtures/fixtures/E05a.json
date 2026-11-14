@@ -1,0 +1,29 @@
+{
+  "id": "E05a",
+  "title": "Bounded 1-D RBM on [0, 2] with drift",
+  "evidence": "derived_exact",
+  "source": "Plans.md section 4, E05",
+  "model": {
+    "domain": "box",
+    "dimension": 1,
+    "drift": [-1.0],
+    "covariance": [
+      [1.0]
+    ],
+    "reflection": [
+      [1.0]
+    ],
+    "upper_bounds": [2.0],
+    "upper_reflection": [
+      [-1.0]
+    ]
+  },
+  "expected": {
+    "mean": [0.4626852792724519],
+    "second_moment": [0.3880558378173557],
+    "covariance_offdiagonal_zero": true,
+    "boundary_rates": [1.018657360363774],
+    "upper_boundary_rates": [0.018657360363774047]
+  },
+  "notes": "Mean 1/2 - 2/expm1(4). Lower minus upper regulator rate equals 1."
+}

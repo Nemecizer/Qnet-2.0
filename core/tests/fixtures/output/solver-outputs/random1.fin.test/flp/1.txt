@@ -1,0 +1,74 @@
+SRBM Parameters:
+  dimension     = 4
+  grid_n        = 8
+  basis_m       = 3
+  grid_type     = uniform
+  max_moments   = 4
+  solver        = highs
+  output_prefix = OUTPUT_PREFIX
+  drift         = -0.1019 -0.0923 -0.1010 -0.0972
+  upper_bounds  = 11.0000 11.0000 11.0000 11.0000
+  covariance:
+       1.2411  -0.0268  -0.0384  -0.0336
+      -0.0268   1.1330  -0.0485  -0.0374
+      -0.0384  -0.0485   1.7651  -0.2858
+      -0.0336  -0.0374  -0.2858   1.3738
+  reflection (lower):
+       1.0000   0.0000   0.0000   0.0000
+       0.0000   1.0000   0.0000   0.0000
+       0.0000   0.0000   1.0000   0.0000
+       0.0000   0.0000   0.0000   1.0000
+  reflection (upper):
+      -1.0000   0.0828   0.1183   0.1038
+       0.0000  -1.0000   0.1397   0.1052
+       0.0000   0.0000  -1.0000   0.3142
+       0.0000   0.0000   0.0000  -1.0000
+  tightness K   = (auto: 100000)
+  smoothness_w  = 0 (disabled)
+  basis_norm    = 0 (raw monomials)
+
+[Parse] 0.001 s
+[Grid]  4096 points, 0.002 s
+  Face 1: lower=512 upper=512
+  Face 2: lower=512 upper=512
+  Face 3: lower=512 upper=512
+  Face 4: lower=512 upper=512
+[Index] 35 basis functions, 0.000 s
+[Basis] 0.000 s
+[Eval interior] 0.001 s
+[Eval boundary] 0.001 s
+[Build LP] 88 rows, 8193 cols, 422167 nnz, 0.009 s
+[Solve] Using solver: highs
+[Solve] Optimal u* = 0.0000000000e+00, 6.098 s
+
+Moments:
+  Order     E[Z_1^k]      E[Z_2^k]      E[Z_3^k]      E[Z_4^k]    
+  k=1          4.036819      4.677343      4.392826      4.323582
+  k=2         26.040493     39.455033     27.611891     30.930628
+  k=3        212.345841    396.624145    206.543621    246.373115
+  k=4       1920.754835   4221.735676   1697.174922   2067.956568
+
+Output files:
+  Wrote OUTPUT_PREFIX_marginal_1.csv (8 points)
+  Wrote OUTPUT_PREFIX_marginal_2.csv (8 points)
+  Wrote OUTPUT_PREFIX_marginal_3.csv (8 points)
+  Wrote OUTPUT_PREFIX_marginal_4.csv (8 points)
+  Wrote OUTPUT_PREFIX_distribution.csv (4096 points)
+
+[Total] 6.117 s
+rho_1 = 0.885590
+rho_2 = 0.891643
+rho_3 = 0.865122
+rho_4 = 0.875060
+Gamma_1 = 0.902186
+Gamma_2 = 0.823262
+Gamma_3 = 0.873557
+Gamma_4 = 0.850506
+sojourn_1 = 4.474485
+sojourn_2 = 5.681473
+sojourn_3 = 5.028664
+sojourn_4 = 5.083542
+E[X_1] = 4.036819
+E[X_2] = 4.677343
+E[X_3] = 4.392826
+E[X_4] = 4.323582

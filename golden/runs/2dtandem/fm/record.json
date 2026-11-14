@@ -1,0 +1,248 @@
+{
+  "completedAt" : "2026-11-11T04:39:52Z",
+  "elapsedSeconds" : 0.3607800006866455,
+  "id" : "96006A05-08A6-4E2F-A533-ECA60F37B772",
+  "measurements" : [
+    {
+      "estimate" : 0.986,
+      "id" : "7C32D470-DFAE-485F-9F6B-18D20D022EA0",
+      "metric" : "Utilization",
+      "stationID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.98,
+      "id" : "6B73616D-24A0-4EDF-BFC6-115DF97B9F94",
+      "metric" : "Utilization",
+      "stationID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.986,
+      "id" : "20B2218B-BA4E-49DF-A0E5-87BD3265A3C0",
+      "metric" : "Throughput",
+      "stationID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.98,
+      "id" : "400E7E7D-CEE2-4562-A617-C798F0848B83",
+      "metric" : "Throughput",
+      "stationID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 14.348,
+      "id" : "405DEB4F-4E41-416A-BFE4-79300EB8DF2F",
+      "metric" : "Mean sojourn time",
+      "stationID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 12.755,
+      "id" : "EB91A129-5FA6-4DB3-948C-17EDC77D6ECA",
+      "metric" : "Mean sojourn time",
+      "stationID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 14.142,
+      "id" : "6DB3D786-BD50-40BB-8D70-9CD2A16025A6",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 12.5,
+      "id" : "8CB59BE2-2A7A-4821-B79C-0341EDE7C75A",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+      "stationName" : "S2",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Finite Element Method",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.fem",
+    "implementation" : "BNAfm\/fBNAfm",
+    "layer" : "SRBM diffusion",
+    "shortName" : "FEM"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Finite capacity",
+    "exportStationIDs" : [
+      "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+      "30E0C906-3664-4540-AFCC-57F0A5F0DC5D"
+    ],
+    "networkFingerprint" : "b3d7024dea00eccf050440df0bd4d9be18c89d69e3692309b3562587a6b4b43e",
+    "networkSnapshot" : {
+      "infiniteBuffers" : false,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "96C1EAB7-4224-45CA-814E-BF7D993EDE48",
+          "id" : "6292589A-290D-4064-857D-C6F2195C498D",
+          "routingProbability" : 1,
+          "toNodeID" : "4F0B3AB0-43B1-43C0-B9D7-784D24A67C23"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "4F0B3AB0-43B1-43C0-B9D7-784D24A67C23",
+          "id" : "34825D04-9042-478A-B6EF-6DB1F0975E31",
+          "routingProbability" : 1,
+          "toNodeID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+          "id" : "40A8F8BE-E38C-4897-9DEA-C19D2C9B2D76",
+          "routingProbability" : 1,
+          "toNodeID" : "5F5D2535-E251-448C-8012-89B4030E8546"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "5F5D2535-E251-448C-8012-89B4030E8546",
+          "id" : "008B528A-57E3-4A58-9559-0C700354FF27",
+          "routingProbability" : 1,
+          "toNodeID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+          "id" : "1869592A-E363-4E6E-A4F4-A9B05A3D32DD",
+          "routingProbability" : 1,
+          "toNodeID" : "D7262FD4-63CD-4A04-9072-C72C54F7C5D1"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=1.0",
+          "id" : "96C1EAB7-4224-45CA-814E-BF7D993EDE48",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            169.4609375,
+            198.36083984375
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "4F0B3AB0-43B1-43C0-B9D7-784D24A67C23",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            257.4609375,
+            198.36083984375
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "constant",
+          "distributionParameters" : "value=1.0",
+          "id" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            345.4609375,
+            198.36083984375
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "5F5D2535-E251-448C-8012-89B4030E8546",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            433.4609375,
+            198.36083984375
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1",
+          "id" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            521.4609375,
+            198.36083984375
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "D7262FD4-63CD-4A04-9072-C72C54F7C5D1",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            619.19140625,
+            198.6484375
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "2dtandem.bnet",
+    "parameters" : {
+      "mesh per dimension" : "10",
+      "quadrature" : "Gauss-Legendre"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/2dtandem.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] Using 18 CPU cores (OpenMP)\nRunning finite element method ...  [                              ]  starting ...\r\u001b[KRunning finite element method ...  [\u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m ]  100\/100      (100%)     0.0s\n\nNetwork load: rho_max = 1.0000 at S1  (heavy-traffic regime — analytical methods are most accurate here)\nBuffer regime: K*(1-rho) = 0.00 at S1 (K=25, rho=1.000) — small for the heavy-traffic limit (target ~1-5); SRBM may overstate E[X] \/ understate loss by 10-20%\n           Finite Element\n           ==============\n\nrho_1      0.986\nrho_2      0.980\n\nGamma_1    0.986\nGamma_2    0.980\n\nsojourn_1  14.348\nsojourn_2  12.755\n\nE[X_1]     14.142\nE[X_2]     12.500\n\nElapsed time: 0.049s\n\n",
+  "startedAt" : "2026-11-11T04:39:52Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

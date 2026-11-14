@@ -1,0 +1,56 @@
+{
+ "step": 12,
+ "op": {
+  "node": "B3",
+  "op": "nodeClick"
+ },
+ "status": [
+  {
+   "text": "Linked S2 -> B3 [Class 2]. Click next node to continue chain.",
+   "severity": "info"
+  },
+  {
+   "text": "Routing from S2 for Class 2 now sums to 2 — set the probabilities in the Inspector.",
+   "severity": "info"
+  }
+ ],
+ "selectedNodeID": {
+  "index": 7,
+  "name": "B3"
+ },
+ "selectedNodeIDs": [],
+ "selectedLinkID": {
+  "index": 10,
+  "from": "S2",
+  "to": "B3",
+  "customerClass": 1
+ },
+ "pendingLinkStartID": {
+  "index": 7,
+  "name": "B3"
+ },
+ "activeLinkSourceID": null,
+ "activeCustomerClass": 1,
+ "selectedTool": "addLink",
+ "toolBeforeStickyPan": null,
+ "canUndo": true,
+ "canRedo": false,
+ "undoActionName": "Add Link",
+ "redoActionName": "",
+ "snapToGrid": false,
+ "snapSuspended": false,
+ "classFilter": null,
+ "canvasScale": 1,
+ "canvasPanOffset": [0, 0],
+ "infiniteBuffers": true,
+ "nodeCount": 10,
+ "linkCount": 11,
+ "numberOfCustomerClasses": 4,
+ "canPaste": false,
+ "hasUnsavedChanges": true,
+ "multiSelectRect": null,
+ "isDraggingNode": false,
+ "parameterEditorTarget": null,
+ "linkParameterEditorTarget": null,
+ "pendingFitOnAppear": false
+}

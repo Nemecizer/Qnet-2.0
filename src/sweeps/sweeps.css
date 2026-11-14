@@ -1,0 +1,24 @@
+/* Run ▸ What-If Sweep… (src/sweeps/): the panel and the Results pane's Sweep view. Tokens only (src/styles.css). */
+.sweep-panel-wide { min-width: 0; width: 100%; max-width: 320px; }
+.sweep-panel-number { width: 96px; }
+.sweep-panel-method { cursor: default; gap: var(--sp-3); }
+.sweep-panel-method input { accent-color: var(--accent-fill); margin: 0; flex: none; }
+.sweep-panel-tier { font-size: var(--fs-sm); white-space: nowrap; }
+.sweep-tier-mark { flex: none; }
+.sweep-panel-warning { color: var(--warn-text); }
+.sweep-panel-summary { color: var(--text-2); font-variant-numeric: tabular-nums; }
+
+.sweep-view .sweep-apply { max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sweep-view .btn:disabled { color: var(--btn-disabled-fg); }
+.sweep-table-card { overflow-x: auto; }
+.sweep-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
+.sweep-table caption { caption-side: top; text-align: left; padding-bottom: var(--sp-3); font-size: var(--fs-md); font-weight: var(--fw-semibold); color: var(--text); }
+.sweep-table th, .sweep-table td { padding: var(--sp-2) var(--sp-3); text-align: right; border-bottom: 1px solid var(--hairline); white-space: nowrap; }
+.sweep-table thead th { color: var(--text-2); font-weight: var(--fw-semibold); border-bottom-color: var(--border); }
+.sweep-table tbody th { font-weight: var(--fw-semibold); color: var(--text); }
+.sweep-table tr[data-current] th { color: var(--accent-text); }
+.sweep-table td[data-gap] { color: var(--muted); }
+.sweep-gap { font-style: italic; }
+.sweep-table-apply { width: 1%; }
+.sweep-table-apply .btn { height: var(--ctl-xs); padding: 0 var(--sp-3); font-size: var(--fs-sm); }
+.sweep-notes { flex: none; margin: 0; padding: 0 0 0 var(--sp-5); max-width: 880px; color: var(--text-2); font-size: var(--fs-sm); line-height: 1.5; }

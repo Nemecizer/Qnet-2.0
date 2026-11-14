@@ -1,0 +1,47 @@
+{
+  "blocking" : "bas_external_loss",
+  "classes" : [
+    {
+      "external_arrivals" : {
+        "s1" : 0.69999999999999996
+      },
+      "id" : "c1",
+      "name" : "Class 1"
+    }
+  ],
+  "name" : "Tandem2.MM1.K5.fin",
+  "routes" : [
+    {
+      "class" : "c1",
+      "from" : "s1",
+      "probability" : 1,
+      "to" : "s2"
+    }
+  ],
+  "schema_version" : 1,
+  "solver" : {
+    "damping" : 0.5,
+    "max_iterations" : 1000,
+    "tolerance" : 1e-10
+  },
+  "stations" : [
+    {
+      "capacity" : 5,
+      "id" : "s1",
+      "name" : "S1",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1
+      }
+    },
+    {
+      "capacity" : 5,
+      "id" : "s2",
+      "name" : "S2",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1
+      }
+    }
+  ]
+}

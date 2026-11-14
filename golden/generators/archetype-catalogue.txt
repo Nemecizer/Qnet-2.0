@@ -1,0 +1,6 @@
+groups: Single Station | Lines | Feedback
+mmcStation | Single Station | M/M/c Station | Src1 → B1 → S1 → Sink1, with c parallel servers | servers,targetRho,arrivalRate,buffers
+tandemLine | Lines | Tandem Line | Src1 → B1 → S1 → … → Sd → Sink1, every station at the same ρ | stations,servers,targetRho,arrivalRate,buffers
+forkStyleSplit | Lines | Fork and Merge | S1 splits its output evenly into S2 and S3, both to Sink1 | servers,targetRho,arrivalRate,buffers
+openJacksonFeedback | Feedback | Line with Rework | Every station returns a fraction p of its output to its own buffer | stations,servers,targetRho,feedbackProbability,arrivalRate,buffers
+reentrantTwoStation | Feedback | Re-entrant Pair | S1 → S2, and S2 sends a fraction p back to B1 — a two-station cycle | servers,targetRho,feedbackProbability,arrivalRate,buffers

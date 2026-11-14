@@ -1,0 +1,64 @@
+{
+  "canvasPanOffset" : [
+    0,
+    0
+  ],
+  "canvasScale" : 1,
+  "infiniteBuffers" : false,
+  "links" : [
+
+  ],
+  "nodes" : [
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.1111111",
+      "id" : "E0BB5F53-70DC-4947-9848-FE310E20D371",
+      "kind" : "station",
+      "name" : "S1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        102,
+        109
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.1111111",
+      "id" : "2184E027-C9B4-4E5A-84DF-2D1E9ED4677E",
+      "kind" : "station",
+      "name" : "S2",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        210,
+        114
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "433F33D8-2B8B-4DA6-95B2-149E9E99BFB9",
+      "kind" : "buffer",
+      "name" : "B1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        308,
+        140
+      ],
+      "serviceDistributions" : {
+
+      }
+    }
+  ]
+}

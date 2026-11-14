@@ -1,0 +1,31 @@
+[A[2KRunning regenerative simulation (C) ...  [ ]                                                       0.0s[KRunning regenerative simulation (C) ...  [done]                                                    0.1s
+Regenerative Monte Carlo
+Model layer: queueing process (simulation)
+Evidence: regenerative ratio confidence intervals; asymptotic, not finite-sample, and they describe sampling error only
+Model: OpenJackson.d2.feedback.p30.inf.bnet
+
+Complete empty-to-empty cycles: 3400
+Stopping reason: precision_target_met
+Precision target met: yes
+
+Node                   E[N]         E[Q]  utilisation   throughput
+------------------------------------------------------------------
+s1                    2.352        1.646        0.706        1.436
+s2                    2.408        1.701        0.707        1.005
+
+Quantity                               estimate   std error              95% interval  eff. cycles
+--------------------------------------------------------------------------------------------------
+Mean number in system                     4.760       0.117      [4.530, 4.989]        895.200
+External blocking probability             0.000       0.000      [0.000, 0.000]        750.300
+Departure rate                            1.005       0.005      [0.995, 1.015]        895.200
+E[N] at s1                                2.352       0.069      [2.217, 2.488]        895.200
+utilisation at s1                         0.706       0.005      [0.697, 0.715]        895.200
+E[N] at s1, class c1                      2.352       0.069      [2.217, 2.488]        895.200
+E[N] at s2                                2.408       0.077      [2.257, 2.558]        895.200
+utilisation at s2                         0.707       0.005      [0.697, 0.716]        895.200
+E[N] at s2, class c1                      2.408       0.077      [2.257, 2.558]        895.200
+
+Uncertainty uses complete regenerative cycles, not individual events.
+
+Elapsed time: 0.095s
+

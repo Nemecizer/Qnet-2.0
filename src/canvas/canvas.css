@@ -1,0 +1,145 @@
+/* The canvas's drawing and chrome (P5 drawing area). Colours are the Canvas block's tokens in
+   src/styles.css; sizes are the --fs-* tokens. The SVG itself takes resolved colours as attributes
+   (src/canvas/layers/colors.ts), so only its fades live here. */
+
+/* ---------- Fades (DS.Motion.quick; instant under Reduce Motion, where --dur-1 is 0) ---------- */
+
+.canvas-fade { transition: opacity var(--dur-1) ease-out; }
+.canvas-appear { animation: canvas-appear var(--dur-1) ease-out; }
+@keyframes canvas-appear { from { opacity: 0; } to { opacity: 1; } }
+:root[data-motion="reduce"] .canvas-fade { transition: none; }
+:root[data-motion="reduce"] .canvas-appear { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-motion]) .canvas-fade { transition: none; }
+  :root:not([data-motion]) .canvas-appear { animation: none; }
+}
+
+/* ---------- Overlays (NetworkCanvasOverlays.swift) ---------- */
+
+/* Over the canvas, letting every click through; only the panels and the hint's buttons take it. */
+.canvas-overlays {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* The floating panel: 8 pt padding, a flat opaque surface (never a material), radius 8, a hairline
+   separator and the card shadow, 8 pt from the canvas edge. */
+.canvas-panel {
+  position: absolute;
+  bottom: var(--sp-4);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-4);
+  background: var(--canvas-panel);
+  border: 1px solid var(--canvas-separator);
+  border-radius: var(--r-lg);
+  box-shadow: var(--canvas-panel-shadow);
+  pointer-events: auto;
+}
+:root[data-contrast="more"] .canvas-panel { border-width: 1.5px; }
+@media (prefers-contrast: more) { :root:not([data-contrast]) .canvas-panel { border-width: 1.5px; } }
+
+.canvas-legend { left: var(--sp-4); gap: var(--sp-4); flex-wrap: wrap; max-width: calc(100% - 2 * var(--sp-4) - 260px); }
+.canvas-zoom { right: var(--sp-4); }
+
+/* A class chip (DSBadge, swatch, neutral or selected). */
+.canvas-class-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  height: 20px;
+  padding: 0 var(--sp-4);
+  border: 1px solid transparent;
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  cursor: default;
+}
+.canvas-class-chip:hover { background: var(--hover); }
+.canvas-class-chip[data-active] { background: var(--sel); border-color: var(--border); color: var(--sel-text); font-weight: var(--fw-semibold); }
+.canvas-class-chip[data-dimmed] { color: var(--muted); }
+.canvas-class-swatch { width: 20px; height: 3px; border-radius: 2px; flex: none; }
+
+.canvas-zoom-btn { width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: var(--r-sm); background: transparent; color: var(--text-2); }
+.canvas-zoom-btn:disabled { opacity: 0.4; }
+.canvas-snap[data-on] { background: var(--sel); color: var(--sel-text); }
+.canvas-snap { transition: opacity var(--dur-1) ease-out; }
+.canvas-zoom-menu {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  height: 24px;
+  padding: 0 var(--sp-2);
+  border: 0;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--text);
+  font-size: var(--fs-sm);
+  font-variant-numeric: tabular-nums;
+  cursor: default;
+}
+.canvas-zoom-menu:hover { background: var(--hover); }
+.canvas-zoom-percent { min-width: 40px; text-align: right; }
+.canvas-zoom-caret { color: var(--muted); font-size: var(--fs-2xs); line-height: 1; }
+.canvas-rule { width: 1px; height: 16px; margin: 0 var(--sp-1); background: var(--canvas-separator); }
+
+/* The empty-canvas hint: its icon and text let a click through to the canvas; its buttons don't. */
+.canvas-empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-5);
+  width: max-content;
+  max-width: min(460px, 94%);
+  text-align: center;
+  pointer-events: none;
+}
+/* Type and icon are styles.css's empty state. The two actions sit side by side, so the hint stays
+   clear of the zoom cluster at the smallest window. */
+.canvas-empty-icon { display: inline-flex; pointer-events: none; }
+.canvas-empty-title { pointer-events: none; }
+.canvas-empty-message { pointer-events: none; }
+.canvas-empty-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--sp-3); margin-top: var(--sp-4); pointer-events: none; }
+.canvas-empty-actions .btn { pointer-events: auto; }
+
+/* ---------- Status bar (ContentView.swift CanvasStatusBar) ---------- */
+
+.canvas-sb {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  min-width: 0;
+  overflow: hidden;
+  font-size: var(--fs-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  white-space: nowrap;
+}
+.canvas-sb-seg { flex: none; display: inline-flex; align-items: center; gap: var(--sp-2); padding: 0 var(--sp-4); height: 24px; }
+.canvas-sb-div { flex: none; width: 1px; height: 12px; background: var(--hairline); }
+.canvas-sb-spacer { flex: 1 1 0; min-width: var(--sp-4); }
+.canvas-sb-run { flex: none; display: inline-flex; align-items: center; }
+.canvas-sb-strong { font-weight: var(--fw-medium); }
+.canvas-sb-glyph { color: var(--muted); }
+.canvas-sb-quiet { color: var(--muted); }
+.canvas-sb-zoom { min-width: 40px; text-align: right; }
+.canvas-sb-selecting { color: var(--accent-text); }
+.canvas-sb-snap-on { color: var(--accent-text); }
+.canvas-sb-snap-off { color: var(--muted); }
+.canvas-sb-countlist { display: inline-flex; align-items: center; }
+.canvas-sb-words { gap: var(--sp-5); }
+.canvas-sb-symbols { gap: var(--sp-4); }
+.canvas-sb-count { display: inline-flex; align-items: center; gap: var(--sp-1); }
+.canvas-sb-num { min-width: 24px; text-align: right; }
+.canvas-sb-num-lead { text-align: left; }

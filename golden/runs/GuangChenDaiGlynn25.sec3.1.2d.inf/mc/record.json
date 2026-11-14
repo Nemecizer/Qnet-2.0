@@ -1,0 +1,255 @@
+{
+  "completedAt" : "2026-11-11T04:53:56Z",
+  "elapsedSeconds" : 0.33491599559783936,
+  "id" : "65D09197-C5A5-4210-81BD-9E67C258F1D1",
+  "measurements" : [
+    {
+      "estimate" : 0.45,
+      "id" : "645963D0-CBDB-413E-9C62-DC489D52E25D",
+      "metric" : "Utilization",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000005",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.9,
+      "id" : "588BD7CA-5747-47F0-BD5E-9397CFF513F8",
+      "metric" : "Utilization",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000003",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.45,
+      "id" : "11167219-B235-4CD8-ACAC-3D0201AC8EB7",
+      "metric" : "Throughput",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000005",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.9,
+      "id" : "00D3BE64-28A4-4F3B-BEFC-583FAE6E2A00",
+      "metric" : "Throughput",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000003",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.62,
+      "id" : "24CDC276-BE80-41F5-BBD9-3B7DD1EB9538",
+      "metric" : "Mean sojourn time",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000005",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 0.542,
+      "id" : "DCACB9AE-1817-4E4E-B678-36F83ACE5939",
+      "metric" : "Mean sojourn time",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000003",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 0.279,
+      "id" : "C9312131-85BB-4BB7-8FC8-2CDFF149A362",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000005",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.488,
+      "id" : "E9F211F5-F5FF-49FE-A68A-EA96E4F2698C",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "A1AAAAAA-3100-0001-0000-000000000003",
+      "stationName" : "S2",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Multi-Class SRBM",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.multiclass-station",
+    "implementation" : "multiclass_diffusion\/mc_solver",
+    "layer" : "SRBM diffusion",
+    "shortName" : "MC SRBM"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "A1AAAAAA-3100-0001-0000-000000000005",
+      "A1AAAAAA-3100-0001-0000-000000000003"
+    ],
+    "networkFingerprint" : "170ca5517c2696a64f1c1957846007a7bc02b0164ca4f7716a54c64348e97240",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3100-0001-0000-000000000001",
+          "id" : "A1AAAAAA-3100-0002-0000-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "A1AAAAAA-3100-0001-0000-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3100-0001-0000-000000000002",
+          "id" : "A1AAAAAA-3100-0002-0000-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "A1AAAAAA-3100-0001-0000-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3100-0001-0000-000000000003",
+          "id" : "A1AAAAAA-3100-0002-0000-000000000003",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3100-0001-0000-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3100-0001-0000-000000000003",
+          "id" : "A1AAAAAA-3100-0002-0000-000000000004",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3100-0001-0000-000000000006"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3100-0001-0000-000000000004",
+          "id" : "A1AAAAAA-3100-0002-0000-000000000005",
+          "routingProbability" : 1,
+          "toNodeID" : "A1AAAAAA-3100-0001-0000-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3100-0001-0000-000000000005",
+          "id" : "A1AAAAAA-3100-0002-0000-000000000006",
+          "routingProbability" : 1,
+          "toNodeID" : "A1AAAAAA-3100-0001-0000-000000000006"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.9",
+          "id" : "A1AAAAAA-3100-0001-0000-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1AAAAAA-3100-0001-0000-000000000002",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            200,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "erlang",
+          "distributionParameters" : "k=2,rate=2.0",
+          "id" : "A1AAAAAA-3100-0001-0000-000000000003",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            300,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1AAAAAA-3100-0001-0000-000000000004",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            400,
+            300
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "erlang",
+          "distributionParameters" : "k=2,rate=2.0",
+          "id" : "A1AAAAAA-3100-0001-0000-000000000005",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            500,
+            300
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1AAAAAA-3100-0001-0000-000000000006",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "GuangChenDaiGlynn25.sec3.1.2d.inf.bnet",
+    "parameters" : {
+      "formulation" : "research",
+      "mesh per dimension" : "auto"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/GuangChenDaiGlynn25.sec3.1.2d.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Running multi-class SRBM (research, mesh=auto) ... done.\n\nNetwork load: rho_max = 0.9000 at S2  (near heavy-traffic — small O(1) deviation expected)\n──  Asymptotic product form — GCDG 2025 Cor. 3 (feed-forward, station relabel applied)  ──\n           Multi-Class SRBM  Asymptotic E[X]\n           ================  ============\n\nrho_1      0.450 (+0.0%)     0.450\nrho_2      0.900 (+0.0%)     0.900\n\nGamma_1    0.450 (+0.0%)     0.450\nGamma_2    0.900 (+0.0%)     0.900\n\nsojourn_1  0.620 (+0.0%)     1.364\nsojourn_2  0.542 (+0.0%)     7.500\n\nE[X_1]     0.279 (+0.0%)     0.614\nE[X_2]     0.488 (+0.0%)     6.750\n\nElapsed time: 0.098s\n\n",
+  "startedAt" : "2026-11-11T04:53:55Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

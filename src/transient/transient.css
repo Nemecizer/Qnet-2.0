@@ -1,0 +1,22 @@
+/* Run ▸ Transient… (src/transient/). Tokens only (src/styles.css). */
+.transient-view .btn:disabled { color: var(--btn-disabled-fg); }
+.transient-setup { flex: none; max-width: 880px; margin: 0; padding: var(--sp-4) var(--sp-5); border: 1px solid var(--hairline); border-radius: var(--r-lg); background: var(--surface); display: flex; flex-direction: column; gap: var(--sp-3); min-width: 0; }
+.transient-setup legend { padding: 0 var(--sp-2); font-size: var(--fs-xs); font-weight: var(--fw-semibold); color: var(--text-2); }
+.transient-row { display: flex; align-items: center; flex-wrap: wrap; gap: var(--sp-2) var(--sp-4); font-size: var(--fs-sm); color: var(--text-2); }
+.transient-row label { display: inline-flex; align-items: center; gap: var(--sp-2); color: var(--text); }
+.transient-row .qn-field { min-width: 0; height: var(--ctl-md); font-size: var(--fs-sm); }
+.transient-row input.qn-field { width: 72px; text-align: right; font-variant-numeric: tabular-nums; }
+.transient-row input[type="checkbox"] { margin: 0; }
+.transient-hint { color: var(--text-2); font-size: var(--fs-xs); }
+.transient-problem { margin: 0; font-size: var(--fs-sm); color: var(--crit-text); }
+.transient-reading { flex: none; margin: 0; max-width: 880px; font-size: var(--fs-md); line-height: 1.5; color: var(--text); }
+.transient-scale { flex: none; margin: 0; max-width: 880px; font-size: var(--fs-sm); color: var(--text-2); }
+.transient-tiers { flex: none; list-style: none; margin: 0; padding: 0; max-width: 880px; display: flex; flex-direction: column; gap: var(--sp-1); font-size: var(--fs-sm); color: var(--text-2); }
+.transient-tiers li { display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--sp-1) var(--sp-2); }
+.transient-tiers strong { color: var(--text); font-weight: var(--fw-semibold); }
+.transient-key { flex: none; align-self: center; }
+.transient-progress { flex: none; display: flex; align-items: center; gap: var(--sp-3); max-width: 880px; font-size: var(--fs-sm); color: var(--text-2); }
+.transient-progress progress { flex: 1 1 160px; max-width: 320px; height: 6px; accent-color: var(--accent); }
+.transient-table th[scope="row"] { text-align: left; }
+.transient-table td[data-muted] { color: var(--muted); }
+.transient-table thead th { white-space: normal; vertical-align: bottom; min-width: 72px; }

@@ -1,0 +1,27 @@
+{
+ "description": "Buffer regime and sizes on a finite tandem: Network ▸ Buffer Model to infinite and back (setInfiniteBuffers, undoable, no-op when unchanged), updateBufferSize with the clamp to 1, a buffer inspector sheet that flips the regime and changes the size in one step, and the no-change Save sentence.",
+ "start": "Tandem2.MM1.K5.fin",
+ "steps": [
+  {"op": "setInfiniteBuffers", "value": true},
+  {"op": "setInfiniteBuffers", "value": true},
+  {"op": "undo"},
+  {"op": "updateBufferSize", "node": "B1", "size": 0},
+  {"op": "updateBufferSize", "node": "B1", "size": 1},
+  {"op": "updateBufferSize", "node": "B2", "size": 25},
+  {"op": "updateBufferSize", "node": "S1", "size": 25},
+  {"op": "undo"},
+  {"op": "undo"},
+  {"op": "nodeSheet", "node": "B2", "bufferSize": "7"},
+  {"op": "nodeSheet", "node": "B2", "infiniteBuffers": true, "bufferSize": "9"},
+  {"op": "undo"},
+  {"op": "nodeSheet", "node": "B2", "bufferSize": "0"},
+  {"op": "nodeSheet", "node": "B2", "bufferSize": "abc"},
+  {"op": "nodeSheet", "node": "B2"},
+  {"op": "nodeSheet", "node": "B1", "infiniteBuffers": true},
+  {"op": "nodeSheet", "node": "B1", "infiniteBuffers": false, "bufferSize": "3"},
+  {"op": "undo"},
+  {"op": "undo"},
+  {"op": "redo"},
+  {"op": "setInfiniteBuffers", "value": false}
+ ]
+}

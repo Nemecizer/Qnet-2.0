@@ -1,0 +1,64 @@
+NETWORK ANALYSIS — Brownian Heavy-Traffic Reliability
+=====================================================
+
+NETWORK SUMMARY
+---------------
+Stations:         3
+Customer classes: 2
+Buffer model:     infinite
+
+KEY PRIMITIVES
+--------------
+  Station   servers    μ_eff        α          ρ   c²_s_eff   buffer
+  S1              1   2.0000   0.5556     0.2778     1.0000        ∞
+  S2              1   2.0000   1.0556     0.5278     1.0000        ∞
+  S3              1   2.0000   1.0000     0.5000     1.0000        ∞
+
+  Class       λ (ext)     c²_a
+  C1           0.5000   1.0000
+  C2           0.5000   1.0000
+
+OVERALL RELIABILITY ASSESSMENT
+------------------------------
+Score: 76 / 100  (MODERATE)
+Findings: 0 critical, 1 warning, 3 info
+
+Some primitives sit near the edge of the heavy-traffic regime. E[X] estimates are probably directionally correct but may have 10–30% error. See the findings below for specifics.
+
+FINDINGS (grouped by severity)
+------------------------------
+
+[WARNING ] 1. Station 1 is lightly loaded (ρ = 0.278, below heavy-traffic regime)
+  Why:     SRBM is the heavy-traffic limit where ρ → 1. At low ρ the stationary distribution has a large atom at zero that the diffusion smooths out; the approximation systematically underestimates P(X=0) and overestimates mean queue length. Error ranges roughly 20–50% below ρ = 0.5.
+  Fix:     Raise α_1 (route more traffic through station 1) or reduce μ_1 (currently 2.0000) so that ρ_1 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+  Affects: E[X_1], sojourn_1, class waiting times
+
+[INFO    ] 2. Station 2 is moderately loaded (ρ = 0.528)
+  Why:     Below ρ ≈ 0.7 the heavy-traffic approximation starts to noticeably overestimate queue length. Expect 10–20% error vs simulation.
+  Fix:     If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+  Affects: E[X_2]
+
+[INFO    ] 3. Station 3 is moderately loaded (ρ = 0.500)
+  Why:     Below ρ ≈ 0.7 the heavy-traffic approximation starts to noticeably overestimate queue length. Expect 10–20% error vs simulation.
+  Fix:     If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+  Affects: E[X_3]
+
+[INFO    ] 4. Routing has feedback cycles (i ↔ j)
+  Why:     Departure processes from station j feed back into station i whose departures in turn feed j. The Whitt superposition/departure approximations iterate to a fixed point; the fixed-point SCV is correct only in heavy traffic and converges slowly.
+  Fix:     Raise all ρ in the cycle toward 1 to tighten the heavy-traffic limit. For lightly-loaded feedback networks, simulation is more reliable.
+  Affects: E[X_i] for stations in the cycle
+
+PERFORMANCE METRIC RELIABILITY
+------------------------------
+  E[X_i] (queue length):          MODERATE    ρ below heavy-traffic regime — E[X] systematically biased
+  Throughput (Γ_i):               HIGH        Γ = α; derived exactly from traffic equations
+  Utilization (ρ_i):              HIGH        ρ = α / (s·μ); derived exactly from primitives
+  Sojourn time:                   MODERATE    sojourn = E[X]/Γ; inherits E[X] reliability
+  Per-class W, T, N:              MODERATE    Little's law applied to E[X]; inherits its reliability
+
+TOP ACTIONABLE SUGGESTIONS
+--------------------------
+1. Raise α_1 (route more traffic through station 1) or reduce μ_1 (currently 2.0000) so that ρ_1 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+2. If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+3. If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+

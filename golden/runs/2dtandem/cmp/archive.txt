@@ -1,0 +1,25 @@
+[Threads] 18 CPU cores for parallel solvers (Sim/Spectral/FE); analytical solvers (QNA/SBD/LP) are single-threaded
+Running spectral method ...           [                              ]  starting ...[KRunning spectral method ...           [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  132/132      (100%)     0.0s
+Running finite element method ...     [                              ]  starting ...[KRunning finite element method ...     [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  100/100      (100%)     0.0s
+Running finite LP method (highs) ...  [ ]                                                       0.0s[KRunning finite LP method (highs) ...  [done]                                                    0.1s
+Running simulation ...                [                              ]  starting ...[KRunning simulation ...                [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  8/8          (100%)     0.0s
+
+Network load: rho_max = 1.0000 at S1  (heavy-traffic regime — analytical methods are most accurate here)
+Buffer regime: K*(1-rho) = 0.00 at S1 (K=25, rho=1.000) — small for the heavy-traffic limit (target ~1-5); SRBM may overstate E[X] / understate loss by 10-20%
+           Spectral         FE (Gauss)       Finite LP        Simulation              Average of Algorithms
+           ========         ==========       =========        ==========              =====================
+
+rho_1      0.992 (+0.8%)    0.991 (+0.7%)    0.991 (+0.7%)    0.984 ± 0.001 (+0.0%)   0.992 (+0.8%)
+rho_2      0.980 (+1.1%)    0.980 (+1.1%)    0.980 (+1.1%)    0.969 ± 0.003 (+0.0%)   0.980 (+1.1%)
+
+Gamma_1    0.973 (+0.4%)    0.973 (+0.4%)    0.973 (+0.4%)    0.969 ± 0.001 (+0.0%)   0.973 (+0.4%)
+Gamma_2    0.980 (+1.1%)    0.980 (+1.1%)    0.980 (+1.1%)    0.969 ± 0.001 (+0.0%)   0.980 (+1.1%)
+
+sojourn_1  16.170 (+12.2%)  16.279 (+12.9%)  16.257 (+12.8%)  14.415 ± 0.177 (+0.0%)  16.235 (+12.6%)
+sojourn_2  12.755 (+7.3%)   12.755 (+7.3%)   12.755 (+7.3%)   11.886 ± 0.358 (+0.0%)  12.755 (+7.3%)
+
+E[X_1]     15.732 (+12.7%)  15.832 (+13.4%)  15.811 (+13.2%)  13.962 ± 0.170 (+0.0%)  15.792 (+13.1%)
+E[X_2]     12.500 (+8.6%)   12.500 (+8.6%)   12.500 (+8.6%)   11.512 ± 0.346 (+0.0%)  12.500 (+8.6%)
+
+Elapsed time: 0.144s
+

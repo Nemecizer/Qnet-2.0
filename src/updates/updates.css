@@ -1,0 +1,24 @@
+/* The update sheet (src/updates/): the alert's frame (components/shell.css), with a box for the
+   release notes and a progress bar. Colours, spacing and motion are tokens only. */
+.upd-dialog.sb-dialog { width: min(500px, 100%); }
+.upd-notes-label { margin: var(--sp-3) 0 0; font-size: var(--fs-sm); font-weight: var(--fw-semibold); color: var(--text-2); }
+/* The inset box of a dialog (as .sb-dialog-details-box and the failure report's output). */
+.upd-notes {
+  max-height: 220px; overflow: auto; padding: var(--sp-4) var(--sp-5);
+  border: 1px solid var(--hairline); border-radius: var(--r-md); background: var(--surface-2);
+  color: var(--text); line-height: var(--lh-prose); overflow-wrap: anywhere; user-select: text; -webkit-user-select: text;
+}
+.upd-notes:focus-visible { outline-offset: 1px; }
+.upd-notes p { margin: var(--sp-2) 0; }
+.upd-notes > :first-child { margin-top: 0; }
+.upd-notes > :last-child { margin-bottom: 0; }
+.upd-notes-heading { margin: var(--sp-4) 0 var(--sp-1); font-size: inherit; font-weight: var(--fw-semibold); }
+.upd-notes-list { margin: var(--sp-2) 0; padding-left: var(--sp-6); }
+.upd-notes-list li { margin: var(--sp-1) 0; }
+.upd-notes .muted { color: var(--text-2); }
+.upd-progress { display: flex; flex-direction: column; gap: var(--sp-3); margin-top: var(--sp-2); }
+/* The same bar as a toast's (components/shell.css .toast-bar). */
+.upd-bar { height: 4px; border-radius: 2px; background: var(--track); overflow: hidden; }
+.upd-bar-fill { height: 100%; border-radius: 2px; background: var(--accent-fill); transition: width var(--dur-2) linear; }
+.upd-progress-text { color: var(--text-2); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
+.upd-dialog .sb-dialog-actions { flex-wrap: wrap; }

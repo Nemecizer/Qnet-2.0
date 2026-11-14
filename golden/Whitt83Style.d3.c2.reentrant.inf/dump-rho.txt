@@ -1,0 +1,16 @@
+d=3, K=2, infiniteBuffers=true
+S1: α=0.555556  μ_eff=2.000000  c=2.000000  ρ=0.277778
+S2: α=1.055556  μ_eff=2.000000  c=2.000000  ρ=0.527778
+S3: α=1.000000  μ_eff=2.000000  c=2.000000  ρ=0.500000
+class 1: α=[0.5556 0.5556 0.5000 ]  μ=[2.0000 2.0000 2.0000 ]  λ_ext=0.5000
+class 2: α=[0.0000 0.5000 0.5000 ]  μ=[2.0000 2.0000 2.0000 ]  λ_ext=0.5000
+aggregatedP (3×3):
+  S1: 0.0000 1.0000 0.0000 
+  S2: 0.0526 0.0000 0.9474 
+  S3: 0.0000 0.0000 0.0000 
+hasRoutingCycles = true
+SRBM existence: holds — R is a nonsingular M-matrix, so it is completely-S and the SRBM exists and is unique in law.
+SRBM recurrence: holds — positive recurrent: R is an M-matrix and R⁻¹θ < 0 (Harrison–Williams 1987).
+AnalyticalTractability.assess(allowGCDG=true)  → kind=exactSkewSymmetric, isTractable=true, detail='SRBM skew-symmetric case — Harrison–Williams 1987 exact product form'
+  means(Exact E[X]  (skew-sym)): S1=0.3846 S2=1.1176 S3=1.0000
+AnalyticalTractability.assess(allowGCDG=false) → kind=exactSkewSymmetric, isTractable=true, detail='SRBM skew-symmetric case — Harrison–Williams 1987 exact product form'

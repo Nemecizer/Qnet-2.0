@@ -1,0 +1,196 @@
+{
+  "completedAt" : "2026-11-11T04:56:21Z",
+  "elapsedSeconds" : 0.4721139669418335,
+  "failureMessage" : "Bar Bounds exited with status 3. See the originating tab's Status pane and retained output.",
+  "id" : "91D7A5BA-5146-442F-9A02-D9DE83C385E6",
+  "measurements" : [
+
+  ],
+  "method" : {
+    "displayName" : "BAR Moment Bounds",
+    "fidelity" : "SRBM bound relaxation",
+    "identifier" : "srbm.bar-moment-bounds",
+    "implementation" : "bar_bounds",
+    "layer" : "SRBM diffusion",
+    "shortName" : "BAR Bounds"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+      "D0D40D08-A893-4677-915F-6DFE3C7D3B41"
+    ],
+    "networkFingerprint" : "db563deb5ef0107c34d581871982c65a00e09b9f665fe20b09e696a9078a619b",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "18AE78AC-0D98-4199-9402-3BA235DFD54D",
+          "id" : "1396146E-F49C-46B6-89AD-3F0F4CCCAABF",
+          "routingProbability" : 1,
+          "toNodeID" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947",
+          "id" : "91B67C2E-F548-4D0D-A81A-30ACC847B303",
+          "routingProbability" : 1,
+          "toNodeID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+          "id" : "454EE9EB-35C6-4D3C-9772-4E584C35BC05",
+          "routingProbability" : 1,
+          "toNodeID" : "1AC45D5F-9622-4398-8F56-8001E64E29A7"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "1AC45D5F-9622-4398-8F56-8001E64E29A7",
+          "id" : "E5E3D8B1-9C97-498A-9088-321489CE55AD",
+          "routingProbability" : 1,
+          "toNodeID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+          "id" : "177C1F84-6065-477D-BAEB-E4AB9EE6E355",
+          "routingProbability" : 0.6666666666666667,
+          "toNodeID" : "647D1A28-BDA0-4163-B2A7-FC52164B7C0A"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+          "id" : "B8A8574B-6367-434F-858E-532C545AC826",
+          "routingProbability" : 0.3333333333333333,
+          "toNodeID" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.5",
+          "id" : "18AE78AC-0D98-4199-9402-3BA235DFD54D",
+          "kind" : "source",
+          "name" : "Src",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            200,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.5",
+          "id" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            300,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "1AC45D5F-9622-4398-8F56-8001E64E29A7",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            400,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.5",
+          "id" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            500,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "647D1A28-BDA0-4163-B2A7-FC52164B7C0A",
+          "kind" : "sink",
+          "name" : "Sink",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "Reiman84.d2.c1.reentrant.inf.bnet",
+    "parameters" : {
+      "backend" : "auto (CVXPY when available)",
+      "certification" : "exact 1D\/product form only; floating SDP results uncertified",
+      "model layer" : "stationary orthant SRBM",
+      "moment-relaxation order" : "2",
+      "runtime" : "QNET_SOLVER_ROOT: \/Users\/nobody\/Library\/Caches\/qnet\/solvers\/stage\/Resources\/bin\/infinite\/BNAbb\/solver.py; Python runtime: \/opt\/homebrew\/bin\/python3"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/Reiman84.d2.c1.reentrant.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Constructing BAR moment bounds ...  [ ]                                                       0.0s\r\u001b[KConstructing BAR moment bounds ...  [done]                                                    0.2s\nerror: no performance bounds were produced: CVXPY is not installed. The relaxation can still be exported as JSON; install cvxpy with an SDP-capable solver to obtain numerical candidates.\nModel: Reiman84.d2.c1.reentrant.inf.bnet (2 dimensions)\nMethod: bar_moment_sdp_outer_relaxation\nCertified: no\nBackend status: unavailable\nBackend detail: CVXPY is not installed. The relaxation can still be exported as JSON; install cvxpy with an SDP-capable solver to obtain numerical candidates.\n  mean_workload_1: lower=None (not_solved), upper=None (not_solved)\n  mean_workload_2: lower=None (not_solved), upper=None (not_solved)\nTargets with numerical values: 0\/2\nRelaxation: 25 moments, 21 equalities, 7 PSD blocks\nElapsed time: 0.199s\n\n",
+  "startedAt" : "2026-11-11T04:56:21Z",
+  "status" : "failed",
+  "warnings" : [
+
+  ]
+}

@@ -1,0 +1,31 @@
+[Threads] Single-threaded (analytical solver)
+Running SBD ...  [ ]                                                       0.0s[KRunning SBD ...  [done]                                                    0.0s
+
+Network load: rho_max = 0.9000 at S3  (near heavy-traffic — small O(1) deviation expected)
+──  Asymptotic product form — GCDG 2025 Cor. 3 (lower-triangular R, feed-forward)  ──
+           SBD            Asymptotic E[X]
+           ===            ============
+
+rho_1      0.900 (+0.0%)  0.900
+rho_2      0.900 (+0.0%)  0.900
+rho_3      0.900 (+0.0%)  0.900
+rho_4      0.900 (+0.0%)  0.900
+
+Gamma_1    0.997 (+0.0%)  0.997
+Gamma_2    1.018 (+0.0%)  1.018
+Gamma_3    0.981 (+0.0%)  0.981
+Gamma_4    0.871 (+0.0%)  0.871
+
+sojourn_1  6.684 (+0.0%)  6.423
+sojourn_2  7.638 (+0.0%)  7.532
+sojourn_3  7.402 (+0.0%)  7.258
+sojourn_4  6.605 (+0.0%)  6.311
+
+E[Q_1]     6.663 (+0.0%)  6.403
+E[Q_2]     7.779 (+0.0%)  7.672
+E[Q_3]     7.260 (+0.0%)  7.119
+E[Q_4]     5.750 (+0.0%)  5.494
+
+QNET_SBD_STATUS_V1 fallback_used=no
+Elapsed time: 0.051s
+

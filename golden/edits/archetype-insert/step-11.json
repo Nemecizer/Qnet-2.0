@@ -1,0 +1,78 @@
+{
+ "step": 11,
+ "op": {
+  "archetype": "openJacksonFeedback",
+  "op": "insertArchetype",
+  "parameters": {
+   "feedbackProbability": 0.25,
+   "stations": 3
+  }
+ },
+ "status": [
+  {
+   "text": "Insert Line with Rework: added 8 nodes and 10 links. 3 stations, 8 nodes, 10 links, λ = 1.000, ρ = 0.900 at every station. The network stays on finite buffers — an insert never re-interprets the stations already on the canvas. Use Network ▸ Buffer Model to change the whole network. Its traffic is Class 2, because the canvas already had a source.",
+   "severity": "info"
+  }
+ ],
+ "selectedNodeID": null,
+ "selectedNodeIDs": [
+  {
+   "index": 8,
+   "name": "Src2"
+  },
+  {
+   "index": 9,
+   "name": "B4"
+  },
+  {
+   "index": 10,
+   "name": "S4"
+  },
+  {
+   "index": 11,
+   "name": "B5"
+  },
+  {
+   "index": 12,
+   "name": "S5"
+  },
+  {
+   "index": 13,
+   "name": "B6"
+  },
+  {
+   "index": 14,
+   "name": "S6"
+  },
+  {
+   "index": 15,
+   "name": "Sink2"
+  }
+ ],
+ "selectedLinkID": null,
+ "pendingLinkStartID": null,
+ "activeLinkSourceID": null,
+ "activeCustomerClass": 0,
+ "selectedTool": "addStation",
+ "toolBeforeStickyPan": null,
+ "canUndo": true,
+ "canRedo": false,
+ "undoActionName": "Insert Line with Rework",
+ "redoActionName": "",
+ "snapToGrid": false,
+ "snapSuspended": false,
+ "classFilter": null,
+ "canvasScale": 1,
+ "canvasPanOffset": [0, 0],
+ "infiniteBuffers": false,
+ "nodeCount": 16,
+ "linkCount": 18,
+ "numberOfCustomerClasses": 2,
+ "canPaste": false,
+ "hasUnsavedChanges": true,
+ "multiSelectRect": null,
+ "isDraggingNode": false,
+ "parameterEditorTarget": null,
+ "linkParameterEditorTarget": null,
+ "pendingFitOnAppear": true
+}

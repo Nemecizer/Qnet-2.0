@@ -1,0 +1,50 @@
+{
+  "covariance" : [
+    [
+      0.59999999999999998,
+      0
+    ],
+    [
+      0,
+      0.59999999999999998
+    ]
+  ],
+  "drift" : [
+    -0.40000000000000002,
+    0
+  ],
+  "model_type" : "orthant_srbm_bar_bounds",
+  "name" : "Schwerer01.d2.c1.inf",
+  "reflection" : [
+    [
+      1,
+      0
+    ],
+    [
+      -1,
+      1
+    ]
+  ],
+  "relaxation" : {
+    "max_psd_entries" : 5000000,
+    "max_variables" : 100000,
+    "order" : 2,
+    "targets" : [
+      {
+        "moment" : [
+          1,
+          0
+        ],
+        "name" : "mean_workload_1"
+      },
+      {
+        "moment" : [
+          0,
+          1
+        ],
+        "name" : "mean_workload_2"
+      }
+    ]
+  },
+  "schema_version" : 1
+}

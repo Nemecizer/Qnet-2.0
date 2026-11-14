@@ -1,0 +1,32 @@
+[Threads] 18 CPU cores for parallel solvers (Sim/Spectral/FE); analytical solvers (QNA/SBD/LP) are single-threaded
+Running spectral method ...  [                              ]  starting ...[KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  328/328      (100%)     0.1s
+Running QNA ...              [ ]                                                       0.0s[KRunning QNA ...              [done]                                                    0.1s
+Running RQNA ...             [ ]                                                       0.0s[KRunning RQNA ...             [done]                                                    0.0s
+Running SBD ...              [ ]                                                       0.0s[KRunning SBD ...              [done]                                                    0.1s
+Running simulation ...       [                              ]  starting ...[KRunning simulation ...       [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  8/8          (100%)     0.1s
+
+Network load: rho_max = 0.9000 at S2  (near heavy-traffic — small O(1) deviation expected)
+Routing graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference
+──  Open Jackson network — exact M/M/s product form  ──
+           Spectral        QNA             RQNA              SBD             Simulation             Average of Algorithms  Exact E[N]  (Jackson)
+           ========        ===             ====              ===             ==========             =====================  ============
+
+rho_1      0.675 (+0.0%)   0.675 (+0.0%)   0.675 (+0.0%)     0.675 (+0.0%)   0.674 ± 0.003 (-0.1%)  0.675 (+0.0%)          0.675
+rho_2      0.900 (+0.0%)   0.900 (+0.0%)   0.900 (+0.0%)     0.900 (+0.0%)   0.901 ± 0.005 (+0.1%)  0.900 (+0.0%)          0.900
+rho_3      0.450 (+0.0%)   0.450 (+0.0%)   0.450 (+0.0%)     0.450 (+0.0%)   0.450 ± 0.002 (+0.0%)  0.450 (+0.0%)          0.450
+
+Gamma_1    0.675 (+0.0%)   0.675 (+0.0%)   0.675 (+0.0%)     0.675 (+0.0%)   0.675 ± 0.003 (+0.0%)  0.675 (+0.0%)          0.675
+Gamma_2    0.900 (+0.0%)   0.900 (+0.0%)   0.900 (+0.0%)     0.900 (+0.0%)   0.900 ± 0.004 (+0.0%)  0.900 (+0.0%)          0.900
+Gamma_3    0.450 (+0.0%)   0.450 (+0.0%)   0.450 (+0.0%)     0.450 (+0.0%)   0.449 ± 0.002 (-0.2%)  0.450 (+0.0%)          0.450
+
+sojourn_1  3.077 (+0.0%)   3.077 (+0.0%)   3.334 (+8.4%)     3.077 (+0.0%)   3.096 (+0.6%)          3.141 (+2.1%)          3.077
+sojourn_2  10.000 (+0.0%)  10.000 (+0.0%)  23.562 (+135.6%)  10.000 (+0.0%)  9.844 (-1.6%)          13.390 (+33.9%)        10.000
+sojourn_3  1.818 (+0.0%)   1.818 (+0.0%)   1.873 (+3.0%)     1.818 (+0.0%)   1.814 (-0.2%)          1.832 (+0.8%)          1.818
+
+E[Q_1]     2.077 (+0.0%)   2.077 (+0.0%)   2.251 (+8.4%)     2.077 (+0.0%)   2.089 ± 0.030 (+0.6%)  2.120 (+2.1%)          2.077
+E[Q_2]     9.000 (+0.0%)   9.000 (+0.0%)   21.205 (+135.6%)  9.000 (+0.0%)   8.855 ± 0.413 (-1.6%)  12.051 (+33.9%)        9.000
+E[Q_3]     0.818 (+0.0%)   0.818 (+0.0%)   0.843 (+3.1%)     0.818 (+0.0%)   0.815 ± 0.007 (-0.4%)  0.824 (+0.7%)          0.818
+
+QNET_COMPARISON_STATUS_V1 partial=no successful=5
+Elapsed time: 0.636s
+

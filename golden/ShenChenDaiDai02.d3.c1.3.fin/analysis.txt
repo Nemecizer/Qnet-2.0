@@ -1,0 +1,52 @@
+NETWORK ANALYSIS — Brownian Heavy-Traffic Reliability
+=====================================================
+
+NETWORK SUMMARY
+---------------
+Stations:         3
+Customer classes: 1
+Buffer model:     finite
+
+KEY PRIMITIVES
+--------------
+  Station   servers    μ_eff        α          ρ   c²_s_eff   buffer
+  S1              1   1.1111   1.0000     0.9000     0.2500       11
+  S2              1   0.9000   1.0000     1.1111     1.0000       16
+  S3              1   0.9000   1.0000     1.1111     2.0000       16
+
+  Class       λ (ext)     c²_a
+  C1           1.0000   1.0000
+
+OVERALL RELIABILITY ASSESSMENT
+------------------------------
+Score: 30 / 100  (UNRELIABLE)
+Findings: 2 critical, 0 warning, 0 info
+
+At least one critical issue makes the SRBM approximation inapplicable. Resolve the critical findings before trusting any output.
+
+FINDINGS (grouped by severity)
+------------------------------
+
+[CRITICAL] 1. Station 2 is unstable (ρ = 1.111 ≥ 1)
+  Why:     Heavy-traffic SRBM requires every station to be stable (ρ < 1). An overloaded station has an infinite queue in the fluid limit; the diffusion approximation is undefined and E[X] values returned by the solver are meaningless.
+  Fix:     Reduce the effective arrival rate to station 2 (lower λ or reroute traffic) or increase capacity by adding servers / raising the service rate μ (currently 0.9000). Target ρ < 1 with comfortable margin, ideally 0.85–0.99.
+  Affects: E[X_2], sojourn_2, E[X] for every station (unstable network)
+
+[CRITICAL] 2. Station 3 is unstable (ρ = 1.111 ≥ 1)
+  Why:     Heavy-traffic SRBM requires every station to be stable (ρ < 1). An overloaded station has an infinite queue in the fluid limit; the diffusion approximation is undefined and E[X] values returned by the solver are meaningless.
+  Fix:     Reduce the effective arrival rate to station 3 (lower λ or reroute traffic) or increase capacity by adding servers / raising the service rate μ (currently 0.9000). Target ρ < 1 with comfortable margin, ideally 0.85–0.99.
+  Affects: E[X_3], sojourn_3, E[X] for every station (unstable network)
+
+PERFORMANCE METRIC RELIABILITY
+------------------------------
+  E[X_i] (queue length):          UNRELIABLE  network is unstable — values are meaningless
+  Throughput (Γ_i):               HIGH        throughput is bounded by capacity regardless of stability
+  Utilization (ρ_i):              HIGH        computed directly from primitives
+  Sojourn time:                   UNRELIABLE  Little's law applied to meaningless E[X]
+  Per-class W, T, N:              UNRELIABLE  downstream of E[X]
+
+TOP ACTIONABLE SUGGESTIONS
+--------------------------
+1. Reduce the effective arrival rate to station 2 (lower λ or reroute traffic) or increase capacity by adding servers / raising the service rate μ (currently 0.9000). Target ρ < 1 with comfortable margin, ideally 0.85–0.99.
+2. Reduce the effective arrival rate to station 3 (lower λ or reroute traffic) or increase capacity by adding servers / raising the service rate μ (currently 0.9000). Target ρ < 1 with comfortable margin, ideally 0.85–0.99.
+

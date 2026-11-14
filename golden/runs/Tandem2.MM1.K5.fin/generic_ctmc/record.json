@@ -1,0 +1,271 @@
+{
+  "completedAt" : "2026-11-11T04:56:56Z",
+  "elapsedSeconds" : 0.4036259651184082,
+  "id" : "157C0D11-A660-4C01-8EF7-BCE320B1ED15",
+  "measurements" : [
+    {
+      "estimate" : 1.5333184,
+      "id" : "ACFBF0C5-0AFB-4E91-9309-6473A87456BC",
+      "metric" : "Mean number in system",
+      "stationID" : "EE000002-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.65999925,
+      "id" : "0203CF4F-02C7-484D-8ECD-C27108097956",
+      "metric" : "Server utilization",
+      "stationID" : "EE000002-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.057143926,
+      "id" : "6377D5FB-210A-4ACB-B02E-DD96C9664F13",
+      "metric" : "Full probability",
+      "stationID" : "EE000002-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "probability"
+    },
+    {
+      "estimate" : 0.65999925,
+      "id" : "0CE8C4DB-338C-49C2-A62C-FA38FFEDD651",
+      "metric" : "Throughput",
+      "stationID" : "EE000002-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 2.3232123,
+      "id" : "DD4B15A9-EB4C-46F1-9156-F4C53135453A",
+      "metric" : "Mean sojourn time",
+      "stationID" : "EE000002-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 1.3978655,
+      "id" : "CE6B8C57-6709-4B67-9AA2-A620BF58AAC8",
+      "metric" : "Mean number in system",
+      "stationID" : "EE000002-0001-0001-0001-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.6350236,
+      "id" : "3AFA9A90-A9EE-423A-A44C-579A7AA38943",
+      "metric" : "Server utilization",
+      "stationID" : "EE000002-0001-0001-0001-000000000005",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.042669867,
+      "id" : "9641342F-F6F7-4021-A5EA-1DDFC137271E",
+      "metric" : "Full probability",
+      "stationID" : "EE000002-0001-0001-0001-000000000005",
+      "stationName" : "S2",
+      "unit" : "probability"
+    },
+    {
+      "estimate" : 0.6350236,
+      "id" : "4C60A643-D34F-49D8-9419-2D100BD07BF5",
+      "metric" : "Throughput",
+      "stationID" : "EE000002-0001-0001-0001-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 2.2012812,
+      "id" : "A9788CCA-52F1-46F3-B34F-7C22A762B2D4",
+      "metric" : "Mean sojourn time",
+      "stationID" : "EE000002-0001-0001-0001-000000000005",
+      "stationName" : "S2",
+      "unit" : "time"
+    }
+  ],
+  "method" : {
+    "displayName" : "Exact Sparse CTMC",
+    "fidelity" : "Exact queueing result",
+    "identifier" : "queue.finite-ctmc",
+    "implementation" : "generic_ctmc",
+    "layer" : "Queueing process",
+    "shortName" : "CTMC"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Finite capacity",
+    "exportStationIDs" : [
+      "EE000002-0001-0001-0001-000000000003",
+      "EE000002-0001-0001-0001-000000000005"
+    ],
+    "networkFingerprint" : "c93f46d5c2576d3de41c0e0499810e1dbc2b52918cf8dacfbe616acf3bec680a",
+    "networkSnapshot" : {
+      "infiniteBuffers" : false,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000002-0001-0001-0001-000000000001",
+          "id" : "EE000002-0001-0001-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000002-0001-0001-0001-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000002-0001-0001-0001-000000000002",
+          "id" : "EE000002-0001-0001-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000002-0001-0001-0001-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000002-0001-0001-0001-000000000003",
+          "id" : "EE000002-0001-0001-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000002-0001-0001-0001-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000002-0001-0001-0001-000000000004",
+          "id" : "EE000002-0001-0001-2222-000000000004",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000002-0001-0001-0001-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000002-0001-0001-0001-000000000005",
+          "id" : "EE000002-0001-0001-2222-000000000005",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000002-0001-0001-0001-000000000006"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.7",
+          "id" : "EE000002-0001-0001-0001-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 4,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000002-0001-0001-0001-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            220,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000002-0001-0001-0001-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            340,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 4,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000002-0001-0001-0001-000000000004",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000002-0001-0001-0001-000000000005",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            580,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000002-0001-0001-0001-000000000006",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            700,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "Tandem2.MM1.K5.fin.bnet",
+    "parameters" : {
+      "blocking" : "loss",
+      "engine" : "C",
+      "max reachable states" : "200000",
+      "runtime" : "C engine; QNET_SOLVER_ROOT: \/Users\/nobody\/Library\/Caches\/qnet\/solvers\/stage\/Resources\/bin\/finite\/fBNAgc\/fbna_gc",
+      "service discipline" : "FCFS",
+      "stationary tolerance" : "1e-12"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/Tandem2.MM1.K5.fin.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Solving exact CTMC (C) ...  [ ]                                                       0.0s\r\u001b[KSolving exact CTMC (C) ...  [done]                                                    0.0s\nGeneric finite-state CTMC — loss on full\nModel: Tandem2.MM1.K5.fin.bnet\nStates: 36  Transitions: 90\nStationary solve: converged after 303 iterations; ||pi Q||_1=2.405e-12\nNetwork: E[N]=2.9311839  external accepted=0.65999925  external loss P=0.057143926\nFlow residuals: population=4.547e-12  max station\/class=4.346e-12\nStation s1: E[N]=1.5333184  utilization=0.65999925  P(full)=0.057143926  throughput=0.65999925  E[T]=2.3232123\n  Class c1: E[N]=1.5333184  accepted=0.65999925  completed=0.65999925  E[T]=2.3232123\nStation s2: E[N]=1.3978655  utilization=0.6350236  P(full)=0.042669867  throughput=0.6350236  E[T]=2.2012812\n  Class c1: E[N]=1.3978655  accepted=0.6350236  completed=0.6350236  E[T]=2.2012812\nElapsed time: 0.075s\n\n",
+  "runEvidence" : {
+    "residual" : 2.405e-12
+  },
+  "startedAt" : "2026-11-11T04:56:56Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

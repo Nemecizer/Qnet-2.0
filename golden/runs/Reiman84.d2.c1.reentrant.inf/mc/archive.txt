@@ -1,0 +1,22 @@
+Running multi-class SRBM (research, mesh=auto) ... done.
+
+Network load: rho_max = 0.5000 at S1  (moderate load — SRBM/FEM are heavy-traffic limits; expect deviation from simulation)
+Routing graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference
+──  Open Jackson network — exact M/M/s product form  ──
+           Multi-Class SRBM  Exact E[N]  (Jackson)
+           ================  ============
+
+rho_1      0.500 (+0.0%)     0.500
+rho_2      0.500 (+0.0%)     0.500
+
+Gamma_1    0.750 (+0.0%)     0.750
+Gamma_2    0.750 (+0.0%)     0.750
+
+sojourn_1  1.365 (+2.4%)     1.333
+sojourn_2  1.623 (+21.8%)    1.333
+
+E[X_1]     1.024 (+2.4%)     1.000
+E[X_2]     1.218 (+21.8%)    1.000
+
+Elapsed time: 0.101s
+

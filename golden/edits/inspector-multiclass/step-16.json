@@ -1,0 +1,47 @@
+{
+ "step": 16,
+ "op": {
+  "class": 7,
+  "distribution": "pareto",
+  "node": "S1",
+  "op": "updateServiceDistribution",
+  "parameters": "shape=3,scale=1"
+ },
+ "status": [
+  {
+   "text": "Updated S1 service distribution for Class 8 to Pareto (shape=3,scale=1).",
+   "severity": "success"
+  }
+ ],
+ "selectedNodeID": {
+  "index": 5,
+  "name": "S2"
+ },
+ "selectedNodeIDs": [],
+ "selectedLinkID": null,
+ "pendingLinkStartID": null,
+ "activeLinkSourceID": null,
+ "activeCustomerClass": 0,
+ "selectedTool": "select",
+ "toolBeforeStickyPan": null,
+ "canUndo": true,
+ "canRedo": false,
+ "undoActionName": "Change Service Distribution",
+ "redoActionName": "",
+ "snapToGrid": false,
+ "snapSuspended": false,
+ "classFilter": null,
+ "canvasScale": 1,
+ "canvasPanOffset": [0, 0],
+ "infiniteBuffers": true,
+ "nodeCount": 7,
+ "linkCount": 10,
+ "numberOfCustomerClasses": 4,
+ "canPaste": false,
+ "hasUnsavedChanges": true,
+ "multiSelectRect": null,
+ "isDraggingNode": false,
+ "parameterEditorTarget": null,
+ "linkParameterEditorTarget": null,
+ "pendingFitOnAppear": false
+}

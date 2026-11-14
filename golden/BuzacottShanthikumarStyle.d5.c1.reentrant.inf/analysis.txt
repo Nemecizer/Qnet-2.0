@@ -1,0 +1,75 @@
+NETWORK ANALYSIS — Brownian Heavy-Traffic Reliability
+=====================================================
+
+NETWORK SUMMARY
+---------------
+Stations:         5
+Customer classes: 1
+Buffer model:     infinite
+
+KEY PRIMITIVES
+--------------
+  Station   servers    μ_eff        α          ρ   c²_s_eff   buffer
+  S1              1   2.0000   1.0000     0.5000     1.0000        ∞
+  S2              1   2.0000   1.3333     0.6667     1.0000        ∞
+  S3              1   2.0000   1.3333     0.6667     1.0000        ∞
+  S4              1   2.0000   1.0000     0.5000     1.0000        ∞
+  S5              1   2.0000   1.0000     0.5000     1.0000        ∞
+
+  Class       λ (ext)     c²_a
+  C1           1.0000   1.0000
+
+OVERALL RELIABILITY ASSESSMENT
+------------------------------
+Score: 82 / 100  (MODERATE)
+Findings: 0 critical, 0 warning, 6 info
+
+Some primitives sit near the edge of the heavy-traffic regime. E[X] estimates are probably directionally correct but may have 10–30% error. See the findings below for specifics.
+
+FINDINGS (grouped by severity)
+------------------------------
+
+[INFO    ] 1. Station 1 is moderately loaded (ρ = 0.500)
+  Why:     Below ρ ≈ 0.7 the heavy-traffic approximation starts to noticeably overestimate queue length. Expect 10–20% error vs simulation.
+  Fix:     If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+  Affects: E[X_1]
+
+[INFO    ] 2. Station 2 is moderately loaded (ρ = 0.667)
+  Why:     Below ρ ≈ 0.7 the heavy-traffic approximation starts to noticeably overestimate queue length. Expect 10–20% error vs simulation.
+  Fix:     If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+  Affects: E[X_2]
+
+[INFO    ] 3. Station 3 is moderately loaded (ρ = 0.667)
+  Why:     Below ρ ≈ 0.7 the heavy-traffic approximation starts to noticeably overestimate queue length. Expect 10–20% error vs simulation.
+  Fix:     If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+  Affects: E[X_3]
+
+[INFO    ] 4. Station 4 is moderately loaded (ρ = 0.500)
+  Why:     Below ρ ≈ 0.7 the heavy-traffic approximation starts to noticeably overestimate queue length. Expect 10–20% error vs simulation.
+  Fix:     If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+  Affects: E[X_4]
+
+[INFO    ] 5. Station 5 is moderately loaded (ρ = 0.500)
+  Why:     Below ρ ≈ 0.7 the heavy-traffic approximation starts to noticeably overestimate queue length. Expect 10–20% error vs simulation.
+  Fix:     If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+  Affects: E[X_5]
+
+[INFO    ] 6. Routing has feedback cycles (i ↔ j)
+  Why:     Departure processes from station j feed back into station i whose departures in turn feed j. The Whitt superposition/departure approximations iterate to a fixed point; the fixed-point SCV is correct only in heavy traffic and converges slowly.
+  Fix:     Raise all ρ in the cycle toward 1 to tighten the heavy-traffic limit. For lightly-loaded feedback networks, simulation is more reliable.
+  Affects: E[X_i] for stations in the cycle
+
+PERFORMANCE METRIC RELIABILITY
+------------------------------
+  E[X_i] (queue length):          MODERATE    ρ below heavy-traffic regime — E[X] systematically biased
+  Throughput (Γ_i):               HIGH        Γ = α; derived exactly from traffic equations
+  Utilization (ρ_i):              HIGH        ρ = α / (s·μ); derived exactly from primitives
+  Sojourn time:                   MODERATE    sojourn = E[X]/Γ; inherits E[X] reliability
+  Per-class W, T, N:              MODERATE    Little's law applied to E[X]; inherits its reliability
+
+TOP ACTIONABLE SUGGESTIONS
+--------------------------
+1. If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+2. If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+3. If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+

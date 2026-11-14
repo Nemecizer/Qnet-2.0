@@ -1,0 +1,49 @@
+/* The results overlay's legend chip (new in 2.1, ROADMAP B2): a floating panel like the canvas's
+   others (flat surface, hairline, card shadow), top-left so it never meets the class legend or the
+   zoom cluster. The badges and rings are SVG with resolved colours (ResultsLayer.tsx); only the
+   chip is styled here. Its fade is canvas.css's .canvas-appear, instant under Reduce Motion. */
+
+.canvas-results-chrome {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+.canvas-results-legend {
+  position: absolute;
+  top: var(--sp-4);
+  left: var(--sp-4);
+  max-width: calc(100% - 2 * var(--sp-4));
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-4);
+  min-height: var(--ctl-lg);
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--canvas-panel);
+  border: 1px solid var(--canvas-separator);
+  border-radius: var(--r-lg);
+  box-shadow: var(--canvas-panel-shadow);
+  color: var(--canvas-text);
+  font-size: var(--fs-sm);
+  text-align: left;
+  cursor: default;
+  pointer-events: auto;
+}
+.canvas-results-legend:hover { background: var(--hover); }
+:root[data-contrast="more"] .canvas-results-legend { border-width: 1.5px; }
+@media (prefers-contrast: more) { :root:not([data-contrast]) .canvas-results-legend { border-width: 1.5px; } }
+
+.canvas-results-scale { display: inline-flex; align-items: center; gap: var(--sp-2); flex: none; }
+.canvas-results-ramp { width: 56px; height: 6px; border-radius: 3px; flex: none; }
+.canvas-results-ramp[data-stale] { opacity: 0.45; }
+.canvas-results-end { color: var(--canvas-text-2); font-size: var(--fs-xs); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.canvas-results-text { display: flex; flex-direction: column; min-width: 0; }
+.canvas-results-caption { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.canvas-results-stale { color: var(--warn-text); font-size: var(--fs-xs); font-weight: var(--fw-semibold); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.canvas-results-caret { color: var(--muted); font-size: var(--fs-2xs); line-height: 1; flex: none; }
+
+/* A narrow canvas keeps the words and drops the scale's end labels. */
+@container (max-width: 420px) { .canvas-results-end { display: none; } }

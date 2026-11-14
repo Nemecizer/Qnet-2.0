@@ -1,0 +1,224 @@
+{
+  "note": "Written by scripts/notices.mjs --native from the staged solvers and the manifest of the pinned sources their libraries were built from (scripts/build-deps.sh). Do not edit by hand.",
+  "minimumMacOS": "14.0",
+  "components": [
+    {
+      "key": "cjson",
+      "name": "cJSON",
+      "version": "1.7.19",
+      "source": "https://github.com/DaveGamble/cJSON",
+      "archive": "https://github.com/DaveGamble/cJSON/archive/refs/tags/v1.7.19.tar.gz",
+      "sha256": "7fa616e3046edfa7a28a32d5f9eacfd23f92900fe1f8ccd988c1662f30454562",
+      "files": {
+        "cjson/LICENSE": "a36dda207c36db5818729c54e7ad4e8b0c6fba847491ba64f372c1a2037b6d5c"
+      }
+    },
+    {
+      "key": "highs",
+      "name": "HiGHS",
+      "version": "1.16.0",
+      "source": "https://github.com/ERGO-Code/HiGHS",
+      "archive": "https://github.com/ERGO-Code/HiGHS/releases/download/v1.16.0/source-archive.tar.gz",
+      "sha256": "05ba0a408e31fe933e4ee4ec9d0e244a0e3c5bd2613e7b138701f62708eceed9",
+      "files": {
+        "highs/LICENSE.txt": "795e6090936bcf2e1a0bfb339053de0c5bb6f3102035ead0ecc0ed4a7c41f1b7"
+      }
+    },
+    {
+      "key": "libomp",
+      "name": "LLVM OpenMP runtime (libomp)",
+      "version": "23.1.5",
+      "source": "https://github.com/llvm/llvm-project",
+      "archive": "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.5/llvm-project-23.1.5.src.tar.xz",
+      "sha256": "fb50b1eac93ddeb3aa8dab4cfe324dff74f4a9c2bdee6160c9e36188f8d06a6e",
+      "files": {
+        "libomp/LICENSE.TXT": "fdad1758a9e1f9d5a81e18879b3406772115edc92c24bfa36b70c654f325e8e4"
+      }
+    },
+    {
+      "key": "suite-sparse",
+      "name": "SuiteSparse",
+      "version": "7.14.1",
+      "source": "https://github.com/DrTimothyAldenDavis/SuiteSparse",
+      "archive": "https://github.com/DrTimothyAldenDavis/SuiteSparse/archive/refs/tags/v7.14.1.tar.gz",
+      "sha256": "81e560e1f74546df139edb765b3f5bc865866da23062312ffe8fd821063c8397",
+      "files": {
+        "suite-sparse/GPL-2.0.txt": "e6d6a009505e345fe949e1310334fcb0747f28dae2856759de102ab66b722cb4",
+        "suite-sparse/LGPL-2.1.txt": "d1140673af4ac0a12a5c6dcbae3dfe49cf156b31218298bf740a4bdf0b4fc338",
+        "suite-sparse/LICENSE.txt": "c07f7bb69aa870c774bd01f040dabd179b7cc8c60021c2c56db9d63d37deabcb"
+      }
+    }
+  ],
+  "libraries": [
+    {
+      "file": "libamd.3.dylib",
+      "component": "suite-sparse",
+      "version": "3.3.4",
+      "licence": "BSD-3-Clause",
+      "loads": [
+        "libsuitesparseconfig.7.dylib"
+      ],
+      "usedBy": [
+        "finite/fBNAfm/bna_fm_cbc",
+        "finite/fBNAfm/bna_fm_gauss",
+        "finite/fBNAsm/srbm_solver",
+        "infinite/BNAmd/mc_solver",
+        "infinite/BNAsm/bnet"
+      ]
+    },
+    {
+      "file": "libcamd.3.dylib",
+      "component": "suite-sparse",
+      "version": "3.3.5",
+      "licence": "BSD-3-Clause",
+      "loads": [
+        "libsuitesparseconfig.7.dylib"
+      ],
+      "usedBy": [
+        "finite/fBNAfm/bna_fm_cbc",
+        "finite/fBNAfm/bna_fm_gauss",
+        "finite/fBNAsm/srbm_solver",
+        "infinite/BNAmd/mc_solver",
+        "infinite/BNAsm/bnet"
+      ]
+    },
+    {
+      "file": "libccolamd.3.dylib",
+      "component": "suite-sparse",
+      "version": "3.3.5",
+      "licence": "BSD-3-Clause",
+      "loads": [
+        "libsuitesparseconfig.7.dylib"
+      ],
+      "usedBy": [
+        "finite/fBNAfm/bna_fm_cbc",
+        "finite/fBNAfm/bna_fm_gauss",
+        "finite/fBNAsm/srbm_solver",
+        "infinite/BNAmd/mc_solver",
+        "infinite/BNAsm/bnet"
+      ]
+    },
+    {
+      "file": "libcholmod.5.dylib",
+      "component": "suite-sparse",
+      "version": "5.3.5",
+      "licence": "LGPL-2.1-or-later AND GPL-2.0-or-later AND Apache-2.0",
+      "loads": [
+        "libamd.3.dylib",
+        "libcamd.3.dylib",
+        "libccolamd.3.dylib",
+        "libcolamd.3.dylib",
+        "libomp.dylib",
+        "libsuitesparseconfig.7.dylib"
+      ],
+      "usedBy": [
+        "finite/fBNAfm/bna_fm_cbc",
+        "finite/fBNAfm/bna_fm_gauss",
+        "finite/fBNAsm/srbm_solver",
+        "infinite/BNAmd/mc_solver",
+        "infinite/BNAsm/bnet"
+      ]
+    },
+    {
+      "file": "libcjson.1.dylib",
+      "component": "cjson",
+      "version": "1.7.19",
+      "licence": "MIT",
+      "loads": [],
+      "usedBy": [
+        "infinite/BNAmd/mc_solver"
+      ]
+    },
+    {
+      "file": "libcolamd.3.dylib",
+      "component": "suite-sparse",
+      "version": "3.3.5",
+      "licence": "BSD-3-Clause",
+      "loads": [
+        "libsuitesparseconfig.7.dylib"
+      ],
+      "usedBy": [
+        "finite/fBNAfm/bna_fm_cbc",
+        "finite/fBNAfm/bna_fm_gauss",
+        "finite/fBNAsm/srbm_solver",
+        "infinite/BNAmd/mc_solver",
+        "infinite/BNAsm/bnet"
+      ]
+    },
+    {
+      "file": "libcxsparse.4.dylib",
+      "component": "suite-sparse",
+      "version": "4.4.2",
+      "licence": "LGPL-2.1-or-later",
+      "loads": [
+        "libsuitesparseconfig.7.dylib"
+      ],
+      "usedBy": [
+        "infinite/BNAmc/rbm_mlmc"
+      ]
+    },
+    {
+      "file": "libhighs.1.dylib",
+      "component": "highs",
+      "version": "1.16.0",
+      "licence": "MIT",
+      "loads": [],
+      "usedBy": [
+        "finite/fBNAlp/fBNAlp_solver",
+        "infinite/BNAlp/srbm_lp"
+      ]
+    },
+    {
+      "file": "libomp.dylib",
+      "component": "libomp",
+      "version": "5.0.0",
+      "licence": "Apache-2.0 WITH LLVM-exception",
+      "loads": [],
+      "usedBy": [
+        "finite/fBNAfm/bna_fm_cbc",
+        "finite/fBNAfm/bna_fm_gauss",
+        "finite/fBNAlp/fBNAlp_solver",
+        "finite/fBNAsim/fBNAsim",
+        "finite/fBNAsm/srbm_solver",
+        "infinite/BNAlp/srbm_lp",
+        "infinite/BNAmc/rbm_mlmc",
+        "infinite/BNAmd/mc_solver",
+        "infinite/BNAsim/jackson_sim",
+        "infinite/BNAsm/bnet"
+      ]
+    },
+    {
+      "file": "libsuitesparseconfig.7.dylib",
+      "component": "suite-sparse",
+      "version": "7.14.1",
+      "licence": "BSD-3-Clause",
+      "loads": [
+        "libomp.dylib"
+      ],
+      "usedBy": [
+        "finite/fBNAfm/bna_fm_cbc",
+        "finite/fBNAfm/bna_fm_gauss",
+        "finite/fBNAsm/srbm_solver",
+        "infinite/BNAmd/mc_solver",
+        "infinite/BNAsm/bnet"
+      ]
+    },
+    {
+      "file": "libumfpack.6.dylib",
+      "component": "suite-sparse",
+      "version": "6.3.8",
+      "licence": "GPL-2.0-or-later",
+      "loads": [
+        "libamd.3.dylib",
+        "libcholmod.5.dylib",
+        "libsuitesparseconfig.7.dylib"
+      ],
+      "usedBy": [
+        "finite/fBNAfm/bna_fm_cbc",
+        "finite/fBNAfm/bna_fm_gauss",
+        "infinite/BNAmd/mc_solver",
+        "infinite/BNAsm/bnet"
+      ]
+    }
+  ]
+}

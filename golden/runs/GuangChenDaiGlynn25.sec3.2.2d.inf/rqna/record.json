@@ -1,0 +1,268 @@
+{
+  "completedAt" : "2026-11-11T04:53:59Z",
+  "elapsedSeconds" : 0.504207968711853,
+  "id" : "D2A4646A-32EB-4341-8096-94F199137970",
+  "measurements" : [
+    {
+      "estimate" : 0.9,
+      "id" : "BC60B5B1-AA5F-4BE0-89E4-914AF852195F",
+      "metric" : "Utilization",
+      "stationID" : "A1AAAAAA-3200-0001-0000-000000000003",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.9,
+      "id" : "81AE3290-1EF1-484E-8EC9-FECF09211187",
+      "metric" : "Utilization",
+      "stationID" : "A1AAAAAA-3200-0001-0000-000000000005",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.9,
+      "id" : "C9A1FA32-A5C9-46DE-B581-A8DA2001B5EE",
+      "metric" : "Throughput",
+      "stationID" : "A1AAAAAA-3200-0001-0000-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.9,
+      "id" : "03A4E99B-FDE5-4E87-AEE1-7C1A3E6AF563",
+      "metric" : "Throughput",
+      "stationID" : "A1AAAAAA-3200-0001-0000-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 7.882,
+      "id" : "D656BD08-1BFD-4DC3-B2B0-D0D3C6FB689F",
+      "metric" : "Mean sojourn time",
+      "stationID" : "A1AAAAAA-3200-0001-0000-000000000003",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 7.882,
+      "id" : "8A3B639F-468F-44CC-9A0A-5B05B4C6676C",
+      "metric" : "Mean sojourn time",
+      "stationID" : "A1AAAAAA-3200-0001-0000-000000000005",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 7.093,
+      "id" : "CF2D2677-4294-4628-AEC3-8B00A0B28760",
+      "metric" : "Mean number in system",
+      "stationID" : "A1AAAAAA-3200-0001-0000-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 7.093,
+      "id" : "5E1D2106-CD61-494B-A45D-C7EE8C5AF20F",
+      "metric" : "Mean number in system",
+      "stationID" : "A1AAAAAA-3200-0001-0000-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Whitt–You RQNA",
+    "fidelity" : "Queueing approximation",
+    "identifier" : "queue-approx.rqna",
+    "implementation" : "BNArqna",
+    "layer" : "Queue approximation",
+    "shortName" : "RQNA"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "A1AAAAAA-3200-0001-0000-000000000003",
+      "A1AAAAAA-3200-0001-0000-000000000005"
+    ],
+    "networkFingerprint" : "d027330ee88b8827fdcba6682c446ec3e99bebe70d5bd97c9bfa8e2d4877251f",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000001",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000001",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000001",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000002",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000002",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000003",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000004",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000003",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000005",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000006"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000004",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000006",
+          "routingProbability" : 1,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000005",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000007",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000005",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000008",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000006"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.9",
+          "id" : "A1AAAAAA-3200-0001-0000-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            250
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1AAAAAA-3200-0001-0000-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            220,
+            180
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "erlang",
+          "distributionParameters" : "k=2,rate=2.0",
+          "id" : "A1AAAAAA-3200-0001-0000-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            340,
+            180
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1AAAAAA-3200-0001-0000-000000000004",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            220,
+            320
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "erlang",
+          "distributionParameters" : "k=2,rate=2.0",
+          "id" : "A1AAAAAA-3200-0001-0000-000000000005",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            340,
+            320
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1AAAAAA-3200-0001-0000-000000000006",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            500,
+            250
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "GuangChenDaiGlynn25.sec3.2.2d.inf.bnet",
+    "parameters" : {
+
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/GuangChenDaiGlynn25.sec3.2.2d.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] Single-threaded (analytical solver)\nRunning RQNA ...  [ ]                                                       0.0s\r\u001b[KRunning RQNA ...  [done]                                                    0.0s\n\nNetwork load: rho_max = 0.9000 at S1  (near heavy-traffic — small O(1) deviation expected)\nRouting graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference\n           RQNA\n           ====\n\nrho_1      0.900\nrho_2      0.900\n\nGamma_1    0.900\nGamma_2    0.900\n\nsojourn_1  7.882\nsojourn_2  7.882\n\nE[Q_1]     7.093\nE[Q_2]     7.093\n\nElapsed time: 0.073s\n\n",
+  "startedAt" : "2026-11-11T04:53:59Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

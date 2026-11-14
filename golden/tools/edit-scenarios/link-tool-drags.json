@@ -1,0 +1,22 @@
+{
+ "description": "The Link tool's drag-to-connect (completeLinkDrag replaying handleNodeTap): a drag to another node, one released on empty canvas, one that never left its node (a click), out-and-back onto a station (a self-loop) and onto a buffer (refused), and a drag that starts away from a half-built chain.",
+ "start": "Tandem2.MM1.K5.fin",
+ "steps": [
+  {"op": "deleteLink", "link": {"from": "S1", "to": "B2"}},
+  {"op": "setTool", "tool": "addLink"},
+  {"op": "dragConnect", "from": "S1", "to": "B2"},
+  {"op": "dragConnect", "from": "S2", "to": null},
+  {"op": "dragConnect", "from": "S2", "to": "S2"},
+  {"op": "dragConnect", "from": "S2", "to": "S2", "returned": true},
+  {"op": "dragConnect", "from": "B1", "to": "B1", "returned": true},
+  {"op": "nodeClick", "node": "S1"},
+  {"op": "dragConnect", "from": "B2", "to": "S1"},
+  {"op": "dragConnect", "from": "Sink1", "to": "S1"},
+  {"op": "dragConnect", "from": "S1", "to": "S1", "returned": true},
+  {"op": "undo"},
+  {"op": "undo"},
+  {"op": "undo"},
+  {"op": "redo"},
+  {"op": "canvasClick", "at": [400, 500]}
+ ]
+}

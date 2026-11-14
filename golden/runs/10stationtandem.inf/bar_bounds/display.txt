@@ -1,0 +1,21 @@
+[A[2KConstructing BAR moment bounds ...  [ ]                                                       0.0s[KConstructing BAR moment bounds ...  [/]                                                       0.3s[KConstructing BAR moment bounds ...  [-]                                                       0.5s[KConstructing BAR moment bounds ...  [done]                                                    0.6s
+error: no performance bounds were produced: CVXPY is not installed. The relaxation can still be exported as JSON; install cvxpy with an SDP-capable solver to obtain numerical candidates.
+Model: 10stationtandem.inf.bnet (10 dimensions)
+Method: bar_moment_sdp_outer_relaxation
+Certified: no
+Backend status: unavailable
+Backend detail: CVXPY is not installed. The relaxation can still be exported as JSON; install cvxpy with an SDP-capable solver to obtain numerical candidates.
+  mean_workload_1: lower=None (not_solved), upper=None (not_solved)
+  mean_workload_2: lower=None (not_solved), upper=None (not_solved)
+  mean_workload_3: lower=None (not_solved), upper=None (not_solved)
+  mean_workload_4: lower=None (not_solved), upper=None (not_solved)
+  mean_workload_5: lower=None (not_solved), upper=None (not_solved)
+  mean_workload_6: lower=None (not_solved), upper=None (not_solved)
+  mean_workload_7: lower=None (not_solved), upper=None (not_solved)
+  mean_workload_8: lower=None (not_solved), upper=None (not_solved)
+  mean_workload_9: lower=None (not_solved), upper=None (not_solved)
+  mean_workload_10: lower=None (not_solved), upper=None (not_solved)
+Targets with numerical values: 0/10
+Relaxation: 8151 moments, 3003 equalities, 111 PSD blocks
+Elapsed time: 0.626s
+

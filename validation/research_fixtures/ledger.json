@@ -1,0 +1,273 @@
+{
+ "note": "Gates for run_solvers.py (see its docstring). 'deviation' records a measured, explained error so that it cannot grow unnoticed; it is not an acceptance of that error. Settings are the GUI defaults. Measured 21 Oct 2026 on Apple silicon.",
+ "cells": {
+  "E04/BNAsm": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E04/BNAfm": {
+   "gate": "skip",
+   "reason": "BNAfm needs 2 <= K <= 8."
+  },
+  "E04/BNAlp": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E04/BNAmc": {
+   "gate": "statistical",
+   "z": 4,
+   "observed_max_z": 0.978,
+   "observed_max_rel_err": 0.033,
+   "reason": "MLMC at the GUI defaults (gamma 0.05, eps 0.01, seed 20261021). The reported SE is sampling error only; the Euler step and the finite horizon T add a bias of several SE (E06 coordinate 2: error 0.048 against a requested RMSE of 0.01). z <= 4 guards the run, it does not certify the accuracy target."
+  },
+  "E04/BNAbb": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E04/BNAalr": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E05a/fBNAsm": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 6.04e-07
+  },
+  "E05a/fBNAfm": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 7.5e-05
+  },
+  "E05a/fBNAlp": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 3.73e-05
+  },
+  "E05b/fBNAsm": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E05b/fBNAfm": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E05b/fBNAlp": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E05c/fBNAsm": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 6.04e-07
+  },
+  "E05c/fBNAfm": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.000114
+  },
+  "E05c/fBNAlp": {
+   "gate": "deviation",
+   "max_rel_err": 0.00168,
+   "observed": 0.00126,
+   "reason": "GUI default grid_n 20, basis_m 6 for d = 2; coordinate 1 reads 0.4621 against 0.4627 (0.13%). E05a (1-D, grid_n 64, basis_m 8) is within 4e-5."
+  },
+  "E06/BNAsm": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E06/BNAfm": {
+   "gate": "deviation",
+   "max_rel_err": 84.3,
+   "observed": 67.5,
+   "reason": "BNAfm's box-growth loop diverges: its second box (b = 6, 30) gives (0.504, 2.010), then the FEM mesh hits its cap of 60 while the box keeps growing, the means blow up, and after 12 rounds it prints the last iterate with a warning and exit 0. A coordinate with zero drift starts at b = 25. BNAfm is not called by the GUI."
+  },
+  "E06/BNAlp": {
+   "gate": "deviation",
+   "max_rel_err": 0.0851,
+   "observed": 0.068,
+   "reason": "GUI default grid_n 100, basis_m 6. The error falls with the basis: 6.8% at m = 6, 2.1% at m = 10 (measured 21 Oct 2026)."
+  },
+  "E06/BNAmc": {
+   "gate": "statistical",
+   "z": 4,
+   "observed_max_z": 2.735,
+   "observed_max_rel_err": 0.0253,
+   "reason": "MLMC at the GUI defaults (gamma 0.05, eps 0.01, seed 20261021). The reported SE is sampling error only; the Euler step and the finite horizon T add a bias of several SE (E06 coordinate 2: error 0.048 against a requested RMSE of 0.01). z <= 4 guards the run, it does not certify the accuracy target."
+  },
+  "E06/BNAbb": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E06/BNAalr": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E07/BNAsm": {
+   "gate": "deviation",
+   "max_rel_err": 0.00304,
+   "observed": 0.00235,
+   "reason": "Degree 8 (GUI default): coordinate 2 reads 0.7518 against 0.75 (0.24%). The non-product-form case is the only one BNAsm does not solve to 1e-5."
+  },
+  "E07/BNAfm": {
+   "gate": "deviation",
+   "max_rel_err": 182.0,
+   "observed": 145.0,
+   "reason": "Same divergence as E06 (zero drift on coordinate 2). BNAfm is not called by the GUI."
+  },
+  "E07/BNAlp": {
+   "gate": "deviation",
+   "max_rel_err": 0.0378,
+   "observed": 0.0302,
+   "reason": "GUI default grid_n 100, basis_m 6: coordinate 2 reads 0.7274 against 0.75. Matches the miss found in the SRBM gap analysis on BNAlp's own example1.txt."
+  },
+  "E07/BNAmc": {
+   "gate": "statistical",
+   "z": 4,
+   "observed_max_z": 1.244,
+   "observed_max_rel_err": 0.0136,
+   "reason": "MLMC at the GUI defaults (gamma 0.05, eps 0.01, seed 20261021). The reported SE is sampling error only; the Euler step and the finite horizon T add a bias of several SE (E06 coordinate 2: error 0.048 against a requested RMSE of 0.01). z <= 4 guards the run, it does not certify the accuracy target."
+  },
+  "E07/BNAbb": {
+   "gate": "interval"
+  },
+  "E07/BNAalr": {
+   "gate": "deviation",
+   "max_rel_err": 0.0525,
+   "observed": 0.0419,
+   "reason": "Default options; the fit reports not converged and reads (0.519, 0.782). Every product-form case is exact because the solver detects skew symmetry first."
+  },
+  "E08_d20/BNAsm": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 8e-06
+  },
+  "E08_d20/BNAfm": {
+   "gate": "skip",
+   "reason": "BNAfm needs 2 <= K <= 8."
+  },
+  "E08_d20/BNAlp": {
+   "gate": "skip",
+   "reason": "BNAlp takes d <= 10."
+  },
+  "E08_d20/BNAmc": {
+   "gate": "statistical",
+   "z": 4,
+   "observed_max_z": 3.485,
+   "observed_max_rel_err": 0.28,
+   "reason": "MLMC at the GUI defaults (gamma 0.05, eps 0.01, seed 20261021). The reported SE is sampling error only; the Euler step and the finite horizon T add a bias of several SE (E06 coordinate 2: error 0.048 against a requested RMSE of 0.01). z <= 4 guards the run, it does not certify the accuracy target."
+  },
+  "E08_d20/BNAbb": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E08_d20/BNAalr": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E08_d3/BNAsm": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 1e-06
+  },
+  "E08_d3/BNAfm": {
+   "gate": "skip",
+   "reason": "Exceeds two minutes (and ten): the default mesh 20 per axis grows with the box, so a 3-D run is a sequence of large FEM solves."
+  },
+  "E08_d3/BNAlp": {
+   "gate": "deviation",
+   "max_rel_err": 0.0763,
+   "observed": 0.061,
+   "reason": "GUI default grid_n 25, basis_m 5 for d = 3. grid_n 40, basis_m 6 gives (1, 0.504, 0.334), about 1% (measured 21 Oct 2026)."
+  },
+  "E08_d3/BNAmc": {
+   "gate": "statistical",
+   "z": 4,
+   "observed_max_z": 3.611,
+   "observed_max_rel_err": 0.0511,
+   "reason": "MLMC at the GUI defaults (gamma 0.05, eps 0.01, seed 20261021). The reported SE is sampling error only; the Euler step and the finite horizon T add a bias of several SE (E06 coordinate 2: error 0.048 against a requested RMSE of 0.01). z <= 4 guards the run, it does not certify the accuracy target."
+  },
+  "E08_d3/BNAbb": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E08_d3/BNAalr": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E08_d30/BNAsm": {
+   "gate": "skip",
+   "reason": "Cholesky breakdown at degree 3 for d = 30 (exit 1; bnet suggests -l or -r eps). Degree 3 is the largest the GUI's 2 GB basis limit allows here, so the GUI run fails the same way."
+  },
+  "E08_d30/BNAfm": {
+   "gate": "skip",
+   "reason": "BNAfm needs 2 <= K <= 8."
+  },
+  "E08_d30/BNAlp": {
+   "gate": "skip",
+   "reason": "BNAlp takes d <= 10."
+  },
+  "E08_d30/BNAmc": {
+   "gate": "statistical",
+   "z": 4,
+   "observed_max_z": 2.966,
+   "observed_max_rel_err": 0.312,
+   "reason": "MLMC at the GUI defaults (gamma 0.05, eps 0.01, seed 20261021). The reported SE is sampling error only; the Euler step and the finite horizon T add a bias of several SE (E06 coordinate 2: error 0.048 against a requested RMSE of 0.01). z <= 4 guards the run, it does not certify the accuracy target."
+  },
+  "E08_d30/BNAbb": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E08_d30/BNAalr": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E08_d5/BNAsm": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 1e-06
+  },
+  "E08_d5/BNAfm": {
+   "gate": "skip",
+   "reason": "fBNAfm refuses at the first box (exit 2: work budget) for K = 5 at mesh 20."
+  },
+  "E08_d5/BNAlp": {
+   "gate": "deviation",
+   "max_rel_err": 0.328,
+   "observed": 0.262,
+   "reason": "GUI default grid_n 10, basis_m 3 for d = 5: coordinate 2 reads 0.369 against 0.5. grid_n 12, basis_m 4 gives 0.503 but coordinate 3 still reads 0.278 against 0.333, and takes 47 s."
+  },
+  "E08_d5/BNAmc": {
+   "gate": "statistical",
+   "z": 4,
+   "observed_max_z": 1.384,
+   "observed_max_rel_err": 0.0547,
+   "reason": "MLMC at the GUI defaults (gamma 0.05, eps 0.01, seed 20261021). The reported SE is sampling error only; the Euler step and the finite horizon T add a bias of several SE (E06 coordinate 2: error 0.048 against a requested RMSE of 0.01). z <= 4 guards the run, it does not certify the accuracy target."
+  },
+  "E08_d5/BNAbb": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  },
+  "E08_d5/BNAalr": {
+   "gate": "rtol",
+   "tol": 0.001,
+   "observed": 0.0
+  }
+ }
+}

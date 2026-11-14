@@ -1,0 +1,27 @@
+[A[2K[Threads] Single-threaded (analytical solver)
+Running QNA ...  [ ]                                                       0.0s[KRunning QNA ...  [done]                                                    0.0s
+
+Network load: rho_max = 0.900 at S2  (near heavy-traffic — small O(1) deviation expected)
+Routing graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference
+──  Open Jackson network — exact M/M/s product form  ──
+           QNA             Exact E[N]  (Jackson)
+           ===             ============
+
+rho_1      0.675 (+0.0%)   0.675
+rho_2      0.900 (+0.0%)   0.900
+rho_3      0.450 (+0.0%)   0.450
+
+Gamma_1    0.675 (+0.0%)   0.675
+Gamma_2    0.900 (+0.0%)   0.900
+Gamma_3    0.450 (+0.0%)   0.450
+
+sojourn_1  3.077 (+0.0%)   3.077
+sojourn_2  10.000 (+0.0%)  10.000
+sojourn_3  1.818 (+0.0%)   1.818
+
+E[Q_1]     2.077 (+0.0%)   2.077
+E[Q_2]     9.000 (+0.0%)   9.000
+E[Q_3]     0.818 (+0.0%)   0.818
+
+Elapsed time: 0.032s
+

@@ -1,0 +1,25 @@
+Running multi-class SRBM (research, mesh=auto) ... done.
+
+Network load: rho_max = 0.4500 at S1  (moderate load — SRBM/FEM are heavy-traffic limits; expect deviation from simulation)
+──  Open Jackson network — exact M/M/s product form (3 classes, no shared station)  ──
+           Multi-Class SRBM  Exact E[N]  (Jackson)
+           ================  ============
+
+rho_1      0.450 (+0.0%)     0.450
+rho_2      0.400 (+0.0%)     0.400
+rho_3      0.420 (+0.0%)     0.420
+
+Gamma_1    0.450 (+0.0%)     0.450
+Gamma_2    0.400 (+0.0%)     0.400
+Gamma_3    0.420 (+0.0%)     0.420
+
+sojourn_1  2.023 (+11.3%)    1.818
+sojourn_2  2.070 (+24.2%)    1.667
+sojourn_3  2.031 (+17.8%)    1.724
+
+E[X_1]     0.910 (+11.2%)    0.818
+E[X_2]     0.828 (+24.1%)    0.667
+E[X_3]     0.853 (+17.8%)    0.724
+
+Elapsed time: 7.292s
+

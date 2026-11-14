@@ -1,0 +1,12 @@
+d=2, K=1, infiniteBuffers=false
+S1: α=1.000000  μ_eff=1.000000  c=1.000000  ρ=1.000000
+S2: α=1.000000  μ_eff=1.000000  c=1.000000  ρ=1.000000
+class 1: α=[1.0000 1.0000 ]  μ=[1.0000 1.0000 ]  λ_ext=1.0000
+aggregatedP (2×2):
+  S1: 0.0000 1.0000 
+  S2: 0.0000 0.0000 
+hasRoutingCycles = false
+SRBM existence: holds — the reflection directions satisfy the Dai–Williams (1995) condition on every set of meeting faces, so the box SRBM exists and is unique in law.
+SRBM recurrence: holds — the state space is bounded, so no drift can make the SRBM transient.
+AnalyticalTractability.assess(allowGCDG=true)  → kind=none, isTractable=false, detail=''
+AnalyticalTractability.assess(allowGCDG=false) → kind=none, isTractable=false, detail=''

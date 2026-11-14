@@ -1,0 +1,329 @@
+{
+  "completedAt" : "2026-11-11T04:56:51Z",
+  "elapsedSeconds" : 1.4465500116348267,
+  "id" : "85D48C7E-F920-4A28-9866-1247817315A0",
+  "measurements" : [
+    {
+      "estimate" : 0.868,
+      "id" : "FCB64792-99D7-4F3A-998C-EF8A3C61B793",
+      "metric" : "Utilization",
+      "stationID" : "D4E5F6A7-4444-4444-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.9,
+      "id" : "8C580828-132D-46C1-BDBD-4EAB81C88F81",
+      "metric" : "Utilization",
+      "stationID" : "D4E5F6A7-4444-4444-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.697,
+      "id" : "0EC56151-0320-482B-84A1-326738D321A3",
+      "metric" : "Utilization",
+      "stationID" : "D4E5F6A7-4444-4444-1111-000000000007",
+      "stationName" : "S3",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.965,
+      "id" : "61835F52-A477-440C-86AB-C7E88ED22FFF",
+      "metric" : "Throughput",
+      "stationID" : "D4E5F6A7-4444-4444-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 1,
+      "id" : "4F74E004-8A47-4456-9365-4394503AA709",
+      "metric" : "Throughput",
+      "stationID" : "D4E5F6A7-4444-4444-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.774,
+      "id" : "AE56B239-27E0-474C-9ABA-E5A3B52A48DC",
+      "metric" : "Throughput",
+      "stationID" : "D4E5F6A7-4444-4444-1111-000000000007",
+      "stationName" : "S3",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 2.185,
+      "id" : "69E43264-0EEB-4C2A-A5C4-26BBDF54C9D0",
+      "metric" : "Mean sojourn time",
+      "stationID" : "D4E5F6A7-4444-4444-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 3.46,
+      "id" : "00F3C7CC-524D-4104-92EA-F040512D3B54",
+      "metric" : "Mean sojourn time",
+      "stationID" : "D4E5F6A7-4444-4444-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 3.618,
+      "id" : "2AA87629-3330-43F9-AE15-7D0DB6F65780",
+      "metric" : "Mean sojourn time",
+      "stationID" : "D4E5F6A7-4444-4444-1111-000000000007",
+      "stationName" : "S3",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 2.107,
+      "id" : "3220A3E6-96B6-493C-8C4E-9D144721AD1E",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "D4E5F6A7-4444-4444-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 3.46,
+      "id" : "176E6E56-DAD2-4487-BC29-92A4883CE83A",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "D4E5F6A7-4444-4444-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 2.801,
+      "id" : "B91ACAC7-71CD-4612-8C2F-E3BE1356D371",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "D4E5F6A7-4444-4444-1111-000000000007",
+      "stationName" : "S3",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Finite Element Method",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.fem",
+    "implementation" : "BNAfm\/fBNAfm",
+    "layer" : "SRBM diffusion",
+    "shortName" : "FEM"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Finite capacity",
+    "exportStationIDs" : [
+      "D4E5F6A7-4444-4444-1111-000000000003",
+      "D4E5F6A7-4444-4444-1111-000000000005",
+      "D4E5F6A7-4444-4444-1111-000000000007"
+    ],
+    "networkFingerprint" : "10e3e7e897b1afbd0a8f3a297cc2340052ad4b513920b76299d7a47b9f58d185",
+    "networkSnapshot" : {
+      "infiniteBuffers" : false,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D4E5F6A7-4444-4444-1111-000000000001",
+          "id" : "D4E5F6A7-4444-4444-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "D4E5F6A7-4444-4444-1111-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D4E5F6A7-4444-4444-1111-000000000002",
+          "id" : "D4E5F6A7-4444-4444-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "D4E5F6A7-4444-4444-1111-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D4E5F6A7-4444-4444-1111-000000000003",
+          "id" : "D4E5F6A7-4444-4444-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "D4E5F6A7-4444-4444-1111-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D4E5F6A7-4444-4444-1111-000000000004",
+          "id" : "D4E5F6A7-4444-4444-2222-000000000004",
+          "routingProbability" : 1,
+          "toNodeID" : "D4E5F6A7-4444-4444-1111-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D4E5F6A7-4444-4444-1111-000000000005",
+          "id" : "D4E5F6A7-4444-4444-2222-000000000005",
+          "routingProbability" : 1,
+          "toNodeID" : "D4E5F6A7-4444-4444-1111-000000000006"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D4E5F6A7-4444-4444-1111-000000000006",
+          "id" : "D4E5F6A7-4444-4444-2222-000000000006",
+          "routingProbability" : 1,
+          "toNodeID" : "D4E5F6A7-4444-4444-1111-000000000007"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D4E5F6A7-4444-4444-1111-000000000007",
+          "id" : "D4E5F6A7-4444-4444-2222-000000000007",
+          "routingProbability" : 1,
+          "toNodeID" : "D4E5F6A7-4444-4444-1111-000000000008"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=1.0",
+          "id" : "D4E5F6A7-4444-4444-1111-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 3,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "D4E5F6A7-4444-4444-1111-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            190,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "erlang",
+          "distributionParameters" : "k=4,rate=4.44444444",
+          "id" : "D4E5F6A7-4444-4444-1111-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            280,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 5,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "D4E5F6A7-4444-4444-1111-000000000004",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            370,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.111111",
+          "id" : "D4E5F6A7-4444-4444-1111-000000000005",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 5,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "D4E5F6A7-4444-4444-1111-000000000006",
+          "kind" : "buffer",
+          "name" : "B3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            550,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "gamma",
+          "distributionParameters" : "shape=0.5,scale=1.8",
+          "id" : "D4E5F6A7-4444-4444-1111-000000000007",
+          "kind" : "station",
+          "name" : "S3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            640,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "D4E5F6A7-4444-4444-1111-000000000008",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            730,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "ShenChenDaiDai02.d3.c1.4.fin.bnet",
+    "parameters" : {
+      "mesh per dimension" : "10",
+      "quadrature" : "Gauss-Legendre"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/ShenChenDaiDai02.d3.c1.4.fin.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] Using 18 CPU cores (OpenMP)\nRunning finite element method ...  [                              ]  starting ...\r\u001b[KRunning finite element method ...  [\u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m ]  1000\/1000    (100%)        \/\r\u001b[KRunning finite element method ...  [\u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m ]  1000\/1000    (100%)        -\r\u001b[KRunning finite element method ...  [\u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m ]  1000\/1000    (100%)        \\\r\u001b[KRunning finite element method ...  [\u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m ]  1000\/1000    (100%)        |\r\u001b[KRunning finite element method ...  [\u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m ]  1000\/1000    (100%)     1.2s\n\nNetwork load: rho_max = 0.9000 at S2  (near heavy-traffic — small O(1) deviation expected)\nBuffer regime: K*(1-rho) = 0.40 at S1 (K=4, rho=0.900) — small for the heavy-traffic limit (target ~1-5); SRBM may overstate E[X] \/ understate loss by 10-20%\n           Finite Element\n           ==============\n\nrho_1      0.868\nrho_2      0.900\nrho_3      0.697\n\nGamma_1    0.965\nGamma_2    1.000\nGamma_3    0.774\n\nsojourn_1  2.185\nsojourn_2  3.460\nsojourn_3  3.618\n\nE[X_1]     2.107\nE[X_2]     3.460\nE[X_3]     2.801\n\nElapsed time: 1.269s\n\n",
+  "startedAt" : "2026-11-11T04:56:50Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

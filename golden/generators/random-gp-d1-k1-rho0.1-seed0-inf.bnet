@@ -1,0 +1,104 @@
+{
+  "canvasPanOffset" : [
+    0,
+    0
+  ],
+  "canvasScale" : 1,
+  "infiniteBuffers" : true,
+  "links" : [
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "B8701EB8-7220-4616-BD29-128D135072D6",
+      "id" : "517E9B4D-9FF7-4C44-AFC9-040FB6636AB5",
+      "routingProbability" : 1,
+      "toNodeID" : "ECD27A0C-FDD6-4086-9D9C-6B831A2236CB"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "469C05C3-82A1-4945-8C8D-91A8FC5BB85D",
+      "id" : "029603AB-B568-46C5-9726-0D30F17B5CBF",
+      "routingProbability" : 0.4364081105788174,
+      "toNodeID" : "C6C05619-EAB2-45F7-85D4-46275242A3F4"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "ECD27A0C-FDD6-4086-9D9C-6B831A2236CB",
+      "id" : "59BD7CF4-66F7-4B1E-BD0F-AF93F409B61B",
+      "routingProbability" : 1,
+      "toNodeID" : "469C05C3-82A1-4945-8C8D-91A8FC5BB85D"
+    }
+  ],
+  "nodes" : [
+    {
+      "bufferSize" : 1,
+      "distribution" : "poisson",
+      "distributionParameters" : "lambda=0.090250",
+      "id" : "B8701EB8-7220-4616-BD29-128D135072D6",
+      "kind" : "source",
+      "name" : "Src1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        80,
+        220
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "ECD27A0C-FDD6-4086-9D9C-6B831A2236CB",
+      "kind" : "buffer",
+      "name" : "B1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        200,
+        220
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "erlang",
+      "distributionParameters" : "k=3,rate=2.7075",
+      "id" : "469C05C3-82A1-4945-8C8D-91A8FC5BB85D",
+      "kind" : "station",
+      "name" : "S1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        265,
+        220
+      ],
+      "serviceDistributions" : {
+        "0" : {
+          "distribution" : "erlang",
+          "distributionParameters" : "k=3,rate=2.7075"
+        }
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "C6C05619-EAB2-45F7-85D4-46275242A3F4",
+      "kind" : "sink",
+      "name" : "Sink1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        370,
+        220
+      ],
+      "serviceDistributions" : {
+
+      }
+    }
+  ]
+}

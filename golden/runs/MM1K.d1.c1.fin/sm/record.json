@@ -1,0 +1,167 @@
+{
+  "completedAt" : "2026-11-11T04:55:49Z",
+  "elapsedSeconds" : 0.427933931350708,
+  "id" : "89A3DADF-2B79-4427-B78F-5A62BDFF1604",
+  "measurements" : [
+    {
+      "estimate" : 0.854,
+      "id" : "D2FA36D2-850D-46B1-B656-167D90A8F624",
+      "metric" : "Utilization",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.854,
+      "id" : "E285F396-CB95-4CFB-A667-8D1882881DDF",
+      "metric" : "Throughput",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 5.223,
+      "id" : "161136E1-4226-458F-92EB-E94A5775848C",
+      "metric" : "Mean sojourn time",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 4.462,
+      "id" : "10A77189-57D6-48EE-B607-127947A9167A",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Spectral Method",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.spectral",
+    "implementation" : "BNAsm\/fBNAsm",
+    "layer" : "SRBM diffusion",
+    "shortName" : "Spectral"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Finite capacity",
+    "exportStationIDs" : [
+      "EE000001-0001-0001-0001-000000000003"
+    ],
+    "networkFingerprint" : "4a61f9da5223f27e8e2ed5351813d746071f68158092d346416cfbfbc9bb1e9b",
+    "networkSnapshot" : {
+      "infiniteBuffers" : false,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000001",
+          "id" : "EE000001-0001-0001-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000002",
+          "id" : "EE000001-0001-0001-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000003",
+          "id" : "EE000001-0001-0001-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000004"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.9",
+          "id" : "EE000001-0001-0001-0001-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            220,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            340,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000004",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "MM1K.d1.c1.fin.bnet",
+    "parameters" : {
+      "basis" : "monomial",
+      "polynomial degree" : "8"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/MM1K.d1.c1.fin.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] Using 18 CPU cores (OpenMP)\nRunning spectral method ...  [                              ]  starting ...\r\u001b[KRunning spectral method ...  [\u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m ]  24\/24        (100%)     0.1s\n\nNetwork load: rho_max = 0.9000 at S1  (near heavy-traffic — small O(1) deviation expected)\n──  SRBM skew-symmetric case — Harrison–Williams 1987 exact product form  ──\n           Spectral        Exact E[X]  (skew-sym)\n           ========        ============\n\nrho_1      0.854 (-5.1%)   0.900\n\nGamma_1    0.854 (-5.1%)   0.900\n\nsojourn_1  5.223 (-50.5%)  10.556\n\nE[X_1]     4.462 (-53.0%)  9.500\n\nElapsed time: 0.180s\n\n",
+  "startedAt" : "2026-11-11T04:55:49Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

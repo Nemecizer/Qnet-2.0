@@ -1,0 +1,66 @@
+{
+ "canvasScale": 1,
+ "infiniteBuffers": true,
+ "links": [
+  {
+   "customerClass": 0,
+   "fromNodeID": "N0",
+   "routingProbability": 1,
+   "toNodeID": "N1"
+  },
+  {
+   "customerClass": 0,
+   "fromNodeID": "N1",
+   "routingProbability": 1,
+   "toNodeID": "N2"
+  },
+  {
+   "customerClass": 0,
+   "fromNodeID": "N2",
+   "routingProbability": 1,
+   "toNodeID": "N3"
+  }
+ ],
+ "nodes": [
+  {
+   "bufferSize": 1,
+   "distribution": "exponential",
+   "distributionParameters": "rate=0.9",
+   "id": "N0",
+   "kind": "source",
+   "name": "Src1",
+   "numberOfServers": 1,
+   "serviceDistributions": {}
+  },
+  {
+   "bufferSize": 10,
+   "distribution": "exponential",
+   "distributionParameters": "rate=1.0",
+   "id": "N1",
+   "kind": "buffer",
+   "name": "B1",
+   "numberOfServers": 1,
+   "serviceDistributions": {}
+  },
+  {
+   "bufferSize": 1,
+   "distribution": "exponential",
+   "distributionParameters": "rate=1.0",
+   "id": "N2",
+   "kind": "station",
+   "name": "S1",
+   "numberOfServers": 1,
+   "serviceDistributions": {}
+  },
+  {
+   "bufferSize": 1,
+   "distribution": "exponential",
+   "distributionParameters": "rate=1.0",
+   "id": "N3",
+   "kind": "sink",
+   "name": "Sink1",
+   "numberOfServers": 1,
+   "serviceDistributions": {}
+  }
+ ]
+}

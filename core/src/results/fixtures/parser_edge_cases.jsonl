@@ -1,0 +1,44 @@
+{"method": "queue.des", "export": true, "raw": "rho_1 = 0.5\nrho_1 = 0.7\nGamma_1 = 2\n"}
+{"method": "queue.des", "export": true, "raw": "RHO_1 = 0.5\nGAMMA_2=1.5\nSojourn_3   7\n"}
+{"method": "queue.des", "export": true, "raw": "\u017fojourn_1 = 3.5\n"}
+{"method": "queue.des", "export": true, "raw": "rho_1 = \u0661.5\nrho_1 = 0.25\n"}
+{"method": "queue.des", "export": true, "raw": "rho_99999999999999999999 = 1\nE[X_1] = 2\n"}
+{"method": "queue.des", "export": true, "raw": "rho_0 = 0.5\nrho_2 = 0.6\n"}
+{"method": "queue.des", "export": false, "raw": "rho_1 = 0.5\nrho_2 = 0.6\nrho_3 = 0.7\n"}
+{"method": "queue.des", "export": true, "raw": "\u001b[1;32mrho_1\u001b[0m = 0.9 (+1.5%)\r\u001b[Krho_2 = 0.8\r\nE[Q_1] = 3 \u00b1 0.25\n"}
+{"method": "queue.des", "export": true, "raw": "  E[x_1]   =   1e-3\t(2E-4)\n e[y_2] 4.\n"}
+{"method": "queue.des", "export": true, "raw": "rho_1 = 1e999\n"}
+{"method": "queue.des", "export": true, "raw": "rho_1 = 0.9\u0301\n"}
+{"method": "queue.des", "export": true, "raw": "rho_1 0.5 (0.1\n"}
+{"method": "queue.des", "export": true, "raw": "rho_1 = 0.5 \u00b1\u3000 0.05\n"}
+{"method": "queue.des", "export": true, "raw": "residual\n= 3e-9\nstationarity error: 4\nrho_1 = 1\n"}
+{"method": "queue.des", "export": true, "raw": "||PI Q||_1 = 2.5e-12\nrho_1 = 1\nsuccessive refinement relative change=0.5\n"}
+{"method": "comparison.mixed", "export": true, "raw": "E[X_1]      \u2014       2.5       2.7\nE[Y_2]   n/a   x 3.25\nE[Q_3] 1.5 2\n"}
+{"method": "comparison.mixed", "export": true, "raw": "E[X_1]  \u2014  \u2014\nQNET_COMPARISON_STATUS_V1 partial=no successful=2\n"}
+{"method": "comparison.mixed", "export": true, "raw": "E[X_1] 1.0\nqnet_comparison_status_v1 PARTIAL=YES\n"}
+{"method": "queue.des", "export": true, "raw": "E[X_1]      \u2014       2.5       2.7\n"}
+{"method": "queue.des", "export": true, "raw": "L_1 = 2.5 \u00b1 0.5\nL_2=3\n"}
+{"method": "queue.finite-ctmc", "export": true, "raw": "Station s1: E[N]=1.5 utilization=0.6 P(full)=0.01 throughput=0.59 E[T]=2.54\nstation S2: e[n]=x utilization=0.5 P(full)=0 throughput=1 E[T]=1\n"}
+{"method": "queue.finite-ctmc", "export": true, "raw": "Station s1: E[N]=\u0661 utilization=0.6 P(full)=0.01 throughput=0.59 E[T]=2.54\n"}
+{"method": "queue.open-bcmp-product-form", "export": true, "raw": "\ufb06ation \u017f1 (FCFS): E[N]=9 throughput=1 utilization=0.9 margin=0.1\n"}
+{"method": "queue-approx.finite-decomposition", "export": true, "raw": "S1 Buffer one: offered=1 throughput=0.9 P(full)=0.1 E[N]=2 E[Q]=1.1 util=0.9 W=1.2 T=2.2\n  s2 x: o\ufb00ered=1 throughput=0.9 P(full)=0.1 E[N]=2 E[Q]=1.1 util=0.9 W=1.2 T=2.2\n"}
+{"method": "queue.infinite-truncated-ctmc", "export": true, "raw": "Node 1 Checkout: E[N]=8.5 utilization=0.9 departure=1.0\nNode 2 : E[N]=1 utilization=0.1 departure=0.1\nSelected total cap: 40\nHeuristic converged: YES\n"}
+{"method": "srbm.adaptive-low-rank-bar", "export": true, "raw": "E[Z_1] = 0.8 Var[Z_9] = 0.6\nRank: 3 converged: yes\nHeld-out relative BAR RMS = 7.19038e-17\nresidual: 5\n"}
+{"method": "srbm.bar-moment-bounds", "export": true, "raw": "mean_workload_1: [0.5, 0.7] (exact)\nmean_workload_2: lower=0.1 (feasible), upper=0.9 (feasible)\nCertified: no\n"}
+{"method": "srbm.bar-moment-bounds", "export": true, "raw": "mean_workload_1: [0.5,0.7](EXACT)\nCertified: YES\nRelaxation: 3 moments, 2 equalities, 1 PSD blocks\n"}
+{"method": "queue.regenerative-mc", "export": true, "raw": "QNET_NODE_METRIC_V1 node_id=s%31 metric=mean_number_class class_id=c2 estimate=0x1p1 standard_error=NA ci_confidence=na ci_low=inf ci_high=2.7 ci_half_width=0.2 effective_cycles=40.5\nComplete empty-to-empty cycles: 12\nPrecision target met: yes\n"}
+{"method": "queue.regenerative-mc", "export": true, "raw": "QNET_NODE_METRIC_V1 node_id=s1 metric=other class_id=- estimate=1 standard_error=0.1 ci_confidence=0.95 ci_low=0.9 ci_high=1.1 ci_half_width=0.1 effective_cycles=1\nQNET_NODE_METRIC_V1 node_id=x1 metric=utilization class_id=- estimate=1 standard_error=0.1 ci_confidence=0.95 ci_low=0.9 ci_high=1.1 ci_half_width=0.1 effective_cycles=1\nQNET_NODE_METRIC_V1 node_id=S2 metric=utilization class_id=C1 estimate=0.5 standard_error=0.1 ci_confidence=0.95 ci_low=0.4 ci_high=0.6 ci_half_width=0.1 effective_cycles=NA\nQNET_NODE_METRIC_V1 node_id=s1 metric=utilization class_id=- estimate=nan standard_error=0.1 ci_confidence=0.95 ci_low=0.9 ci_high=1.1 ci_half_width=0.1 effective_cycles=1\n"}
+{"method": "queue.regenerative-mc", "export": true, "raw": "QNET_NODE_METRIC_V1 node_id=s1 metric=mean_queue class_id=- estimate=1.5 standard_error=0.1 ci_confidence=0.95 ci_low=1.4 ci_high=1.6 ci_half_width=0.1 effective_cycles=7 \nqnet_node_metric_v1 node_id=s1 metric=mean_queue class_id=- estimate=1.5 standard_error=0.1 ci_confidence=0.95 ci_low=1.4 ci_high=1.6 ci_half_width=0.1 effective_cycles=7\n"}
+{"method": "queue.matrix-analytic-qbd", "export": true, "raw": "QNET_QBD_METRIC_V1 metric=tail_probability estimate=0.5\nQNET_QBD_METRIC_V1 metric=variance_level estimate=2\u2028\nQNET_QBD_METRIC_V1 metric=standard_deviation_level estimate=1.4 \nQNET_QBD_METRIC_V1 metric=second_moment_level estimate=3\nresidual = 9\nQNET_QBD_EVIDENCE_V1 key=iterations value=12\nQNET_QBD_EVIDENCE_V1 key=iterations value=13\nQNET_QBD_EVIDENCE_V1 key=stability%5Fclassification value=null_recurrent\n"}
+{"method": "queue.matrix-analytic-qbd", "export": true, "raw": "QNET_QBD_METRIC_V1 metric=mean_level estimate=1\nQNET_QBD_EVIDENCE_V1 key=normalization_residual value=inf\n"}
+{"method": "queue.des", "export": true, "raw": "QNET_QBD_METRIC_V1 metric=mean_level estimate=1\n"}
+{"method": "srbm.mlmc", "export": true, "raw": "L_1 = 2.5\nQNET_MLMC_STATUS_V1 adaptive=no precision_met=na cap_hits=0\n"}
+{"method": "srbm.mlmc", "export": true, "raw": "QNET_MLMC_STATUS_V1 adaptive=yes precision_met=no cap_hits=3\n"}
+{"method": "srbm.mlmc", "export": true, "raw": "L_1 = 2\nqnet_mlmc_status_v1  ADAPTIVE=YES   PRECISION_MET=NO cap_hits=2\n"}
+{"method": "queue-approx.sbd", "export": true, "raw": "rho_1 = 0.9\nQNET_SBD_STATUS_V1 fallback_used=no\n"}
+{"method": "queue-approx.sbd", "export": true, "raw": "rho_1 = 0.9\nQNET_SBD_STATUS_V1\nfallbac\u212a_used=yes\n"}
+{"method": "srbm.adaptive-low-rank-bar", "export": true, "raw": "E[Z_1] = 1 Var[Z_1] = 1\nRank: 12 converged: no\u0301\n"}
+{"method": "queue.infinite-truncated-ctmc", "export": true, "raw": "Node 1 x: E[N]=1 utilization=0.5 departure=0.5\nHeuristic converged: no\n"}
+{"method": "queue.regenerative-mc", "export": true, "raw": "Complete empty-to-empty cycles: 0\n"}
+{"method": "srbm.spectral", "export": true, "raw": "\n\n"}
+{"method": "queue.des", "export": true, "raw": "\r"}

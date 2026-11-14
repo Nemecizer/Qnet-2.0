@@ -1,0 +1,15 @@
+[A[2KConstructing BAR moment bounds ...  [ ]                                                       0.0s[KConstructing BAR moment bounds ...  [done]                                                    0.1s
+error: no performance bounds were produced: CVXPY is not installed. The relaxation can still be exported as JSON; install cvxpy with an SDP-capable solver to obtain numerical candidates.
+Model: random2.bnet (4 dimensions)
+Method: bar_moment_sdp_outer_relaxation
+Certified: no
+Backend status: unavailable
+Backend detail: CVXPY is not installed. The relaxation can still be exported as JSON; install cvxpy with an SDP-capable solver to obtain numerical candidates.
+  mean_workload_1: lower=None (not_solved), upper=None (not_solved)
+  mean_workload_2: lower=None (not_solved), upper=None (not_solved)
+  mean_workload_3: lower=None (not_solved), upper=None (not_solved)
+  mean_workload_4: lower=None (not_solved), upper=None (not_solved)
+Targets with numerical values: 0/4
+Relaxation: 210 moments, 126 equalities, 21 PSD blocks
+Elapsed time: 0.099s
+

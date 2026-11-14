@@ -1,0 +1,26 @@
+/* Results ▸ Uncertainty (src/uncertainty/). Tokens only (src/styles.css). */
+.uncertainty-view .results-charts-body[data-pending="true"] > :not(.uncertainty-inputs) { opacity: 0.55; }
+@media (prefers-reduced-motion: no-preference) {
+  .uncertainty-view .results-charts-body > * { transition: opacity 120ms ease-out; }
+}
+.uncertainty-defaults { display: flex; align-items: center; flex-wrap: wrap; gap: var(--sp-3) var(--sp-5); font-size: var(--fs-sm); color: var(--text-2); }
+.uncertainty-defaults label { display: inline-flex; align-items: center; gap: var(--sp-2); }
+.uncertainty-defaults input[type="text"] { width: 56px; height: var(--ctl-sm); text-align: right; font-variant-numeric: tabular-nums; }
+.uncertainty-check { color: var(--text); }
+.uncertainty-assumption { margin: var(--sp-3) 0; font-size: var(--fs-xs); color: var(--text-2); }
+.uncertainty-input-table { width: 100%; }
+.uncertainty-input-table th[scope="row"] { font-weight: var(--fw-regular); color: var(--text); }
+.uncertainty-how { white-space: nowrap; }
+.uncertainty-how select { height: var(--ctl-sm); margin-right: var(--sp-2); }
+.uncertainty-how input { width: 64px; height: var(--ctl-sm); margin: 0 var(--sp-1); text-align: right; font-variant-numeric: tabular-nums; }
+.uncertainty-input-table td.uncertainty-assumed { text-align: left; white-space: normal; color: var(--text-2); font-size: var(--fs-xs); }
+.uncertainty-progress { flex: none; margin: 0; font-size: var(--fs-sm); color: var(--text-2); font-variant-numeric: tabular-nums; }
+.uncertainty-overload { flex: none; display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--sp-2) var(--sp-3); margin: 0; max-width: 880px; font-size: var(--fs-md); color: var(--text); }
+.uncertainty-overload[data-tone="warning"] { padding: var(--sp-3) var(--sp-4); border: 1px solid var(--warning-border); border-radius: var(--r-md); background: var(--warn-bg); }
+.uncertainty-overload[data-tone="warning"] strong { color: var(--warn-text); }
+.uncertainty-overload svg { align-self: center; color: var(--warn-text); }
+.uncertainty-overload span { font-size: var(--fs-sm); color: var(--text-2); }
+.uncertainty-overload[data-tone="quiet"] strong { font-weight: var(--fw-regular); color: var(--text-2); font-size: var(--fs-sm); }
+.uncertainty-reading { flex: none; margin: 0; max-width: 880px; font-size: var(--fs-md); line-height: 1.5; color: var(--text); }
+.uncertainty-lead { font-weight: var(--fw-semibold); }
+.uncertainty-table td { font-variant-numeric: tabular-nums; }

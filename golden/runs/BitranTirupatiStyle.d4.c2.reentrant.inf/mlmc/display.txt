@@ -1,0 +1,62 @@
+[A[2KRunning SRBM MLMC (γ=0.050, ε=0.010) ... 
+SRBM MLMC replication 1 diagnostics:
+Sigma nnz ratio: L has 7 non-zeros of 4^2 = 16  (43.75%); using SPARSE CSC path
+R     nnz ratio: 10 non-zeros of 4^2 = 16  (62.50%); using SPARSE CSC LCP column update
+Dimension d   = 4
+gamma         = 0.050
+epsilon       = 0.010
+seed          = 2454886589211414945
+T             = 5.000
+L (levels)    = 3
+N (samples)   = 25260
+ratio (1/gam) = 20
+backend       = openmp
+threads       = 18
+
+antithetic    = off
+adaptive      = off
+
+  Completed 1263 / 25260 (5%)
+  Completed 2526 / 25260 (10%)
+  Completed 3789 / 25260 (15%)
+  Completed 5052 / 25260 (20%)
+  Completed 6315 / 25260 (25%)
+  Completed 7578 / 25260 (30%)
+  Completed 8841 / 25260 (35%)
+  Completed 10104 / 25260 (40%)
+  Completed 11367 / 25260 (45%)
+  Completed 12630 / 25260 (50%)
+  Completed 13893 / 25260 (55%)
+  Completed 15156 / 25260 (60%)
+  Completed 16419 / 25260 (65%)
+  Completed 17682 / 25260 (70%)
+  Completed 18945 / 25260 (75%)
+  Completed 20208 / 25260 (80%)
+  Completed 21471 / 25260 (85%)
+  Completed 22734 / 25260 (90%)
+  Completed 23997 / 25260 (95%)
+  Completed 25260 / 25260 (100%)
+done.
+
+SRBM MLMC (Blanchet-Chen-Glynn-Si)
+==============================================
+# Dimension: 4
+# gamma=0.050  epsilon=0.010  T=5.000  L=3  N=25260  seed=2454886589211414945
+# backend=openmp  threads=18  elapsed=0.390s
+# antithetic=off adaptive=off
+# Replications: 1 (independent top-level streams)
+# Replication seeds: 2454886589211414945
+# Replication 1: seed=2454886589211414945 N=25260 stop=fixed-count
+#
+
+Per-Station Mean Queue Length (L_i = mu_i * E[Y_i]):
+  L_1 =     1.010  ±  0.044 (95%)    (workload E[Y_1] =  0.253 ± 0.011, mu_i = 4.000)
+  L_2 =     1.035  ±  0.078 (95%)    (workload E[Y_2] =  0.259 ± 0.019, mu_i = 4.000)
+  L_3 =     1.020  ±  0.047 (95%)    (workload E[Y_3] =  0.255 ± 0.012, mu_i = 4.000)
+  L_4 =     0.985  ±  0.026 (95%)    (workload E[Y_4] =  0.246 ± 0.007, mu_i = 4.000)
+
+Average queue length: 1.013 (no joint CI: one run does not identify cross-station covariance)
+Total Gaussian RVs (summed over replications): 65948400
+QNET_MLMC_STATUS_V1 adaptive=no precision_met=na cap_hits=0
+Elapsed time: 0.514s
+

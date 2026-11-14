@@ -1,0 +1,32 @@
+/* Results ▸ Capacity (src/optimise/). Tokens only (src/styles.css). */
+.capacity-view .btn:disabled { color: var(--btn-disabled-fg); }
+.capacity-section { flex: none; max-width: 880px; padding: var(--sp-5) var(--sp-6); border: 1px solid var(--hairline); border-radius: var(--r-lg); background: var(--surface); }
+.capacity-section h3 { margin: 0 0 var(--sp-3); font-size: var(--fs-md); font-weight: var(--fw-semibold); color: var(--text); }
+.capacity-section h3 small { margin-left: var(--sp-3); font-size: var(--fs-xs); font-weight: var(--fw-regular, 400); color: var(--text-2); }
+.capacity-targets { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--sp-2); }
+.capacity-targets li { display: flex; align-items: center; flex-wrap: wrap; gap: var(--sp-2) var(--sp-3); min-height: var(--ctl-sm); font-size: var(--fs-sm); color: var(--text-2); }
+.capacity-targets label { display: inline-flex; align-items: center; gap: var(--sp-2); min-width: 250px; color: var(--text); }
+.capacity-targets input[type="text"] { width: 76px; height: var(--ctl-sm); text-align: right; font-variant-numeric: tabular-nums; }
+.capacity-targets select { height: var(--ctl-sm); }
+.capacity-hint { color: var(--text-2); font-size: var(--fs-xs); font-variant-numeric: tabular-nums; }
+.capacity-stations { border-collapse: collapse; font-size: var(--fs-sm); }
+.capacity-stations th { padding: var(--sp-1) var(--sp-4) var(--sp-1) 0; text-align: left; font-weight: var(--fw-semibold); color: var(--text-2); font-size: var(--fs-xs); }
+.capacity-stations th[scope="row"] { color: var(--text); font-size: var(--fs-sm); }
+.capacity-stations td { padding: var(--sp-1) var(--sp-4) var(--sp-1) 0; }
+.capacity-stations input[type="text"] { width: 72px; height: var(--ctl-sm); text-align: right; font-variant-numeric: tabular-nums; }
+.capacity-stations input[type="text"]:disabled { color: var(--btn-disabled-fg); }
+.capacity-problem { flex: none; margin: 0; max-width: 880px; font-size: var(--fs-sm); color: var(--warn-text); }
+.capacity-tier { flex: none; display: flex; align-items: center; flex-wrap: wrap; gap: var(--sp-2) var(--sp-3); margin: 0; max-width: 880px; font-size: var(--fs-sm); color: var(--text-2); }
+.capacity-tier strong { color: var(--text); font-weight: var(--fw-semibold); }
+.capacity-experimental { padding: 0 var(--sp-2); border: 1px solid var(--border); border-radius: var(--r-sm); font-size: var(--fs-xs); color: var(--text-2); }
+.capacity-reading { flex: none; margin: 0; max-width: 880px; font-size: var(--fs-md); line-height: 1.5; color: var(--text); }
+.capacity-proof { flex: none; margin: 0; max-width: 880px; font-size: var(--fs-sm); color: var(--text-2); }
+.capacity-proof[data-proven="false"] { color: var(--warn-text); }
+.capacity-infeasible { flex: none; max-width: 880px; padding: var(--sp-5) var(--sp-6); border: 1px solid var(--hairline); border-radius: var(--r-lg); background: var(--surface); }
+.capacity-infeasible h3 { display: flex; align-items: center; gap: var(--sp-2); margin: 0 0 var(--sp-2); font-size: var(--fs-md); font-weight: var(--fw-semibold); color: var(--warn-text); }
+.capacity-infeasible p { margin: 0; font-size: var(--fs-sm); line-height: 1.5; color: var(--text); }
+.capacity-table td, .capacity-table th { font-variant-numeric: tabular-nums; }
+.capacity-table tfoot th, .capacity-table tfoot td { border-top: 1px solid var(--border); font-weight: var(--fw-semibold); }
+.capacity-table td[data-change="more"], .capacity-table td[data-change="fewer"] { font-weight: var(--fw-semibold); color: var(--text); }
+.capacity-table .capacity-held { margin-left: var(--sp-2); font-size: var(--fs-xs); color: var(--text-2); }
+.capacity-actions { flex: none; display: flex; flex-wrap: wrap; gap: var(--sp-3); max-width: 880px; }

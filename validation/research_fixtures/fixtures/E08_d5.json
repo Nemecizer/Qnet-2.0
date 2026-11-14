@@ -1,0 +1,33 @@
+{
+  "id": "E08_d5",
+  "title": "Dai-Zhang product-form family, d = 5",
+  "evidence": "published_exact",
+  "source": "Plans.md section 4, E08; P16 (Dai-Zhang neural BAR) Appendix A, PDF pp11-12",
+  "model": {
+    "domain": "orthant",
+    "dimension": 5,
+    "drift": [-1.0, -1.0, -1.0, -1.0, -1.0],
+    "covariance": [
+      [2.0, -1.0, 0.0, 0.0, 0.0],
+      [-1.0, 2.0, -1.0, 0.0, 0.0],
+      [0.0, -1.0, 2.0, -1.0, 0.0],
+      [0.0, 0.0, -1.0, 2.0, -1.0],
+      [0.0, 0.0, 0.0, -1.0, 2.0]
+    ],
+    "reflection": [
+      [1.0, 0.0, 0.0, 0.0, 0.0],
+      [-1.0, 1.0, 0.0, 0.0, 0.0],
+      [0.0, -1.0, 1.0, 0.0, 0.0],
+      [0.0, 0.0, -1.0, 1.0, 0.0],
+      [0.0, 0.0, 0.0, -1.0, 1.0]
+    ]
+  },
+  "expected": {
+    "mean": [1.0, 0.5, 0.3333333333333333, 0.25, 0.2],
+    "second_moment": [2.0, 0.5, 0.2222222222222222, 0.125, 0.08],
+    "covariance_offdiagonal_zero": true,
+    "product_form_rates": [1.0, 2.0, 3.0, 4.0, 5.0],
+    "boundary_rates": [1.0, 2.0, 3.0, 4.0, 5.0]
+  },
+  "notes": "Z_j ~ Exp(rate j), independent. Sum S has P(S <= t) = (1 - e^-t)^d."
+}

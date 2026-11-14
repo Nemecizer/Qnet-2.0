@@ -1,0 +1,25 @@
+node_modules/
+dist/
+src-tauri/target/
+# A symlink into ~/Library/Caches/qnet (scripts/stage-build.sh): no trailing slash, or git
+# doesn't match it.
+src-tauri/gen
+.DS_Store
+__pycache__/
+*.pyc
+
+# Solver build products: the sources are tracked, what make writes is not.
+solvers/**/*.o
+solvers/**/obj/
+
+# Claude Code conversation exports
+/20*-*-this-session-*.txt
+
+# Cargo workspace
+/target/
+
+# This Mac's cargo target folder (scripts/cargo-config.sh writes it)
+/.cargo/config.toml
+
+# Notes for the coding assistant: kept on this Mac, not in the repository
+/CLAUDE.md

@@ -1,0 +1,255 @@
+{
+  "completedAt" : "2026-11-11T04:56:22Z",
+  "elapsedSeconds" : 0.3607059717178345,
+  "id" : "9C68F76D-E4E8-41A7-B629-8F00328C61EF",
+  "measurements" : [
+    {
+      "estimate" : 0.5,
+      "id" : "A12E956C-250F-4D17-A5CC-81FAD6B976CF",
+      "metric" : "Utilization",
+      "stationID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.5,
+      "id" : "4B0C7F75-4960-427F-98A8-401C4DCAA304",
+      "metric" : "Utilization",
+      "stationID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.75,
+      "id" : "496398ED-F810-4B32-98D6-FD3D7C8E8492",
+      "metric" : "Throughput",
+      "stationID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.75,
+      "id" : "C6CEDA47-025C-4689-B497-B8737BC052FE",
+      "metric" : "Throughput",
+      "stationID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 1.365,
+      "id" : "B4FAB054-5B31-4FA0-87BA-5E10D5960612",
+      "metric" : "Mean sojourn time",
+      "stationID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 1.623,
+      "id" : "0CDF57D7-659A-44D5-B5A7-C1CF0DBC00A1",
+      "metric" : "Mean sojourn time",
+      "stationID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 1.024,
+      "id" : "66D9FC8B-3D39-440F-94F7-A58B1C554AC7",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 1.218,
+      "id" : "8298184F-801C-41A8-9B48-BBE75BEA76FB",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+      "stationName" : "S2",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Multi-Class SRBM",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.multiclass-station",
+    "implementation" : "multiclass_diffusion\/mc_solver",
+    "layer" : "SRBM diffusion",
+    "shortName" : "MC SRBM"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+      "D0D40D08-A893-4677-915F-6DFE3C7D3B41"
+    ],
+    "networkFingerprint" : "db563deb5ef0107c34d581871982c65a00e09b9f665fe20b09e696a9078a619b",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "18AE78AC-0D98-4199-9402-3BA235DFD54D",
+          "id" : "1396146E-F49C-46B6-89AD-3F0F4CCCAABF",
+          "routingProbability" : 1,
+          "toNodeID" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947",
+          "id" : "91B67C2E-F548-4D0D-A81A-30ACC847B303",
+          "routingProbability" : 1,
+          "toNodeID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+          "id" : "454EE9EB-35C6-4D3C-9772-4E584C35BC05",
+          "routingProbability" : 1,
+          "toNodeID" : "1AC45D5F-9622-4398-8F56-8001E64E29A7"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "1AC45D5F-9622-4398-8F56-8001E64E29A7",
+          "id" : "E5E3D8B1-9C97-498A-9088-321489CE55AD",
+          "routingProbability" : 1,
+          "toNodeID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+          "id" : "177C1F84-6065-477D-BAEB-E4AB9EE6E355",
+          "routingProbability" : 0.6666666666666667,
+          "toNodeID" : "647D1A28-BDA0-4163-B2A7-FC52164B7C0A"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+          "id" : "B8A8574B-6367-434F-858E-532C545AC826",
+          "routingProbability" : 0.3333333333333333,
+          "toNodeID" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.5",
+          "id" : "18AE78AC-0D98-4199-9402-3BA235DFD54D",
+          "kind" : "source",
+          "name" : "Src",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            200,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.5",
+          "id" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            300,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "1AC45D5F-9622-4398-8F56-8001E64E29A7",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            400,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.5",
+          "id" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            500,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "647D1A28-BDA0-4163-B2A7-FC52164B7C0A",
+          "kind" : "sink",
+          "name" : "Sink",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "Reiman84.d2.c1.reentrant.inf.bnet",
+    "parameters" : {
+      "formulation" : "research",
+      "mesh per dimension" : "auto"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/Reiman84.d2.c1.reentrant.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Running multi-class SRBM (research, mesh=auto) ... done.\n\nNetwork load: rho_max = 0.5000 at S1  (moderate load — SRBM\/FEM are heavy-traffic limits; expect deviation from simulation)\nRouting graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference\n──  Open Jackson network — exact M\/M\/s product form  ──\n           Multi-Class SRBM  Exact E[N]  (Jackson)\n           ================  ============\n\nrho_1      0.500 (+0.0%)     0.500\nrho_2      0.500 (+0.0%)     0.500\n\nGamma_1    0.750 (+0.0%)     0.750\nGamma_2    0.750 (+0.0%)     0.750\n\nsojourn_1  1.365 (+2.4%)     1.333\nsojourn_2  1.623 (+21.8%)    1.333\n\nE[X_1]     1.024 (+2.4%)     1.000\nE[X_2]     1.218 (+21.8%)    1.000\n\nElapsed time: 0.101s\n\n",
+  "startedAt" : "2026-11-11T04:56:21Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "name" : "3dtandem.inf",
+  "nodes" : [
+    {
+      "external_arrival_rate" : 1,
+      "name" : "S1",
+      "servers" : 1,
+      "service_rate_per_server" : 1.1111111
+    },
+    {
+      "external_arrival_rate" : 0,
+      "name" : "S2",
+      "servers" : 1,
+      "service_rate_per_server" : 1.1111111
+    },
+    {
+      "external_arrival_rate" : 0,
+      "name" : "S3",
+      "servers" : 1,
+      "service_rate_per_server" : 1.1111111
+    }
+  ],
+  "process" : "open_single_class_markovian_network",
+  "routing" : [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "schema_version" : 1,
+  "solver" : {
+    "boundary_mass_tolerance" : 1e-08,
+    "growth_factor" : 1.6000000000000001,
+    "include_state_probabilities" : false,
+    "initial_total_cap" : 8,
+    "max_states" : 200000,
+    "max_total_cap" : 64,
+    "minimum_cap_increment" : 2,
+    "refinement_relative_tolerance" : 9.9999999999999995e-08,
+    "routing_tolerance" : 9.9999999999999998e-13,
+    "stability_tolerance" : 9.9999999999999998e-13,
+    "stationary_max_iterations" : 200000,
+    "stationary_tolerance" : 1e-13,
+    "tail_levels" : [
+      0,
+      1,
+      5,
+      10,
+      20
+    ],
+    "top_state_count" : 0
+  }
+}

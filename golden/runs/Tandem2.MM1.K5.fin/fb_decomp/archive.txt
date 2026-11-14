@@ -1,0 +1,19 @@
+Solving finite decomposition ...  [ ]                                                       0.0s[KSolving finite decomposition ...  [done]                                                    0.2s
+FINITE-BUFFER M/M/c/K DECOMPOSITION
+====================================
+Network: Tandem2.MM1.K5.fin.bnet
+Status: converged
+Blocking: bas_external_loss
+Semantics: Internal transfers wait upstream; external arrivals that see a full station are lost. Downstream blocking uses an independence/frozen-server approximation.
+Convergence: iterations=40 residual=7.63144e-11 tolerance=1e-10 damping=0.5
+Network flow: external=0.7 external_loss=0.0483202 internal_loss=0 exit=0.65168 residual=6.95e-11
+
+S1 S1: offered=0.7 throughput=0.65168 P(full)=0.0690288 E[N]=1.66734 E[Q]=0.978425 util=0.688917 W=1.50139 T=2.55853
+  c1: offered=0.7 throughput=0.65168 E[N]=1.66734 T=2.55853
+S2 S2: offered=0.688917 throughput=0.65168 P(full)=0.0540523 E[N]=1.49636 E[Q]=0.844681 util=0.65168 W=1.29616 T=2.29616
+  c1: offered=0.688917 throughput=0.65168 E[N]=1.49636 T=2.29616
+
+Warnings:
+  - BAS results are an independence/frozen-server approximation, not an exact blocking-after-service solution.
+Elapsed time: 0.229s
+

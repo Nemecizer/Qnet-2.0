@@ -1,0 +1,171 @@
+{
+  "canvasPanOffset" : [
+    0,
+    0
+  ],
+  "canvasScale" : 1,
+  "closedPopulation" : 8,
+  "infiniteBuffers" : true,
+  "links" : [
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "5A898D6A-A0F4-4E29-8865-E01CA3B1129A",
+      "id" : "228B9534-36B5-44A9-9EB8-239BC1CBA261",
+      "routingProbability" : 1,
+      "toNodeID" : "53F30BD7-CE89-436C-A3A8-05753DAD1BD3"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "2BF25EA7-5D28-4AA1-87C6-51CA5621D3CD",
+      "id" : "007699B7-ACEC-4A4D-86D2-15E774E5CFF2",
+      "routingProbability" : 1,
+      "toNodeID" : "736A7C18-5A0D-48E7-9768-5AE4B7D03197"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "02AC5915-7590-4BD9-B9D6-0B8CF26D6331",
+      "id" : "30C88331-F3A3-461C-A279-4A1E777DF80D",
+      "routingProbability" : 1,
+      "toNodeID" : "FD8F7E14-051F-4C30-B657-15635F7B8AA1"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "53F30BD7-CE89-436C-A3A8-05753DAD1BD3",
+      "id" : "F194DDC4-5BB4-49CF-9EB3-D61F64E082CA",
+      "routingProbability" : 0.1,
+      "toNodeID" : "5A898D6A-A0F4-4E29-8865-E01CA3B1129A"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "53F30BD7-CE89-436C-A3A8-05753DAD1BD3",
+      "id" : "A962667B-0761-4917-880F-241F1A6CC36E",
+      "routingProbability" : 0.6,
+      "toNodeID" : "2BF25EA7-5D28-4AA1-87C6-51CA5621D3CD"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "53F30BD7-CE89-436C-A3A8-05753DAD1BD3",
+      "id" : "C6E69072-9265-47E9-B78A-0BD51E465C78",
+      "routingProbability" : 0.3,
+      "toNodeID" : "02AC5915-7590-4BD9-B9D6-0B8CF26D6331"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "736A7C18-5A0D-48E7-9768-5AE4B7D03197",
+      "id" : "473E4705-7FC5-4A3A-A701-5A681D889543",
+      "routingProbability" : 1,
+      "toNodeID" : "5A898D6A-A0F4-4E29-8865-E01CA3B1129A"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "FD8F7E14-051F-4C30-B657-15635F7B8AA1",
+      "id" : "BE48BF55-CB56-454E-9573-5ECF2664089D",
+      "routingProbability" : 1,
+      "toNodeID" : "5A898D6A-A0F4-4E29-8865-E01CA3B1129A"
+    }
+  ],
+  "nodes" : [
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "5A898D6A-A0F4-4E29-8865-E01CA3B1129A",
+      "kind" : "buffer",
+      "name" : "B1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        200,
+        300
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=10.0",
+      "id" : "53F30BD7-CE89-436C-A3A8-05753DAD1BD3",
+      "kind" : "station",
+      "name" : "S1",
+      "numberOfServers" : 1,
+      "picture" : "cpu.fill",
+      "position" : [
+        320,
+        300
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "2BF25EA7-5D28-4AA1-87C6-51CA5621D3CD",
+      "kind" : "buffer",
+      "name" : "B2",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        460,
+        200
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=4.0",
+      "id" : "736A7C18-5A0D-48E7-9768-5AE4B7D03197",
+      "kind" : "station",
+      "name" : "S2",
+      "numberOfServers" : 1,
+      "picture" : "server.rack",
+      "position" : [
+        580,
+        200
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "02AC5915-7590-4BD9-B9D6-0B8CF26D6331",
+      "kind" : "buffer",
+      "name" : "B3",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        460,
+        400
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.5",
+      "id" : "FD8F7E14-051F-4C30-B657-15635F7B8AA1",
+      "kind" : "station",
+      "name" : "S3",
+      "numberOfServers" : 2,
+      "picture" : "server.rack",
+      "position" : [
+        580,
+        400
+      ],
+      "serviceDistributions" : {
+
+      }
+    }
+  ]
+}

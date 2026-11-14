@@ -1,0 +1,230 @@
+case 1 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|0.5|ratio|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Throughput|2|customers / time|u=-|note=-
+e: -
+case 2 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|0.5|ratio|u=-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Throughput|1.5|customers / time|u=-|note=-
+m: S3|-|-|Mean sojourn time|7|time|u=-|note=-
+e: -
+case 3 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean sojourn time|3.5|time|u=-|note=-
+e: -
+case 4 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|0.25|ratio|u=-|note=-
+e: -
+case 5 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean reported occupancy|2|customers|u=-|note=-
+e: -
+case 6 queue.des
+disposition: completed
+m: S0|-|-|Utilization|0.5|ratio|u=-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|0.59999999999999998|ratio|u=-|note=-
+e: -
+case 7 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|0.5|ratio|u=-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|0.59999999999999998|ratio|u=-|note=-
+m: S3|-|-|Utilization|0.69999999999999996|ratio|u=-|note=-
+e: -
+case 8 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|0.90000000000000002|ratio|u=-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|0.80000000000000004|ratio|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean number in system|3|customers|u=-,2.75,3.25,0.94999999999999996,-|note=-
+e: -
+case 9 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean reported occupancy|0.001|customers|u=-,0.00080000000000000004,0.0012000000000000001,0.94999999999999996,-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean workload|4|work|u=-|note=-
+e: -
+case 10 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|inf|ratio|u=-|note=-
+e: -
+case 11 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|0.90000000000000002|ratio|u=-|note=-
+e: -
+case 12 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|0.5|ratio|u=-|note=-
+e: -
+case 13 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|0.5|ratio|u=-,0.45000000000000001,0.55000000000000004,0.94999999999999996,-|note=-
+e: -
+case 14 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|1|ratio|u=-|note=-
+e: residual=3e-09|disc=-|delta=-|note=-
+case 15 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|1|ratio|u=-|note=-
+e: residual=2.4999999999999998e-12|disc=-|delta=0.5|note=-
+case 16 comparison.mixed
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean reported occupancy|2.5|customers|u=-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean workload|3.25|work|u=-|note=-
+m: S3|-|-|Mean number in system|1.5|customers|u=-|note=-
+e: -
+w: The structured table records the first value in each comparison row; the retained raw output contains every method column.
+case 17 comparison.mixed
+disposition: failed: The solver produced no recognized station performance measures.
+e: -
+w: No recognized station measurements were found; inspect the retained raw output.
+w: The structured table records the first value in each comparison row; the retained raw output contains every method column.
+case 18 comparison.mixed
+disposition: partial: The comparison contains successful results, but one or more methods failed or were skipped.
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean reported occupancy|1|customers|u=-|note=-
+e: -
+w: The structured table records the first value in each comparison row; the retained raw output contains every method column.
+w: One or more comparison methods failed or were skipped; successful columns remain available.
+case 19 queue.des
+disposition: failed: The solver produced no recognized station performance measures.
+e: -
+w: No recognized station measurements were found; inspect the retained raw output.
+case 20 queue.des
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean queue length|2.5|customers|u=-,2,3,0.94999999999999996,-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean queue length|3|customers|u=-|note=-
+e: -
+case 21 queue.finite-ctmc
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean number in system|1.5|customers|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Server utilization|0.59999999999999998|ratio|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Full probability|0.01|probability|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Throughput|0.58999999999999997|customers / time|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean sojourn time|2.54|time|u=-|note=-
+e: -
+case 22 queue.finite-ctmc
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Server utilization|0.59999999999999998|ratio|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Full probability|0.01|probability|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Throughput|0.58999999999999997|customers / time|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean sojourn time|2.54|time|u=-|note=-
+e: -
+case 23 queue.open-bcmp-product-form
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean number in system|9|customers|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Throughput|1|customers / time|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Server utilization|0.90000000000000002|ratio|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Stability margin|0.10000000000000001|ratio|u=-|note=-
+e: -
+case 24 queue-approx.finite-decomposition
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Offered arrival rate|1|customers / time|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Throughput|0.90000000000000002|customers / time|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Full probability|0.10000000000000001|probability|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean number in system|2|customers|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean queue length|1.1000000000000001|customers|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Server utilization|0.90000000000000002|ratio|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean waiting time|1.2|time|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean sojourn time|2.2000000000000002|time|u=-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Offered arrival rate|1|customers / time|u=-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Throughput|0.90000000000000002|customers / time|u=-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Full probability|0.10000000000000001|probability|u=-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean number in system|2|customers|u=-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean queue length|1.1000000000000001|customers|u=-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Server utilization|0.90000000000000002|ratio|u=-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean waiting time|1.2|time|u=-|note=-
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean sojourn time|2.2000000000000002|time|u=-|note=-
+e: -
+case 25 queue.infinite-truncated-ctmc
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean number in system|8.5|customers|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Server utilization|0.90000000000000002|ratio|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|External departure rate|1|customers / time|u=-|note=-
+e: residual=-|disc=total-population cap 40|delta=-|note=Truncation criteria met: yes (heuristic)
+case 26 srbm.adaptive-low-rank-bar
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean workload|0.80000000000000004|work|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Workload variance|0.59999999999999998|work²|u=-|note=-
+e: residual=7.1903800000000001e-17|disc=mixture rank 3|delta=-|note=Adaptive BAR criteria met: yes
+case 27 srbm.bar-moment-bounds
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean workload|0.59999999999999998|work|u=-,0.5,0.69999999999999996,-,-|note=Certified exact SRBM point bound
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean workload lower bound|0.10000000000000001|work|u=-|note=Floating SDP value; not a certified numerical bound
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean workload upper bound|0.90000000000000002|work|u=-|note=Floating SDP value; not a certified numerical bound
+e: residual=-|disc=-|delta=-|note=Uncertified BAR relaxation result
+w: General floating-point SDP values are feasibility-checked but are not certified numerical bounds.
+case 28 srbm.bar-moment-bounds
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean workload|0.59999999999999998|work|u=-,0.5,0.69999999999999996,-,-|note=Certified exact SRBM point bound
+e: residual=-|disc=3 moments, 2 equalities, 1 PSD blocks|delta=-|note=Certified exact SRBM special case
+case 29 queue.regenerative-mc
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|1|Mean number in system|2|customers|u=-,-,2.7000000000000002,-,-|note=Effective complete cycles: 40.5
+e: residual=-|disc=12 complete regenerative cycles|delta=-|note=Sequential fixed-width target met: yes
+case 30 queue.regenerative-mc
+disposition: completed
+m: Disk|BBBBBBBB-BBBB-CCCC-DDDD-EEEEEEEEEEEE|0|Server utilization|0.5|ratio|u=0.10000000000000001,0.40000000000000002,0.59999999999999998,0.94999999999999996,-|note=-
+e: -
+case 31 queue.regenerative-mc
+disposition: failed: The solver produced no recognized station performance measures.
+e: -
+w: No recognized station measurements were found; inspect the retained raw output.
+case 32 queue.matrix-analytic-qbd
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Variance of number in system|2|customers²|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Second moment of number in system|3|customers²|u=-|note=-
+e: residual=-|disc=matrix-geometric rate solve, 13 iterations|delta=-|note=QBD stability classification: null recurrent
+case 33 queue.matrix-analytic-qbd
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean number in system|1|customers|u=-|note=QBD level equals customer count for the strict one-phase adapter
+e: -
+case 34 queue.des
+disposition: failed: The solver produced no recognized station performance measures.
+e: -
+w: No recognized station measurements were found; inspect the retained raw output.
+case 35 srbm.mlmc
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean queue length|2.5|customers|u=-|note=-
+e: residual=-|disc=-|delta=-|note=Fixed-sample MLMC plan
+case 36 srbm.mlmc
+disposition: failed: The solver produced no recognized station performance measures.
+e: residual=-|disc=-|delta=-|note=Adaptive MLMC precision target met: no (cap hits: 3)
+w: No recognized station measurements were found; inspect the retained raw output.
+case 37 srbm.mlmc
+disposition: partial: SRBM MLMC returned estimates, but at least one adaptive replication hit its sample cap before meeting the requested precision target.
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean queue length|2|customers|u=-|note=-
+e: residual=-|disc=-|delta=-|note=Adaptive MLMC precision target met: no (cap hits: 2)
+w: At least one adaptive MLMC replication reached its maximum-sample safeguard before meeting the requested standard-error target.
+case 38 queue-approx.sbd
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|0.90000000000000002|ratio|u=-|note=-
+e: -
+case 39 queue-approx.sbd
+disposition: partial: SBD completed with a fallback approximation after an internal spectral solve failed.
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Utilization|0.90000000000000002|ratio|u=-|note=-
+e: -
+w: SBD used a one-dimensional fallback because an internal spectral subproblem failed.
+case 40 srbm.adaptive-low-rank-bar
+disposition: completed
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean workload|1|work|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Workload variance|1|work²|u=-|note=-
+e: residual=-|disc=mixture rank 12|delta=-|note=Adaptive BAR criteria met: no
+case 41 queue.infinite-truncated-ctmc
+disposition: partial: The truncated CTMC returned estimates, but its boundary-mass and refinement checks did not converge.
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Mean number in system|1|customers|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|Server utilization|0.5|ratio|u=-|note=-
+m: Checkout|AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE|-|External departure rate|0.5|customers / time|u=-|note=-
+e: residual=-|disc=-|delta=-|note=Truncation criteria met: no (heuristic)
+w: The state-space cap was reached before the truncation checks passed.
+case 42 queue.regenerative-mc
+disposition: failed: No complete empty-to-empty regenerative cycle was observed, so the reported values are not steady-state regenerative estimates.
+e: residual=-|disc=0 complete regenerative cycles|delta=-|note=-
+w: No recognized station measurements were found; inspect the retained raw output.
+case 43 srbm.spectral
+disposition: failed: The solver produced no recognized station performance measures.
+e: -
+w: No recognized station measurements were found; inspect the retained raw output.
+case 44 queue.des
+disposition: failed: The solver produced no recognized station performance measures.
+e: -
+w: No recognized station measurements were found; inspect the retained raw output.

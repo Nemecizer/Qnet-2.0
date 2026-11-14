@@ -1,0 +1,25 @@
+# Two stations with a polynomial basis of degree 2,147,483,647: C(m + 2, 2) basis functions
+# is about 2.3e18, far above what an int holds. fBNAlp must refuse it in one line
+# (examples/check/check.sh). This input goes through the binomial loop of
+# srbm_params_check_size(), whose product is checked before anything is read from it.
+
+dimension   2
+grid_n      12
+basis_m     2147483647
+grid_type   uniform
+solver      highs
+
+drift
+  -1.0  -1.0
+
+covariance
+  1.0  0.0
+  0.0  1.0
+
+reflection_form  minus_only
+reflection
+  1.0  0.0
+  0.0  1.0
+
+upper_bounds
+  10.0  10.0

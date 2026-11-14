@@ -1,0 +1,341 @@
+{
+  "completedAt" : "2026-11-11T04:52:19Z",
+  "elapsedSeconds" : 0.5245170593261719,
+  "id" : "F1CAB337-E8BF-4651-B70D-CC8166A91009",
+  "measurements" : [
+    {
+      "estimate" : 0.594,
+      "id" : "73C059B4-49BD-4493-93E2-B34676C60085",
+      "metric" : "Utilization",
+      "stationID" : "B2C3D4E5-2222-1111-1111-000000000004",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.219,
+      "id" : "C1D56930-8FF3-40B6-A3E8-D8C4F71513DC",
+      "metric" : "Utilization",
+      "stationID" : "B2C3D4E5-2222-1111-1111-000000000006",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.927,
+      "id" : "0BC77261-F1D0-4025-B0E2-906DD345CD8A",
+      "metric" : "Throughput",
+      "stationID" : "B2C3D4E5-2222-1111-1111-000000000004",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.385,
+      "id" : "2E2D7DAC-DB37-4E4A-91AA-487D614730E9",
+      "metric" : "Throughput",
+      "stationID" : "B2C3D4E5-2222-1111-1111-000000000006",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 1.371,
+      "id" : "30091B71-42C5-43FB-88F7-144A92A2F85E",
+      "metric" : "Mean sojourn time",
+      "stationID" : "B2C3D4E5-2222-1111-1111-000000000004",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 0.74,
+      "id" : "64686A48-083F-4629-A672-34FE4DC7A5B8",
+      "metric" : "Mean sojourn time",
+      "stationID" : "B2C3D4E5-2222-1111-1111-000000000006",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 1.271,
+      "id" : "CB25F333-5128-4AF0-B25B-0226299304D0",
+      "metric" : "Mean number in system",
+      "stationID" : "B2C3D4E5-2222-1111-1111-000000000004",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.285,
+      "id" : "F3D71564-001C-4FAA-99A7-17D28278E1D8",
+      "metric" : "Mean number in system",
+      "stationID" : "B2C3D4E5-2222-1111-1111-000000000006",
+      "stationName" : "S2",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Whitt QNA",
+    "fidelity" : "Queueing approximation",
+    "identifier" : "queue-approx.qna",
+    "implementation" : "BNAqna",
+    "layer" : "Queue approximation",
+    "shortName" : "QNA"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "B2C3D4E5-2222-1111-1111-000000000004",
+      "B2C3D4E5-2222-1111-1111-000000000006"
+    ],
+    "networkFingerprint" : "e6101809be2020d275c095dd99f04abc84428465b642bcfee4762314f2e3d20c",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000001",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000003",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000004",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000003",
+          "routingProbability" : 0.5,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000004",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000004",
+          "routingProbability" : 0.5,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000007"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000005",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000005",
+          "routingProbability" : 1,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000006"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000006",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000006",
+          "routingProbability" : 0.5,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000006",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000007",
+          "routingProbability" : 0.5,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000007"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000002",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000008",
+          "routingProbability" : 1,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000003"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000003",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000009",
+          "routingProbability" : 1,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000004"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000004",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000010",
+          "routingProbability" : 0.2,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000005"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000004",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000011",
+          "routingProbability" : 0.8,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000007"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000005",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000012",
+          "routingProbability" : 1,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000006"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000006",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000013",
+          "routingProbability" : 0.2,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000003"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000006",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000014",
+          "routingProbability" : 0.8,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000007"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=0.5",
+          "id" : "B2C3D4E5-2222-1111-1111-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            150
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=0.25",
+          "id" : "B2C3D4E5-2222-1111-1111-000000000002",
+          "kind" : "source",
+          "name" : "Src2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            300
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "B2C3D4E5-2222-1111-1111-000000000003",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            230,
+            220
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=2.0",
+          "id" : "B2C3D4E5-2222-1111-1111-000000000004",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            320,
+            220
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=2.0"
+            },
+            "1" : {
+              "distribution" : "constant",
+              "distributionParameters" : "value=1.0"
+            }
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "B2C3D4E5-2222-1111-1111-000000000005",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            410,
+            220
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=2.0",
+          "id" : "B2C3D4E5-2222-1111-1111-000000000006",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            500,
+            220
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=2.0"
+            },
+            "1" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.0"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "B2C3D4E5-2222-1111-1111-000000000007",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            620,
+            220
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "DaiHarrison92.d2.c2.1.inf.bnet",
+    "parameters" : {
+
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/DaiHarrison92.d2.c2.1.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] Single-threaded (analytical solver)\nRunning QNA ...  [ ]                                                       0.0s\r\u001b[KRunning QNA ...  [done]                                                    0.1s\n\nNetwork load: rho_max = 0.5938 at S1  (moderate load — SRBM\/FEM are heavy-traffic limits; expect deviation from simulation)\nRouting graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference\n           QNA\n           ===\n\nrho_1      0.594\nrho_2      0.219\n\nGamma_1    0.927\nGamma_2    0.385\n\nsojourn_1  1.371\nsojourn_2  0.740\n\nE[Q_1]     1.271\nE[Q_2]     0.285\n\nElapsed time: 0.272s\n\n",
+  "startedAt" : "2026-11-11T04:52:18Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

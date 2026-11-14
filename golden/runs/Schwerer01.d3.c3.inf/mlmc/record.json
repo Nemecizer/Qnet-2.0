@@ -1,0 +1,333 @@
+{
+  "completedAt" : "2026-11-11T04:56:27Z",
+  "elapsedSeconds" : 0.6374160051345825,
+  "id" : "C02280CB-04E3-435D-82F1-929EB9101AB3",
+  "measurements" : [
+    {
+      "estimate" : 0.797,
+      "id" : "0B5B6F0F-F142-4F3F-85B5-617A9AB4DF9A",
+      "metric" : "Mean queue length",
+      "stationID" : "F6A7B8C9-6666-1111-1111-000000000005",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.7823,
+        "upperBound" : 0.8117000000000001
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.6564,
+      "id" : "A03E1DAE-E949-4B24-AAAF-63E5A2AF417A",
+      "metric" : "Mean queue length",
+      "stationID" : "F6A7B8C9-6666-1111-1111-000000000007",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.6436,
+        "upperBound" : 0.6692
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.7164,
+      "id" : "9003B33F-60E0-46A7-A329-6EA26CF7D816",
+      "metric" : "Mean queue length",
+      "stationID" : "F6A7B8C9-6666-1111-1111-000000000009",
+      "stationName" : "S3",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.7014,
+        "upperBound" : 0.7314
+      },
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "SRBM MLMC",
+    "fidelity" : "SRBM simulation",
+    "identifier" : "srbm.mlmc",
+    "implementation" : "BNAmc",
+    "layer" : "SRBM diffusion",
+    "shortName" : "MLMC"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "F6A7B8C9-6666-1111-1111-000000000005",
+      "F6A7B8C9-6666-1111-1111-000000000007",
+      "F6A7B8C9-6666-1111-1111-000000000009"
+    ],
+    "networkFingerprint" : "ef1a44882c6f192ccf5f65bfb7fdaf6c5e90b702fbb9f893a2c648fc4e631a32",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "F6A7B8C9-6666-1111-1111-000000000001",
+          "id" : "F6A7B8C9-6666-1111-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "F6A7B8C9-6666-1111-1111-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "F6A7B8C9-6666-1111-1111-000000000004",
+          "id" : "F6A7B8C9-6666-1111-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "F6A7B8C9-6666-1111-1111-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "F6A7B8C9-6666-1111-1111-000000000005",
+          "id" : "F6A7B8C9-6666-1111-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "F6A7B8C9-6666-1111-1111-000000000010"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "F6A7B8C9-6666-1111-1111-000000000002",
+          "id" : "F6A7B8C9-6666-1111-2222-000000000004",
+          "routingProbability" : 1,
+          "toNodeID" : "F6A7B8C9-6666-1111-1111-000000000006"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "F6A7B8C9-6666-1111-1111-000000000006",
+          "id" : "F6A7B8C9-6666-1111-2222-000000000005",
+          "routingProbability" : 1,
+          "toNodeID" : "F6A7B8C9-6666-1111-1111-000000000007"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "F6A7B8C9-6666-1111-1111-000000000007",
+          "id" : "F6A7B8C9-6666-1111-2222-000000000006",
+          "routingProbability" : 1,
+          "toNodeID" : "F6A7B8C9-6666-1111-1111-000000000010"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "F6A7B8C9-6666-1111-1111-000000000003",
+          "id" : "F6A7B8C9-6666-1111-2222-000000000007",
+          "routingProbability" : 1,
+          "toNodeID" : "F6A7B8C9-6666-1111-1111-000000000008"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "F6A7B8C9-6666-1111-1111-000000000008",
+          "id" : "F6A7B8C9-6666-1111-2222-000000000008",
+          "routingProbability" : 1,
+          "toNodeID" : "F6A7B8C9-6666-1111-1111-000000000009"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "F6A7B8C9-6666-1111-1111-000000000009",
+          "id" : "F6A7B8C9-6666-1111-2222-000000000009",
+          "routingProbability" : 1,
+          "toNodeID" : "F6A7B8C9-6666-1111-1111-000000000010"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=0.45",
+          "id" : "F6A7B8C9-6666-1111-1111-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            100
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=0.4",
+          "id" : "F6A7B8C9-6666-1111-1111-000000000002",
+          "kind" : "source",
+          "name" : "Src2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            220
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=0.42",
+          "id" : "F6A7B8C9-6666-1111-1111-000000000003",
+          "kind" : "source",
+          "name" : "Src3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            340
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "F6A7B8C9-6666-1111-1111-000000000004",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            230,
+            100
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "F6A7B8C9-6666-1111-1111-000000000005",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            320,
+            100
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "F6A7B8C9-6666-1111-1111-000000000006",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            230,
+            220
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "F6A7B8C9-6666-1111-1111-000000000007",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            320,
+            220
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "F6A7B8C9-6666-1111-1111-000000000008",
+          "kind" : "buffer",
+          "name" : "B3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            230,
+            340
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "F6A7B8C9-6666-1111-1111-000000000009",
+          "kind" : "station",
+          "name" : "S3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            320,
+            340
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "F6A7B8C9-6666-1111-1111-000000000010",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            220
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "Schwerer01.d3.c3.inf.bnet",
+    "parameters" : {
+      "adaptive" : "false",
+      "antithetic" : "false",
+      "backend" : "0",
+      "epsilon" : "0.01",
+      "gamma" : "0.05",
+      "levels L" : "3",
+      "path length T" : "7.438016528925618",
+      "replications" : "1",
+      "runtime" : "QNET_SOLVER_ROOT: \/Users\/nobody\/Library\/Caches\/qnet\/solvers\/stage\/Resources\/bin\/infinite\/BNAmc\/rbm_mlmc",
+      "sample plan" : "25260.0",
+      "threads" : "automatic"
+    },
+    "replicationSeeds" : [
+      2454886589211414945
+    ],
+    "seed" : 12345,
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/Schwerer01.d3.c3.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Running SRBM MLMC (γ=0.05, ε=0.01) ... \nSRBM MLMC replication 1 diagnostics:\nSigma nnz ratio: L has 3 non-zeros of 3^2 = 9  (33.33%); using SPARSE CSC path\nR     nnz ratio: 3 non-zeros of 3^2 = 9  (33.33%); using SPARSE CSC LCP column update\nDimension d   = 3\ngamma         = 0.05\nepsilon       = 0.01\nseed          = 2454886589211414945\nT             = 7.4380\nL (levels)    = 3\nN (samples)   = 25260\nratio (1\/gam) = 20\nbackend       = openmp\nthreads       = 18\n\nantithetic    = off\nadaptive      = off\n\n  Completed 1263 \/ 25260 (5%)\n  Completed 2526 \/ 25260 (10%)\n  Completed 3789 \/ 25260 (15%)\n  Completed 5052 \/ 25260 (20%)\n  Completed 6315 \/ 25260 (25%)\n  Completed 7578 \/ 25260 (30%)\n  Completed 8841 \/ 25260 (35%)\n  Completed 10104 \/ 25260 (40%)\n  Completed 11367 \/ 25260 (45%)\n  Completed 12630 \/ 25260 (50%)\n  Completed 13893 \/ 25260 (55%)\n  Completed 15156 \/ 25260 (60%)\n  Completed 16419 \/ 25260 (65%)\n  Completed 17682 \/ 25260 (70%)\n  Completed 18945 \/ 25260 (75%)\n  Completed 20208 \/ 25260 (80%)\n  Completed 21471 \/ 25260 (85%)\n  Completed 22734 \/ 25260 (90%)\n  Completed 23997 \/ 25260 (95%)\n  Completed 25260 \/ 25260 (100%)\ndone.\n\nSRBM MLMC (Blanchet-Chen-Glynn-Si)\n==============================================\n# Dimension: 3\n# gamma=0.0500  epsilon=0.0100  T=7.4380  L=3  N=25260  seed=2454886589211414945\n# backend=openmp  threads=18  elapsed=0.272s\n# antithetic=off adaptive=off\n# Replications: 1 (independent top-level streams)\n# Replication seeds: 2454886589211414945\n# Replication 1: seed=2454886589211414945 N=25260 stop=fixed-count\n#\n\nPer-Station Mean Queue Length (L_i = mu_i * E[Y_i]):\n  L_1 =     0.7970  ±  0.0147 (95%)    (workload E[Y_1] =  0.7970 ± 0.0147, mu_i = 1.0000)\n  L_2 =     0.6564  ±  0.0128 (95%)    (workload E[Y_2] =  0.6564 ± 0.0128, mu_i = 1.0000)\n  L_3 =     0.7164  ±  0.0150 (95%)    (workload E[Y_3] =  0.7164 ± 0.0150, mu_i = 1.0000)\n\nAverage queue length: 0.7233 (no joint CI: one run does not identify cross-station covariance)\nTotal Gaussian RVs (summed over replications): 61526673\nQNET_MLMC_STATUS_V1 adaptive=no precision_met=na cap_hits=0\nElapsed time: 0.400s\n\n",
+  "runEvidence" : {
+    "convergenceNote" : "Fixed-sample MLMC plan"
+  },
+  "startedAt" : "2026-11-11T04:56:26Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

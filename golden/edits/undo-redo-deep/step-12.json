@@ -1,0 +1,53 @@
+{
+ "step": 12,
+ "op": {
+  "count": 3,
+  "node": "S1",
+  "op": "updateNumberOfServers"
+ },
+ "status": [
+  {
+   "text": "Updated S1 to 3 servers.",
+   "severity": "success"
+  }
+ ],
+ "selectedNodeID": {
+  "index": 2,
+  "name": "Sink1"
+ },
+ "selectedNodeIDs": [],
+ "selectedLinkID": {
+  "index": 1,
+  "from": "S1",
+  "to": "Sink1",
+  "customerClass": 0
+ },
+ "pendingLinkStartID": null,
+ "activeLinkSourceID": {
+  "index": 0,
+  "name": "Src1"
+ },
+ "activeCustomerClass": 0,
+ "selectedTool": "addLink",
+ "toolBeforeStickyPan": null,
+ "canUndo": true,
+ "canRedo": false,
+ "undoActionName": "Change Number of Servers",
+ "redoActionName": "",
+ "snapToGrid": false,
+ "snapSuspended": false,
+ "classFilter": null,
+ "canvasScale": 1,
+ "canvasPanOffset": [0, 0],
+ "infiniteBuffers": false,
+ "nodeCount": 3,
+ "linkCount": 2,
+ "numberOfCustomerClasses": 1,
+ "canPaste": false,
+ "hasUnsavedChanges": true,
+ "multiSelectRect": null,
+ "isDraggingNode": false,
+ "parameterEditorTarget": null,
+ "linkParameterEditorTarget": null,
+ "pendingFitOnAppear": false
+}

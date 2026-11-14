@@ -1,0 +1,53 @@
+{
+  "blocking" : "bas_external_loss",
+  "classes" : [
+    {
+      "external_arrivals" : {
+        "s1" : 1
+      },
+      "id" : "c1",
+      "name" : "Class 1"
+    }
+  ],
+  "name" : "OpenJackson.d2.feedback.p50.inf",
+  "routes" : [
+    {
+      "class" : "c1",
+      "from" : "s1",
+      "probability" : 0.5,
+      "to" : "s2"
+    },
+    {
+      "class" : "c1",
+      "from" : "s1",
+      "probability" : 0.5,
+      "to" : "s1"
+    }
+  ],
+  "schema_version" : 1,
+  "solver" : {
+    "damping" : 0.5,
+    "max_iterations" : 1000,
+    "tolerance" : 1e-10
+  },
+  "stations" : [
+    {
+      "capacity" : 25,
+      "id" : "s1",
+      "name" : "S1",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 2.8571428571428572
+      }
+    },
+    {
+      "capacity" : 25,
+      "id" : "s2",
+      "name" : "S2",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.4285714285714286
+      }
+    }
+  ]
+}

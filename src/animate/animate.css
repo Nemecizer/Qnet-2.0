@@ -1,0 +1,92 @@
+/* Animation of a simulation on the canvas (new in 2.1, ROADMAP Phase E). The tokens are drawn on
+   a 2D canvas with colours read from the tokens (render.ts `readPalette`); this styles the layer,
+   the control bar (a floating canvas panel, like the canvas's others) and the status bar's button. */
+
+.animate-layer { position: absolute; inset: 0; pointer-events: none; overflow: hidden; container-type: inline-size; }
+.animate-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+.animate-bar {
+  position: absolute;
+  /* Bottom left: the zoom cluster keeps the bottom right corner. */
+  left: var(--sp-4);
+  bottom: var(--sp-4);
+  width: max-content;
+  max-width: calc(100% - 2 * var(--sp-4) - 190px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--canvas-panel);
+  border: 1px solid var(--canvas-separator);
+  border-radius: var(--r-lg);
+  box-shadow: var(--canvas-panel-shadow);
+  color: var(--canvas-text);
+  font-size: var(--fs-sm);
+  pointer-events: auto;
+  cursor: default;
+}
+:root[data-contrast="more"] .animate-bar { border-width: 1.5px; }
+@media (prefers-contrast: more) { :root:not([data-contrast]) .animate-bar { border-width: 1.5px; } }
+.animate-bar[data-animate-bar="starting"], .animate-bar[data-animate-bar="refused"], .animate-bar[data-animate-bar="failed"] { flex-direction: row; align-items: center; gap: var(--sp-4); }
+
+.animate-row { display: flex; align-items: center; flex-wrap: wrap; gap: var(--sp-3); min-width: 0; }
+.animate-title { font-weight: var(--fw-semibold); white-space: nowrap; }
+.animate-bar .btn { display: inline-flex; align-items: center; gap: var(--sp-2); height: var(--ctl-sm); white-space: nowrap; }
+.animate-play { min-width: 72px; justify-content: center; }
+.animate-icon { width: var(--ctl-sm); padding: 0; justify-content: center; margin-left: auto; }
+.animate-speed { display: inline-flex; align-items: center; gap: var(--sp-2); color: var(--muted); }
+.animate-speed select { height: var(--ctl-sm); font: inherit; color: var(--text); font-variant-numeric: tabular-nums; }
+.animate-clock { display: inline-flex; align-items: baseline; gap: var(--sp-2); min-width: 128px; }
+.animate-num { font-variant-numeric: tabular-nums; }
+.animate-strong { font-weight: var(--fw-medium); }
+.animate-quiet { color: var(--muted); }
+.animate-seed { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.animate-chart-row { align-items: flex-start; }
+.animate-chart { flex: none; }
+.animate-chart-axis { stroke: var(--canvas-separator); stroke-width: 1; }
+.animate-chart-tick { fill: var(--muted); font-size: var(--fs-xs); font-variant-numeric: tabular-nums; dominant-baseline: middle; }
+.animate-chart-line { fill: none; stroke: var(--series-1); stroke-width: 1.5; stroke-linejoin: round; }
+.animate-chart-exact { stroke: var(--tier-exact); stroke-width: 1.5; stroke-dasharray: 4 3; }
+.animate-readout { display: flex; flex-direction: column; gap: 1px; min-width: 0; max-width: 420px; line-height: var(--lh-tight); }
+.animate-exact { color: var(--tier-exact); }
+
+.animate-legend { display: flex; flex-wrap: wrap; gap: var(--sp-1) var(--sp-3); list-style: none; margin: 0; padding: 0; max-width: 200px; }
+.animate-legend li { display: inline-flex; align-items: center; gap: var(--sp-1); white-space: nowrap; }
+.animate-glyph { flex: none; }
+
+.animate-banner, .animate-note { margin: 0; max-width: 640px; line-height: var(--lh-tight); }
+.animate-banner { padding: var(--sp-2) var(--sp-3); border-radius: var(--r-sm); background: var(--warn-bg); color: var(--warn-text); font-weight: var(--fw-medium); }
+.animate-note { color: var(--muted); }
+.animate-refused { display: flex; flex-direction: column; gap: var(--sp-1); max-width: 560px; line-height: var(--lh-tight); }
+
+/* A narrow canvas keeps the controls and drops what the tooltips still say. */
+@container (max-width: 760px) {
+  .animate-seed, .animate-caveat, .animate-legend { display: none; }
+  .animate-bar .btn:not(.animate-play) > span { display: none; }
+  .animate-bar { max-width: calc(100% - 2 * var(--sp-4)); bottom: calc(var(--sp-4) + 44px); }
+}
+
+/* The status bar's button. */
+.animate-sb-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  height: var(--ctl-xs);
+  padding: 0 var(--sp-2);
+  margin: 0 var(--sp-2);
+  border: 0;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: default;
+}
+.animate-sb-button:hover { background: var(--hover); }
+.animate-sb-button[aria-pressed="true"] { background: var(--sel); color: var(--sel-text); }
+
+/* In animation mode the run has the canvas: the problem marks and the results legend step aside
+   (the ρ badges and result values are withheld by CanvasView). They stay mounted, so their
+   commands and the status bar's Problems count are unchanged, and return when the mode ends. */
+.canvas-clip[data-animating] > .canvas-problems,
+.canvas-clip[data-animating] > .canvas-results-chrome { display: none; }

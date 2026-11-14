@@ -1,0 +1,330 @@
+{
+  "completedAt" : "2026-11-11T05:01:15Z",
+  "elapsedSeconds" : 0.3833320140838623,
+  "id" : "A81B305D-47A6-43DB-8C98-9F2B4DF315D1",
+  "measurements" : [
+    {
+      "estimate" : 2.076923077,
+      "id" : "B2B368D0-8A2E-4871-A747-CB43B0CABA4B",
+      "metric" : "Mean workload",
+      "stationID" : "C3D4E5F6-3333-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "work"
+    },
+    {
+      "estimate" : 4.313609471,
+      "id" : "1032EE3D-14DA-4332-83EE-601661191DDB",
+      "metric" : "Workload variance",
+      "stationID" : "C3D4E5F6-3333-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "work²"
+    },
+    {
+      "estimate" : 9.000000002,
+      "id" : "00850E42-8F6B-468E-95DF-2F5C3D3ABAB3",
+      "metric" : "Mean workload",
+      "stationID" : "C3D4E5F6-3333-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "work"
+    },
+    {
+      "estimate" : 81.00000016,
+      "id" : "C886A558-61BB-413C-9B41-933B5AC54747",
+      "metric" : "Workload variance",
+      "stationID" : "C3D4E5F6-3333-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "work²"
+    },
+    {
+      "estimate" : 0.8181818182,
+      "id" : "7D2DDF35-4B27-408B-A742-1DF6545F7BA7",
+      "metric" : "Mean workload",
+      "stationID" : "C3D4E5F6-3333-1111-1111-000000000007",
+      "stationName" : "S3",
+      "unit" : "work"
+    },
+    {
+      "estimate" : 0.6694214877,
+      "id" : "5FF35AF4-A051-498C-98F7-C300B95BB495",
+      "metric" : "Workload variance",
+      "stationID" : "C3D4E5F6-3333-1111-1111-000000000007",
+      "stationName" : "S3",
+      "unit" : "work²"
+    },
+    {
+      "estimate" : 2.076923,
+      "id" : "2ADECDD9-AFFA-4034-B457-242D5C1485BD",
+      "metric" : "Mean queue length",
+      "stationID" : "C3D4E5F6-3333-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 9,
+      "id" : "933B2631-3D37-4353-9A6B-A439E6420DCA",
+      "metric" : "Mean queue length",
+      "stationID" : "C3D4E5F6-3333-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.818182,
+      "id" : "3A057A28-26FE-4F6B-8693-5879478D9E88",
+      "metric" : "Mean queue length",
+      "stationID" : "C3D4E5F6-3333-1111-1111-000000000007",
+      "stationName" : "S3",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Adaptive Low-Rank BAR",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.adaptive-low-rank-bar",
+    "implementation" : "adaptive_srbm",
+    "layer" : "SRBM diffusion",
+    "shortName" : "Low-Rank BAR"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "C3D4E5F6-3333-1111-1111-000000000003",
+      "C3D4E5F6-3333-1111-1111-000000000005",
+      "C3D4E5F6-3333-1111-1111-000000000007"
+    ],
+    "networkFingerprint" : "84542989365a298db848db812ac9203f7d08037b2dbc73780bce3b89d061faac",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000001",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000002",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000003",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000004",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000004",
+          "routingProbability" : 1,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000005",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000005",
+          "routingProbability" : 0.5,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000006"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000005",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000006",
+          "routingProbability" : 0.5,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000006",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000007",
+          "routingProbability" : 1,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000007"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000007",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000008",
+          "routingProbability" : 0.5,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3D4E5F6-3333-1111-1111-000000000007",
+          "id" : "C3D4E5F6-3333-1111-2222-000000000009",
+          "routingProbability" : 0.5,
+          "toNodeID" : "C3D4E5F6-3333-1111-1111-000000000008"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=0.225",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            190,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            280,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000004",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            370,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000005",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000006",
+          "kind" : "buffer",
+          "name" : "B3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            550,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000007",
+          "kind" : "station",
+          "name" : "S3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            640,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3D4E5F6-3333-1111-1111-000000000008",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            730,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "DaiNguyenReiman94.d3.c1.1.inf.bnet",
+    "parameters" : {
+      "BAR tolerance" : "2e-5",
+      "certified error bound" : "false except exact product form",
+      "held-out BAR points" : "max(32, 6 × dimension)",
+      "maximum mixture rank" : "12",
+      "model layer" : "stationary orthant SRBM",
+      "moment-change tolerance" : "2e-3",
+      "runtime" : "QNET_SOLVER_ROOT: \/Users\/nobody\/Library\/Caches\/qnet\/solvers\/stage\/Resources\/bin\/infinite\/BNAalr\/low_rank_bar.py; Python runtime: \/opt\/homebrew\/bin\/python3",
+      "training BAR points" : "max(64, 6 × dimension)"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/DaiNguyenReiman94.d3.c1.1.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Fitting adaptive low-rank BAR ...  [ ]                                                       0.0s\r\u001b[KFitting adaptive low-rank BAR ...  [done]                                                    0.2s\nAdaptive low-rank BAR analysis\nModel layer: stationary orthant SRBM diffusion\nClaim: adaptive low-rank BAR approximation (not a certified moment bound)\nRank: 3  converged: yes\n\nE[Z_1] = 2.076923077    Var[Z_1] = 4.313609471\nE[Z_2] = 9.000000002    Var[Z_2] = 81.00000016\nE[Z_3] = 0.8181818182    Var[Z_3] = 0.6694214877\n\nHeld-out relative BAR RMS = 3.14943e-12\nHeld-out relative BAR max = 9.44228e-12\nSkew-symmetry residual    = 0\nSimplex mass error        = 1.11e-16\nWARNING: Held-out BAR residuals test the fitted transform but do not bound error in the reported moments.\nWARNING: The skew-symmetry residual is numerically small, but the identity is not exact for the supplied decimal parameters; the result remains an approximation.\n\n  L_1 = 2.076923    (workload E[Z_1] = 2.076923, mu_i = 1.000000)\n  L_2 = 9.000000    (workload E[Z_2] = 9.000000, mu_i = 1.000000)\n  L_3 = 0.818182    (workload E[Z_3] = 0.818182, mu_i = 1.000000)\nElapsed time: 0.206s\n\n",
+  "runEvidence" : {
+    "convergenceNote" : "Adaptive BAR criteria met: yes",
+    "discretization" : "mixture rank 3",
+    "residual" : 3.14943e-12
+  },
+  "startedAt" : "2026-11-11T05:01:14Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

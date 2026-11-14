@@ -1,0 +1,20 @@
+/* ── Run UI (P6: src/runs/ui) — the run panels and the status bar's run segment ── */
+.run-ui-form { display: flex; flex-direction: column; gap: var(--sp-3); padding: var(--sp-4) var(--sp-5); }
+.run-ui-unit { font-size: var(--fs-sm); }
+.run-ui-range { display: inline-flex; align-items: center; gap: var(--sp-2); }
+.run-ui-switch { width: 30px; height: 18px; accent-color: var(--accent-fill); }
+.run-ui-glyph-info { color: var(--accent-text); }
+.run-ui-glyph-warning { color: var(--warn-text); }
+
+.run-seg { display: inline-flex; align-items: center; gap: var(--sp-2); padding: 0 var(--sp-4); height: 24px; color: var(--text-2); font-variant-numeric: tabular-nums; white-space: nowrap; min-width: 0; }
+.run-seg-text { overflow: hidden; text-overflow: ellipsis; max-width: 360px; }
+.run-seg-bar { width: 80px; height: 6px; }
+.run-seg-readout { min-width: 72px; }
+.run-seg-success { color: var(--good-text); }
+.run-seg-warning { color: var(--warn-text); }
+.run-seg-failure { color: var(--crit-text); }
+.run-seg-stop { color: var(--crit-text); }
+.run-seg-spin { animation: run-seg-spin 1s linear infinite; }
+@keyframes run-seg-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .run-seg-spin { animation: none; } }
+:root[data-motion="reduce"] .run-seg-spin { animation: none; }

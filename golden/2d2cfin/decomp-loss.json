@@ -1,0 +1,62 @@
+{
+  "blocking" : "loss",
+  "classes" : [
+    {
+      "external_arrivals" : {
+        "s1" : 0.48999999999999999
+      },
+      "id" : "c1",
+      "name" : "Class 1"
+    },
+    {
+      "external_arrivals" : {
+        "s1" : 0.48999999999999999
+      },
+      "id" : "c2",
+      "name" : "Class 2"
+    }
+  ],
+  "name" : "2d2cfin",
+  "routes" : [
+    {
+      "class" : "c1",
+      "from" : "s1",
+      "probability" : 1,
+      "to" : "s2"
+    },
+    {
+      "class" : "c2",
+      "from" : "s1",
+      "probability" : 1,
+      "to" : "s2"
+    }
+  ],
+  "schema_version" : 1,
+  "solver" : {
+    "damping" : 0.5,
+    "max_iterations" : 1000,
+    "tolerance" : 1e-10
+  },
+  "stations" : [
+    {
+      "capacity" : 25,
+      "id" : "s1",
+      "name" : "S1",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1,
+        "c2" : 1
+      }
+    },
+    {
+      "capacity" : 25,
+      "id" : "s2",
+      "name" : "S2",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1,
+        "c2" : 1
+      }
+    }
+  ]
+}

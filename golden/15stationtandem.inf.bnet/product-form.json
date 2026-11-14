@@ -1,0 +1,288 @@
+{
+  "classes" : [
+    {
+      "external_arrival_rates" : {
+        "s1" : 1
+      },
+      "id" : "c1",
+      "routing" : [
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s2"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s1"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s3"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s2"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s4"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s3"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s5"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s4"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s6"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s5"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s7"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s6"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s8"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s7"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s9"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s8"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s10"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s9"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s12"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s10"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s14"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s11"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s11"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s12"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s15"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s13"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s13"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s14"
+        },
+        {
+          "destinations" : [
+
+          ],
+          "exit_probability" : 1,
+          "from_station" : "s15"
+        }
+      ]
+    }
+  ],
+  "description" : "Exact open FCFS BCMP/Jackson model exported from Qnet; M/M/c local factors are normalized analytically without state-space truncation.",
+  "model_type" : "open_bcmp",
+  "name" : "15stationtandem.inf.bnet",
+  "schema_version" : 1,
+  "solver" : {
+    "max_servers" : 100000
+  },
+  "stations" : [
+    {
+      "id" : "s1",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000090000001
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s2",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000000899999
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s3",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000090000001
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s4",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000090000001
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s5",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000090000001
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s6",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000090000001
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s7",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000090000001
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s8",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000090000001
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s9",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000090000001
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s10",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000090000001
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s11",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000090000001
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s12",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000090000001
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s13",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000090000001
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s14",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000090000001
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s15",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.9000000090000001
+      },
+      "type" : "fcfs"
+    }
+  ]
+}

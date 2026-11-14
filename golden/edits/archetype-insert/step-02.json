@@ -1,0 +1,70 @@
+{
+ "step": 2,
+ "op": {
+  "archetype": "reentrantTwoStation",
+  "op": "insertArchetype",
+  "parameters": {
+   "bufferCapacity": 4,
+   "infiniteBuffers": false
+  }
+ },
+ "status": [
+  {
+   "text": "Insert Re-entrant Pair: added 6 nodes and 6 links. 2 stations, 6 nodes, 6 links, λ = 1.000, ρ = 0.900 at every station. The network stays on infinite buffers — an insert never re-interprets the stations already on the canvas. Use Network ▸ Buffer Model to change the whole network. Its traffic is Class 2, because the canvas already had a source.",
+   "severity": "info"
+  }
+ ],
+ "selectedNodeID": null,
+ "selectedNodeIDs": [
+  {
+   "index": 6,
+   "name": "Src2"
+  },
+  {
+   "index": 7,
+   "name": "B3"
+  },
+  {
+   "index": 8,
+   "name": "S3"
+  },
+  {
+   "index": 9,
+   "name": "B4"
+  },
+  {
+   "index": 10,
+   "name": "S4"
+  },
+  {
+   "index": 11,
+   "name": "Sink2"
+  }
+ ],
+ "selectedLinkID": null,
+ "pendingLinkStartID": null,
+ "activeLinkSourceID": null,
+ "activeCustomerClass": 0,
+ "selectedTool": "select",
+ "toolBeforeStickyPan": null,
+ "canUndo": true,
+ "canRedo": false,
+ "undoActionName": "Insert Re-entrant Pair",
+ "redoActionName": "",
+ "snapToGrid": false,
+ "snapSuspended": false,
+ "classFilter": null,
+ "canvasScale": 1,
+ "canvasPanOffset": [0, 0],
+ "infiniteBuffers": true,
+ "nodeCount": 12,
+ "linkCount": 11,
+ "numberOfCustomerClasses": 2,
+ "canPaste": false,
+ "hasUnsavedChanges": true,
+ "multiSelectRect": null,
+ "isDraggingNode": false,
+ "parameterEditorTarget": null,
+ "linkParameterEditorTarget": null,
+ "pendingFitOnAppear": true
+}

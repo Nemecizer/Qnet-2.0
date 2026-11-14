@@ -1,0 +1,69 @@
+NETWORK ANALYSIS — Brownian Heavy-Traffic Reliability
+=====================================================
+
+NETWORK SUMMARY
+---------------
+Stations:         2
+Customer classes: 3
+Buffer model:     infinite
+
+KEY PRIMITIVES
+--------------
+  Station   servers    μ_eff        α          ρ   c²_s_eff   buffer
+  S1              1   2.2222   2.0000     0.9000     2.9121        ∞
+  S2              1   3.3333   3.0000     0.9000     4.7378        ∞
+
+  Class       λ (ext)     c²_a
+  C1           1.0000   1.0000
+  C2           0.0000   1.0000
+  C3           0.0000   1.0000
+
+OVERALL RELIABILITY ASSESSMENT
+------------------------------
+Score: 49 / 100  (LOW)
+Findings: 0 critical, 3 warning, 2 info
+
+Several primitives violate the assumptions used by SRBM. Treat absolute E[X] values with caution — use them for relative comparisons only, and verify against simulation.
+
+FINDINGS (grouped by severity)
+------------------------------
+
+[WARNING ] 1. Station 2 has a highly variable service time (c²_s = 4.74)
+  Why:     SRBM is a two-moment approximation: it only sees mean and variance of service time. With c²_s > 4 (e.g. hyperexponential / long-tail), higher moments dominate the queue dynamics and the two-moment fit systematically UNDERESTIMATES E[X] (often by 30% or more).
+  Fix:     If the true service distribution is long-tailed, consider simulation or a matrix-exponential method. If the SCV = 4.74 is the result of mixing several class service times, splitting those into separate stations would reduce the aggregated SCV.
+  Affects: E[X_2], sojourn_2
+
+[WARNING ] 2. Station 1 services classes with very different speeds (ratio 89.0x)
+  Why:     Compound service-time aggregation (the new research flavor) computes E[S] and E[S²] from a mixture, but the stationary distribution of a multi-class FIFO queue is not fully characterized by two moments when class service times differ by more than ~5x. Expect 10–30% error on E[X] and per-class W.
+  Fix:     If possible, dedicate separate stations to the fast and slow classes. Or use priority queueing with a different analytical model.
+  Affects: E[X_1], per-class waiting times at station 1
+
+[WARNING ] 3. Station 2 services classes with very different speeds (ratio 88.0x)
+  Why:     Compound service-time aggregation (the new research flavor) computes E[S] and E[S²] from a mixture, but the stationary distribution of a multi-class FIFO queue is not fully characterized by two moments when class service times differ by more than ~5x. Expect 10–30% error on E[X] and per-class W.
+  Fix:     If possible, dedicate separate stations to the fast and slow classes. Or use priority queueing with a different analytical model.
+  Affects: E[X_2], per-class waiting times at station 2
+
+[INFO    ] 4. Routing has self-loops (max P[i][i] = 0.667)
+  Why:     A customer can re-enter the same station. The arrival stream to that station is no longer the renewal superposition Whitt's formula assumes, so the computed arrival SCV (and therefore Σ) is an approximation.
+  Fix:     If the self-loop is physically meaningful, the approximation is usually fine at moderate probabilities (P < 0.3). For P close to 1 (e.g. heavy rework), consider modeling the loop as a separate station.
+  Affects: E[X] at looped stations
+
+[INFO    ] 5. Routing has feedback cycles (i ↔ j)
+  Why:     Departure processes from station j feed back into station i whose departures in turn feed j. The Whitt superposition/departure approximations iterate to a fixed point; the fixed-point SCV is correct only in heavy traffic and converges slowly.
+  Fix:     Raise all ρ in the cycle toward 1 to tighten the heavy-traffic limit. For lightly-loaded feedback networks, simulation is more reliable.
+  Affects: E[X_i] for stations in the cycle
+
+PERFORMANCE METRIC RELIABILITY
+------------------------------
+  E[X_i] (queue length):          MODERATE    service SCV is extreme — expect bias in E[X]
+  Throughput (Γ_i):               HIGH        Γ = α; derived exactly from traffic equations
+  Utilization (ρ_i):              HIGH        ρ = α / (s·μ); derived exactly from primitives
+  Sojourn time:                   MODERATE    sojourn = E[X]/Γ; inherits E[X] reliability
+  Per-class W, T, N:              MODERATE    Little's law applied to E[X]; inherits its reliability
+
+TOP ACTIONABLE SUGGESTIONS
+--------------------------
+1. If the true service distribution is long-tailed, consider simulation or a matrix-exponential method. If the SCV = 4.74 is the result of mixing several class service times, splitting those into separate stations would reduce the aggregated SCV.
+2. If possible, dedicate separate stations to the fast and slow classes. Or use priority queueing with a different analytical model.
+3. If possible, dedicate separate stations to the fast and slow classes. Or use priority queueing with a different analytical model.
+

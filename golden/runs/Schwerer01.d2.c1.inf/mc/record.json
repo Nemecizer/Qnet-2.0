@@ -1,0 +1,248 @@
+{
+  "completedAt" : "2026-11-11T04:56:26Z",
+  "elapsedSeconds" : 0.411175012588501,
+  "id" : "431A78BA-ED69-41F1-9036-5B14B04A0B64",
+  "measurements" : [
+    {
+      "estimate" : 0.6,
+      "id" : "7F2B51F6-0C84-449F-9987-6AE49A29F27F",
+      "metric" : "Utilization",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.6,
+      "id" : "21E4C58D-2ECA-49FE-B8D0-58DF26F1C70C",
+      "metric" : "Utilization",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.6,
+      "id" : "4A5ACC1F-7DE7-468A-83C5-B4D609AE04FC",
+      "metric" : "Throughput",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.6,
+      "id" : "6F4FC0BE-DC9E-4623-B9E1-6DD4ECA85834",
+      "metric" : "Throughput",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 1.251,
+      "id" : "C04B8660-380D-491A-8F0B-D5A4D09C3623",
+      "metric" : "Mean sojourn time",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 1.89,
+      "id" : "C30D4B60-0844-4945-80B0-D8753FDD6E21",
+      "metric" : "Mean sojourn time",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 0.751,
+      "id" : "39DD3FB2-C90B-4883-BDAB-5E90E118FB27",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 1.134,
+      "id" : "EE989902-E5E7-4593-A90C-28C91741D93D",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Multi-Class SRBM",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.multiclass-station",
+    "implementation" : "multiclass_diffusion\/mc_solver",
+    "layer" : "SRBM diffusion",
+    "shortName" : "MC SRBM"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "E5F6A7B8-5555-1111-1111-000000000003",
+      "E5F6A7B8-5555-1111-1111-000000000005"
+    ],
+    "networkFingerprint" : "970f64f77082d22568879f39589973df8add60ca88dade2b264619e9e596a0fb",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E5F6A7B8-5555-1111-1111-000000000001",
+          "id" : "E5F6A7B8-5555-1111-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "E5F6A7B8-5555-1111-1111-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E5F6A7B8-5555-1111-1111-000000000002",
+          "id" : "E5F6A7B8-5555-1111-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "E5F6A7B8-5555-1111-1111-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E5F6A7B8-5555-1111-1111-000000000003",
+          "id" : "E5F6A7B8-5555-1111-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "E5F6A7B8-5555-1111-1111-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E5F6A7B8-5555-1111-1111-000000000004",
+          "id" : "E5F6A7B8-5555-1111-2222-000000000004",
+          "routingProbability" : 1,
+          "toNodeID" : "E5F6A7B8-5555-1111-1111-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E5F6A7B8-5555-1111-1111-000000000005",
+          "id" : "E5F6A7B8-5555-1111-2222-000000000005",
+          "routingProbability" : 1,
+          "toNodeID" : "E5F6A7B8-5555-1111-1111-000000000006"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.6",
+          "id" : "E5F6A7B8-5555-1111-1111-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "E5F6A7B8-5555-1111-1111-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            190,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "constant",
+          "distributionParameters" : "value=1.0",
+          "id" : "E5F6A7B8-5555-1111-1111-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            280,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "E5F6A7B8-5555-1111-1111-000000000004",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            370,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "E5F6A7B8-5555-1111-1111-000000000005",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "E5F6A7B8-5555-1111-1111-000000000006",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            550,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "Schwerer01.d2.c1.inf.bnet",
+    "parameters" : {
+      "formulation" : "research",
+      "mesh per dimension" : "auto"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/Schwerer01.d2.c1.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Running multi-class SRBM (research, mesh=auto) ... done.\n\nNetwork load: rho_max = 0.6000 at S1  (moderate load — SRBM\/FEM are heavy-traffic limits; expect deviation from simulation)\n──  Asymptotic product form — GCDG 2025 Cor. 3 (lower-triangular R, feed-forward)  ──\n           Multi-Class SRBM  Asymptotic E[X]\n           ================  ============\n\nrho_1      0.600 (+0.0%)     0.600\nrho_2      0.600 (+0.0%)     0.600\n\nGamma_1    0.600 (+0.0%)     0.600\nGamma_2    0.600 (+0.0%)     0.600\n\nsojourn_1  1.251 (+0.0%)     1.250\nsojourn_2  1.890 (+0.0%)     2.500\n\nE[X_1]     0.751 (+0.0%)     0.750\nE[X_2]     1.134 (+0.0%)     1.500\n\nElapsed time: 0.082s\n\n",
+  "startedAt" : "2026-11-11T04:56:26Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

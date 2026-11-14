@@ -1,0 +1,29 @@
+[Threads] 18 CPU cores for parallel solvers (Sim/Spectral/FE); analytical solvers (QNA/SBD/LP) are single-threaded
+Running spectral method ...           [                              ]  starting ...[KRunning spectral method ...           [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  492/492      (100%)     0.1s
+Running finite element method ...     [                              ]  starting ...[KRunning finite element method ...     [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m         ]   744/1000    ( 74%)         [KRunning finite element method ...     [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  1000/1000    (100%)        /[KRunning finite element method ...     [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  1000/1000    (100%)        -[KRunning finite element method ...     [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  1000/1000    (100%)        \[KRunning finite element method ...     [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  1000/1000    (100%)     1.2s
+Running finite LP method (highs) ...  [ ]                                                       0.0s[KRunning finite LP method (highs) ...  [/]                                                       0.2s[KRunning finite LP method (highs) ...  [-]                                                       0.5s[KRunning finite LP method (highs) ...  [\]                                                       0.7s[KRunning finite LP method (highs) ...  [|]                                                       1.0s[KRunning finite LP method (highs) ...  [/]                                                       1.2s[KRunning finite LP method (highs) ...  [-]                                                       1.5s[KRunning finite LP method (highs) ...  [done]                                                    1.6s
+Running simulation ...                [                              ]  starting ...[KRunning simulation ...                [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  8/8          (100%)     0.1s
+
+Network load: rho_max = 1.1111 at S2  (heavy-traffic regime — analytical methods are most accurate here)
+Buffer regime: K*(1-rho) = -1.78 at S2 (K=16, rho=1.111) — small for the heavy-traffic limit (target ~1-5); SRBM may overstate E[X] / understate loss by 10-20%
+           Spectral         FE (Gauss)       Finite LP        Simulation                Average of Algorithms
+           ========         ==========       =========        ==========                =====================
+
+rho_1      0.927 (-4.4%)    0.927 (-4.4%)    0.927 (-4.4%)    0.970 ± 0.002 (+0.0%)     0.927 (-4.4%)
+rho_2      1.000 (+0.2%)    1.000 (+0.2%)    1.000 (+0.2%)    0.998 ± 6.42e-04 (+0.0%)  1.000 (+0.2%)
+rho_3      0.952 (+3.4%)    0.952 (+3.4%)    0.952 (+3.4%)    0.921 ± 0.002 (+0.0%)     0.952 (+3.4%)
+
+Gamma_1    1.000 (+20.5%)   1.000 (+20.5%)   1.000 (+20.5%)   0.830 ± 0.001 (+0.0%)     1.000 (+20.5%)
+Gamma_2    0.874 (+5.3%)    0.874 (+5.3%)    0.873 (+5.2%)    0.830 ± 0.001 (+0.0%)     0.874 (+5.3%)
+Gamma_3    0.857 (+3.3%)    0.857 (+3.3%)    0.857 (+3.3%)    0.830 ± 0.001 (+0.0%)     0.857 (+3.3%)
+
+sojourn_1  7.198 (-18.9%)   7.541 (-15.0%)   7.440 (-16.2%)   8.874 ± 0.050 (+0.0%)     7.393 (-16.7%)
+sojourn_2  14.720 (-12.7%)  15.500 (-8.0%)   15.675 (-7.0%)   16.854 ± 0.096 (+0.0%)    15.298 (-9.2%)
+sojourn_3  11.158 (+11.6%)  11.158 (+11.6%)  11.108 (+11.1%)  9.996 ± 0.141 (+0.0%)     11.141 (+11.5%)
+
+E[X_1]     7.198 (-2.3%)    7.541 (+2.3%)    7.440 (+1.0%)    7.369 ± 0.040 (+0.0%)     7.393 (+0.3%)
+E[X_2]     12.862 (-8.1%)   13.543 (-3.2%)   13.691 (-2.2%)   13.995 ± 0.076 (+0.0%)    13.365 (-4.5%)
+E[X_3]     9.559 (+15.2%)   9.559 (+15.2%)   9.519 (+14.7%)   8.301 ± 0.116 (+0.0%)     9.546 (+15.0%)
+
+Elapsed time: 1.815s
+

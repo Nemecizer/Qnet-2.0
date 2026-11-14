@@ -1,0 +1,47 @@
+Fitting adaptive low-rank BAR ...  [ ]                                                       0.0s[KFitting adaptive low-rank BAR ...  [/]                                                       0.2s[KFitting adaptive low-rank BAR ...  [-]                                                       0.4s[KFitting adaptive low-rank BAR ...  [\]                                                       0.6s[KFitting adaptive low-rank BAR ...  [|]                                                       0.9s[KFitting adaptive low-rank BAR ...  [/]                                                       1.1s[KFitting adaptive low-rank BAR ...  [-]                                                       1.3s[KFitting adaptive low-rank BAR ...  [\]                                                       1.5s[KFitting adaptive low-rank BAR ...  [|]                                                       1.7s[KFitting adaptive low-rank BAR ...  [/]                                                       1.9s[KFitting adaptive low-rank BAR ...  [-]                                                       2.2s[KFitting adaptive low-rank BAR ...  [\]                                                       2.4s[KFitting adaptive low-rank BAR ...  [|]                                                       2.6s[KFitting adaptive low-rank BAR ...  [/]                                                       2.8s[KFitting adaptive low-rank BAR ...  [-]                                                       3.0s[KFitting adaptive low-rank BAR ...  [\]                                                       3.2s[KFitting adaptive low-rank BAR ...  [done]                                                    3.3s
+Adaptive low-rank BAR analysis
+Model layer: stationary orthant SRBM diffusion
+Claim: adaptive low-rank BAR approximation (not a certified moment bound)
+Rank: 12  converged: no
+
+E[Z_1] = 8.100001835    Var[Z_1] = 65.61030902
+E[Z_2] = 8.100037266    Var[Z_2] = 65.61225268
+E[Z_3] = 8.099999465    Var[Z_3] = 65.61003011
+E[Z_4] = 8.100013151    Var[Z_4] = 65.6103589
+E[Z_5] = 8.100032901    Var[Z_5] = 65.61125084
+E[Z_6] = 8.100039905    Var[Z_6] = 65.61168731
+E[Z_7] = 8.100050323    Var[Z_7] = 65.61245438
+E[Z_8] = 8.10005428    Var[Z_8] = 65.61278288
+E[Z_9] = 8.100060534    Var[Z_9] = 65.61334409
+E[Z_10] = 8.100067186    Var[Z_10] = 65.61399776
+E[Z_11] = 8.100068913    Var[Z_11] = 65.6141771
+E[Z_12] = 8.100073109    Var[Z_12] = 65.61462935
+E[Z_13] = 8.100075299    Var[Z_13] = 65.6148746
+E[Z_14] = 8.100076256    Var[Z_14] = 65.61498388
+E[Z_15] = 8.10007795    Var[Z_15] = 65.61518017
+
+Held-out relative BAR RMS = 0.000647943
+Held-out relative BAR max = 0.00159645
+Skew-symmetry residual    = 1.37065e-16
+Simplex mass error        = 2.78e-17
+WARNING: The requested refinement criteria were not met before max_rank; increase max_rank/log_rate_span or cross-check with another method.
+WARNING: Held-out BAR residuals test the fitted transform but do not bound error in the reported moments.
+WARNING: The skew-symmetry residual is numerically small, but the identity is not exact for the supplied decimal parameters; the result remains an approximation.
+
+  L_01 = 9.000002    (workload E[Z_01] = 8.100002, mu_i = 1.111111)
+  L_02 = 9.000041    (workload E[Z_02] = 8.100037, mu_i = 1.111111)
+  L_03 = 8.999999    (workload E[Z_03] = 8.099999, mu_i = 1.111111)
+  L_04 = 9.000015    (workload E[Z_04] = 8.100013, mu_i = 1.111111)
+  L_05 = 9.000036    (workload E[Z_05] = 8.100033, mu_i = 1.111111)
+  L_06 = 9.000044    (workload E[Z_06] = 8.100040, mu_i = 1.111111)
+  L_07 = 9.000056    (workload E[Z_07] = 8.100050, mu_i = 1.111111)
+  L_08 = 9.000060    (workload E[Z_08] = 8.100054, mu_i = 1.111111)
+  L_09 = 9.000067    (workload E[Z_09] = 8.100061, mu_i = 1.111111)
+  L_10 = 9.000075    (workload E[Z_10] = 8.100067, mu_i = 1.111111)
+  L_11 = 9.000076    (workload E[Z_11] = 8.100069, mu_i = 1.111111)
+  L_12 = 9.000081    (workload E[Z_12] = 8.100073, mu_i = 1.111111)
+  L_13 = 9.000084    (workload E[Z_13] = 8.100075, mu_i = 1.111111)
+  L_14 = 9.000085    (workload E[Z_14] = 8.100076, mu_i = 1.111111)
+  L_15 = 9.000087    (workload E[Z_15] = 8.100078, mu_i = 1.111111)
+Elapsed time: 3.358s
+

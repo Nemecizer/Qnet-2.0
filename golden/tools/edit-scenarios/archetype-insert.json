@@ -1,0 +1,19 @@
+{
+ "description": "Network ▸ Insert Archetype (insertSubnetwork, one undo step): on an empty canvas (the block lands at canvasOrigin and its buffer regime is adopted), a second insert beside it (renamed through the counters, its source's class remapped, the regime kept with the explanatory sentence), an insert into a finite example, and undo / redo.",
+ "start": null,
+ "steps": [
+  {"op": "insertArchetype", "archetype": "tandemLine", "parameters": {"stations": 2}},
+  {"op": "insertArchetype", "archetype": "reentrantTwoStation", "parameters": {"infiniteBuffers": false, "bufferCapacity": 4}},
+  {"op": "undo"},
+  {"op": "insertArchetype", "archetype": "mmcStation", "parameters": {"servers": 3, "targetRho": 0.8}},
+  {"op": "setTool", "tool": "addStation"},
+  {"op": "canvasClick", "at": [1100, 700]},
+  {"op": "undo"},
+  {"op": "undo"},
+  {"op": "undo"},
+  {"op": "insertArchetype", "archetype": "forkStyleSplit", "parameters": {"infiniteBuffers": false, "bufferCapacity": 6}},
+  {"op": "insertArchetype", "archetype": "openJacksonFeedback", "parameters": {"stations": 3, "feedbackProbability": 0.25}},
+  {"op": "undo"},
+  {"op": "redo"}
+ ]
+}

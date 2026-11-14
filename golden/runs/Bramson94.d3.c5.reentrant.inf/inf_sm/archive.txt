@@ -1,0 +1,26 @@
+[Threads] Using 18 CPU cores (OpenMP)
+Running spectral method ...  [                              ]  starting ...[KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m                       ]  100/328      ( 30%)         [KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m             ]  202/328      ( 61%)         [KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m     ]  300/328      ( 91%)         [KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  328/328      (100%)     0.9s
+
+Network load: rho_max = 0.9000 at S1  (near heavy-traffic — small O(1) deviation expected)
+Routing graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference
+           Spectral
+           ========
+
+rho_1      0.900
+rho_2      0.890
+rho_3      0.010
+
+Gamma_1    2.000
+Gamma_2    2.000
+Gamma_3    1.000
+
+sojourn_1  8.472
+sojourn_2  6.529
+sojourn_3  0.015
+
+E[Q_1]     16.944
+E[Q_2]     13.058
+E[Q_3]     0.015
+
+Elapsed time: 1.034s
+

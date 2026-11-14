@@ -1,0 +1,57 @@
+Fitting adaptive low-rank BAR ...  [ ]                                                       0.0s[KFitting adaptive low-rank BAR ...  [/]                                                       0.2s[KFitting adaptive low-rank BAR ...  [-]                                                       0.4s[KFitting adaptive low-rank BAR ...  [\]                                                       0.6s[KFitting adaptive low-rank BAR ...  [|]                                                       0.9s[KFitting adaptive low-rank BAR ...  [/]                                                       1.1s[KFitting adaptive low-rank BAR ...  [-]                                                       1.3s[KFitting adaptive low-rank BAR ...  [\]                                                       1.5s[KFitting adaptive low-rank BAR ...  [|]                                                       1.7s[KFitting adaptive low-rank BAR ...  [/]                                                       2.0s[KFitting adaptive low-rank BAR ...  [-]                                                       2.2s[KFitting adaptive low-rank BAR ...  [\]                                                       2.4s[KFitting adaptive low-rank BAR ...  [|]                                                       2.6s[KFitting adaptive low-rank BAR ...  [/]                                                       2.8s[KFitting adaptive low-rank BAR ...  [-]                                                       3.0s[KFitting adaptive low-rank BAR ...  [\]                                                       3.3s[KFitting adaptive low-rank BAR ...  [|]                                                       3.5s[KFitting adaptive low-rank BAR ...  [/]                                                       3.7s[KFitting adaptive low-rank BAR ...  [-]                                                       3.9s[KFitting adaptive low-rank BAR ...  [\]                                                       4.1s[KFitting adaptive low-rank BAR ...  [|]                                                       4.3s[KFitting adaptive low-rank BAR ...  [/]                                                       4.6s[KFitting adaptive low-rank BAR ...  [done]                                                    4.7s
+Adaptive low-rank BAR analysis
+Model layer: stationary orthant SRBM diffusion
+Claim: adaptive low-rank BAR approximation (not a certified moment bound)
+Rank: 12  converged: no
+
+E[Z_1] = 8.100001779    Var[Z_1] = 65.61019325
+E[Z_2] = 8.100020883    Var[Z_2] = 65.61126828
+E[Z_3] = 8.100000197    Var[Z_3] = 65.61002571
+E[Z_4] = 8.100008085    Var[Z_4] = 65.61021773
+E[Z_5] = 8.100019441    Var[Z_5] = 65.61073415
+E[Z_6] = 8.100023463    Var[Z_6] = 65.61098594
+E[Z_7] = 8.100029442    Var[Z_7] = 65.61142766
+E[Z_8] = 8.100031711    Var[Z_8] = 65.6116166
+E[Z_9] = 8.100035297    Var[Z_9] = 65.61193914
+E[Z_10] = 8.10003911    Var[Z_10] = 65.6123145
+E[Z_11] = 8.1000401    Var[Z_11] = 65.61241743
+E[Z_12] = 8.100042504    Var[Z_12] = 65.61267691
+E[Z_13] = 8.100043758    Var[Z_13] = 65.61281757
+E[Z_14] = 8.100044307    Var[Z_14] = 65.61288024
+E[Z_15] = 8.100045277    Var[Z_15] = 65.61299279
+E[Z_16] = 8.10004648    Var[Z_16] = 65.61313545
+E[Z_17] = 8.100047457    Var[Z_17] = 65.61325375
+E[Z_18] = 8.100047743    Var[Z_18] = 65.6132888
+E[Z_19] = 8.100048505    Var[Z_19] = 65.61338317
+E[Z_20] = 8.100048946    Var[Z_20] = 65.61343839
+
+Held-out relative BAR RMS = 0.000740487
+Held-out relative BAR max = 0.00195205
+Skew-symmetry residual    = 1.37065e-16
+Simplex mass error        = 1.11e-16
+WARNING: The requested refinement criteria were not met before max_rank; increase max_rank/log_rate_span or cross-check with another method.
+WARNING: Held-out BAR residuals test the fitted transform but do not bound error in the reported moments.
+WARNING: The skew-symmetry residual is numerically small, but the identity is not exact for the supplied decimal parameters; the result remains an approximation.
+
+  L_01 = 9.000002    (workload E[Z_01] = 8.100002, mu_i = 1.111111)
+  L_02 = 9.000023    (workload E[Z_02] = 8.100021, mu_i = 1.111111)
+  L_03 = 9.000000    (workload E[Z_03] = 8.100000, mu_i = 1.111111)
+  L_04 = 9.000009    (workload E[Z_04] = 8.100008, mu_i = 1.111111)
+  L_05 = 9.000022    (workload E[Z_05] = 8.100019, mu_i = 1.111111)
+  L_06 = 9.000026    (workload E[Z_06] = 8.100023, mu_i = 1.111111)
+  L_07 = 9.000033    (workload E[Z_07] = 8.100029, mu_i = 1.111111)
+  L_08 = 9.000035    (workload E[Z_08] = 8.100032, mu_i = 1.111111)
+  L_09 = 9.000039    (workload E[Z_09] = 8.100035, mu_i = 1.111111)
+  L_10 = 9.000043    (workload E[Z_10] = 8.100039, mu_i = 1.111111)
+  L_11 = 9.000044    (workload E[Z_11] = 8.100040, mu_i = 1.111111)
+  L_12 = 9.000047    (workload E[Z_12] = 8.100043, mu_i = 1.111111)
+  L_13 = 9.000049    (workload E[Z_13] = 8.100044, mu_i = 1.111111)
+  L_14 = 9.000049    (workload E[Z_14] = 8.100044, mu_i = 1.111111)
+  L_15 = 9.000050    (workload E[Z_15] = 8.100045, mu_i = 1.111111)
+  L_16 = 9.000052    (workload E[Z_16] = 8.100046, mu_i = 1.111111)
+  L_17 = 9.000053    (workload E[Z_17] = 8.100047, mu_i = 1.111111)
+  L_18 = 9.000053    (workload E[Z_18] = 8.100048, mu_i = 1.111111)
+  L_19 = 9.000054    (workload E[Z_19] = 8.100049, mu_i = 1.111111)
+  L_20 = 9.000054    (workload E[Z_20] = 8.100049, mu_i = 1.111111)
+Elapsed time: 4.730s
+

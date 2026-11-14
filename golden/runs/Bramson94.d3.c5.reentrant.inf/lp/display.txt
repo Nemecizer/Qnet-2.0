@@ -1,0 +1,42 @@
+[A[2KRunning Linear Program (BNAlp, Saure-Glynn-Zeevi 2008)
+auto-scaled for d=3: grid_n=25, basis_m=5
+
+HiGHS: run_status=-1, model_status=0
+LP solve failed!
+SRBM Parameters:
+  dimension     = 3
+  grid_n        = 25
+  basis_m       = 5
+  grid_type     = 0 (0=exp, 1=dya, 2=expran)
+  max_moments   = 4
+  solver        = (default)
+  output_prefix = srbm_out
+  drift         = -0.044 43.994 -0.989
+  covariance:
+        1.778   -1.166    0.004
+       -1.166    1.738   -0.017
+        0.004   -0.017   3.00e-04
+  reflection:
+        1.000   -0.506    0.000
+       -0.494    1.000  -44.500
+        0.000   -0.011    1.000
+  grid_spacing  = 0.000 0.000 0.000
+  tightness K   = 100000 100000 100000 100000 100000 100000 100000
+  smoothness_w  = 0 (disabled)
+  basis_norm    = 0 (raw monomials)
+  Auto rho      = 0.199 0.219 1.980
+  Effective grid_spacing (rho/4) = 0.050 0.055 0.495
+
+[Parse] 0.001 s
+[Grid]  15625 points, 0.004 s
+  Face 1 boundary: 625 points
+  Face 2 boundary: 625 points
+  Face 3 boundary: 625 points
+[Index] 56 basis functions, 0.000 s
+[Basis] 0.000 s
+[Eval interior] 0.003 s
+[Eval boundary] 0.000 s
+[Build LP] 120 rows, 17501 cols, 1827988 nnz, 0.050 s
+[Solve] Using solver: highs
+
+Solver exited with code 1.

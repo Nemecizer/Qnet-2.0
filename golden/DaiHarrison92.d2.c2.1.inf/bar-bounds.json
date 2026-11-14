@@ -1,0 +1,50 @@
+{
+  "covariance" : [
+    [
+      0.59980404969031487,
+      -0.1546981873526817
+    ],
+    [
+      -0.1546981873526817,
+      0.24819510151783955
+    ]
+  ],
+  "drift" : [
+    -0.0012038523274477408,
+    -0.63157894736842102
+  ],
+  "model_type" : "orthant_srbm_bar_bounds",
+  "name" : "DaiHarrison92.d2.c2.1.inf",
+  "reflection" : [
+    [
+      1,
+      -0.51845906902086691
+    ],
+    [
+      -0.36842105263157893,
+      1
+    ]
+  ],
+  "relaxation" : {
+    "max_psd_entries" : 5000000,
+    "max_variables" : 100000,
+    "order" : 2,
+    "targets" : [
+      {
+        "moment" : [
+          1,
+          0
+        ],
+        "name" : "mean_workload_1"
+      },
+      {
+        "moment" : [
+          0,
+          1
+        ],
+        "name" : "mean_workload_2"
+      }
+    ]
+  },
+  "schema_version" : 1
+}

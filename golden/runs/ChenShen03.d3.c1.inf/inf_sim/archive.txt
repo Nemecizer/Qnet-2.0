@@ -1,0 +1,26 @@
+[Threads] Using 18 CPU cores (OpenMP)
+Running simulation ...  [                              ]  starting ...[KRunning simulation ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  8/8          (100%)     0.3s
+
+Network load: rho_max = 0.9000 at S2  (near heavy-traffic — small O(1) deviation expected)
+──  Asymptotic product form — GCDG 2025 Cor. 3 (lower-triangular R, feed-forward)  ──
+           Simulation              Asymptotic E[X]
+           ==========              ============
+
+rho_1      0.901 ± 0.001 (+0.0%)   0.900
+rho_2      0.901 ± 0.002 (+0.0%)   0.900
+rho_3      0.900 ± 0.002 (+0.0%)   0.900
+
+Gamma_1    1.000 ± 0.001 (+0.0%)   1.000
+Gamma_2    1.000 ± 0.001 (+0.0%)   1.000
+Gamma_3    1.000 ± 0.001 (+0.0%)   1.000
+
+sojourn_1  5.946 (+0.0%)           5.625
+sojourn_2  7.462 (+0.0%)           9.000
+sojourn_3  12.554 (+0.0%)          13.500
+
+E[Q_1]     5.948 ± 0.142 (+0.0%)   5.625
+E[Q_2]     7.464 ± 0.257 (+0.0%)   9.000
+E[Q_3]     12.556 ± 0.349 (+0.0%)  13.500
+
+Elapsed time: 0.331s
+

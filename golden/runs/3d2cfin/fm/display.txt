@@ -1,0 +1,26 @@
+[A[2K[Threads] Using 18 CPU cores (OpenMP)
+Running finite element method ...  [                              ]  starting ...[KRunning finite element method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  1000/1000    (100%)     0.2s
+
+Network load: rho_max = 1.845 at S2  (heavy-traffic regime — analytical methods are most accurate here)
+Buffer regime: K*(1-rho) = -9.300 at S2 (K=11, rho=1.845) — small for the heavy-traffic limit (target ~1-5); SRBM may overstate E[X] / understate loss by 10-20%
+           Finite Element
+           ==============
+
+rho_1      1.000
+rho_2      1.000
+rho_3      1.000
+
+Gamma_1    1.111
+Gamma_2    1.111
+Gamma_3    1.111
+
+sojourn_1  7.825
+sojourn_2  3.541
+sojourn_3  7.794
+
+E[X_1]     8.695
+E[X_2]     3.934
+E[X_3]     8.660
+
+Elapsed time: 0.205s
+

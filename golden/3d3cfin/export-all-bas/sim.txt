@@ -1,0 +1,43 @@
+# fBNA Queueing Network Export
+# Generated: 11/10/26, 15:57:54
+
+# num_classes
+3
+
+# dimension
+3
+
+# arrival_distributions
+exponential rate=0.334000
+exponential rate=0.334000
+exponential rate=0.333300
+
+# arrival_stations
+1 1 1
+
+# servers_per_station
+1 1 1
+
+# buffer_sizes
+24 24 24
+
+# service_distributions
+erlang k=4,rate=4.44444444 | erlang k=4,rate=4.44444444 | erlang k=4,rate=4.44444444
+exponential rate=1.111111 | exponential rate=1.111111 | exponential rate=1.111111
+gamma shape=0.5,scale=1.8 | gamma shape=0.5,scale=1.8 | gamma shape=0.5,scale=1.8
+
+# routing_matrix_class_1
+0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000
+
+# routing_matrix_class_2
+0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000
+
+# routing_matrix_class_3
+0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000
+

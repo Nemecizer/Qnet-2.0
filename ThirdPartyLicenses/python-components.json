@@ -1,0 +1,272 @@
+{
+  "schema": 1,
+  "runtime": "Contents/Resources/python",
+  "python": "3.15.2",
+  "numpy": "2.5.4",
+  "numpy_blas": "openblas",
+  "minimum_macos": "11.0",
+  "note": "licence_texts and files are paths inside the runtime folder",
+  "components": [
+    {
+      "name": "CPython",
+      "version": "3.15.2",
+      "role": "interpreter and standard library",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.15.2%2B20261110-aarch64-apple-darwin-install_only_stripped.tar.gz",
+      "sha256": "7e58607647b5b4832092a339ff1c55eeeccee128221232509b8fc8d27957065e",
+      "source": "python-build-standalone 20261110 (https://github.com/astral-sh/python-build-standalone), build aarch64-apple-darwin install_only_stripped",
+      "licence": "Python-2.0 AND CNRI-Python",
+      "licence_texts": [
+        "licenses/LICENSE.cpython.txt",
+        "lib/python3.15/LICENSE.txt"
+      ],
+      "files": [
+        "bin/python3.15",
+        "lib/python3.15/"
+      ]
+    },
+    {
+      "name": "bzip2",
+      "version": null,
+      "role": "linked into the interpreter (modules: _bz2)",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.15.2%2B20261110-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+      "sha256": "53af18af034de253bac9b08d95c861d5b08a6d46a87ec5c9d8b34577fe48b4ad",
+      "source": "python-build-standalone 20261110; licence text and identifier from that build's PYTHON.json",
+      "licence": "bzip2-1.0.6",
+      "licence_texts": [
+        "licenses/LICENSE.bzip2.txt"
+      ],
+      "files": [
+        "bin/python3.15"
+      ]
+    },
+    {
+      "name": "Expat",
+      "version": "2.10.0",
+      "role": "linked into the interpreter (modules: pyexpat)",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.15.2%2B20261110-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+      "sha256": "53af18af034de253bac9b08d95c861d5b08a6d46a87ec5c9d8b34577fe48b4ad",
+      "source": "python-build-standalone 20261110; licence text and identifier from that build's PYTHON.json",
+      "licence": "MIT",
+      "licence_texts": [
+        "licenses/LICENSE.expat.txt"
+      ],
+      "files": [
+        "bin/python3.15"
+      ]
+    },
+    {
+      "name": "libedit",
+      "version": null,
+      "role": "linked into the interpreter (modules: readline)",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.15.2%2B20261110-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+      "sha256": "53af18af034de253bac9b08d95c861d5b08a6d46a87ec5c9d8b34577fe48b4ad",
+      "source": "python-build-standalone 20261110; licence text and identifier from that build's PYTHON.json",
+      "licence": "BSD-3-Clause",
+      "licence_texts": [
+        "licenses/LICENSE.libedit.txt"
+      ],
+      "files": [
+        "bin/python3.15"
+      ]
+    },
+    {
+      "name": "libffi",
+      "version": null,
+      "role": "linked into the interpreter (modules: _ctypes)",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.15.2%2B20261110-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+      "sha256": "53af18af034de253bac9b08d95c861d5b08a6d46a87ec5c9d8b34577fe48b4ad",
+      "source": "python-build-standalone 20261110; licence text and identifier from that build's PYTHON.json",
+      "licence": "MIT",
+      "licence_texts": [
+        "licenses/LICENSE.libffi.txt"
+      ],
+      "files": [
+        "bin/python3.15"
+      ]
+    },
+    {
+      "name": "XZ Utils (liblzma)",
+      "version": null,
+      "role": "linked into the interpreter (modules: _lzma)",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.15.2%2B20261110-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+      "sha256": "53af18af034de253bac9b08d95c861d5b08a6d46a87ec5c9d8b34577fe48b4ad",
+      "source": "python-build-standalone 20261110; licence text and identifier from that build's PYTHON.json",
+      "licence": "0BSD",
+      "licence_texts": [
+        "licenses/LICENSE.liblzma.txt"
+      ],
+      "files": [
+        "bin/python3.15"
+      ]
+    },
+    {
+      "name": "libuuid",
+      "version": null,
+      "role": "linked into the interpreter (modules: _uuid)",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.15.2%2B20261110-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+      "sha256": "53af18af034de253bac9b08d95c861d5b08a6d46a87ec5c9d8b34577fe48b4ad",
+      "source": "python-build-standalone 20261110; licence text and identifier from that build's PYTHON.json",
+      "licence": "BSD-3-Clause",
+      "licence_texts": [
+        "licenses/LICENSE.libuuid.txt"
+      ],
+      "files": [
+        "bin/python3.15"
+      ]
+    },
+    {
+      "name": "mpdecimal",
+      "version": "4.0.0",
+      "role": "linked into the interpreter (modules: _decimal)",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.15.2%2B20261110-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+      "sha256": "53af18af034de253bac9b08d95c861d5b08a6d46a87ec5c9d8b34577fe48b4ad",
+      "source": "python-build-standalone 20261110; licence text and identifier from that build's PYTHON.json",
+      "licence": "BSD-2-Clause",
+      "licence_texts": [
+        "licenses/LICENSE.mpdecimal.txt"
+      ],
+      "files": [
+        "bin/python3.15"
+      ]
+    },
+    {
+      "name": "ncurses",
+      "version": null,
+      "role": "linked into the interpreter (modules: _curses, _curses_panel)",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.15.2%2B20261110-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+      "sha256": "53af18af034de253bac9b08d95c861d5b08a6d46a87ec5c9d8b34577fe48b4ad",
+      "source": "python-build-standalone 20261110; licence text and identifier from that build's PYTHON.json",
+      "licence": "X11",
+      "licence_texts": [
+        "licenses/LICENSE.ncurses.txt"
+      ],
+      "files": [
+        "bin/python3.15"
+      ]
+    },
+    {
+      "name": "OpenSSL",
+      "version": "3.5.9",
+      "role": "linked into the interpreter (modules: _hashlib, _ssl)",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.15.2%2B20261110-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+      "sha256": "53af18af034de253bac9b08d95c861d5b08a6d46a87ec5c9d8b34577fe48b4ad",
+      "source": "python-build-standalone 20261110; licence text and identifier from that build's PYTHON.json",
+      "licence": "Apache-2.0",
+      "licence_texts": [
+        "licenses/LICENSE.openssl-3.txt"
+      ],
+      "files": [
+        "bin/python3.15"
+      ]
+    },
+    {
+      "name": "SQLite",
+      "version": "3.53.1",
+      "role": "linked into the interpreter (modules: _sqlite3)",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.15.2%2B20261110-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+      "sha256": "53af18af034de253bac9b08d95c861d5b08a6d46a87ec5c9d8b34577fe48b4ad",
+      "source": "python-build-standalone 20261110; licence text and identifier from that build's PYTHON.json",
+      "licence": "blessing",
+      "licence_texts": [
+        "licenses/LICENSE.sqlite.txt"
+      ],
+      "files": [
+        "bin/python3.15"
+      ]
+    },
+    {
+      "name": "zlib",
+      "version": null,
+      "role": "linked into the interpreter (modules: _sqlite3, binascii, zlib)",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.15.2%2B20261110-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+      "sha256": "53af18af034de253bac9b08d95c861d5b08a6d46a87ec5c9d8b34577fe48b4ad",
+      "source": "python-build-standalone 20261110; licence text and identifier from that build's PYTHON.json",
+      "licence": "Zlib",
+      "licence_texts": [
+        "licenses/LICENSE.zlib.txt"
+      ],
+      "files": [
+        "bin/python3.15"
+      ]
+    },
+    {
+      "name": "zlib-ng",
+      "version": null,
+      "role": "linked into the interpreter (modules: _sqlite3, binascii, zlib)",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.15.2%2B20261110-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+      "sha256": "53af18af034de253bac9b08d95c861d5b08a6d46a87ec5c9d8b34577fe48b4ad",
+      "source": "python-build-standalone 20261110; licence text and identifier from that build's PYTHON.json",
+      "licence": "Zlib",
+      "licence_texts": [
+        "licenses/LICENSE.zlib-ng.txt"
+      ],
+      "files": [
+        "bin/python3.15"
+      ]
+    },
+    {
+      "name": "Zstandard",
+      "version": "1.5.7",
+      "role": "linked into the interpreter (modules: _remote_debugging, _zstd)",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.15.2%2B20261110-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+      "sha256": "53af18af034de253bac9b08d95c861d5b08a6d46a87ec5c9d8b34577fe48b4ad",
+      "source": "python-build-standalone 20261110; licence text and identifier from that build's PYTHON.json",
+      "licence": "BSD-3-Clause",
+      "licence_texts": [
+        "licenses/LICENSE.zstd.txt"
+      ],
+      "files": [
+        "bin/python3.15"
+      ]
+    },
+    {
+      "name": "NumPy",
+      "version": "2.5.4",
+      "role": "array library the CTMC and adaptive BAR solvers import",
+      "url": "https://files.pythonhosted.org/packages/be/75/fee0b8c6d94b44b2fdfae74f6a4ad5a138739589a8aebaec28ce4e713ed5/numpy-2.5.4-cp315-cp315-macosx_11_0_arm64.whl",
+      "sha256": "81e3420b27048b65eb14c3acf0c174a8cb0e023277716110347d2dcb26026dad",
+      "source": "PyPI wheel numpy-2.5.4-cp315-cp315-macosx_11_0_arm64.whl",
+      "licence": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "licence_texts": [
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/LICENSE.txt",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/_core/src/highway/LICENSE",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/_core/src/umath/svml/LICENSE",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/fft/pocketfft/LICENSE.md",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/ma/LICENSE",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/random/LICENSE.md",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/random/src/distributions/LICENSE.md",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md"
+      ],
+      "files": [
+        "lib/python3.15/site-packages/numpy/"
+      ]
+    },
+    {
+      "name": "OpenBLAS and the GNU Fortran runtime (inside the NumPy wheel)",
+      "version": null,
+      "role": "linear algebra for NumPy: libgcc_s.1.1.dylib, libgfortran.5.dylib, libquadmath.0.dylib, libscipy_openblas64_.dylib",
+      "url": "https://files.pythonhosted.org/packages/be/75/fee0b8c6d94b44b2fdfae74f6a4ad5a138739589a8aebaec28ce4e713ed5/numpy-2.5.4-cp315-cp315-macosx_11_0_arm64.whl",
+      "sha256": "81e3420b27048b65eb14c3acf0c174a8cb0e023277716110347d2dcb26026dad",
+      "source": "PyPI wheel numpy-2.5.4-cp315-cp315-macosx_11_0_arm64.whl",
+      "licence": "BSD-3-Clause (OpenBLAS); BSD-3-Clause-Open-MPI (LAPACK inside OpenBLAS); GPL-3.0-or-later WITH GCC-exception-3.1 (libgfortran, libgcc_s); LGPL-2.1-or-later (libquadmath)",
+      "licence_texts": [
+        "lib/python3.15/site-packages/numpy-2.5.4.dist-info/licenses/LICENSE.txt"
+      ],
+      "files": [
+        "lib/python3.15/site-packages/numpy/.dylibs/libgcc_s.1.1.dylib",
+        "lib/python3.15/site-packages/numpy/.dylibs/libgfortran.5.dylib",
+        "lib/python3.15/site-packages/numpy/.dylibs/libquadmath.0.dylib",
+        "lib/python3.15/site-packages/numpy/.dylibs/libscipy_openblas64_.dylib"
+      ]
+    }
+  ]
+}

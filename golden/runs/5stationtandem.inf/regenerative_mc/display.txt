@@ -1,0 +1,43 @@
+[A[2KRunning regenerative simulation (C) ...  [ ]                                                       0.0s[KRunning regenerative simulation (C) ...  [/]                                                       0.2s[KRunning regenerative simulation (C) ...  [-]                                                       0.4s[KRunning regenerative simulation (C) ...  [done]                                                    0.6s
+Regenerative Monte Carlo
+Model layer: queueing process (simulation)
+Evidence: regenerative ratio confidence intervals; asymptotic, not finite-sample, and they describe sampling error only
+Model: 5stationtandem.inf.bnet
+
+Complete empty-to-empty cycles: 21
+Stopping reason: maximum_events
+Precision target met: no
+
+Node                   E[N]         E[Q]  utilisation   throughput
+------------------------------------------------------------------
+s1                    9.271        8.370        0.901        1.000
+s2                    8.888        7.989        0.899        1.000
+s3                    9.023        8.123        0.900        1.000
+s4                    9.052        8.151        0.901        1.000
+s5                    8.861        7.961        0.900        1.000
+
+Quantity                               estimate   std error              95% interval  eff. cycles
+--------------------------------------------------------------------------------------------------
+Mean number in system                    45.095       0.489    [44.074, 46.116]         11.500
+External blocking probability             0.000       0.000      [0.000, 0.000]         11.600
+Departure rate                            1.000    9.32e-04      [0.998, 1.002]         11.500
+E[N] at s1                                9.271       0.179      [8.897, 9.645]         11.500
+utilisation at s1                         0.901       0.001      [0.898, 0.903]         11.500
+E[N] at s1, class c1                      9.271       0.179      [8.897, 9.645]         11.500
+E[N] at s2                                8.888       0.127      [8.623, 9.153]         11.500
+utilisation at s2                         0.899    9.11e-04      [0.897, 0.901]         11.500
+E[N] at s2, class c1                      8.888       0.127      [8.623, 9.153]         11.500
+E[N] at s3                                9.023       0.153      [8.705, 9.342]         11.500
+utilisation at s3                         0.900       0.001      [0.898, 0.903]         11.500
+E[N] at s3, class c1                      9.023       0.153      [8.705, 9.342]         11.500
+E[N] at s4                                9.052       0.092      [8.859, 9.244]         11.500
+utilisation at s4                         0.901    9.52e-04      [0.899, 0.903]         11.500
+E[N] at s4, class c1                      9.052       0.092      [8.859, 9.244]         11.500
+E[N] at s5                                8.861       0.088      [8.677, 9.045]         11.500
+utilisation at s5                         0.900    7.67e-04      [0.898, 0.902]         11.500
+E[N] at s5, class c1                      8.861       0.088      [8.677, 9.045]         11.500
+
+Uncertainty uses complete regenerative cycles, not individual events.
+
+Elapsed time: 0.599s
+

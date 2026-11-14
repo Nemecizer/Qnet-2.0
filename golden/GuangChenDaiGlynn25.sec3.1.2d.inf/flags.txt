@@ -1,0 +1,15 @@
+isAnalyticallyTractable=true
+tractabilityIsExact=false
+tractabilityTitle=This network is analytically tractable
+tractabilityDetail=Asymptotic product form — GCDG 2025 Cor. 3 (feed-forward, station relabel applied)
+tractabilityMeansLabel=Asymptotic E[X]
+tractabilityMeans=0.61363636363636365 6.7500000000000018
+hasFeedback=false
+feedbackQuality=notReentrant
+feedbackDescription:
+
+tractabilityExplanation:
+Under the GCDG 2025 multi-scaling regime (traffic-slackness δᵢ = rⁱ), the stationary distribution of the scaled SRBM (rZ₁, r²Z₂, …) converges to a product of independent exponentials with explicit means mₖ = uₖ⊤Γuₖ / (2 uₖ⊤R_{:,k}) (Theorem 1, eqs. 2.4–2.6). The reported mean is E[Zₖ] ≈ mₖ / δₖ with this network's slackness δ = −R⁻¹θ. Corollary 3 applies because the routing graph is acyclic, so the stations can be relabeled in topological order to make R = I − P⊤ lower-triangular. The corollary applies in the relabeled coordinates and the means are unpermuted back to the user's numbering.
+Reference: Guang, Chen, Dai, Glynn (2025). arXiv:2503.19710, Remark 2 & Cor. 3.
+status:
+Analytical match is ASYMPTOTIC (Asymptotic product form — GCDG 2025 Cor. 3 (feed-forward, station relabel applied)). At finite ρ, the asymptotic means may differ from algorithm/simulation values; Run Comparison's algorithm-vs-asymptotic deltas use simulation as the reference instead.

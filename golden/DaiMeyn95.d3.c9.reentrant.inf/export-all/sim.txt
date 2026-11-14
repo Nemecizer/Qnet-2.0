@@ -1,0 +1,31 @@
+# fBNA Queueing Network Export
+# Generated: 11/10/26, 14:11:05
+
+# num_classes
+1
+
+# dimension
+3
+
+# arrival_distributions
+poisson lambda=1.000000
+
+# arrival_stations
+1
+
+# servers_per_station
+1 1 1
+
+# buffer_sizes
+10 10 10
+
+# service_distributions
+exponential rate=3.333333
+exponential rate=3.333333
+exponential rate=10.000000
+
+# routing_matrix_class_1
+0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 1.000000 0.000000
+

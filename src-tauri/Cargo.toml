@@ -1,0 +1,59 @@
+[package]
+name = "qnet"
+version = "2.1.2"
+description = "Queueing-network modelling and analysis"
+edition = "2021"
+authors = ["Dr Joseph Edward Nemec"]
+license = "MIT"
+publish = false
+
+[lib]
+name = "qnet_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tauri-plugin-opener = "2"
+# The model, .bnet reading and writing, analysis and exporters (PLAN.md §3).
+qnet-core = { path = "../core" }
+# P6: the Run menu runs solvers through P3's runner, as qnet-cli run does.
+qnet-runner = { path = "../runner" }
+# util.rs (from NetMon): a nonce for the temporary file of an atomic write.
+getrandom = "0.3"
+tauri-plugin-dialog = "2"
+# canvas_export.rs: File ▸ Export ▸ Diagram as PDF/PNG, Copy as Image and Print Diagram turn the
+# canvas's own SVG into a vector PDF (krilla + krilla-svg: text embedded as subset fonts, SF Pro's
+# variable font instanced at the drawn weight) and a PNG (resvg). usvg/resvg 0.47 are the versions
+# krilla-svg 0.8 is built on, so one copy of each is linked.
+usvg = "0.47"
+resvg = { version = "0.47", default-features = false, features = ["text"] }
+krilla = { version = "0.8.2", default-features = false }
+krilla-svg = "0.8.1"
+# shell.rs: the Shell pane's pseudo-terminal (openpty, setsid/TIOCSCTTY, TIOCSWINSZ, getpwuid_r for the
+# login shell) and its base64 bytes to and from the page. Both are already in the lock through Tauri.
+libc = "0.2"
+base64 = "0.22"
+
+# ai/ (P7): the assistant asks Anthropic, OpenAI, Ollama and LM Studio from Rust, streamed
+# (Response::chunk) over rustls with the system certificates. reqwest and tokio are already in the
+# lock through Tauri; tokio time, sync and macros are the idle timeout, Stop and select!.
+reqwest = { version = "0.13.5", default-features = false, features = ["rustls"] }
+tokio = { version = "1", features = ["time", "sync", "macros"] }
+
+# updates.rs (A5): automatic updates, built ready and switched off. The plugin is linked always but
+# registered, and so able to reach the network, only in a build made with QNET_UPDATE_ENDPOINT and
+# QNET_UPDATE_PUBKEY set (docs/UPDATES.md). Used from Rust only: no page-side package or permission.
+tauri-plugin-updater = "2"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+# windows.rs: NSWindow.allowsAutomaticWindowTabbing = false (ledger WS-005), the one AppKit call
+# Tauri has no API for. The same objc2 Tauri itself links.
+objc2 = "0.6"
+# ai/keys.rs (P7): the API keys, generic-password items in the login Keychain (in the tree anyway
+# through rustls-platform-verifier).
+security-framework = "3"

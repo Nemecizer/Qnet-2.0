@@ -1,0 +1,27 @@
+[Threads] Using 18 CPU cores (OpenMP)
+Running spectral method ...  [                              ]  starting ...[KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  328/328      (100%)     0.1s
+
+Network load: rho_max = 0.5278 at S2  (moderate load — SRBM/FEM are heavy-traffic limits; expect deviation from simulation)
+Routing graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference
+──  SRBM skew-symmetric case — Harrison–Williams 1987 exact product form  ──
+           Spectral       Exact E[X]  (skew-sym)
+           ========       ============
+
+rho_1      0.278 (+0.0%)  0.278
+rho_2      0.528 (+0.0%)  0.528
+rho_3      0.500 (+0.0%)  0.500
+
+Gamma_1    0.556 (+0.0%)  0.556
+Gamma_2    1.056 (+0.0%)  1.056
+Gamma_3    1.000 (+0.0%)  1.000
+
+sojourn_1  0.692 (+0.0%)  0.692
+sojourn_2  1.059 (+0.0%)  1.059
+sojourn_3  1.000 (+0.0%)  1.000
+
+E[Q_1]     0.385 (+0.0%)  0.385
+E[Q_2]     1.118 (+0.0%)  1.118
+E[Q_3]     1.000 (+0.0%)  1.000
+
+Elapsed time: 0.126s
+

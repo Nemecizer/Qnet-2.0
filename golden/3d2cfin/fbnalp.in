@@ -1,0 +1,29 @@
+# Qnet -> fBNAlp finite-buffer SRBM input
+# d = 3, buffers = 11, 11, 11
+
+dimension  3
+grid_n     12
+basis_m    4
+grid_type  uniform
+solver     highs
+output_prefix OUTPUT_PREFIX
+
+drift
+     0.93889     0.93889     0.93889
+
+covariance
+     2.32778    -0.27778     0.00000
+    -0.27778     1.38889    -1.11111
+     0.00000    -1.11111     3.33333
+
+reflection_form interleaved
+reflection
+     1.00000    -1.00000     0.00000     1.00000     0.00000     0.00000
+     0.00000     0.00000     1.00000    -1.00000     0.00000     1.00000
+     0.00000     0.00000     0.00000     0.00000     1.00000    -1.00000
+
+upper_bounds
+    11.00000    11.00000    11.00000
+
+service_rates
+     1.11111     1.11111     1.11111

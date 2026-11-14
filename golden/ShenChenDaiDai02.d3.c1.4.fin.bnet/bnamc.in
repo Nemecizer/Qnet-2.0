@@ -1,0 +1,16 @@
+# BNET -> BNAmc SRBM input (workload scaling)
+# Produced by BNASRBMExporter
+# d = 3
+# mu_eff per station (1/tau) = 1.1111, 1.1111, 1.1111
+# mean queue length L_i = mu_eff_i * E[Y_i]
+3
+
+  -0.10000    0.00000   -0.00000
+
+   1.01250   -0.20250    0.00000
+  -0.20250    1.01250   -0.81000
+   0.00000   -0.81000    2.43000
+
+   1.00000    0.00000    0.00000
+  -1.00000    1.00000    0.00000
+   0.00000   -1.00000    1.00000

@@ -1,0 +1,258 @@
+{
+  "completedAt" : "2026-11-11T04:56:15Z",
+  "elapsedSeconds" : 0.39153099060058594,
+  "id" : "31918FD3-4332-41AA-9028-F4919757CE83",
+  "measurements" : [
+    {
+      "estimate" : 1,
+      "id" : "5328557E-7972-4F24-970E-04A8F3C82696",
+      "metric" : "Mean number in system",
+      "stationID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.75,
+      "id" : "FF0876EC-BF58-43E8-A7B6-B865D905465F",
+      "metric" : "Throughput",
+      "stationID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.5,
+      "id" : "EA0D8457-D958-4DD8-BAD1-8DDB00F40DE7",
+      "metric" : "Server utilization",
+      "stationID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.5,
+      "id" : "A829D837-616F-49DD-886A-EC4EDE8B6AC3",
+      "metric" : "Stability margin",
+      "stationID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 1,
+      "id" : "47543844-79C4-4D2E-96E7-0672EDFF38C9",
+      "metric" : "Mean number in system",
+      "stationID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+      "stationName" : "S2",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.75,
+      "id" : "D944CC40-3651-433B-B0AC-F676FD34B1B3",
+      "metric" : "Throughput",
+      "stationID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.5,
+      "id" : "E606A44B-9934-4189-9928-B2D754BB7874",
+      "metric" : "Server utilization",
+      "stationID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.5,
+      "id" : "488914C8-CD05-4F4D-B345-F63D283DE7E6",
+      "metric" : "Stability margin",
+      "stationID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    }
+  ],
+  "method" : {
+    "displayName" : "Exact Open Product Form",
+    "fidelity" : "Exact queueing result",
+    "identifier" : "queue.open-bcmp-product-form",
+    "implementation" : "product_form\/open_bcmp",
+    "layer" : "Queueing process",
+    "shortName" : "Product Form"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+      "D0D40D08-A893-4677-915F-6DFE3C7D3B41"
+    ],
+    "networkFingerprint" : "db563deb5ef0107c34d581871982c65a00e09b9f665fe20b09e696a9078a619b",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "18AE78AC-0D98-4199-9402-3BA235DFD54D",
+          "id" : "1396146E-F49C-46B6-89AD-3F0F4CCCAABF",
+          "routingProbability" : 1,
+          "toNodeID" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947",
+          "id" : "91B67C2E-F548-4D0D-A81A-30ACC847B303",
+          "routingProbability" : 1,
+          "toNodeID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+          "id" : "454EE9EB-35C6-4D3C-9772-4E584C35BC05",
+          "routingProbability" : 1,
+          "toNodeID" : "1AC45D5F-9622-4398-8F56-8001E64E29A7"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "1AC45D5F-9622-4398-8F56-8001E64E29A7",
+          "id" : "E5E3D8B1-9C97-498A-9088-321489CE55AD",
+          "routingProbability" : 1,
+          "toNodeID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+          "id" : "177C1F84-6065-477D-BAEB-E4AB9EE6E355",
+          "routingProbability" : 0.6666666666666667,
+          "toNodeID" : "647D1A28-BDA0-4163-B2A7-FC52164B7C0A"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+          "id" : "B8A8574B-6367-434F-858E-532C545AC826",
+          "routingProbability" : 0.3333333333333333,
+          "toNodeID" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.5",
+          "id" : "18AE78AC-0D98-4199-9402-3BA235DFD54D",
+          "kind" : "source",
+          "name" : "Src",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "E87CD008-DEE8-4E06-B4AD-EBAA51470947",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            200,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.5",
+          "id" : "C557AC3D-255E-421C-AAA4-0B98CA64CA18",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            300,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "1AC45D5F-9622-4398-8F56-8001E64E29A7",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            400,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.5",
+          "id" : "D0D40D08-A893-4677-915F-6DFE3C7D3B41",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            500,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "647D1A28-BDA0-4163-B2A7-FC52164B7C0A",
+          "kind" : "sink",
+          "name" : "Sink",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "Reiman84.d2.c1.reentrant.inf.bnet",
+    "parameters" : {
+      "local queues" : "M\/M\/c",
+      "model" : "exact open FCFS BCMP\/Jackson",
+      "runtime" : "QNET_SOLVER_ROOT: \/Users\/nobody\/Library\/Caches\/qnet\/solvers\/stage\/Resources\/bin\/infinite\/BNApf\/solver.py; Python runtime: \/opt\/homebrew\/bin\/python3",
+      "state-space truncation" : "none",
+      "traffic equations" : "class-preserving open routing"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/Reiman84.d2.c1.reentrant.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Solving exact open product form ...  [ ]                                                       0.0s\r\u001b[KSolving exact open product form ...  [done]                                                    0.1s\nExact open BCMP product-form analysis\nModel: Reiman84.d2.c1.reentrant.inf.bnet\nAnalytic probability mass: 1  minimum stability margin: 0.5\nCross-check residuals: traffic=1.110e-16  flow=0.000e+00  Little=1.110e-16\nOpen class c1: external=0.5  departure=0.5  E[N]=2  E[T]=4\nStation s1 (fcfs): E[N]=1  throughput=0.75  utilization=0.5  margin=0.5\nStation s2 (fcfs): E[N]=1  throughput=0.75  utilization=0.5  margin=0.5\nElapsed time: 0.174s\n\n",
+  "startedAt" : "2026-11-11T04:56:15Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

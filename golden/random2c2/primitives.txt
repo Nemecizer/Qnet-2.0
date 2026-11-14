@@ -1,0 +1,55 @@
+========================================================================
+NETWORK PRIMITIVES (Brownian / SRBM)
+========================================================================
+
+Structure:
+  Stations (d):         4
+  Customer classes (K): 2
+  Buffer sizes a:       [2, 2, 2, 2]
+  Servers s_i:          [1, 1, 1, 1]
+
+External arrival rates λ_k (per class):
+  Class 1:     1.35986
+  Class 2:     1.31892
+  Total:       2.67877
+
+Per-station primitives:
+  i | servers |        α_i |        μ_i |        c_i |       ρ_i |      b_i
+  ------------------------------------------------------------------------
+  1 |     1   |    0.92527 |    1.02808 |    1.02808 |   0.90000 | -0.10281
+  2 |     1   |    0.87351 |    0.97057 |    0.97057 |   0.90000 | -0.09706
+  3 |     1   |    0.80705 |    0.89672 |    0.89672 |   0.90000 | -0.08967
+  4 |     1   |    0.89134 |    0.99038 |    0.99038 |   0.90000 | -0.09904
+
+  α_i = Σ_k α^(k)_i     offered arrival rate at station i
+  μ_i = Σ_k (α^(k)_i/α_i) μ^(k)_i     throughput-weighted service rate
+  c_i = s_i · μ_i       station capacity
+  ρ_i = α_i / c_i       nominal traffic intensity
+  b_i = α_i - c_i       station netput
+  θ = (I - Pᵀ) b        SRBM drift (reflection R = I - Pᵀ)
+
+Per-class throughput α^(k)_i:
+          station 1  station 2  station 3  station 4 
+  class 1     0.50018    0.46415    0.41978    0.44435 
+  class 2     0.42509    0.40936    0.38727    0.44698 
+
+Aggregated routing matrix P (row i → col j):
+              →1        →2        →3        →4    
+  from 1     0.0000    0.0948    0.0923    0.0944 
+  from 2     0.0000    0.0000    0.1643    0.1798 
+  from 3     0.0000    0.0000    0.0000    0.3188 
+  from 4     0.0000    0.0000    0.0000    0.0000 
+
+Reflection matrix R (d × 2d, columns = [lower_1, upper_1, lower_2, upper_2, …]):
+  row 1:  +1.000  -1.000  +0.000  +0.000  +0.000  +0.000  +0.000  +0.000 
+  row 2:  -0.095  +0.000  +1.000  -1.000  +0.000  +0.000  +0.000  +0.000 
+  row 3:  -0.092  +0.000  -0.164  +0.000  +1.000  -1.000  +0.000  +0.000 
+  row 4:  -0.094  +0.000  -0.180  +0.000  -0.319  +0.000  +1.000  -1.000 
+
+Covariance matrix Σ (diffusion coefficient):
+     1.48788   -0.05334   -0.05194   -0.05313 
+    -0.05334    1.53594   -0.11255   -0.12293 
+    -0.05194   -0.11255    1.39344   -0.19902 
+    -0.05313   -0.12293   -0.19902    1.30458 
+
+No warnings — parameters look healthy for the Brownian approximation.

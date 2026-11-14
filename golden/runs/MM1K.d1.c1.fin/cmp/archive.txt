@@ -1,0 +1,21 @@
+[Threads] 18 CPU cores for parallel solvers (Sim/Spectral/FE); analytical solvers (QNA/SBD/LP) are single-threaded
+Running spectral method ...           [                              ]  starting ...[KRunning spectral method ...           [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  24/24        (100%)     0.2s
+Running finite element method ...     [                              ]  starting ...[KRunning finite element method ...     [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  10/10        (100%)     0.1s
+Running finite LP method (highs) ...  [ ]                                                       0.0s[KRunning finite LP method (highs) ...  [done]                                                    0.1s
+Running simulation ...                [                              ]  starting ...[KRunning simulation ...                [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  8/8          (100%)     0.1s
+
+Network load: rho_max = 0.9000 at S1  (near heavy-traffic — small O(1) deviation expected)
+──  SRBM skew-symmetric case — Harrison–Williams 1987 exact product form  ──
+           Spectral        FE (Gauss)      Finite LP       Simulation              Average of Algorithms  Exact E[X]  (skew-sym)
+           ========        ==========      =========       ==========              =====================  ============
+
+rho_1      0.854 (-5.1%)   0.854 (-5.1%)   0.854 (-5.1%)   0.861 ± 0.004 (-4.3%)   0.854 (-5.1%)          0.900
+
+Gamma_1    0.854 (-5.1%)   0.854 (-5.1%)   0.854 (-5.1%)   0.861 ± 0.002 (-4.3%)   0.854 (-5.1%)          0.900
+
+sojourn_1  5.223 (-50.5%)  5.223 (-50.5%)  5.223 (-50.5%)  4.958 ± 0.065 (-53.0%)  5.223 (-50.5%)         10.556
+
+E[X_1]     4.462 (-53.0%)  4.462 (-53.0%)  4.462 (-53.0%)  4.269 ± 0.056 (-55.1%)  4.462 (-53.0%)         9.500
+
+Elapsed time: 0.268s
+

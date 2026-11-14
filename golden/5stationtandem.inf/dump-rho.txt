@@ -1,0 +1,19 @@
+d=5, K=1, infiniteBuffers=true
+S1: α=1.000000  μ_eff=1.111111  c=1.111111  ρ=0.900000
+S2: α=1.000000  μ_eff=1.111111  c=1.111111  ρ=0.900000
+S3: α=1.000000  μ_eff=1.111111  c=1.111111  ρ=0.900000
+S4: α=1.000000  μ_eff=1.111111  c=1.111111  ρ=0.900000
+S5: α=1.000000  μ_eff=1.111111  c=1.111111  ρ=0.900000
+class 1: α=[1.0000 1.0000 1.0000 1.0000 1.0000 ]  μ=[1.1111 1.1111 1.1111 1.1111 1.1111 ]  λ_ext=1.0000
+aggregatedP (5×5):
+  S1: 0.0000 1.0000 0.0000 0.0000 0.0000 
+  S2: 0.0000 0.0000 1.0000 0.0000 0.0000 
+  S3: 0.0000 0.0000 0.0000 1.0000 0.0000 
+  S4: 0.0000 0.0000 0.0000 0.0000 1.0000 
+  S5: 0.0000 0.0000 0.0000 0.0000 0.0000 
+hasRoutingCycles = false
+SRBM existence: holds — R is a nonsingular M-matrix, so it is completely-S and the SRBM exists and is unique in law.
+SRBM recurrence: holds — positive recurrent: R is an M-matrix and R⁻¹θ < 0 (Harrison–Williams 1987).
+AnalyticalTractability.assess(allowGCDG=true)  → kind=exactJackson, isTractable=true, detail='Open Jackson network — exact M/M/s product form'
+  means(Exact E[N]  (Jackson)): S1=9.0000 S2=9.0000 S3=9.0000 S4=9.0000 S5=9.0000
+AnalyticalTractability.assess(allowGCDG=false) → kind=exactJackson, isTractable=true, detail='Open Jackson network — exact M/M/s product form'

@@ -1,0 +1,31 @@
+{
+  "covariance" : [
+    [
+      1.8
+    ]
+  ],
+  "drift" : [
+    -0.099999999999999978
+  ],
+  "model_type" : "orthant_srbm_bar_bounds",
+  "name" : "MM1K.d1.c1.fin",
+  "reflection" : [
+    [
+      1
+    ]
+  ],
+  "relaxation" : {
+    "max_psd_entries" : 5000000,
+    "max_variables" : 100000,
+    "order" : 2,
+    "targets" : [
+      {
+        "moment" : [
+          1
+        ],
+        "name" : "mean_workload_1"
+      }
+    ]
+  },
+  "schema_version" : 1
+}

@@ -1,0 +1,72 @@
+/* The Shell pane (src/panes/shell/). The terminal sits 6 px in from the left and 10 px up from
+ * the bottom (terminalLeadingInset, terminalBottomInset: the prompt isn't flush with the border
+ * and the last row clears the window's rounded corner). It is as wide as its longest measured
+ * line inside a box that scrolls sideways; its own vertical scroller is replaced by an overlay
+ * one on the pane's right edge, so it stays in view however far the box is panned. */
+
+.pane-shell .pane-header-row { min-width: 0; }
+.pane-shell .pane-header-trailing { flex: none; }
+.shell-header-info { display: flex; align-items: center; gap: var(--sp-3); min-width: 0; max-width: 28em; }
+.shell-dot { flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--critical); }
+.shell-dot[data-running] { background: var(--good); }
+.shell-path {
+  min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+  font-size: var(--fs-sm); color: var(--text-2);
+}
+.shell-restart-now {
+  flex: none; padding: 0 var(--sp-3); border: 1px solid var(--border); border-radius: var(--r-sm);
+  background: var(--surface-2); color: var(--text); font-size: var(--fs-xs);
+}
+:root:not([data-motion="reduce"]) .shell-restart-now { animation: shell-fade var(--dur-2) ease-out; }
+@keyframes shell-fade { from { opacity: 0; } }
+.pane-shell .icon-btn[data-danger]:not(:disabled):hover { color: var(--crit-text); }
+.pane-shell .icon-btn:disabled { color: var(--btn-disabled-fg); }
+.shell-font-menu {
+  max-width: 13em; height: var(--ctl-sm); padding: 0 var(--sp-3); border: 1px solid var(--hairline); border-radius: var(--r-sm);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  background: var(--surface); color: var(--text-2); font-size: var(--fs-xs);
+}
+
+.shell-frame { position: relative; flex: 1; min-height: 0; display: flex; background: var(--shell-ground, var(--shell-bg)); }
+.shell-body { position: relative; flex: 1; min-width: 0; min-height: 0; display: flex; }
+
+.shell-view { position: relative; flex: 1; min-width: 0; min-height: 0; overflow: hidden; background: var(--shell-ground, var(--shell-bg)); }
+.shell-scroller {
+  position: absolute; left: 6px; top: 0; right: 0; bottom: 10px;
+  overflow-x: auto; overflow-y: hidden;
+}
+.shell-term { height: 100%; }
+.shell-term .xterm { height: 100%; padding: 0; }
+/* xterm's own vertical scrollbar sits at the far right of the wide terminal; the overlay below replaces it. */
+.shell-term .xterm .xterm-viewport { scrollbar-width: none; }
+.shell-term .xterm .xterm-viewport::-webkit-scrollbar { display: none; }
+
+.shell-vscroll {
+  position: absolute; top: 2px; right: 2px; bottom: 12px; width: 8px; border-radius: 4px;
+  opacity: 0; pointer-events: none; transition: opacity var(--dur-3) ease-out;
+}
+.shell-vscroll[data-enabled="true"] { pointer-events: auto; }
+.shell-vscroll[data-visible="true"] { opacity: 1; transition-duration: var(--dur-1); }
+.shell-vthumb {
+  position: absolute; left: 1px; right: 1px; min-height: 18px; border-radius: 3px;
+  background: color-mix(in srgb, var(--text) 38%, transparent);
+}
+.shell-view[data-theme="classic"] .shell-vthumb { background: color-mix(in srgb, var(--shell-classic-fg) 45%, transparent); }
+
+.shell-find {
+  position: absolute; top: var(--sp-3); right: var(--sp-5); z-index: 5;
+  display: flex; align-items: center; gap: var(--sp-2);
+  max-width: calc(100% - 2 * var(--sp-5)); padding: var(--sp-2) var(--sp-3);
+  background: var(--surface); color: var(--text-2); border-radius: var(--r-md);
+  box-shadow: var(--shadow-pop);
+}
+.shell-find-field {
+  flex: 1 1 200px; min-width: 60px; height: 22px; padding: 0 var(--sp-3);
+  border: 1px solid var(--field-border); border-radius: var(--r-sm); background: var(--surface); color: var(--text);
+  font-size: var(--fs-sm);
+}
+.shell-find-field[data-missed] { border-color: var(--critical); }
+.shell-find-none { flex: none; font-size: var(--fs-xs); color: var(--muted); white-space: nowrap; }
+.shell-find .icon-btn { flex: none; }
+
+.shell-menu { z-index: var(--z-popover); }

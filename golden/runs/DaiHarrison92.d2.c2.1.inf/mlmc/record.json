@@ -1,0 +1,317 @@
+{
+  "completedAt" : "2026-11-11T04:52:22Z",
+  "elapsedSeconds" : 1.203942060470581,
+  "id" : "EB799CDF-81B1-4FB8-91A3-30DABB6672CA",
+  "measurements" : [
+    {
+      "estimate" : 1.1663,
+      "id" : "CE5B9706-13B9-4EF0-9B94-09A9005ADA27",
+      "metric" : "Mean queue length",
+      "stationID" : "B2C3D4E5-2222-1111-1111-000000000004",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 1.1410999999999998,
+        "upperBound" : 1.1915
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.2749,
+      "id" : "DF877B70-9941-4758-AAB4-03645C6957AD",
+      "metric" : "Mean queue length",
+      "stationID" : "B2C3D4E5-2222-1111-1111-000000000006",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.2663,
+        "upperBound" : 0.2835
+      },
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "SRBM MLMC",
+    "fidelity" : "SRBM simulation",
+    "identifier" : "srbm.mlmc",
+    "implementation" : "BNAmc",
+    "layer" : "SRBM diffusion",
+    "shortName" : "MLMC"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "B2C3D4E5-2222-1111-1111-000000000004",
+      "B2C3D4E5-2222-1111-1111-000000000006"
+    ],
+    "networkFingerprint" : "e6101809be2020d275c095dd99f04abc84428465b642bcfee4762314f2e3d20c",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000001",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000003",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000004",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000003",
+          "routingProbability" : 0.5,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000004",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000004",
+          "routingProbability" : 0.5,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000007"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000005",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000005",
+          "routingProbability" : 1,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000006"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000006",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000006",
+          "routingProbability" : 0.5,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000006",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000007",
+          "routingProbability" : 0.5,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000007"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000002",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000008",
+          "routingProbability" : 1,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000003"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000003",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000009",
+          "routingProbability" : 1,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000004"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000004",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000010",
+          "routingProbability" : 0.2,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000005"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000004",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000011",
+          "routingProbability" : 0.8,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000007"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000005",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000012",
+          "routingProbability" : 1,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000006"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000006",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000013",
+          "routingProbability" : 0.2,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000003"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "B2C3D4E5-2222-1111-1111-000000000006",
+          "id" : "B2C3D4E5-2222-1111-2222-000000000014",
+          "routingProbability" : 0.8,
+          "toNodeID" : "B2C3D4E5-2222-1111-1111-000000000007"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=0.5",
+          "id" : "B2C3D4E5-2222-1111-1111-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            150
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=0.25",
+          "id" : "B2C3D4E5-2222-1111-1111-000000000002",
+          "kind" : "source",
+          "name" : "Src2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            300
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "B2C3D4E5-2222-1111-1111-000000000003",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            230,
+            220
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=2.0",
+          "id" : "B2C3D4E5-2222-1111-1111-000000000004",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            320,
+            220
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=2.0"
+            },
+            "1" : {
+              "distribution" : "constant",
+              "distributionParameters" : "value=1.0"
+            }
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "B2C3D4E5-2222-1111-1111-000000000005",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            410,
+            220
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=2.0",
+          "id" : "B2C3D4E5-2222-1111-1111-000000000006",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            500,
+            220
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=2.0"
+            },
+            "1" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.0"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "B2C3D4E5-2222-1111-1111-000000000007",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            620,
+            220
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "DaiHarrison92.d2.c2.1.inf.bnet",
+    "parameters" : {
+      "adaptive" : "false",
+      "antithetic" : "false",
+      "backend" : "0",
+      "epsilon" : "0.01",
+      "gamma" : "0.05",
+      "levels L" : "3",
+      "path length T" : "9.085789155072227",
+      "replications" : "1",
+      "runtime" : "QNET_SOLVER_ROOT: \/Users\/nobody\/Library\/Caches\/qnet\/solvers\/stage\/Resources\/bin\/infinite\/BNAmc\/rbm_mlmc",
+      "sample plan" : "25260.0",
+      "threads" : "automatic"
+    },
+    "replicationSeeds" : [
+      2454886589211414945
+    ],
+    "seed" : 12345,
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/DaiHarrison92.d2.c2.1.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Running SRBM MLMC (γ=0.05, ε=0.01) ... \nSRBM MLMC replication 1 diagnostics:\nSigma nnz ratio: L has 3 non-zeros of 2^2 = 4  (75.00%); using SPARSE CSC path\nR     nnz ratio: 4 non-zeros of 2^2 = 4  (100.00%); using SPARSE CSC LCP column update\nDimension d   = 2\ngamma         = 0.05\nepsilon       = 0.01\nseed          = 2454886589211414945\nT             = 9.0859\nL (levels)    = 3\nN (samples)   = 25260\nratio (1\/gam) = 20\nbackend       = openmp\nthreads       = 18\n\nantithetic    = off\nadaptive      = off\n\n  Completed 1263 \/ 25260 (5%)\n  Completed 2526 \/ 25260 (10%)\n  Completed 3789 \/ 25260 (15%)\n  Completed 5052 \/ 25260 (20%)\n  Completed 6315 \/ 25260 (25%)\n  Completed 7578 \/ 25260 (30%)\n  Completed 8841 \/ 25260 (35%)\n  Completed 10104 \/ 25260 (40%)\n  Completed 11367 \/ 25260 (45%)\n  Completed 12630 \/ 25260 (50%)\n  Completed 13893 \/ 25260 (55%)\n  Completed 15156 \/ 25260 (60%)\n  Completed 16419 \/ 25260 (65%)\n  Completed 17682 \/ 25260 (70%)\n  Completed 18945 \/ 25260 (75%)\n  Completed 20208 \/ 25260 (80%)\n  Completed 21471 \/ 25260 (85%)\n  Completed 22734 \/ 25260 (90%)\n  Completed 23997 \/ 25260 (95%)\n  Completed 25260 \/ 25260 (100%)\ndone.\n\nSRBM MLMC (Blanchet-Chen-Glynn-Si)\n==============================================\n# Dimension: 2\n# gamma=0.0500  epsilon=0.0100  T=9.0859  L=3  N=25260  seed=2454886589211414945\n# backend=openmp  threads=18  elapsed=0.624s\n# antithetic=off adaptive=off\n# Replications: 1 (independent top-level streams)\n# Replication seeds: 2454886589211414945\n# Replication 1: seed=2454886589211414945 N=25260 stop=fixed-count\n#\n\nPer-Station Mean Queue Length (L_i = mu_i * E[Y_i]):\n  L_1 =     1.1663  ±  0.0252 (95%)    (workload E[Y_1] =  0.7470 ± 0.0162, mu_i = 1.5614)\n  L_2 =     0.2749  ±  0.0086 (95%)    (workload E[Y_2] =  0.1560 ± 0.0049, mu_i = 1.7619)\n\nAverage queue length: 0.7206 (no joint CI: one run does not identify cross-station covariance)\nTotal Gaussian RVs (summed over replications): 53817106\nQNET_MLMC_STATUS_V1 adaptive=no precision_met=na cap_hits=0\nElapsed time: 0.816s\n\n",
+  "runEvidence" : {
+    "convergenceNote" : "Fixed-sample MLMC plan"
+  },
+  "startedAt" : "2026-11-11T04:52:20Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

@@ -1,0 +1,82 @@
+Running Linear Program (BNAlp, Saure-Glynn-Zeevi 2008)
+auto-scaled for d=4: grid_n=12, basis_m=4
+
+SRBM Parameters:
+  dimension     = 4
+  grid_n        = 12
+  basis_m       = 4
+  grid_type     = 0 (0=exp, 1=dya, 2=expran)
+  max_moments   = 4
+  solver        = (default)
+  output_prefix = srbm_out
+  drift         = -0.1000 -0.7674 -0.4976 0.1349
+  covariance:
+       1.4690  -0.0854  -0.1221  -0.0601
+      -0.0854   0.4725  -0.1003  -0.1089
+      -0.1221  -0.1003   0.5138  -0.1747
+      -0.0601  -0.1089  -0.1747   0.6754
+  reflection:
+       1.0000   0.0000   0.0000   0.0000
+      -0.2326   1.0000   0.0000   0.0000
+      -0.3326  -0.1698   1.0000   0.0000
+      -0.1637  -0.3159  -0.6553   1.0000
+  grid_spacing  = 0.0000 0.0000 0.0000 0.0000
+  tightness K   = 100000 100000 100000 100000 100000 100000 100000 100000 100000
+  smoothness_w  = 0 (disabled)
+  basis_norm    = 0 (raw monomials)
+  Auto rho      = 0.2000 1.5813 1.3303 1.1342
+  Effective grid_spacing (rho/4) = 0.0500 0.3953 0.3326 0.2835
+
+[Parse] 0.000 s
+[Grid]  20736 points, 0.004 s
+  Face 1 boundary: 1728 points
+  Face 2 boundary: 1728 points
+  Face 3 boundary: 1728 points
+  Face 4 boundary: 1728 points
+[Index] 70 basis functions, 0.000 s
+[Basis] 0.000 s
+[Eval interior] 0.010 s
+[Eval boundary] 0.001 s
+[Build LP] 150 rows, 27649 cols, 3341905 nnz, 0.126 s
+[Solve] Using solver: highs
+[Solve] Optimal u* = 0.0000000000e+00, 8.987 s
+
+Moments:
+  Order     E[Z_1^k]      E[Z_2^k]      E[Z_3^k]      E[Z_4^k]    
+  k=1          7.344850      0.301210      0.395583      0.498196
+  k=2        107.893643      0.184006      0.314909      0.570741
+  k=3       2377.387872      0.169634      0.373950      0.939226
+  k=4      69629.061361      0.221095      0.678219      1.853905
+
+Output files:
+  Wrote srbm_out_marginal_1.csv (12 points)
+  Wrote srbm_out_marginal_2.csv (12 points)
+  Wrote srbm_out_marginal_3.csv (12 points)
+  Wrote srbm_out_marginal_4.csv (12 points)
+  Wrote srbm_out_distribution.csv (20736 points)
+
+[Total] 9.168 s
+E[X_1] = 7.344850
+E[X_2] = 0.301210
+E[X_3] = 0.395583
+E[X_4] = 0.498196
+
+Linear Program (Saure-Glynn-Zeevi 2008 LP)
+==========================================
+
+Solver: highs  |  grid_n = 12  |  basis_m = 4
+[Build LP] 150 rows, 27649 cols, 3341905 nnz, 0.126 s
+[Solve] Optimal u* = 0.0000000000e+00, 8.987 s
+[Total] 9.168s
+
+Node   Servers  E[Y] (workload)  L = mu·E[Y]     mu_i      
+1      1        7.3449           6.0000           0.8169    
+2      1        0.3012           0.2462           0.8174    
+3      1        0.3956           0.3402           0.8599    
+4      1        0.4982           0.3715           0.7457    
+
+Network Totals:
+  Total E[N]:             6.9579
+  Average queue length:   1.7395
+Elapsed time: 9.248s
+

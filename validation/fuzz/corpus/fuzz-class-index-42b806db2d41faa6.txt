@@ -1,0 +1,5 @@
+0.90.34's mc_solver (sanitizer build): bnet_parser.c:376 wrote net->P[c] with a customer class outside 0..7 (stack-buffer-overflow)
+arguments: -c -n 1
+made from: OpenJackson.d2.feedback.p70.inf.bnet by m_grow (seed 20261112, case 342)
+the fixed solver: exit 1
+parse error: link 8 has a customer class that is not a whole number from 0 up

@@ -1,0 +1,64 @@
+NETWORK ANALYSIS — Brownian Heavy-Traffic Reliability
+=====================================================
+
+NETWORK SUMMARY
+---------------
+Stations:         4
+Customer classes: 1
+Buffer model:     infinite
+
+KEY PRIMITIVES
+--------------
+  Station   servers    μ_eff        α          ρ   c²_s_eff   buffer
+  S1              1   0.8169   0.7352     0.9000     0.3333        ∞
+  S2              1   0.8174   0.1711     0.2094     1.0000        ∞
+  S3              1   0.8599   0.2879     0.3349     0.5280        ∞
+  S4              1   0.7457   0.3228     0.4329     0.3333        ∞
+
+  Class       λ (ext)     c²_a
+  C1           0.7352   1.0000
+
+OVERALL RELIABILITY ASSESSMENT
+------------------------------
+Score: 40 / 100  (LOW)
+Findings: 0 critical, 4 warning, 0 info
+
+Several primitives violate the assumptions used by SRBM. Treat absolute E[X] values with caution — use them for relative comparisons only, and verify against simulation.
+
+FINDINGS (grouped by severity)
+------------------------------
+
+[WARNING ] 1. Station 2 is lightly loaded (ρ = 0.209, below heavy-traffic regime)
+  Why:     SRBM is the heavy-traffic limit where ρ → 1. At low ρ the stationary distribution has a large atom at zero that the diffusion smooths out; the approximation systematically underestimates P(X=0) and overestimates mean queue length. Error ranges roughly 20–50% below ρ = 0.5.
+  Fix:     Raise α_2 (route more traffic through station 2) or reduce μ_2 (currently 0.8174) so that ρ_2 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+  Affects: E[X_2], sojourn_2, class waiting times
+
+[WARNING ] 2. Station 3 is lightly loaded (ρ = 0.335, below heavy-traffic regime)
+  Why:     SRBM is the heavy-traffic limit where ρ → 1. At low ρ the stationary distribution has a large atom at zero that the diffusion smooths out; the approximation systematically underestimates P(X=0) and overestimates mean queue length. Error ranges roughly 20–50% below ρ = 0.5.
+  Fix:     Raise α_3 (route more traffic through station 3) or reduce μ_3 (currently 0.8599) so that ρ_3 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+  Affects: E[X_3], sojourn_3, class waiting times
+
+[WARNING ] 3. Station 4 is lightly loaded (ρ = 0.433, below heavy-traffic regime)
+  Why:     SRBM is the heavy-traffic limit where ρ → 1. At low ρ the stationary distribution has a large atom at zero that the diffusion smooths out; the approximation systematically underestimates P(X=0) and overestimates mean queue length. Error ranges roughly 20–50% below ρ = 0.5.
+  Fix:     Raise α_4 (route more traffic through station 4) or reduce μ_4 (currently 0.7457) so that ρ_4 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+  Affects: E[X_4], sojourn_4, class waiting times
+
+[WARNING ] 4. Utilizations are unbalanced (ρ range 0.209 – 0.900, spread 0.69)
+  Why:     Balanced heavy-traffic theory (Harrison–Reiman) assumes every station simultaneously approaches ρ → 1. When one station dominates, the multi-dimensional SRBM degenerates toward the one-dimensional M/G/1 of the bottleneck, and non-bottleneck E[X_i] values are biased low.
+  Fix:     Balance capacities: either add servers / raise μ at the bottleneck, or combine stations whose load patterns resemble each other. Alternatively, accept that only the bottleneck's E[X] will be close to simulation.
+  Affects: E[X_i] for non-bottleneck stations
+
+PERFORMANCE METRIC RELIABILITY
+------------------------------
+  E[X_i] (queue length):          MODERATE    ρ below heavy-traffic regime — E[X] systematically biased
+  Throughput (Γ_i):               HIGH        Γ = α; derived exactly from traffic equations
+  Utilization (ρ_i):              HIGH        ρ = α / (s·μ); derived exactly from primitives
+  Sojourn time:                   MODERATE    sojourn = E[X]/Γ; inherits E[X] reliability
+  Per-class W, T, N:              MODERATE    Little's law applied to E[X]; inherits its reliability
+
+TOP ACTIONABLE SUGGESTIONS
+--------------------------
+1. Raise α_2 (route more traffic through station 2) or reduce μ_2 (currently 0.8174) so that ρ_2 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+2. Raise α_3 (route more traffic through station 3) or reduce μ_3 (currently 0.8599) so that ρ_3 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+3. Raise α_4 (route more traffic through station 4) or reduce μ_4 (currently 0.7457) so that ρ_4 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+

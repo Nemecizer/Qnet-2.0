@@ -1,0 +1,15 @@
+isAnalyticallyTractable=true
+tractabilityIsExact=true
+tractabilityTitle=This network is analytically tractable
+tractabilityDetail=Open Jackson network — exact M/M/s product form
+tractabilityMeansLabel=Exact E[N]  (Jackson)
+tractabilityMeans=9.0000009000000905 9.0000009000000905 9.0000009000000905
+hasFeedback=false
+feedbackQuality=notReentrant
+feedbackDescription:
+
+tractabilityExplanation:
+All inter-arrival and service distributions are exponential, buffers are infinite, and there is a single customer class. By Jackson's theorem the stationary joint distribution of station populations factorises; each station i behaves as an independent M/M/sᵢ queue with
+    ρᵢ = αᵢ / (sᵢ · μᵢ)  < 1
+    E[Nᵢ] = closed-form M/M/sᵢ mean (Erlang-C for sᵢ > 1, ρᵢ/(1−ρᵢ) for sᵢ = 1).
+status:

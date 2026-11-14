@@ -1,0 +1,26 @@
+[Threads] Single-threaded (analytical solver)
+Running QNA ...  [ ]                                                       0.0s[KRunning QNA ...  [done]                                                    0.0s
+
+Network load: rho_max = 0.4500 at S1  (moderate load — SRBM/FEM are heavy-traffic limits; expect deviation from simulation)
+──  Open Jackson network — exact M/M/s product form (3 classes, no shared station)  ──
+           QNA            Exact E[N]  (Jackson)
+           ===            ============
+
+rho_1      0.450 (+0.0%)  0.450
+rho_2      0.400 (+0.0%)  0.400
+rho_3      0.420 (+0.0%)  0.420
+
+Gamma_1    0.450 (+0.0%)  0.450
+Gamma_2    0.400 (+0.0%)  0.400
+Gamma_3    0.420 (+0.0%)  0.420
+
+sojourn_1  1.818 (+0.0%)  1.818
+sojourn_2  1.667 (+0.0%)  1.667
+sojourn_3  1.724 (+0.0%)  1.724
+
+E[Q_1]     0.818 (+0.0%)  0.818
+E[Q_2]     0.667 (+0.0%)  0.667
+E[Q_3]     0.724 (+0.0%)  0.724
+
+Elapsed time: 0.075s
+

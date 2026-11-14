@@ -1,0 +1,57 @@
+NETWORK ANALYSIS — Brownian Heavy-Traffic Reliability
+=====================================================
+
+NETWORK SUMMARY
+---------------
+Stations:         2
+Customer classes: 1
+Buffer model:     infinite
+
+KEY PRIMITIVES
+--------------
+  Station   servers    μ_eff        α          ρ   c²_s_eff   buffer
+  S1              1   1.0000   0.6000     0.6000     0.0000        ∞
+  S2              1   1.0000   0.6000     0.6000     1.0000        ∞
+
+  Class       λ (ext)     c²_a
+  C1           0.6000   1.0000
+
+OVERALL RELIABILITY ASSESSMENT
+------------------------------
+Score: 91 / 100  (HIGH)
+Findings: 0 critical, 0 warning, 3 info
+
+The network sits comfortably inside the assumptions of heavy-traffic SRBM theory. E[X] estimates should be within ~5–10% of simulation for most primitives.
+
+FINDINGS (grouped by severity)
+------------------------------
+
+[INFO    ] 1. Station 1 is moderately loaded (ρ = 0.600)
+  Why:     Below ρ ≈ 0.7 the heavy-traffic approximation starts to noticeably overestimate queue length. Expect 10–20% error vs simulation.
+  Fix:     If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+  Affects: E[X_1]
+
+[INFO    ] 2. Station 2 is moderately loaded (ρ = 0.600)
+  Why:     Below ρ ≈ 0.7 the heavy-traffic approximation starts to noticeably overestimate queue length. Expect 10–20% error vs simulation.
+  Fix:     If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+  Affects: E[X_2]
+
+[INFO    ] 3. Station 1 has deterministic service (c²_s = 0) — M/D/1-like
+  Why:     Station is well-posed (Σ_ii is kept positive by arrival variability), but the two-moment SRBM slightly overestimates queue length relative to the Pollaczek–Khinchine exact answer for M/D/1.
+  Fix:     If you need high accuracy for deterministic-service stations, cross-check E[X_1] against the M/D/1 formula ρ²/(2(1−ρ)). Otherwise SRBM is usually within ~10
+  Affects: E[X_1]
+
+PERFORMANCE METRIC RELIABILITY
+------------------------------
+  E[X_i] (queue length):          MODERATE    service SCV is extreme — expect bias in E[X]
+  Throughput (Γ_i):               HIGH        Γ = α; derived exactly from traffic equations
+  Utilization (ρ_i):              HIGH        ρ = α / (s·μ); derived exactly from primitives
+  Sojourn time:                   MODERATE    sojourn = E[X]/Γ; inherits E[X] reliability
+  Per-class W, T, N:              MODERATE    Little's law applied to E[X]; inherits its reliability
+
+TOP ACTIONABLE SUGGESTIONS
+--------------------------
+1. If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+2. If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+3. If you need high accuracy for deterministic-service stations, cross-check E[X_1] against the M/D/1 formula ρ²/(2(1−ρ)). Otherwise SRBM is usually within ~10
+

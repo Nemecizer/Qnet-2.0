@@ -1,0 +1,47 @@
+SRBM Parameters:
+  dimension     = 1
+  grid_n        = 64
+  basis_m       = 8
+  grid_type     = uniform
+  max_moments   = 4
+  solver        = highs
+  output_prefix = OUTPUT_PREFIX
+  drift         = -0.1000
+  upper_bounds  = 11.0000
+  covariance:
+       1.9000
+  reflection (lower):
+       1.0000
+  reflection (upper):
+      -1.0000
+  tightness K   = (auto: 100000)
+  smoothness_w  = 0 (disabled)
+  basis_norm    = 0 (raw monomials)
+
+[Parse] 0.000 s
+[Grid]  64 points, 0.002 s
+  Face 1: lower=1 upper=1
+[Index] 9 basis functions, 0.000 s
+[Basis] 0.000 s
+[Eval interior] 0.000 s
+[Eval boundary] 0.000 s
+[Build LP] 24 rows, 67 cols, 1178 nnz, 0.000 s
+[Solve] Using solver: highs
+[Solve] Optimal u* = 0.0000000000e+00, 0.004 s
+
+Moments:
+  Order     E[Z_1^k]    
+  k=1          4.461581
+  k=2         29.347440
+  k=3        226.753388
+  k=4       1910.493499
+
+Output files:
+  Wrote OUTPUT_PREFIX_marginal_1.csv (64 points)
+  Wrote OUTPUT_PREFIX_distribution.csv (64 points)
+
+[Total] 0.008 s
+rho_1 = 0.854196
+Gamma_1 = 0.854196
+sojourn_1 = 5.223134
+E[X_1] = 4.461581

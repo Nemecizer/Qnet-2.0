@@ -1,0 +1,50 @@
+{
+  "covariance" : [
+    [
+      0.80249968200009625,
+      -0.49499979600006255
+    ],
+    [
+      -0.49499979600006255,
+      0.80249968200009625
+    ]
+  ],
+  "drift" : [
+    -0.150000059999988,
+    -0.150000059999988
+  ],
+  "model_type" : "orthant_srbm_bar_bounds",
+  "name" : "KumarSeidman90.d2.c4.reentrant.fin",
+  "reflection" : [
+    [
+      1,
+      -0.5
+    ],
+    [
+      -0.5,
+      1
+    ]
+  ],
+  "relaxation" : {
+    "max_psd_entries" : 5000000,
+    "max_variables" : 100000,
+    "order" : 2,
+    "targets" : [
+      {
+        "moment" : [
+          1,
+          0
+        ],
+        "name" : "mean_workload_1"
+      },
+      {
+        "moment" : [
+          0,
+          1
+        ],
+        "name" : "mean_workload_2"
+      }
+    ]
+  },
+  "schema_version" : 1
+}

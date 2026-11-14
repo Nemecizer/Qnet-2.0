@@ -1,0 +1,30 @@
+/* Live results (new in 2.1, ROADMAP Phase D): the legend's chip and the status bar's read-out.
+   Tokens only. The chip is an outlined pill with a dot — a recorded run's legend has neither — and
+   the dot's slow pulse stops under Reduce Motion. */
+
+.live-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  align-self: flex-start;
+  padding: 0 var(--sp-3);
+  border: 1px solid var(--tier-exact);
+  border-radius: var(--r-pill);
+  color: var(--canvas-text);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.live-chip-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--tier-exact); flex: none; animation: live-pulse 2.4s ease-in-out infinite; }
+.live-chip:not([data-live-tier="exact"]) { border-color: var(--warn-text); border-style: dashed; }
+.live-chip:not([data-live-tier="exact"]) .live-chip-dot { background: var(--warn-text); }
+@keyframes live-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+:root[data-motion="reduce"] .live-chip-dot { animation: none; }
+@media (prefers-reduced-motion: reduce) { :root:not([data-motion]) .live-chip-dot { animation: none; } }
+
+.live-readout { gap: var(--sp-4); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.live-readout-part { display: inline-flex; align-items: baseline; gap: var(--sp-1); }
+.live-readout-num { font-weight: var(--fw-medium); }
+.live-readout-note { color: var(--warn-text); }
+.live-readout-tier { color: var(--muted); }

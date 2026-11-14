@@ -1,0 +1,50 @@
+{
+  "covariance" : [
+    [
+      1.96,
+      -0.97999999999999998
+    ],
+    [
+      -0.97999999999999998,
+      1.96
+    ]
+  ],
+  "drift" : [
+    -0.020000000000000018,
+    0
+  ],
+  "model_type" : "orthant_srbm_bar_bounds",
+  "name" : "2d2cfin",
+  "reflection" : [
+    [
+      1,
+      0
+    ],
+    [
+      -1,
+      1
+    ]
+  ],
+  "relaxation" : {
+    "max_psd_entries" : 5000000,
+    "max_variables" : 100000,
+    "order" : 2,
+    "targets" : [
+      {
+        "moment" : [
+          1,
+          0
+        ],
+        "name" : "mean_workload_1"
+      },
+      {
+        "moment" : [
+          0,
+          1
+        ],
+        "name" : "mean_workload_2"
+      }
+    ]
+  },
+  "schema_version" : 1
+}

@@ -1,0 +1,50 @@
+{
+  "covariance" : [
+    [
+      1.2375,
+      -0.45000000000000001
+    ],
+    [
+      -0.45000000000000001,
+      1.2375
+    ]
+  ],
+  "drift" : [
+    -0.049999999999999989,
+    -0.049999999999999989
+  ],
+  "model_type" : "orthant_srbm_bar_bounds",
+  "name" : "GuangChenDaiGlynn25.sec3.2.2d.inf",
+  "reflection" : [
+    [
+      1,
+      -0.5
+    ],
+    [
+      -0.5,
+      1
+    ]
+  ],
+  "relaxation" : {
+    "max_psd_entries" : 5000000,
+    "max_variables" : 100000,
+    "order" : 2,
+    "targets" : [
+      {
+        "moment" : [
+          1,
+          0
+        ],
+        "name" : "mean_workload_1"
+      },
+      {
+        "moment" : [
+          0,
+          1
+        ],
+        "name" : "mean_workload_2"
+      }
+    ]
+  },
+  "schema_version" : 1
+}

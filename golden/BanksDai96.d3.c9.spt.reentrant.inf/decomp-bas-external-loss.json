@@ -1,0 +1,131 @@
+{
+  "blocking" : "bas_external_loss",
+  "classes" : [
+    {
+      "external_arrivals" : {
+        "s1" : 1
+      },
+      "id" : "c1",
+      "name" : "Class 1"
+    },
+    {
+      "external_arrivals" : {
+
+      },
+      "id" : "c2",
+      "name" : "Class 2"
+    },
+    {
+      "external_arrivals" : {
+
+      },
+      "id" : "c3",
+      "name" : "Class 3"
+    },
+    {
+      "external_arrivals" : {
+
+      },
+      "id" : "c4",
+      "name" : "Class 4"
+    }
+  ],
+  "name" : "BanksDai96.d3.c9.spt.reentrant.inf",
+  "routes" : [
+    {
+      "class" : "c1",
+      "from" : "s1",
+      "probability" : 1,
+      "to" : "s2"
+    },
+    {
+      "class" : "c3",
+      "from" : "s1",
+      "probability" : 1,
+      "to" : "s3"
+    },
+    {
+      "class" : "c1",
+      "from" : "s2",
+      "probability" : 1,
+      "to" : "s3"
+    },
+    {
+      "class" : "c2",
+      "from" : "s2",
+      "probability" : 1,
+      "to" : "s3"
+    },
+    {
+      "class" : "c3",
+      "from" : "s2",
+      "probability" : 1,
+      "to" : "s1"
+    },
+    {
+      "class" : "c1",
+      "from" : "s3",
+      "probability" : 1,
+      "to" : "s2",
+      "to_class" : "c2"
+    },
+    {
+      "class" : "c2",
+      "from" : "s3",
+      "probability" : 1,
+      "to" : "s2",
+      "to_class" : "c3"
+    },
+    {
+      "class" : "c3",
+      "from" : "s3",
+      "probability" : 1,
+      "to" : "s1",
+      "to_class" : "c4"
+    }
+  ],
+  "schema_version" : 1,
+  "solver" : {
+    "damping" : 0.5,
+    "max_iterations" : 1000,
+    "tolerance" : 1e-10
+  },
+  "stations" : [
+    {
+      "capacity" : 11,
+      "id" : "s1",
+      "name" : "S1",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 2.8571430000000002,
+        "c2" : 1,
+        "c3" : 3.3333330000000001,
+        "c4" : 4
+      }
+    },
+    {
+      "capacity" : 11,
+      "id" : "s2",
+      "name" : "S2",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 4,
+        "c2" : 3.3333330000000001,
+        "c3" : 2.8571430000000002,
+        "c4" : 1
+      }
+    },
+    {
+      "capacity" : 11,
+      "id" : "s3",
+      "name" : "S3",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 10,
+        "c2" : 5,
+        "c3" : 3.3333330000000001,
+        "c4" : 1
+      }
+    }
+  ]
+}

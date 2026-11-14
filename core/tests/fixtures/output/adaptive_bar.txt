@@ -1,0 +1,1 @@
+awk -v w=2 -v mu='2 0.5' 'BEGIN{n=split(mu,m," ")}{print}/^E\[Z_[0-9]+\] =/{s=$1;gsub(/[^0-9]/,"",s);i=s+0;if(i>=1&&i<=n){q[i]=$3*m[i];z[i]=$3;u[i]=m[i];if(i>d)d=i}}END{if(d>0){printf "\n";for(i=1;i<=d;i++)printf "  L_%0*d = %.6f    (workload E[Z_%0*d] = %.6f, mu_i = %.6f)\n",w,i,q[i],w,i,z[i],u[i]}}'

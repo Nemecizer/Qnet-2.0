@@ -1,0 +1,85 @@
+{
+  "blocking" : "bas_external_loss",
+  "classes" : [
+    {
+      "external_arrivals" : {
+        "s1" : 1
+      },
+      "id" : "c1",
+      "name" : "Class 1"
+    },
+    {
+      "external_arrivals" : {
+
+      },
+      "id" : "c2",
+      "name" : "Class 2"
+    },
+    {
+      "external_arrivals" : {
+
+      },
+      "id" : "c3",
+      "name" : "Class 3"
+    }
+  ],
+  "name" : "LuKumar91.d2.c5.reentrant.inf",
+  "routes" : [
+    {
+      "class" : "c1",
+      "from" : "s1",
+      "probability" : 1,
+      "to" : "s2"
+    },
+    {
+      "class" : "c2",
+      "from" : "s1",
+      "probability" : 1,
+      "to" : "s2"
+    },
+    {
+      "class" : "c1",
+      "from" : "s2",
+      "probability" : 1,
+      "to" : "s1",
+      "to_class" : "c2"
+    },
+    {
+      "class" : "c2",
+      "from" : "s2",
+      "probability" : 1,
+      "to" : "s1",
+      "to_class" : "c3"
+    }
+  ],
+  "schema_version" : 1,
+  "solver" : {
+    "damping" : 0.5,
+    "max_iterations" : 1000,
+    "tolerance" : 1e-10
+  },
+  "stations" : [
+    {
+      "capacity" : 11,
+      "id" : "s1",
+      "name" : "S1",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 10,
+        "c2" : 10,
+        "c3" : 1.6666669999999999
+      }
+    },
+    {
+      "capacity" : 11,
+      "id" : "s2",
+      "name" : "S2",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.6666669999999999,
+        "c2" : 10,
+        "c3" : 1
+      }
+    }
+  ]
+}

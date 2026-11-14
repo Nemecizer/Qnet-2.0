@@ -1,0 +1,118 @@
+[A[2KRunning Linear Program (BNAlp, Saure-Glynn-Zeevi 2008)
+auto-scaled for d=10: grid_n=3, basis_m=3
+
+SRBM Parameters:
+  dimension     = 10
+  grid_n        = 3
+  basis_m       = 3
+  grid_type     = 0 (0=exp, 1=dya, 2=expran)
+  max_moments   = 4
+  solver        = (default)
+  output_prefix = srbm_out
+  drift         = -0.100 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+  covariance:
+        1.620   -0.810    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000
+       -0.810    1.620   -0.810    0.000    0.000    0.000    0.000    0.000    0.000    0.000
+        0.000   -0.810    1.620   -0.810    0.000    0.000    0.000    0.000    0.000    0.000
+        0.000    0.000   -0.810    1.620   -0.810    0.000    0.000    0.000    0.000    0.000
+        0.000    0.000    0.000   -0.810    1.620   -0.810    0.000    0.000    0.000    0.000
+        0.000    0.000    0.000    0.000   -0.810    1.620   -0.810    0.000    0.000    0.000
+        0.000    0.000    0.000    0.000    0.000   -0.810    1.620   -0.810    0.000    0.000
+        0.000    0.000    0.000    0.000    0.000    0.000   -0.810    1.620   -0.810    0.000
+        0.000    0.000    0.000    0.000    0.000    0.000    0.000   -0.810    1.620   -0.810
+        0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000   -0.810    1.620
+  reflection:
+        1.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000
+       -1.000    1.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000
+        0.000   -1.000    1.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000
+        0.000    0.000   -1.000    1.000    0.000    0.000    0.000    0.000    0.000    0.000
+        0.000    0.000    0.000   -1.000    1.000    0.000    0.000    0.000    0.000    0.000
+        0.000    0.000    0.000    0.000   -1.000    1.000    0.000    0.000    0.000    0.000
+        0.000    0.000    0.000    0.000    0.000   -1.000    1.000    0.000    0.000    0.000
+        0.000    0.000    0.000    0.000    0.000    0.000   -1.000    1.000    0.000    0.000
+        0.000    0.000    0.000    0.000    0.000    0.000    0.000   -1.000    1.000    0.000
+        0.000    0.000    0.000    0.000    0.000    0.000    0.000    0.000   -1.000    1.000
+  grid_spacing  = 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+  tightness K   = 100000 100000 100000 100000 100000 100000 100000 100000 100000 100000 100000 100000 100000 100000 100000 100000 100000 100000 100000 100000 100000
+  smoothness_w  = 0 (disabled)
+  basis_norm    = 0 (raw monomials)
+  Auto rho      = 0.200 0.200 0.200 0.200 0.200 0.200 0.200 0.200 0.200 0.200
+  Effective grid_spacing (rho/4) = 0.050 0.050 0.050 0.050 0.050 0.050 0.050 0.050 0.050 0.050
+
+[Parse] 0.000 s
+[Grid]  59049 points, 0.002 s
+  Face 1 boundary: 19683 points
+  Face 2 boundary: 19683 points
+  Face 3 boundary: 19683 points
+  Face 4 boundary: 19683 points
+  Face 5 boundary: 19683 points
+  Face 6 boundary: 19683 points
+  Face 7 boundary: 19683 points
+  Face 8 boundary: 19683 points
+  Face 9 boundary: 19683 points
+  Face 10 boundary: 19683 points
+[Index] 286 basis functions, 0.000 s
+[Basis] 0.001 s
+[Eval interior] 0.018 s
+[Eval boundary] 0.041 s
+[Build LP] 594 rows, 255880 cols, 39803961 nnz, 1.534 s
+[Solve] Using solver: highs
+[Solve] Optimal u* = 0.000, 245.125 s
+
+Moments:
+  Order     E[Z_1^k]      E[Z_2^k]      E[Z_3^k]      E[Z_4^k]      E[Z_5^k]      E[Z_6^k]      E[Z_7^k]      E[Z_8^k]      E[Z_9^k]      E[Z_10^k]    
+  k=1             8.100         7.264         6.750         6.581         7.234         7.017         7.745         8.364         7.018         8.363
+  k=2           131.220       131.220       123.631       108.870       127.866       126.933       129.022       126.957       127.538       147.069
+  k=3          2504.046      2653.011      2516.302      2102.356      2557.497      2568.098      2501.260      2328.811      2586.026      2933.866
+  k=4         51944.859     56425.939     53665.685     43843.647     54150.301     54635.423     52252.643     47433.122     55067.045     62050.589
+
+Output files:
+  Wrote srbm_out_marginal_1.csv (3 points)
+  Wrote srbm_out_marginal_2.csv (3 points)
+  Wrote srbm_out_marginal_3.csv (3 points)
+  Wrote srbm_out_marginal_4.csv (3 points)
+  Wrote srbm_out_marginal_5.csv (3 points)
+  Wrote srbm_out_marginal_6.csv (3 points)
+  Wrote srbm_out_marginal_7.csv (3 points)
+  Wrote srbm_out_marginal_8.csv (3 points)
+  Wrote srbm_out_marginal_9.csv (3 points)
+  Wrote srbm_out_marginal_10.csv (3 points)
+  Wrote srbm_out_distribution.csv (59049 points)
+
+[Total] 247.683 s
+E[X_1] = 8.100
+E[X_2] = 7.264
+E[X_3] = 6.750
+E[X_4] = 6.581
+E[X_5] = 7.234
+E[X_6] = 7.017
+E[X_7] = 7.745
+E[X_8] = 8.364
+E[X_9] = 7.018
+E[X_10] = 8.363
+
+Linear Program (Saure-Glynn-Zeevi 2008 LP)
+==========================================
+
+Solver: highs  |  grid_n = 3  |  basis_m = 3
+[Build LP] 594 rows, 255880 cols, 39803961 nnz, 1.534 s
+[Solve] Optimal u* = 0.000, 245.125 s
+[Total] 247.683s
+
+Node   Servers  E[Y] (workload)  L = mu·E[Y]     mu_i      
+1      1         8.100            9.000            1.111    
+2      1         7.264            8.071            1.111    
+3      1         6.750            7.500            1.111    
+4      1         6.581            7.312            1.111    
+5      1         7.234            8.038            1.111    
+6      1         7.017            7.796            1.111    
+7      1         7.745            8.605            1.111    
+8      1         8.364            9.293            1.111    
+9      1         7.018            7.798            1.111    
+10     1         8.363            9.293            1.111    
+
+Network Totals:
+  Total E[N]:             82.707
+  Average queue length:   8.271
+Elapsed time: 247.915s
+

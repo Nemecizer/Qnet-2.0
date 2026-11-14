@@ -1,0 +1,25 @@
+{
+  "id": "E04",
+  "title": "One-dimensional orthant RBM",
+  "evidence": "derived_exact",
+  "source": "Plans.md section 4, E04",
+  "model": {
+    "domain": "orthant",
+    "dimension": 1,
+    "drift": [-1.0],
+    "covariance": [
+      [2.0]
+    ],
+    "reflection": [
+      [1.0]
+    ]
+  },
+  "expected": {
+    "mean": [1.0],
+    "second_moment": [2.0],
+    "covariance_offdiagonal_zero": true,
+    "product_form_rates": [1.0],
+    "boundary_rates": [1.0]
+  },
+  "notes": "Stationary law Exp(1); beta = 1. A solver that confuses Gamma with Gamma/2 reads 0.5 or 2."
+}

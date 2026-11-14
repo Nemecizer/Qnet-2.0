@@ -1,0 +1,26 @@
+[Threads] Using 18 CPU cores (OpenMP)
+Running spectral method ...  [                              ]  starting ...[KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  328/328      (100%)     0.2s
+
+Network load: rho_max = 0.9000 at S2  (near heavy-traffic — small O(1) deviation expected)
+──  Asymptotic product form — GCDG 2025 Cor. 3 (lower-triangular R, feed-forward)  ──
+           Spectral        Asymptotic E[X]
+           ========        ============
+
+rho_1      0.900 (+0.0%)   0.900
+rho_2      0.900 (+0.0%)   0.900
+rho_3      0.900 (+0.0%)   0.900
+
+Gamma_1    1.000 (+0.0%)   1.000
+Gamma_2    1.000 (+0.0%)   1.000
+Gamma_3    1.000 (+0.0%)   1.000
+
+sojourn_1  5.625 (+0.0%)   5.625
+sojourn_2  7.226 (+0.0%)   9.000
+sojourn_3  13.183 (+0.0%)  13.500
+
+E[Q_1]     5.625 (+0.0%)   5.625
+E[Q_2]     7.226 (+0.0%)   9.000
+E[Q_3]     13.183 (+0.0%)  13.500
+
+Elapsed time: 0.384s
+

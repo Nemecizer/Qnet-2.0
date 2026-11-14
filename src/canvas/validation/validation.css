@@ -1,0 +1,144 @@
+/* Problems on the canvas (new in 2.1, ROADMAP C4): the badges, the marked links, the popover that
+   explains a problem and offers its fixes, and the status bar's count with its list. HTML over the
+   canvas's SVG, so none of it can reach an exported diagram. Colours are tokens only; severity is
+   told by shape as well (Glyph.tsx), and a marked link by its dash pattern. */
+
+.problem-glyph { flex: none; display: block; }
+/* The outline is --critical, which is 3:1 on the surface in both themes; the dark fill alone is not. */
+.problem-glyph[data-severity="error"] .problem-glyph-shape { fill: var(--danger-fill); stroke: var(--critical); }
+.problem-glyph[data-severity="error"] .problem-glyph-mark { stroke: var(--on-accent); }
+.problem-glyph[data-severity="warning"] .problem-glyph-shape { fill: var(--warn-bg); stroke: var(--warn-text); }
+.problem-glyph[data-severity="warning"] .problem-glyph-mark { stroke: var(--warn-text); }
+.problem-glyph[data-severity="info"] .problem-glyph-shape { fill: var(--surface); stroke: var(--info); }
+.problem-glyph[data-severity="info"] .problem-glyph-mark { stroke: var(--info); }
+
+/* Over the canvas, letting every click through; only the badges and an open popover take it. */
+.canvas-problems { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.canvas-problems-links { position: absolute; inset: 0; }
+.canvas-problems-pan { position: absolute; left: 0; top: 0; width: 0; height: 0; }
+
+.canvas-problem-link { fill: none; stroke-linecap: round; opacity: 0.4; }
+.canvas-problem-link[data-severity="error"] { stroke: var(--critical); }
+.canvas-problem-link[data-severity="warning"] { stroke: var(--warning-border); stroke-dasharray: 2 7; opacity: 0.7; }
+.canvas-problem-link[data-severity="info"] { stroke: var(--info); stroke-dasharray: 1 8; }
+/* Increase contrast: the marks are solid ink, not a tint. */
+:root[data-contrast="more"] .canvas-problem-link { opacity: 1; }
+@media (prefers-contrast: more) { :root:not([data-contrast]) .canvas-problem-link { opacity: 1; } }
+
+.canvas-problem { position: absolute; width: 0; height: 0; }
+.canvas-problem-badge {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: default;
+  pointer-events: auto;
+}
+.canvas-problem-badge:hover, .canvas-problem-badge[aria-expanded="true"] { background: var(--hover); }
+/* With results on the canvas a station's value sits in a pill above it: the problem badge steps
+   out to the side, clear of the pill's end and of the utilisation ring. */
+.canvas-clip:has(> .canvas-results-chrome) .canvas-problem-badge { transform: translate(-9px, 7px); }
+
+.canvas-problem-pop {
+  position: absolute;
+  top: 13px;
+  left: -14px;
+  width: 280px;
+  max-width: 280px;
+  padding: var(--sp-4) var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-pop);
+  color: var(--text);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  text-align: left;
+  pointer-events: auto;
+  user-select: text;
+  -webkit-user-select: text;
+  overflow-y: auto;
+  z-index: 2;
+}
+.canvas-problem-pop[data-flip-x] { left: auto; right: -14px; }
+.canvas-problem-pop[data-flip-y] { top: auto; bottom: 13px; }
+:root[data-contrast="more"] .canvas-problem-pop { border-width: 1.5px; }
+@media (prefers-contrast: more) { :root:not([data-contrast]) .canvas-problem-pop { border-width: 1.5px; } }
+
+.problem-item { display: flex; flex-direction: column; gap: var(--sp-3); }
+.problem-item + .problem-item { padding-top: var(--sp-4); border-top: 1px solid var(--hairline); }
+.problem-text { display: flex; align-items: flex-start; gap: var(--sp-3); margin: 0; }
+.problem-text .problem-glyph { margin-top: 1px; }
+.problem-severity { font-weight: var(--fw-semibold); }
+.problem-item[data-severity="error"] .problem-severity { color: var(--crit-text); }
+.problem-item[data-severity="warning"] .problem-severity { color: var(--warn-text); }
+.problem-fixes { display: flex; flex-wrap: wrap; gap: var(--sp-2); padding-left: calc(16px + var(--sp-3)); }
+.problem-fixes:empty { display: none; }
+/* A problem's first fix is the suggested one (styles.css .btn.suggested): several problems are
+   listed at once, and the window's one filled button is Solve. */
+.problem-fixes .btn.primary { background: var(--surface); border-color: var(--accent); color: var(--accent-text); }
+.problem-fixes .btn.primary:hover, .problem-fixes .btn.primary:active { background: var(--hover); }
+
+/* The status bar's count. */
+.canvas-sb-problems {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  height: var(--ctl-xs);
+  padding: 0 var(--sp-2);
+  border: 0;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+  cursor: default;
+}
+.canvas-sb-problems:hover, .canvas-sb-problems[aria-expanded="true"] { background: var(--hover); }
+.canvas-sb-problems[data-clear] { color: var(--muted); }
+.canvas-sb-problem-count { display: inline-flex; align-items: center; gap: var(--sp-1); }
+
+/* The list, above the status bar. */
+.problems-list {
+  position: fixed;
+  z-index: var(--z-popover);
+  width: 400px;
+  max-width: calc(100vw - 2 * var(--sp-4));
+  /* Bottom-anchored above the status bar (the inline style), and never taller than the room
+     above it: with a top inset as well, the box is as tall as its rows and the auto margin takes
+     the rest, so its heading can't leave the window when the canvas pane is short. */
+  top: var(--sp-4);
+  height: fit-content;
+  margin-top: auto;
+  max-height: min(420px, 60vh);
+  max-height: -webkit-fill-available;
+  max-height: stretch;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-pop);
+  color: var(--text);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+}
+.problems-list-head { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4); padding: var(--sp-4) var(--sp-5); border-bottom: 1px solid var(--hairline); }
+.problems-list-title { margin: 0; font-size: var(--fs-base); font-weight: var(--fw-semibold); }
+.problems-list-count { color: var(--muted); font-size: var(--fs-sm); }
+.problems-list-body { margin: 0; padding: var(--sp-2) 0; list-style: none; overflow-y: auto; min-height: 0; max-height: 340px; }
+.problems-list-body > li { display: flex; flex-direction: column; gap: var(--sp-3); padding: var(--sp-3) var(--sp-5); }
+.problems-list-body > li + li { border-top: 1px solid var(--hairline); }
+.problems-row { display: flex; align-items: flex-start; gap: var(--sp-3); margin: 0; padding: var(--sp-1) var(--sp-2); border: 0; border-radius: var(--r-sm); background: transparent; color: inherit; font: inherit; text-align: left; cursor: default; }
+button.problems-row:hover { background: var(--hover); }
+.problems-row .problem-glyph { margin-top: 1px; }
+.problems-list-empty { margin: 0; padding: var(--sp-6) var(--sp-5); color: var(--muted); text-align: center; }
+.problems-list-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4); padding: var(--sp-3) var(--sp-5); border-top: 1px solid var(--hairline); color: var(--muted); font-size: var(--fs-sm); }

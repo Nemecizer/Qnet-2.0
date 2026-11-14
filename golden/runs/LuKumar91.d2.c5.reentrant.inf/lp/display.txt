@@ -1,0 +1,70 @@
+[A[2KRunning Linear Program (BNAlp, Saure-Glynn-Zeevi 2008)
+auto-scaled for d=2: grid_n=100, basis_m=6
+
+SRBM Parameters:
+  dimension     = 2
+  grid_n        = 100
+  basis_m       = 6
+  grid_type     = 0 (0=exp, 1=dya, 2=expran)
+  max_moments   = 4
+  solver        = (default)
+  output_prefix = srbm_out
+  drift         = 0.029 -0.125
+  covariance:
+        0.905   -0.856
+       -0.856    0.995
+  reflection:
+        1.000   -0.762
+       -0.875    1.000
+  grid_spacing  = 0.000 0.000
+  tightness K   = 100000 100000 100000 100000 100000
+  smoothness_w  = 0 (disabled)
+  basis_norm    = 0 (raw monomials)
+  Auto rho      = 0.400 0.600
+  Effective grid_spacing (rho/4) = 0.100 0.150
+
+[Parse] 0.000 s
+[Grid]  10000 points, 0.002 s
+  Face 1 boundary: 100 points
+  Face 2 boundary: 100 points
+[Index] 28 basis functions, 0.000 s
+[Basis] 0.000 s
+[Eval interior] 0.001 s
+[Eval boundary] 0.000 s
+[Build LP] 62 rows, 10201 cols, 561209 nnz, 0.013 s
+[Solve] Using solver: highs
+[Solve] Optimal u* = 0.000, 0.864 s
+
+Moments:
+  Order     E[Z_1^k]      E[Z_2^k]    
+  k=1             1.717         1.373
+  k=2             5.310         3.474
+  k=3            23.490        12.472
+  k=4           133.692        57.509
+
+Output files:
+  Wrote srbm_out_marginal_1.csv (100 points)
+  Wrote srbm_out_marginal_2.csv (100 points)
+  Wrote srbm_out_distribution.csv (10000 points)
+
+[Total] 0.892 s
+E[X_1] = 1.717
+E[X_2] = 1.373
+
+Linear Program (Saure-Glynn-Zeevi 2008 LP)
+==========================================
+
+Solver: highs  |  grid_n = 100  |  basis_m = 6
+[Build LP] 62 rows, 10201 cols, 561209 nnz, 0.013 s
+[Solve] Optimal u* = 0.000, 0.864 s
+[Total] 0.892s
+
+Node   Servers  E[Y] (workload)  L = mu·E[Y]     mu_i      
+1      1         1.717            6.440            3.750    
+2      1         1.373            3.923            2.857    
+
+Network Totals:
+  Total E[N]:             10.363
+  Average queue length:   5.181
+Elapsed time: 0.944s
+

@@ -1,0 +1,18 @@
+isAnalyticallyTractable=false
+tractabilityIsExact=false
+tractabilityTitle=
+tractabilityDetail=
+tractabilityMeansLabel=
+tractabilityMeans=
+hasFeedback=true
+feedbackQuality=red
+criterion=Per-station ρ < 0.85 | ok=true | max ρ = 0.800
+criterion=Service SCV in [0.5, 2] | ok=false | worst c²_s = 2.562 (extreme variance breaks 2-moment methods)
+criterion=Max re-entry probability < 0.5 | ok=false | largest cycle prob = 0.667 — heavy feedback inflates the per-class temporal correlation
+criterion=No class-transition amplification at high-ρ stations | ok=false | S1 has ρ = 0.80 and class μ-ratio = 6.0 (Kumar-Seidman / Bramson signature)
+feedbackDescription:
+Immediate feedback: S1 ↔ S2.
+tractabilityExplanation:
+
+status:
+Analytical match is ASYMPTOTIC (Asymptotic product form — GCDG 2025 Cor. 2 (d = 2, P-matrix R)) but the network is re-entrant — the multi-scaling regime is unreliable here, so the analytical column is suppressed in Run Comparison.

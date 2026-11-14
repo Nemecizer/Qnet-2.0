@@ -1,0 +1,45 @@
+NETWORK ANALYSIS — Brownian Heavy-Traffic Reliability
+=====================================================
+
+NETWORK SUMMARY
+---------------
+Stations:         2
+Customer classes: 1
+Buffer model:     infinite
+
+KEY PRIMITIVES
+--------------
+  Station   servers    μ_eff        α          ρ   c²_s_eff   buffer
+  S1              1   2.0408   1.4286     0.7000     1.0000        ∞
+  S2              1   1.4286   1.0000     0.7000     1.0000        ∞
+
+  Class       λ (ext)     c²_a
+  C1           1.0000   1.0000
+
+OVERALL RELIABILITY ASSESSMENT
+------------------------------
+Score: 97 / 100  (HIGH)
+Findings: 0 critical, 0 warning, 1 info
+
+The network sits comfortably inside the assumptions of heavy-traffic SRBM theory. E[X] estimates should be within ~5–10% of simulation for most primitives.
+
+FINDINGS (grouped by severity)
+------------------------------
+
+[INFO    ] 1. Routing has self-loops (max P[i][i] = 0.300)
+  Why:     A customer can re-enter the same station. The arrival stream to that station is no longer the renewal superposition Whitt's formula assumes, so the computed arrival SCV (and therefore Σ) is an approximation.
+  Fix:     If the self-loop is physically meaningful, the approximation is usually fine at moderate probabilities (P < 0.3). For P close to 1 (e.g. heavy rework), consider modeling the loop as a separate station.
+  Affects: E[X] at looped stations
+
+PERFORMANCE METRIC RELIABILITY
+------------------------------
+  E[X_i] (queue length):          HIGH        primitives inside heavy-traffic sweet spot
+  Throughput (Γ_i):               HIGH        Γ = α; derived exactly from traffic equations
+  Utilization (ρ_i):              HIGH        ρ = α / (s·μ); derived exactly from primitives
+  Sojourn time:                   HIGH        sojourn = E[X]/Γ; inherits E[X] reliability
+  Per-class W, T, N:              HIGH        Little's law applied to E[X]; inherits its reliability
+
+TOP ACTIONABLE SUGGESTIONS
+--------------------------
+1. If the self-loop is physically meaningful, the approximation is usually fine at moderate probabilities (P < 0.3). For P close to 1 (e.g. heavy rework), consider modeling the loop as a separate station.
+

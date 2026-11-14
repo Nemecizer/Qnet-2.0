@@ -1,0 +1,62 @@
+{
+  "blocking" : "loss",
+  "classes" : [
+    "c1"
+  ],
+  "external_arrivals" : [
+    {
+      "class" : "c1",
+      "rate" : 0.69999999999999996,
+      "station" : "s1"
+    }
+  ],
+  "name" : "Tandem2.MM1.K5.fin",
+  "routing" : [
+    {
+      "destinations" : [
+        {
+          "class" : "c1",
+          "probability" : 1,
+          "station" : "s2"
+        }
+      ],
+      "from_class" : "c1",
+      "from_station" : "s1"
+    },
+    {
+      "destinations" : [
+        {
+          "exit" : true,
+          "probability" : 1
+        }
+      ],
+      "from_class" : "c1",
+      "from_station" : "s2"
+    }
+  ],
+  "schema_version" : 1,
+  "service_discipline" : "fcfs",
+  "solver" : {
+    "max_iterations" : 200000,
+    "max_states" : 200000,
+    "tolerance" : 9.9999999999999998e-13
+  },
+  "stations" : [
+    {
+      "capacity" : 5,
+      "id" : "s1",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1
+      }
+    },
+    {
+      "capacity" : 5,
+      "id" : "s2",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1
+      }
+    }
+  ]
+}

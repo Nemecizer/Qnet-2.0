@@ -1,0 +1,75 @@
+{
+  "covariance" : [
+    [
+      0.90000000000000002,
+      0,
+      0
+    ],
+    [
+      0,
+      0.80000000000000004,
+      0
+    ],
+    [
+      0,
+      0,
+      0.83999999999999997
+    ]
+  ],
+  "drift" : [
+    -0.55000000000000004,
+    -0.59999999999999998,
+    -0.58000000000000007
+  ],
+  "model_type" : "orthant_srbm_bar_bounds",
+  "name" : "Schwerer01.d3.c3.inf",
+  "reflection" : [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "relaxation" : {
+    "max_psd_entries" : 5000000,
+    "max_variables" : 100000,
+    "order" : 2,
+    "targets" : [
+      {
+        "moment" : [
+          1,
+          0,
+          0
+        ],
+        "name" : "mean_workload_1"
+      },
+      {
+        "moment" : [
+          0,
+          1,
+          0
+        ],
+        "name" : "mean_workload_2"
+      },
+      {
+        "moment" : [
+          0,
+          0,
+          1
+        ],
+        "name" : "mean_workload_3"
+      }
+    ]
+  },
+  "schema_version" : 1
+}

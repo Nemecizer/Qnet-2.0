@@ -1,0 +1,182 @@
+{
+  "completedAt" : "2026-11-11T04:55:48Z",
+  "elapsedSeconds" : 0.43621599674224854,
+  "id" : "D5E2D9B2-949C-40D7-94F8-B8E16852396F",
+  "measurements" : [
+    {
+      "estimate" : 4.2769036,
+      "id" : "B3C9B9CA-1F3E-404D-9540-4B26A6594CC8",
+      "metric" : "Mean number in system",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.86064086,
+      "id" : "8EC6B761-154C-4C7E-B942-94BBBC79AD74",
+      "metric" : "Server utilization",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.043732374,
+      "id" : "CCDD5C6D-ACA4-4664-80CC-1F66CD5C72EE",
+      "metric" : "Full probability",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "probability"
+    },
+    {
+      "estimate" : 0.86064086,
+      "id" : "718569D0-670A-4A8D-B1C3-7D7BEB889419",
+      "metric" : "Throughput",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 4.9694406,
+      "id" : "06FB7A4D-73EF-4F1A-B7AC-91D4062A288A",
+      "metric" : "Mean sojourn time",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "time"
+    }
+  ],
+  "method" : {
+    "displayName" : "Exact Sparse CTMC",
+    "fidelity" : "Exact queueing result",
+    "identifier" : "queue.finite-ctmc",
+    "implementation" : "generic_ctmc",
+    "layer" : "Queueing process",
+    "shortName" : "CTMC"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Finite capacity",
+    "exportStationIDs" : [
+      "EE000001-0001-0001-0001-000000000003"
+    ],
+    "networkFingerprint" : "4a61f9da5223f27e8e2ed5351813d746071f68158092d346416cfbfbc9bb1e9b",
+    "networkSnapshot" : {
+      "infiniteBuffers" : false,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000001",
+          "id" : "EE000001-0001-0001-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000002",
+          "id" : "EE000001-0001-0001-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000003",
+          "id" : "EE000001-0001-0001-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000004"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.9",
+          "id" : "EE000001-0001-0001-0001-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            220,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            340,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000004",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "MM1K.d1.c1.fin.bnet",
+    "parameters" : {
+      "blocking" : "loss",
+      "engine" : "C",
+      "max reachable states" : "200000",
+      "runtime" : "C engine; QNET_SOLVER_ROOT: \/Users\/nobody\/Library\/Caches\/qnet\/solvers\/stage\/Resources\/bin\/finite\/fBNAgc\/fbna_gc",
+      "service discipline" : "FCFS",
+      "stationary tolerance" : "1e-12"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/MM1K.d1.c1.fin.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Solving exact CTMC (C) ...  [ ]                                                       0.0s\r\u001b[KSolving exact CTMC (C) ...  [done]                                                    0.0s\nGeneric finite-state CTMC — loss on full\nModel: MM1K.d1.c1.fin.bnet\nStates: 12  Transitions: 22\nStationary solve: converged after 705 iterations; ||pi Q||_1=1.901e-12\nNetwork: E[N]=4.2769036  external accepted=0.86064086  external loss P=0.043732374\nFlow residuals: population=7.158e-12  max station\/class=7.158e-12\nStation s1: E[N]=4.2769036  utilization=0.86064086  P(full)=0.043732374  throughput=0.86064086  E[T]=4.9694406\n  Class c1: E[N]=4.2769036  accepted=0.86064086  completed=0.86064086  E[T]=4.9694406\nElapsed time: 0.078s\n\n",
+  "runEvidence" : {
+    "residual" : 1.901e-12
+  },
+  "startedAt" : "2026-11-11T04:55:48Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

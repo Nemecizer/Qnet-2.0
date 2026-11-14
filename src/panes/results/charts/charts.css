@@ -1,0 +1,16 @@
+/* The Results pane's Charts view (src/panes/results/charts/). Tokens only (src/styles.css). */
+.results-charts { flex: 1; min-height: 0; display: flex; flex-direction: column; background: var(--surface-2); }
+.results-charts-bar {
+  flex: none; display: flex; align-items: center; flex-wrap: wrap; gap: var(--sp-3);
+  padding: var(--sp-2) var(--sp-3); border-bottom: 1px solid var(--hairline); background: var(--surface);
+}
+.results-charts-bar .results-views { margin-right: 0; }
+.results-charts-bar .icon-btn:disabled { color: var(--btn-disabled-fg); background: transparent; }
+.results-charts-body { flex: 1; min-height: 0; overflow: auto; display: flex; flex-direction: column; gap: var(--sp-4); padding: var(--sp-5); }
+.results-chart-card {
+  flex: none; min-width: 0; width: 100%; max-width: 880px; padding: var(--sp-6); border: 1px solid var(--hairline); border-radius: var(--r-lg); background: var(--surface);
+}
+.results-charts-notice {
+  flex: none; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--sp-4);
+  padding: var(--sp-4) var(--sp-5); border-radius: var(--r-md); background: var(--info-bg); color: var(--text); font-size: var(--fs-sm);
+}

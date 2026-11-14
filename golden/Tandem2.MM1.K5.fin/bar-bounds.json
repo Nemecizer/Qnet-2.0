@@ -1,0 +1,50 @@
+{
+  "covariance" : [
+    [
+      1.3999999999999999,
+      -0.69999999999999996
+    ],
+    [
+      -0.69999999999999996,
+      1.3999999999999999
+    ]
+  ],
+  "drift" : [
+    -0.30000000000000004,
+    0
+  ],
+  "model_type" : "orthant_srbm_bar_bounds",
+  "name" : "Tandem2.MM1.K5.fin",
+  "reflection" : [
+    [
+      1,
+      0
+    ],
+    [
+      -1,
+      1
+    ]
+  ],
+  "relaxation" : {
+    "max_psd_entries" : 5000000,
+    "max_variables" : 100000,
+    "order" : 2,
+    "targets" : [
+      {
+        "moment" : [
+          1,
+          0
+        ],
+        "name" : "mean_workload_1"
+      },
+      {
+        "moment" : [
+          0,
+          1
+        ],
+        "name" : "mean_workload_2"
+      }
+    ]
+  },
+  "schema_version" : 1
+}

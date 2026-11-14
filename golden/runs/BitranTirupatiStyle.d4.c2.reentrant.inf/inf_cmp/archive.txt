@@ -1,0 +1,36 @@
+[Threads] 18 CPU cores for parallel solvers (Sim/Spectral/FE); analytical solvers (QNA/SBD/LP) are single-threaded
+Running spectral method ...  [                              ]  starting ...[KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  988/988      (100%)     0.4s
+Running QNA ...              [ ]                                                       0.0s[KRunning QNA ...              [done]                                                    0.1s
+Running RQNA ...             [ ]                                                       0.0s[KRunning RQNA ...             [done]                                                    0.0s
+Running SBD ...              [ ]                                                       0.0s[KRunning SBD ...              [done]                                                    0.1s
+Running simulation ...       [                              ]  starting ...[KRunning simulation ...       [[7m [27m [7m [27m [7m [27m                         ]  2/8          ( 25%)         [KRunning simulation ...       [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  8/8          (100%)     0.3s
+
+Network load: rho_max = 0.5000 at S1  (moderate load — SRBM/FEM are heavy-traffic limits; expect deviation from simulation)
+Routing graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference
+──  SRBM skew-symmetric case — Harrison–Williams 1987 exact product form  ──
+           Spectral       QNA            RQNA           SBD            Simulation                Average of Algorithms  Exact E[X]  (skew-sym)
+           ========       ===            ====           ===            ==========                =====================  ============
+
+rho_1      0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.499 ± 9.00e-04 (-0.2%)  0.500 (+0.0%)          0.500
+rho_2      0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.500 ± 3.00e-04 (+0.0%)  0.500 (+0.0%)          0.500
+rho_3      0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.500 ± 9.00e-04 (+0.0%)  0.500 (+0.0%)          0.500
+rho_4      0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.500 ± 9.00e-04 (+0.0%)  0.500 (+0.0%)          0.500
+
+Gamma_1    2.000 (+0.0%)  2.000 (+0.0%)  2.000 (+0.0%)  2.000 (+0.0%)  1.998 ± 0.002 (-0.1%)     2.000 (+0.0%)          2.000
+Gamma_2    2.000 (+0.0%)  2.000 (+0.0%)  2.000 (+0.0%)  2.000 (+0.0%)  1.998 ± 0.002 (-0.1%)     2.000 (+0.0%)          2.000
+Gamma_3    2.000 (+0.0%)  2.000 (+0.0%)  2.000 (+0.0%)  2.000 (+0.0%)  1.998 ± 0.002 (-0.1%)     2.000 (+0.0%)          2.000
+Gamma_4    2.000 (+0.0%)  2.000 (+0.0%)  2.000 (+0.0%)  2.000 (+0.0%)  1.998 ± 0.002 (-0.1%)     2.000 (+0.0%)          2.000
+
+sojourn_1  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.498 (-0.4%)             0.500 (+0.0%)          0.500
+sojourn_2  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)             0.500 (+0.0%)          0.500
+sojourn_3  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)             0.500 (+0.0%)          0.500
+sojourn_4  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)  0.500 (+0.0%)             0.500 (+0.0%)          0.500
+
+E[Q_1]     1.000 (+0.0%)  1.000 (+0.0%)  1.000 (+0.0%)  1.000 (+0.0%)  0.995 ± 0.006 (-0.5%)     1.000 (+0.0%)          1.000
+E[Q_2]     1.000 (+0.0%)  1.000 (+0.0%)  1.000 (+0.0%)  1.000 (+0.0%)  0.999 ± 0.001 (-0.1%)     1.000 (+0.0%)          1.000
+E[Q_3]     1.000 (+0.0%)  1.000 (+0.0%)  1.000 (+0.0%)  1.000 (+0.0%)  0.999 ± 0.006 (-0.1%)     1.000 (+0.0%)          1.000
+E[Q_4]     1.000 (+0.0%)  1.000 (+0.0%)  1.000 (+0.0%)  1.000 (+0.0%)  0.999 ± 0.005 (-0.1%)     1.000 (+0.0%)          1.000
+
+QNET_COMPARISON_STATUS_V1 partial=no successful=5
+Elapsed time: 1.176s
+

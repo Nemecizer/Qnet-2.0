@@ -1,0 +1,26 @@
+Fitting adaptive low-rank BAR ...  [ ]                                                       0.0s[KFitting adaptive low-rank BAR ...  [/]                                                       0.2s[KFitting adaptive low-rank BAR ...  [-]                                                       0.5s[KFitting adaptive low-rank BAR ...  [done]                                                    0.7s
+Adaptive low-rank BAR analysis
+Model layer: stationary orthant SRBM diffusion
+Claim: adaptive low-rank BAR approximation (not a certified moment bound)
+Rank: 3  converged: yes
+
+E[Z_1] = 0.5    Var[Z_1] = 0.25
+E[Z_2] = 1    Var[Z_2] = 1
+E[Z_3] = 1    Var[Z_3] = 1
+E[Z_4] = 0.5    Var[Z_4] = 0.25
+E[Z_5] = 0.5    Var[Z_5] = 0.25
+
+Held-out relative BAR RMS = 1.4643e-11
+Held-out relative BAR max = 3.46749e-11
+Skew-symmetry residual    = 0
+Simplex mass error        = 5.55e-17
+WARNING: Held-out BAR residuals test the fitted transform but do not bound error in the reported moments.
+WARNING: The skew-symmetry residual is numerically small, but the identity is not exact for the supplied decimal parameters; the result remains an approximation.
+
+  L_1 = 1.000000    (workload E[Z_1] = 0.500000, mu_i = 2.000000)
+  L_2 = 2.000000    (workload E[Z_2] = 1.000000, mu_i = 2.000000)
+  L_3 = 2.000000    (workload E[Z_3] = 1.000000, mu_i = 2.000000)
+  L_4 = 1.000000    (workload E[Z_4] = 0.500000, mu_i = 2.000000)
+  L_5 = 1.000000    (workload E[Z_5] = 0.500000, mu_i = 2.000000)
+Elapsed time: 0.833s
+

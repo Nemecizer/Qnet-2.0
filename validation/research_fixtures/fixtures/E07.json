@@ -1,0 +1,33 @@
+{
+  "id": "E07",
+  "title": "Harrison non-product-form 2-D RBM",
+  "evidence": "published_exact",
+  "source": "Plans.md section 4, E07; P24 PDF p15, example 1",
+  "model": {
+    "domain": "orthant",
+    "dimension": 2,
+    "drift": [-1.0, 0.0],
+    "covariance": [
+      [1.0, 0.0],
+      [0.0, 1.0]
+    ],
+    "reflection": [
+      [1.0, 0.0],
+      [-1.0, 1.0]
+    ]
+  },
+  "expected": {
+    "mean": [0.5, 0.75],
+    "second_moment": [0.5, 1.25],
+    "cross_moment_12": 0.46875,
+    "covariance_12": 0.09375,
+    "boundary_rates": [1.0, 1.0],
+    "sum_tail": {
+      "1": 0.48392385851224,
+      "2": 0.18736229631151,
+      "5": 0.0095217236897292,
+      "10": 6.4204953144813e-05
+    }
+  },
+  "notes": "Exact but not product form: the coordinates are dependent (Cov = 3/32). A product-form solver cannot pass this by accident."
+}

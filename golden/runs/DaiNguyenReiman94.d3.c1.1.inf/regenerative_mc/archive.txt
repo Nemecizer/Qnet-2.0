@@ -1,0 +1,50 @@
+Running regenerative simulation (C) ...  [ ]                                                       0.0s[KRunning regenerative simulation (C) ...  [/]                                                       0.2s[KRunning regenerative simulation (C) ...  [done]                                                    0.2s
+Regenerative Monte Carlo
+Model layer: queueing process (simulation)
+Evidence: regenerative ratio confidence intervals; asymptotic, not finite-sample, and they describe sampling error only
+Model: DaiNguyenReiman94.d3.c1.1.inf.bnet
+
+Complete empty-to-empty cycles: 7600
+Stopping reason: precision_target_met
+Precision target met: yes
+
+Node                   E[N]         E[Q]  utilisation   throughput
+------------------------------------------------------------------
+s1                 2.075865     1.401436     0.674429     0.674945
+s2                 8.865625     7.967235     0.898391     0.899495
+s3                 0.816462     0.366206     0.450256     0.449756
+
+Quantity                               estimate   std error              95% interval  eff. cycles
+--------------------------------------------------------------------------------------------------
+Mean number in system                 11.757952    0.265233    [11.238022, 12.277883]       1208.8
+External blocking probability          0.000000    0.000000      [0.000000, 0.000000]       1133.5
+Departure rate                         0.225206    0.000351      [0.224517, 0.225894]       1208.8
+E[N] at s1                             2.075865    0.015850      [2.044795, 2.106936]       1208.8
+utilisation at s1                      0.674429    0.001499      [0.671490, 0.677368]       1208.8
+E[N] at s1, class c1                   2.075865    0.015850      [2.044795, 2.106936]       1208.8
+E[N] at s2                             8.865625    0.252759      [8.370147, 9.361103]       1208.8
+utilisation at s2                      0.898391    0.002021      [0.894429, 0.902352]       1208.8
+E[N] at s2, class c1                   8.865625    0.252759      [8.370147, 9.361103]       1208.8
+E[N] at s3                             0.816462    0.003571      [0.809461, 0.823462]       1208.8
+utilisation at s3                      0.450256    0.000953      [0.448387, 0.452125]       1208.8
+E[N] at s3, class c1                   0.816462    0.003571      [0.809461, 0.823462]       1208.8
+
+Uncertainty uses complete regenerative cycles, not individual events.
+
+QNET_NODE_METRIC_V1 node_id=s1 metric=mean_number class_id=- estimate=2.075865431454115 standard_error=0.015850014727167076 ci_confidence=0.94999999999999996 ci_low=2.0447950245698481 ci_high=2.1069358383383818 ci_half_width=0.031070406884266762 effective_cycles=1208.7832007973702
+QNET_NODE_METRIC_V1 node_id=s1 metric=mean_queue class_id=- estimate=1.4014362422549063 standard_error=0.014535931489245885 ci_confidence=0.94999999999999996 ci_low=1.3729418014870636 ci_high=1.4299306830227489 ci_half_width=0.028494440767842615 effective_cycles=1208.7832007973702
+QNET_NODE_METRIC_V1 node_id=s1 metric=utilization class_id=- estimate=0.67442918919921169 standard_error=0.0014991240378377109 ci_confidence=0.94999999999999996 ci_low=0.67149049200382249 ci_high=0.67736788639460088 ci_half_width=0.0029386971953891494 effective_cycles=1208.7832007973702
+QNET_NODE_METRIC_V1 node_id=s1 metric=service_completion_rate class_id=- estimate=0.67494490386345318 standard_error=0.0013731858720537828 ci_confidence=0.94999999999999996 ci_low=0.67225308025906827 ci_high=0.6776367274678381 ci_half_width=0.0026918236043849686 effective_cycles=1208.7832007973702
+QNET_NODE_METRIC_V1 node_id=s1 metric=mean_number_class class_id=c1 estimate=2.075865431454115 standard_error=0.015850014727167076 ci_confidence=0.94999999999999996 ci_low=2.0447950245698481 ci_high=2.1069358383383818 ci_half_width=0.031070406884266762 effective_cycles=1208.7832007973702
+QNET_NODE_METRIC_V1 node_id=s2 metric=mean_number class_id=- estimate=8.8656254534204706 standard_error=0.25275925525906884 ci_confidence=0.94999999999999996 ci_low=8.370147497100163 ci_high=9.3611034097407781 ci_half_width=0.49547795632030711 effective_cycles=1208.7832007973702
+QNET_NODE_METRIC_V1 node_id=s2 metric=mean_queue class_id=- estimate=7.9672347262274723 standard_error=0.25122895786963745 ci_confidence=0.94999999999999996 ci_low=7.4747565754822398 ci_high=8.4597128769727057 ci_half_width=0.49247815074523288 effective_cycles=1208.7832007973702
+QNET_NODE_METRIC_V1 node_id=s2 metric=utilization class_id=- estimate=0.89839072719297153 standard_error=0.002020808057643961 ci_confidence=0.94999999999999996 ci_low=0.89442938522157356 ci_high=0.9023520691643695 ci_half_width=0.003961341971397957 effective_cycles=1208.7832007973702
+QNET_NODE_METRIC_V1 node_id=s2 metric=service_completion_rate class_id=- estimate=0.89949474227276505 standard_error=0.0018616599112125786 ci_confidence=0.94999999999999996 ci_low=0.89584537462755021 ci_high=0.90314410991797989 ci_half_width=0.0036493676452148721 effective_cycles=1208.7832007973702
+QNET_NODE_METRIC_V1 node_id=s2 metric=mean_number_class class_id=c1 estimate=8.8656254534204706 standard_error=0.25275925525906884 ci_confidence=0.94999999999999996 ci_low=8.370147497100163 ci_high=9.3611034097407781 ci_half_width=0.49547795632030711 effective_cycles=1208.7832007973702
+QNET_NODE_METRIC_V1 node_id=s3 metric=mean_number class_id=- estimate=0.8164615114022078 standard_error=0.0035711966044229796 ci_confidence=0.94999999999999996 ci_low=0.80946097963784613 ci_high=0.82346204316656946 ci_half_width=0.007000531764361698 effective_cycles=1208.7832007973702
+QNET_NODE_METRIC_V1 node_id=s3 metric=mean_queue class_id=- estimate=0.36620552728397621 standard_error=0.0027612714694925447 ci_confidence=0.94999999999999996 ci_low=0.3607926724979173 ci_high=0.37161838207003511 ci_half_width=0.0054128547860589132 effective_cycles=1208.7832007973702
+QNET_NODE_METRIC_V1 node_id=s3 metric=utilization class_id=- estimate=0.45025598411822954 standard_error=0.00095324195949941174 ci_confidence=0.94999999999999996 ci_low=0.44838736657744976 ci_high=0.45212460165900931 ci_half_width=0.0018686175407797941 effective_cycles=1208.7832007973702
+QNET_NODE_METRIC_V1 node_id=s3 metric=service_completion_rate class_id=- estimate=0.44975563050448225 standard_error=0.00084784274826206366 ci_confidence=0.94999999999999996 ci_low=0.44809362453061868 ci_high=0.45141763647834582 ci_half_width=0.0016620059738635721 effective_cycles=1208.7832007973702
+QNET_NODE_METRIC_V1 node_id=s3 metric=mean_number_class class_id=c1 estimate=0.8164615114022078 standard_error=0.0035711966044229796 ci_confidence=0.94999999999999996 ci_low=0.80946097963784613 ci_high=0.82346204316656946 ci_half_width=0.007000531764361698 effective_cycles=1208.7832007973702
+Elapsed time: 0.254s
+

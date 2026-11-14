@@ -1,0 +1,26 @@
+[A[2K[Threads] Using 18 CPU cores (OpenMP)
+Running simulation ...  [                              ]  starting ...[KRunning simulation ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  8/8          (100%)     0.1s
+
+Network load: rho_max = 1.845 at S2  (heavy-traffic regime — analytical methods are most accurate here)
+Buffer regime: K*(1-rho) = -9.300 at S2 (K=11, rho=1.845) — small for the heavy-traffic limit (target ~1-5); SRBM may overstate E[X] / understate loss by 10-20%
+           Simulation
+           ==========
+
+rho_1      1.000 ± 3.00e-06
+rho_2      0.981 ± 6.96e-04
+rho_3      0.885 ± 0.002
+
+Gamma_1    0.983 ± 0.002
+Gamma_2    0.983 ± 0.002
+Gamma_3    0.983 ± 0.002
+
+sojourn_1  10.484 ± 0.026
+sojourn_2  7.839 ± 0.031
+sojourn_3  5.698 ± 0.035
+
+E[X_1]     10.311 ± 0.005
+E[X_2]     7.710 ± 0.024
+E[X_3]     5.604 ± 0.031
+
+Elapsed time: 0.105s
+

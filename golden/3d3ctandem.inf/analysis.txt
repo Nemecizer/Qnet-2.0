@@ -1,0 +1,48 @@
+NETWORK ANALYSIS — Brownian Heavy-Traffic Reliability
+=====================================================
+
+NETWORK SUMMARY
+---------------
+Stations:         3
+Customer classes: 3
+Buffer model:     infinite
+
+KEY PRIMITIVES
+--------------
+  Station   servers    μ_eff        α          ρ   c²_s_eff   buffer
+  S1              1   1.1111   1.0667     0.9600     1.1111        ∞
+  S2              1   1.1111   1.0667     0.9600     0.0000        ∞
+  S3              1   1.1429   1.0667     0.9333     1.0027        ∞
+
+  Class       λ (ext)     c²_a
+  C1           0.3333   0.0000
+  C2           0.4000   1.0000
+  C3           0.3333   0.3333
+
+OVERALL RELIABILITY ASSESSMENT
+------------------------------
+Score: 97 / 100  (HIGH)
+Findings: 0 critical, 0 warning, 1 info
+
+The network sits comfortably inside the assumptions of heavy-traffic SRBM theory. E[X] estimates should be within ~5–10% of simulation for most primitives.
+
+FINDINGS (grouped by severity)
+------------------------------
+
+[INFO    ] 1. Station 2 has deterministic service (c²_s = 0) — M/D/1-like
+  Why:     Station is well-posed (Σ_ii is kept positive by arrival variability), but the two-moment SRBM slightly overestimates queue length relative to the Pollaczek–Khinchine exact answer for M/D/1.
+  Fix:     If you need high accuracy for deterministic-service stations, cross-check E[X_2] against the M/D/1 formula ρ²/(2(1−ρ)). Otherwise SRBM is usually within ~10
+  Affects: E[X_2]
+
+PERFORMANCE METRIC RELIABILITY
+------------------------------
+  E[X_i] (queue length):          MODERATE    service SCV is extreme — expect bias in E[X]
+  Throughput (Γ_i):               HIGH        Γ = α; derived exactly from traffic equations
+  Utilization (ρ_i):              HIGH        ρ = α / (s·μ); derived exactly from primitives
+  Sojourn time:                   MODERATE    sojourn = E[X]/Γ; inherits E[X] reliability
+  Per-class W, T, N:              MODERATE    Little's law applied to E[X]; inherits its reliability
+
+TOP ACTIONABLE SUGGESTIONS
+--------------------------
+1. If you need high accuracy for deterministic-service stations, cross-check E[X_2] against the M/D/1 formula ρ²/(2(1−ρ)). Otherwise SRBM is usually within ~10
+

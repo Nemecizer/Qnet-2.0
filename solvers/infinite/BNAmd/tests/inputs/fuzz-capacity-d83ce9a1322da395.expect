@@ -1,0 +1,4 @@
+# found by validation/fuzz/fuzz_mc_solver.py in 0.90.34's mc_solver: mc_fem_gauss.c:176 signed overflow of the per-thread capacity (n_elem/threads + 1) * 4^K * 4^K
+# made from BuzacottShanthikumarStyle.d5.c1.reentrant.inf.bnet by m_grow (seed 20261112, case 37)
+args=-G -n 2147483647
+exit=1

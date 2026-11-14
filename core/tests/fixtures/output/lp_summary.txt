@@ -1,0 +1,45 @@
+printf '\n'
+awk -v mu="$MU" -v servers="$SERVERS" '
+  BEGIN {
+    nMu = split(mu,      muarr, " ")
+    nSv = split(servers, svarr, " ")
+  }
+  /^\[Solve\] Optimal/       { u_star=$4; solver_line=$0; next }
+  /^\[Solve\] Using solver:/ { solver_name=$NF; next }
+  /^\[Total\]/               { total_s=$2 "s"; next }
+  /^  grid_n/                 { grid_n=$NF; next }
+  /^  basis_m/                { basis_m=$NF; next }
+  /^\[Build LP\]/            { build_line=$0; next }
+  /^E\[X_[0-9]+\] = /        {
+    m = match($1, /[0-9]+/)
+    idx = substr($1, RSTART, RLENGTH) + 0
+    workloads[idx] = $NF + 0
+    if (idx > d) d = idx
+    next
+  }
+  END {
+    printf "Linear Program (Saure-Glynn-Zeevi 2008 LP)\n"
+    printf "==========================================\n\n"
+    printf "Solver: %s  |  grid_n = %s  |  basis_m = %s\n",
+           solver_name, grid_n, basis_m
+    if (build_line  != "") print build_line
+    if (solver_line != "") print solver_line
+    if (total_s     != "") printf "[Total] %s\n", total_s
+    printf "\n%-6s %-8s %-16s %-16s %-10s\n",
+           "Node","Servers","E[Y] (workload)","L = mu·E[Y]","mu_i"
+    sumL = 0
+    for (i = 1; i <= d; i++) {
+      mu_i = muarr[i] + 0
+      sv   = (i <= nSv ? svarr[i] : 1)
+      L    = workloads[i] * mu_i
+      printf "%-6d %-8d %-16.4f %-16.4f %-10.4f\n",
+             i, sv, workloads[i], L, mu_i
+      sumL += L
+    }
+    printf "\nNetwork Totals:\n"
+    if (d > 0) {
+      printf "  Total E[N]:             %.4f\n", sumL
+      printf "  Average queue length:   %.4f\n", sumL / d
+    }
+  }
+' "OUT"

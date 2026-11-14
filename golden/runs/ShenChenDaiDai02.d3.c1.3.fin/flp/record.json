@@ -1,0 +1,332 @@
+{
+  "completedAt" : "2026-11-11T04:56:49Z",
+  "elapsedSeconds" : 2.038908004760742,
+  "id" : "84A07B71-DC9D-42ED-A61D-D8120B3C6560",
+  "measurements" : [
+    {
+      "estimate" : 0.9,
+      "id" : "B2A7FB17-D634-438A-8C51-6E67DCC8DD7C",
+      "metric" : "Utilization",
+      "stationID" : "D4E5F6A7-4444-3333-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 1,
+      "id" : "06EB9520-4A05-47B3-AE6B-D9BD41194597",
+      "metric" : "Utilization",
+      "stationID" : "D4E5F6A7-4444-3333-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.951,
+      "id" : "C558E011-72C6-461F-9861-EF0765E66FF8",
+      "metric" : "Utilization",
+      "stationID" : "D4E5F6A7-4444-3333-1111-000000000007",
+      "stationName" : "S3",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 1,
+      "id" : "2C0A570E-DE4E-4335-858F-AE28B6E4BFF5",
+      "metric" : "Throughput",
+      "stationID" : "D4E5F6A7-4444-3333-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.9,
+      "id" : "9104619B-A13D-46F9-B27C-384E85957563",
+      "metric" : "Throughput",
+      "stationID" : "D4E5F6A7-4444-3333-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.856,
+      "id" : "E8DE3563-B187-4690-BBE0-7C23E1E8DD57",
+      "metric" : "Throughput",
+      "stationID" : "D4E5F6A7-4444-3333-1111-000000000007",
+      "stationName" : "S3",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 7.321,
+      "id" : "559FEBFA-7551-4036-AFB8-37D4214A2292",
+      "metric" : "Mean sojourn time",
+      "stationID" : "D4E5F6A7-4444-3333-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 14.817,
+      "id" : "842B2322-315C-4AB2-920D-02BDE902E6C4",
+      "metric" : "Mean sojourn time",
+      "stationID" : "D4E5F6A7-4444-3333-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 11.113,
+      "id" : "EB84F673-9729-4930-B28A-0F47577FAD28",
+      "metric" : "Mean sojourn time",
+      "stationID" : "D4E5F6A7-4444-3333-1111-000000000007",
+      "stationName" : "S3",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 7.321,
+      "id" : "CD617180-3F0D-4080-BB35-EF349506E406",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "D4E5F6A7-4444-3333-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 13.335,
+      "id" : "2EE98C88-ECB6-47E5-A1D6-496902510DC5",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "D4E5F6A7-4444-3333-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 9.514,
+      "id" : "3C45B10E-22E9-443A-811A-1D911CF0E20E",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "D4E5F6A7-4444-3333-1111-000000000007",
+      "stationName" : "S3",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "BAR Linear Program",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.lp",
+    "implementation" : "BNAlp\/fBNAlp",
+    "layer" : "SRBM diffusion",
+    "shortName" : "LP"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Finite capacity",
+    "exportStationIDs" : [
+      "D4E5F6A7-4444-3333-1111-000000000003",
+      "D4E5F6A7-4444-3333-1111-000000000005",
+      "D4E5F6A7-4444-3333-1111-000000000007"
+    ],
+    "networkFingerprint" : "a599d4583547568743fe5824678dac32086095054614ba514fd6feb03749137c",
+    "networkSnapshot" : {
+      "infiniteBuffers" : false,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D4E5F6A7-4444-3333-1111-000000000001",
+          "id" : "D4E5F6A7-4444-3333-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "D4E5F6A7-4444-3333-1111-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D4E5F6A7-4444-3333-1111-000000000002",
+          "id" : "D4E5F6A7-4444-3333-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "D4E5F6A7-4444-3333-1111-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D4E5F6A7-4444-3333-1111-000000000003",
+          "id" : "D4E5F6A7-4444-3333-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "D4E5F6A7-4444-3333-1111-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D4E5F6A7-4444-3333-1111-000000000004",
+          "id" : "D4E5F6A7-4444-3333-2222-000000000004",
+          "routingProbability" : 1,
+          "toNodeID" : "D4E5F6A7-4444-3333-1111-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D4E5F6A7-4444-3333-1111-000000000005",
+          "id" : "D4E5F6A7-4444-3333-2222-000000000005",
+          "routingProbability" : 1,
+          "toNodeID" : "D4E5F6A7-4444-3333-1111-000000000006"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D4E5F6A7-4444-3333-1111-000000000006",
+          "id" : "D4E5F6A7-4444-3333-2222-000000000006",
+          "routingProbability" : 1,
+          "toNodeID" : "D4E5F6A7-4444-3333-1111-000000000007"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D4E5F6A7-4444-3333-1111-000000000007",
+          "id" : "D4E5F6A7-4444-3333-2222-000000000007",
+          "routingProbability" : 1,
+          "toNodeID" : "D4E5F6A7-4444-3333-1111-000000000008"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=1.0",
+          "id" : "D4E5F6A7-4444-3333-1111-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "D4E5F6A7-4444-3333-1111-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            190,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "erlang",
+          "distributionParameters" : "k=4,rate=4.44444444",
+          "id" : "D4E5F6A7-4444-3333-1111-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            280,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 15,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "D4E5F6A7-4444-3333-1111-000000000004",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            370,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=0.9",
+          "id" : "D4E5F6A7-4444-3333-1111-000000000005",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 15,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "D4E5F6A7-4444-3333-1111-000000000006",
+          "kind" : "buffer",
+          "name" : "B3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            550,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "gamma",
+          "distributionParameters" : "shape=0.5,scale=2.222222",
+          "id" : "D4E5F6A7-4444-3333-1111-000000000007",
+          "kind" : "station",
+          "name" : "S3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            640,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "D4E5F6A7-4444-3333-1111-000000000008",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            730,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "ShenChenDaiDai02.d3.c1.3.fin.bnet",
+    "parameters" : {
+      "basis normalization" : "false",
+      "basis size" : "auto",
+      "grid size" : "auto",
+      "grid type" : "uniform",
+      "solver" : "highs"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/ShenChenDaiDai02.d3.c1.3.fin.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] Single-threaded (analytical solver)\nRunning finite LP method (highs) ...  [ ]                                                       0.0s\r\u001b[KRunning finite LP method (highs) ...  [\/]                                                       0.2s\r\u001b[KRunning finite LP method (highs) ...  [-]                                                       0.5s\r\u001b[KRunning finite LP method (highs) ...  [\\]                                                       0.7s\r\u001b[KRunning finite LP method (highs) ...  [|]                                                       1.0s\r\u001b[KRunning finite LP method (highs) ...  [\/]                                                       1.2s\r\u001b[KRunning finite LP method (highs) ...  [-]                                                       1.5s\r\u001b[KRunning finite LP method (highs) ...  [done]                                                    1.7s\n\nNetwork load: rho_max = 1.1111 at S2  (heavy-traffic regime — analytical methods are most accurate here)\nBuffer regime: K*(1-rho) = -1.78 at S2 (K=16, rho=1.111) — small for the heavy-traffic limit (target ~1-5); SRBM may overstate E[X] \/ understate loss by 10-20%\n           Finite LP\n           =========\n\nrho_1      0.900\nrho_2      1.000\nrho_3      0.951\n\nGamma_1    1.000\nGamma_2    0.900\nGamma_3    0.856\n\nsojourn_1  7.321\nsojourn_2  14.817\nsojourn_3  11.113\n\nE[X_1]     7.321\nE[X_2]     13.335\nE[X_3]     9.514\n\nElapsed time: 1.718s\n\n",
+  "startedAt" : "2026-11-11T04:56:47Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

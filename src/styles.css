@@ -1,0 +1,847 @@
+/* Qnet design tokens and global styles (from NetMon, without its metric, node and chart tokens).
+ *
+ * Colour comes from one 12-step neutral ramp per theme, all at OKLCH hue 255 with chroma
+ * 0.005–0.012, so every grey in the app is the same faintly cool grey. Step 1 is the backdrop
+ * behind the panes; steps 2–12 run from the pane surface to the strongest text.
+ *
+ *   step  token                       step  token
+ *   1     --desk                       7     (spare: disabled text)
+ *   2     --surface                    8     --field-border (3:1 on surface)
+ *   3     --surface-2, --zebra,        9     --muted (4.5:1 on 2 and 3)
+ *         --chrome                     10    (spare)
+ *   4     --hover, --surface-3         11    --text-2
+ *   5     --hairline                   12    --text (7:1 and up)
+ *   6     --border
+ *
+ * Every pair that has to stay legible is checked in src/test/contrast.test.ts (WCAG 2 contrast),
+ * for both themes and the increased-contrast variant. Change a value, run
+ * `npx vitest run src/test/contrast.test.ts`.
+ *
+ * Themes: :root is light. Dark is :root[data-theme="dark"], and the same block again inside
+ * prefers-color-scheme for "System" (keep the two copies equal; a test checks). src/lib/theme.ts
+ * sets data-theme, data-contrast and data-motion on <html>, and index.html applies the saved
+ * choice before the first paint.
+ *
+ * Customer-class colours (the canvas's link colours) are in the Canvas block at the end.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Neutral ramp, light. */
+  --gray-1: #cdd3db;  /* oklch(86.5% 0.012 255) */
+  --gray-2: #fbfeff;  /* oklch(99.5% 0.005 255) */
+  --gray-3: #edf0f4;  /* oklch(95.5% 0.006 255) */
+  --gray-4: #e3e6eb;  /* oklch(92.5% 0.007 255) */
+  --gray-5: #d2d6db;  /* oklch(87.5% 0.008 255) */
+  --gray-6: #b9bec4;  /* oklch(80% 0.010 255) */
+  --gray-7: #a0a5ac;  /* oklch(72% 0.011 255) */
+  --gray-8: #868b92;  /* oklch(63.5% 0.012 255) */
+  --gray-9: #646970;  /* oklch(52% 0.012 255) */
+  --gray-10: #52575d; /* oklch(45.5% 0.012 255) */
+  --gray-11: #41454c; /* oklch(39% 0.012 255) */
+  --gray-12: #13161b; /* oklch(20% 0.010 255) */
+
+  /* Surfaces, lines and text (roles over the ramp). */
+  --desk: var(--gray-1);
+  --surface: var(--gray-2);
+  --surface-2: var(--gray-3);
+  --surface-3: var(--gray-4);
+  --zebra: var(--gray-3);
+  --chrome: var(--gray-3);
+  --hover: var(--gray-4);
+  --hairline: var(--gray-5);
+  --border: var(--gray-6);
+  --field-border: var(--gray-8);
+  --muted: var(--gray-9);
+  --text-2: var(--gray-11);
+  --text: var(--gray-12);
+  --overlay: rgba(19, 22, 27, 0.32);
+
+  /* Accent: --accent and --accent-text for links, icons and rings; --accent-fill behind white
+     text (--on-accent). */
+  --accent: #186bc5;       /* oklch(53% 0.16 255) */
+  --accent-text: #1262b8;  /* a step darker than --accent: 4.5:1 on --hover and --sel too */
+  --accent-fill: #1467c2;  /* oklch(52% 0.16 255) */
+  --on-accent: #ffffff;
+  --focus-ring: #1a6dce;   /* oklch(54% 0.17 255): 3:1 on every ground a control sits on, the desk included */
+  --sel: #cee3ff;          /* oklch(91% 0.045 255) */
+  --sel-inactive: #dce0e5; /* oklch(90.5% 0.008 255) */
+  --sel-text: var(--text);
+  --sel-muted: var(--text-2);
+  --sel-strong: #003275;   /* oklch(33% 0.125 258) */
+  --btn-disabled-bg: #e8ebef;
+  --btn-disabled-fg: #8e9399;
+  --danger-fill: #c92f33;
+
+  /* Status. Reserved: never a class colour, always beside a word or an icon. */
+  --good: #25984d;         /* oklch(60% 0.15 150) */
+  --warning: #efa810;      /* oklch(78% 0.16 78) fills */
+  --warning-border: #c08000;
+  --critical: #cc3336;     /* oklch(56% 0.19 25) */
+  --info: #186bc5;
+  --good-text: #137738;
+  --warn-text: #8a5600;
+  --crit-text: #b32228;
+  /* Increase Contrast's inks (the contrast block re-points the four names): 4.5:1 on its darker --hover. */
+  --accent-text-more: #0d4585;
+  --good-text-more: #0a5226;
+  --warn-text-more: #5e3a00;
+  --crit-text-more: #8a151b;
+  --good-bg: color-mix(in srgb, var(--good) 14%, var(--surface));
+  --warn-bg: color-mix(in srgb, var(--warning) 18%, var(--surface));
+  --crit-bg: color-mix(in srgb, var(--critical) 12%, var(--surface));
+  --info-bg: color-mix(in srgb, var(--info) 11%, var(--surface));
+
+  --text-scale: 1;
+  --fs-2xs: calc(10.5px * var(--text-scale));
+  --fs-xs: calc(10.5px * var(--text-scale));
+  --fs-sm: calc(11px * var(--text-scale));
+  --fs-mono: calc(11.5px * var(--text-scale));
+  --fs-base: calc(12.5px * var(--text-scale));
+  --fs-md: calc(13px * var(--text-scale));
+  --fs-lg: calc(15px * var(--text-scale));
+  --fs-xl: calc(22px * var(--text-scale));
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, monospace;
+  /* Line heights: titles and one-line controls, running text, and text that is read (help, callouts). */
+  --lh-tight: 1.25;
+  --lh-body: 1.4;
+  --lh-prose: 1.5;
+
+  /* Space and shape. */
+  --sp-1: 2px;
+  --sp-2: 4px;
+  --sp-3: 6px;
+  --sp-4: 8px;
+  --sp-5: 12px;
+  --sp-6: 16px;
+  --sp-7: 24px;
+  --sp-8: 32px;
+  /* Radii: controls and fields; icon buttons, search fields and inset boxes; cards and popovers;
+     dialogs; chips and pills. */
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 8px;
+  --r-xl: 12px;
+  --r-pill: 999px;
+
+  /* Control heights: in-table and segment buttons; pills and small fields; the standard button,
+     field and icon button; the top bar; a page's own large controls. */
+  --ctl-xs: 20px;
+  --ctl-sm: 22px;
+  --ctl-md: 24px;
+  --ctl-bar: 26px;
+  --ctl-lg: 28px;
+
+  /* The one focus ring (the :focus-visible rule below): its width steps to 3px under Increase
+     contrast. Inside a clipped box the offset is negative, never another colour or style. */
+  --focus-width: 2px;
+  --focus-offset: 2px;
+
+  /* Motion. All durations drop to 0 under reduced motion. */
+  --dur-1: 120ms;
+  --dur-2: 180ms;
+  --dur-3: 260ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* A spinner's turn. Spinners, pulses and fades all stop under reduced motion (the rule below). */
+  --dur-spin: 900ms;
+
+  /* Depth: a raised segment or card on a surface; a panel floating over the canvas (the canvas's
+     own --canvas-panel-shadow); a popover, menu or dialog. */
+  --shadow-raised: 0 0 0 0.5px var(--border), 0 1px 2px rgba(19, 22, 27, 0.08);
+  --shadow-pop: 0 10px 28px rgba(19, 22, 27, 0.18), 0 1px 3px rgba(19, 22, 27, 0.12), 0 0 0 0.5px rgba(19, 22, 27, 0.16);
+  --z-popover: 20000;
+  --z-toast: 30000;
+  --z-dialog: 40000;
+  /* The groove of a progress bar. */
+  --track: var(--surface-3);
+
+  /* The top bar's height: the macOS traffic lights sit inside it (tauri.conf.json, y 20). */
+  --topbar-h: 40px;
+}
+
+/* Dark. Keep identical to the media-query copy below (a test compares them). */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --gray-1: #0a0c10;  /* oklch(15.5% 0.008 255) */
+  --gray-2: #25282c;  /* oklch(27.5% 0.008 255) */
+  --gray-3: #2d3135;  /* oklch(31% 0.009 255) */
+  --gray-4: #363a3e;  /* oklch(34.5% 0.010 255) */
+  --gray-5: #3f4348;  /* oklch(38% 0.010 255) */
+  --gray-6: #4c5056;  /* oklch(43% 0.011 255) */
+  --gray-7: #5c6167;  /* oklch(49% 0.012 255) */
+  --gray-8: #71767d;  /* oklch(56.5% 0.012 255) */
+  --gray-9: #9ba0a7;  /* oklch(70.5% 0.012 255) */
+  --gray-10: #b0b5bb; /* oklch(77% 0.011 255) */
+  --gray-11: #c8ccd2; /* oklch(84.5% 0.009 255) */
+  --gray-12: #eef0f3; /* oklch(95.5% 0.005 255) */
+  --overlay: rgba(0, 0, 0, 0.5);
+  --accent: #5fa1f3;
+  --accent-text: #72adf5;
+  --accent-fill: #2368bd;
+  --focus-ring: #539af2;
+  --sel: #203e64;
+  --sel-inactive: #44484d;
+  --sel-strong: #02468b;
+  --btn-disabled-bg: #32363a;
+  --btn-disabled-fg: #676c73;
+  --danger-fill: #be2e31;
+  --good: #3fc168;
+  --warning: #f3b01d;
+  --warning-border: #d79700;
+  --critical: #e54c4a;
+  --info: #5fa1f3;
+  --good-text: #58cd78;
+  --warn-text: #f4b93c;
+  --crit-text: #fa8282;
+  --accent-text-more: #a8cdfb;
+  --good-text-more: #8fe0a6;
+  --warn-text-more: #f8cf78;
+  --crit-text-more: #fdb0b0;
+  --good-bg: color-mix(in srgb, var(--good) 16%, var(--surface));
+  --warn-bg: color-mix(in srgb, var(--warning) 16%, var(--surface));
+  --crit-bg: color-mix(in srgb, var(--critical) 18%, var(--surface));
+  --info-bg: color-mix(in srgb, var(--info) 10%, var(--surface));
+  --shadow-pop: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(255, 255, 255, 0.1);
+  --shadow-raised: 0 0 0 0.5px var(--border), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --gray-1: #0a0c10;  /* oklch(15.5% 0.008 255) */
+    --gray-2: #25282c;  /* oklch(27.5% 0.008 255) */
+    --gray-3: #2d3135;  /* oklch(31% 0.009 255) */
+    --gray-4: #363a3e;  /* oklch(34.5% 0.010 255) */
+    --gray-5: #3f4348;  /* oklch(38% 0.010 255) */
+    --gray-6: #4c5056;  /* oklch(43% 0.011 255) */
+    --gray-7: #5c6167;  /* oklch(49% 0.012 255) */
+    --gray-8: #71767d;  /* oklch(56.5% 0.012 255) */
+    --gray-9: #9ba0a7;  /* oklch(70.5% 0.012 255) */
+    --gray-10: #b0b5bb; /* oklch(77% 0.011 255) */
+    --gray-11: #c8ccd2; /* oklch(84.5% 0.009 255) */
+    --gray-12: #eef0f3; /* oklch(95.5% 0.005 255) */
+    --overlay: rgba(0, 0, 0, 0.5);
+    --accent: #5fa1f3;
+    --accent-text: #72adf5;
+    --accent-fill: #2368bd;
+    --focus-ring: #539af2;
+    --sel: #203e64;
+    --sel-inactive: #44484d;
+    --sel-strong: #02468b;
+    --btn-disabled-bg: #32363a;
+    --btn-disabled-fg: #676c73;
+    --danger-fill: #be2e31;
+    --good: #3fc168;
+    --warning: #f3b01d;
+    --warning-border: #d79700;
+    --critical: #e54c4a;
+    --info: #5fa1f3;
+    --good-text: #58cd78;
+    --warn-text: #f4b93c;
+    --crit-text: #fa8282;
+    --accent-text-more: #a8cdfb;
+    --good-text-more: #8fe0a6;
+    --warn-text-more: #f8cf78;
+    --crit-text-more: #fdb0b0;
+    --good-bg: color-mix(in srgb, var(--good) 16%, var(--surface));
+    --warn-bg: color-mix(in srgb, var(--warning) 16%, var(--surface));
+    --crit-bg: color-mix(in srgb, var(--critical) 18%, var(--surface));
+    --info-bg: color-mix(in srgb, var(--info) 10%, var(--surface));
+    --shadow-pop: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(255, 255, 255, 0.1);
+    --shadow-raised: 0 0 0 0.5px var(--border), 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Increase contrast (Settings › Appearance, or the macOS setting). Keep the two copies equal. */
+:root[data-contrast="more"] {
+  --hairline: var(--gray-8);
+  --border: var(--gray-9);
+  --field-border: var(--gray-10);
+  --muted: var(--gray-10);
+  --text-2: var(--gray-12);
+  --zebra: var(--gray-4);
+  --hover: var(--gray-6);
+  --focus-width: 3px;
+  --sel: var(--sel-strong);
+  --sel-text: var(--on-accent);
+  --sel-muted: var(--sel-text);
+  --accent-text: var(--accent-text-more);
+  --good-text: var(--good-text-more);
+  --warn-text: var(--warn-text-more);
+  --crit-text: var(--crit-text-more);
+}
+@media (prefers-contrast: more) {
+  :root:not([data-contrast]) {
+    --hairline: var(--gray-8);
+    --border: var(--gray-9);
+    --field-border: var(--gray-10);
+    --muted: var(--gray-10);
+    --text-2: var(--gray-12);
+    --zebra: var(--gray-4);
+    --hover: var(--gray-6);
+    --focus-width: 3px;
+    --sel: var(--sel-strong);
+    --sel-text: var(--on-accent);
+    --sel-muted: var(--sel-text);
+    --accent-text: var(--accent-text-more);
+    --good-text: var(--good-text-more);
+    --warn-text: var(--warn-text-more);
+    --crit-text: var(--crit-text-more);
+  }
+}
+
+/* Reduce motion (Settings › Appearance, or the macOS setting). The durations drop to 0, and every
+   animation and transition in the app ends at once: a spinner stands still, a pulse is a plain
+   ring, a fade is a cut. (Near zero, not `none`, so animationend and transitionend still fire.) */
+:root[data-motion="reduce"] { --dur-1: 0ms; --dur-2: 0ms; --dur-3: 0ms; --dur-spin: 0ms; }
+:root[data-motion="reduce"] *, :root[data-motion="reduce"] *::before, :root[data-motion="reduce"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-delay: 0s !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  transition-delay: 0s !important;
+  scroll-behavior: auto !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-motion]) { --dur-1: 0ms; --dur-2: 0ms; --dur-3: 0ms; --dur-spin: 0ms; }
+  :root:not([data-motion]) *, :root:not([data-motion]) *::before, :root:not([data-motion]) *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Base ---------- */
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; margin: 0; }
+
+body {
+  font: var(--fs-base)/1.4 var(--font);
+  background: var(--desk);
+  color: var(--text);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, select, textarea { font: inherit; color: inherit; }
+
+input, select {
+  height: var(--ctl-md);
+  padding: 2px 7px;
+  border: 1px solid var(--field-border);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+}
+input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; }
+input:disabled, select:disabled, textarea:disabled { background: var(--btn-disabled-bg); color: var(--btn-disabled-fg); border-color: var(--hairline); }
+
+/* One focus ring everywhere: outside the control, never a border change. */
+:focus { outline: none; }
+:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+/* A search field is a box around a bare input: the box takes the ring, as a plain field would. */
+.status-search:focus-within, .ai-search:focus-within, .an-search:focus-within, .qn-welcome-search:focus-within, .results-filter:focus-within {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: 0;
+}
+
+/* Thin themed scrollbars. */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--text) 22%, transparent);
+  border: 3px solid transparent;
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+
+.spacer { flex: 1; }
+.muted { color: var(--muted); }
+.small { font-size: var(--fs-sm); }
+.mono { font-family: var(--mono); font-size: var(--fs-mono); }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* Buttons. One .btn.primary to a view: the thing the view is for. Everything else is a plain
+   .btn; a second recommended action is .btn.suggested (accent ink, no fill). */
+.btn {
+  height: var(--ctl-md);
+  padding: 0 var(--sp-5);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  cursor: default;
+  white-space: nowrap;
+  transition: background-color var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease);
+}
+.btn:hover { background: var(--hover); }
+.btn:active { background: var(--surface-3); }
+.btn.primary { background: var(--accent-fill); border-color: var(--accent-fill); color: var(--on-accent); font-weight: var(--fw-medium); }
+.btn.primary:hover, .btn.primary:active { background: color-mix(in srgb, var(--accent-fill) 90%, var(--text)); }
+.btn.suggested { border-color: var(--accent); color: var(--accent-text); font-weight: var(--fw-medium); }
+.btn:disabled { background: var(--btn-disabled-bg); color: var(--btn-disabled-fg); border-color: var(--hairline); }
+
+/* A segmented control (the Results views, a chart's One Method / All Methods): a groove with the
+   chosen segment raised in it, as in the Status pane's filter. Never the accent fill, which is
+   the primary button's. */
+.results-views, .status-segmented {
+  display: inline-flex;
+  flex: none;
+  padding: 1px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+}
+.results-views button, .status-segmented button {
+  height: var(--ctl-xs);
+  padding: 0 var(--sp-4);
+  border: 0;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--text-2);
+  font: inherit;
+  font-size: var(--fs-sm);
+  cursor: default;
+  white-space: nowrap;
+}
+.results-views button:hover, .status-segmented button:hover { color: var(--text); }
+.results-views button[aria-checked="true"], .status-segmented button[data-on] { background: var(--surface); color: var(--text); box-shadow: var(--shadow-raised); }
+:root[data-contrast="more"] .results-views button[aria-checked="true"], :root[data-contrast="more"] .status-segmented button[data-on] { box-shadow: 0 0 0 1.5px var(--text); }
+@media (prefers-contrast: more) {
+  :root:not([data-contrast]) .results-views button[aria-checked="true"], :root:not([data-contrast]) .status-segmented button[data-on] { box-shadow: 0 0 0 1.5px var(--text); }
+}
+
+/* A spinner: one ring, one speed (the Results pane, the agreement runner, the assistant). */
+.results-spinner, .agr-spinner, .ai-spinner, .ai-set-spinner {
+  box-sizing: border-box;
+  border: 2px solid var(--hairline);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: qn-spin var(--dur-spin) linear infinite;
+}
+@keyframes qn-spin { to { transform: rotate(360deg); } }
+
+.notice {
+  display: flex;
+  gap: var(--sp-4);
+  align-items: flex-start;
+  padding: var(--sp-4) var(--sp-5);
+  border-radius: var(--r-md);
+  background: var(--warn-bg);
+  color: var(--warn-text);
+  border: 1px solid var(--warning-border);
+}
+
+/* The empty state, the same in every pane, window and page: a quiet icon, a title, one sentence,
+   and at most one action (.btn.primary) with any alternative beside it as a plain .btn. The
+   Inspector (.insp-empty), the canvas (.canvas-empty) and the Welcome page (.qn-welcome-empty)
+   carry the same type and icon by their own class names. */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  height: 100%;
+  padding: var(--sp-6);
+  color: var(--muted);
+  text-align: center;
+}
+.empty-state > svg, .insp-empty > svg, .canvas-empty-icon svg { flex: none; width: 28px; height: 28px; stroke-width: 1.5; color: var(--muted); }
+.empty-state h2, .insp-empty h3, .canvas-empty-title { margin: var(--sp-2) 0 0; font-size: var(--fs-md); font-weight: var(--fw-semibold); line-height: var(--lh-tight); color: var(--text); }
+.empty-state p, .insp-empty p, .canvas-empty-message { margin: 0; max-width: 44ch; font-size: var(--fs-base); line-height: var(--lh-body); color: var(--muted); }
+.empty-state > .btn, .empty-state > .agr-actions { margin-top: var(--sp-4); }
+
+/* ---------- Canvas ----------
+ * The canvas's colours (0.90.34 DesignSystem.swift `DS.Color` canvas tokens and `CustomerClass`;
+ * docs/specs/canvas.md §19; ledger CAN-220, CAN-221). The drawing never reads these through CSS:
+ * src/canvas/layers/colors.ts resolves this block from the stylesheet's text into plain colour
+ * values (`canvasColors(theme, contrast)`), so an exported SVG stands alone. Each node colour has a
+ * `-more` twin for Increase Contrast (0.90.34 stepped every `DS.Color.dynamic` pair 30 % toward
+ * black in light, toward white in dark); the contrast block only re-points the names. The class
+ * colours are macOS's system red, blue, green, orange, purple, cyan, pink and yellow, with their
+ * increased-contrast variants; class 9 and later are generated (colors.ts `classColor`).
+ * Keep the media-query copies equal to the attribute blocks (src/canvas/tokens.test.ts checks).
+ */
+:root {
+  --canvas-bg: var(--surface);
+  --canvas-station-fill: #ccdefa;  --canvas-station-fill-more: #8f9baf;
+  --canvas-buffer-fill: #fce6c2;   --canvas-buffer-fill-more: #b1a188;
+  --canvas-source-fill: #d1f0d4;   --canvas-source-fill-more: #92a894;
+  --canvas-sink-fill: #fad4d4;     --canvas-sink-fill-more: #af9494;
+  --canvas-node-stroke: #38383d;   --canvas-node-stroke-more: #27272b;
+  --canvas-node-glyph: #26262b;    --canvas-node-glyph-more: #1b1b1e;
+  --canvas-grid-dot: rgba(0, 0, 0, 0.26);
+  --canvas-grid-line: rgba(0, 0, 0, 0.12);
+  --canvas-class-1: #ff3b30; --canvas-class-1-more: #d70015;
+  --canvas-class-2: #007aff; --canvas-class-2-more: #0040dd;
+  --canvas-class-3: #28cd41; --canvas-class-3-more: #007d1b;
+  --canvas-class-4: #ff9500; --canvas-class-4-more: #c93400;
+  --canvas-class-5: #af52de; --canvas-class-5-more: #8944ab;
+  --canvas-class-6: #55bef0; --canvas-class-6-more: #0071a4;
+  --canvas-class-7: #ff2d55; --canvas-class-7-more: #d30f45;
+  --canvas-class-8: #ffcc00; --canvas-class-8-more: #b25000;
+  /* ρ badge: 0.90.34's legible tint of the signal colour, with the on-tint ink on it. */
+  --canvas-rho-light: var(--good-text);
+  --canvas-rho-moderate: var(--warn-text);
+  --canvas-rho-heavy: var(--crit-text);
+  --canvas-on-tint: #ffffff;
+  --canvas-panel-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  /* Accent-derived (theme-independent: they follow --accent). */
+  --canvas-accent: var(--accent);
+  --canvas-hover-ring: color-mix(in srgb, var(--accent) 35%, transparent);
+  --canvas-selection-glow: color-mix(in srgb, var(--accent) 35%, transparent);
+  --canvas-selection-fill-strong: color-mix(in srgb, var(--accent) 35%, transparent);
+  --canvas-marquee-fill: color-mix(in srgb, var(--accent) 8%, transparent);
+  --canvas-link-halo: color-mix(in srgb, var(--accent) 25%, transparent);
+  --canvas-chip-fill: var(--surface);
+  --canvas-separator: var(--hairline);
+  --canvas-text: var(--text);
+  --canvas-text-2: var(--muted);
+  --canvas-panel: var(--surface);
+}
+:root[data-theme="dark"] {
+  --canvas-station-fill: #294575;  --canvas-station-fill-more: #697d9f;
+  --canvas-buffer-fill: #784f1f;   --canvas-buffer-fill-more: #a08462;
+  --canvas-source-fill: #246138;   --canvas-source-fill-more: #659074;
+  --canvas-sink-fill: #7a2b2e;     --canvas-sink-fill-more: #a26b6d;
+  --canvas-node-stroke: #dbdbe0;   --canvas-node-stroke-more: #e6e6ea;
+  --canvas-node-glyph: #ebebf0;    --canvas-node-glyph-more: #f1f1f4;
+  --canvas-grid-dot: rgba(255, 255, 255, 0.3);
+  --canvas-grid-line: rgba(255, 255, 255, 0.14);
+  --canvas-class-1: #ff453a; --canvas-class-1-more: #ff6961;
+  --canvas-class-2: #0a84ff; --canvas-class-2-more: #409cff;
+  --canvas-class-3: #32d74b; --canvas-class-3-more: #30db5b;
+  --canvas-class-4: #ff9f0a; --canvas-class-4-more: #ffb340;
+  --canvas-class-5: #bf5af2; --canvas-class-5-more: #da8fff;
+  --canvas-class-6: #5ac8f5; --canvas-class-6-more: #70d7ff;
+  --canvas-class-7: #ff375f; --canvas-class-7-more: #ff6482;
+  --canvas-class-8: #ffd60a; --canvas-class-8-more: #ffd426;
+  --canvas-on-tint: #000000;
+  --canvas-panel-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --canvas-station-fill: #294575;  --canvas-station-fill-more: #697d9f;
+    --canvas-buffer-fill: #784f1f;   --canvas-buffer-fill-more: #a08462;
+    --canvas-source-fill: #246138;   --canvas-source-fill-more: #659074;
+    --canvas-sink-fill: #7a2b2e;     --canvas-sink-fill-more: #a26b6d;
+    --canvas-node-stroke: #dbdbe0;   --canvas-node-stroke-more: #e6e6ea;
+    --canvas-node-glyph: #ebebf0;    --canvas-node-glyph-more: #f1f1f4;
+    --canvas-grid-dot: rgba(255, 255, 255, 0.3);
+    --canvas-grid-line: rgba(255, 255, 255, 0.14);
+    --canvas-class-1: #ff453a; --canvas-class-1-more: #ff6961;
+    --canvas-class-2: #0a84ff; --canvas-class-2-more: #409cff;
+    --canvas-class-3: #32d74b; --canvas-class-3-more: #30db5b;
+    --canvas-class-4: #ff9f0a; --canvas-class-4-more: #ffb340;
+    --canvas-class-5: #bf5af2; --canvas-class-5-more: #da8fff;
+    --canvas-class-6: #5ac8f5; --canvas-class-6-more: #70d7ff;
+    --canvas-class-7: #ff375f; --canvas-class-7-more: #ff6482;
+    --canvas-class-8: #ffd60a; --canvas-class-8-more: #ffd426;
+    --canvas-on-tint: #000000;
+    --canvas-panel-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+  }
+}
+:root[data-contrast="more"] {
+  --canvas-station-fill: var(--canvas-station-fill-more);
+  --canvas-buffer-fill: var(--canvas-buffer-fill-more);
+  --canvas-source-fill: var(--canvas-source-fill-more);
+  --canvas-sink-fill: var(--canvas-sink-fill-more);
+  --canvas-node-stroke: var(--canvas-node-stroke-more);
+  --canvas-node-glyph: var(--canvas-node-glyph-more);
+  --canvas-class-1: var(--canvas-class-1-more);
+  --canvas-class-2: var(--canvas-class-2-more);
+  --canvas-class-3: var(--canvas-class-3-more);
+  --canvas-class-4: var(--canvas-class-4-more);
+  --canvas-class-5: var(--canvas-class-5-more);
+  --canvas-class-6: var(--canvas-class-6-more);
+  --canvas-class-7: var(--canvas-class-7-more);
+  --canvas-class-8: var(--canvas-class-8-more);
+}
+@media (prefers-contrast: more) {
+  :root:not([data-contrast]) {
+    --canvas-station-fill: var(--canvas-station-fill-more);
+    --canvas-buffer-fill: var(--canvas-buffer-fill-more);
+    --canvas-source-fill: var(--canvas-source-fill-more);
+    --canvas-sink-fill: var(--canvas-sink-fill-more);
+    --canvas-node-stroke: var(--canvas-node-stroke-more);
+    --canvas-node-glyph: var(--canvas-node-glyph-more);
+    --canvas-class-1: var(--canvas-class-1-more);
+    --canvas-class-2: var(--canvas-class-2-more);
+    --canvas-class-3: var(--canvas-class-3-more);
+    --canvas-class-4: var(--canvas-class-4-more);
+    --canvas-class-5: var(--canvas-class-5-more);
+    --canvas-class-6: var(--canvas-class-6-more);
+    --canvas-class-7: var(--canvas-class-7-more);
+    --canvas-class-8: var(--canvas-class-8-more);
+  }
+}
+/* ---------- end Canvas ---------- */
+
+/* ---------- Shell (P6, src/panes/shell/theme.ts) ----------
+ * The terminal's grounds and ANSI 0–15 (DesignSystem.swift shellPaletteLight / shellPaletteDark,
+ * classicShellForeground). System theme: the app's text on its surface, the accent caret, and the
+ * light palette, or the dark one in dark mode. Classic (shell.classicTheme): phosphor green on
+ * black with the dark palette. Keep the dark block and its media-query copy equal. */
+:root {
+  --shell-bg: var(--surface);
+  --shell-fg: var(--text);
+  --shell-caret: var(--accent);
+  --shell-sel: var(--sel);
+  --shell-sel-inactive: var(--sel-inactive);
+  --shell-classic-fg: #4de666;
+  --shell-classic-bg: #000000;
+  --shell-classic-sel: rgba(77, 230, 102, 0.35);
+  --shell-ansi-0: #000000;
+  --shell-ansi-1: #b20000;
+  --shell-ansi-2: #008000;
+  --shell-ansi-3: #996600;
+  --shell-ansi-4: #0000cc;
+  --shell-ansi-5: #990099;
+  --shell-ansi-6: #008099;
+  --shell-ansi-7: #999999;
+  --shell-ansi-8: #666666;
+  --shell-ansi-9: #cc0000;
+  --shell-ansi-10: #009900;
+  --shell-ansi-11: #b28600;
+  --shell-ansi-12: #3333ff;
+  --shell-ansi-13: #cc00cc;
+  --shell-ansi-14: #0099b2;
+  --shell-ansi-15: #b2b2b2;
+  --shell-ansi-dark-0: #606060;
+  --shell-ansi-dark-1: #cd3131;
+  --shell-ansi-dark-2: #0dbc79;
+  --shell-ansi-dark-3: #e5e510;
+  --shell-ansi-dark-4: #2472c8;
+  --shell-ansi-dark-5: #bc3fbc;
+  --shell-ansi-dark-6: #11a8cd;
+  --shell-ansi-dark-7: #e5e5e5;
+  --shell-ansi-dark-8: #808080;
+  --shell-ansi-dark-9: #f14c4c;
+  --shell-ansi-dark-10: #23d18b;
+  --shell-ansi-dark-11: #f5f543;
+  --shell-ansi-dark-12: #3b8eea;
+  --shell-ansi-dark-13: #d670d6;
+  --shell-ansi-dark-14: #29b8db;
+  --shell-ansi-dark-15: #ffffff;
+}
+:root[data-theme="dark"] {
+  --shell-ansi-0: #606060;
+  --shell-ansi-1: #cd3131;
+  --shell-ansi-2: #0dbc79;
+  --shell-ansi-3: #e5e510;
+  --shell-ansi-4: #2472c8;
+  --shell-ansi-5: #bc3fbc;
+  --shell-ansi-6: #11a8cd;
+  --shell-ansi-7: #e5e5e5;
+  --shell-ansi-8: #808080;
+  --shell-ansi-9: #f14c4c;
+  --shell-ansi-10: #23d18b;
+  --shell-ansi-11: #f5f543;
+  --shell-ansi-12: #3b8eea;
+  --shell-ansi-13: #d670d6;
+  --shell-ansi-14: #29b8db;
+  --shell-ansi-15: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --shell-ansi-0: #606060;
+    --shell-ansi-1: #cd3131;
+    --shell-ansi-2: #0dbc79;
+    --shell-ansi-3: #e5e510;
+    --shell-ansi-4: #2472c8;
+    --shell-ansi-5: #bc3fbc;
+    --shell-ansi-6: #11a8cd;
+    --shell-ansi-7: #e5e5e5;
+    --shell-ansi-8: #808080;
+    --shell-ansi-9: #f14c4c;
+    --shell-ansi-10: #23d18b;
+    --shell-ansi-11: #f5f543;
+    --shell-ansi-12: #3b8eea;
+    --shell-ansi-13: #d670d6;
+    --shell-ansi-14: #29b8db;
+    --shell-ansi-15: #ffffff;
+  }
+}
+/* ---------- end Shell ---------- */
+
+/* ---------- Charts (2.1, src/charts) ----------
+ * Tier colours (how much a method's number is worth as evidence: src/results/insight.ts `Tier`)
+ * and the eight series colours (customer classes in a chart, lines in a sweep). Marks, never text:
+ * a label beside a mark is in a text token. Each is at least 3:1 on --surface, --surface-2 and
+ * white (src/charts/tokens.test.ts), and the sets were chosen with a colour-vision-deficiency
+ * check (Machado protan/deutan, OKLab ΔE): the five tiers are told apart in every pairing
+ * (ΔE ≥ 8.9 simulated, ≥ 16.9 unsimulated), the series in adjacent pairs (≥ 8.4, ≥ 17), which is
+ * why series are assigned in order and never cycled. The charts add a shape per tier and a hatch
+ * on every second series, so colour is never the only difference. Increase Contrast steps
+ * them further from the surface (the block after this one). Keep the dark block and its media-query copy equal.
+ */
+:root {
+  --tier-exact: #2b5fd9;
+  --tier-simulation: #0b8fa3;
+  --tier-approximation: #e2562c;
+  --tier-diffusion: #8f2d9a;
+  --tier-bound: #84480a;
+  --series-1: #2a78d6;
+  --series-2: #d9591f;
+  --series-3: #0f8f6a;
+  --series-4: #a87400;
+  --series-5: #d0508a;
+  --series-6: #008300;
+  --series-7: #6250d6;
+  --series-8: #d63a3a;
+}
+:root[data-theme="dark"] {
+  --tier-exact: #2c81f8;
+  --tier-simulation: #149f98;
+  --tier-approximation: #e75b6f;
+  --tier-diffusion: #c543cf;
+  --tier-bound: #a77300;
+  --series-1: #3987e5;
+  --series-2: #d95926;
+  --series-3: #199e70;
+  --series-4: #c98500;
+  --series-5: #d55181;
+  --series-6: #2f962f;
+  --series-7: #9085e9;
+  --series-8: #e66767;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --tier-exact: #2c81f8;
+    --tier-simulation: #149f98;
+    --tier-approximation: #e75b6f;
+    --tier-diffusion: #c543cf;
+    --tier-bound: #a77300;
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --series-4: #c98500;
+    --series-5: #d55181;
+    --series-6: #2f962f;
+    --series-7: #9085e9;
+    --series-8: #e66767;
+  }
+}
+/* ---------- end Charts ---------- */
+
+/* ---------- Charts, Increase Contrast ----------
+ * The tier and series colours' twins for Increase Contrast, made as the canvas's node colours are
+ * (0.90.34 stepped each colour 30 % toward black in light, toward white in dark): every one moves
+ * further from the surface it is drawn on, so a mark that cleared 3:1 clears about 5:1. The
+ * contrast blocks only re-point the names. An exported chart is always drawn in the plain light
+ * values (src/charts/theme.ts `lightValue`), so these never reach a file. Outside the Charts
+ * block above because src/charts/tokens.test.ts holds that block to the thirteen names; keep the
+ * media-query copies equal to the attribute blocks.
+ */
+:root {
+  --tier-exact-more: #1e4398;
+  --tier-simulation-more: #086472;
+  --tier-approximation-more: #9e3c1f;
+  --tier-diffusion-more: #64206c;
+  --tier-bound-more: #5c3207;
+  --series-1-more: #1d5496;
+  --series-2-more: #983e16;
+  --series-3-more: #0b644a;
+  --series-4-more: #765100;
+  --series-5-more: #923861;
+  --series-6-more: #005c00;
+  --series-7-more: #453896;
+  --series-8-more: #962929;
+}
+:root[data-theme="dark"] {
+  --tier-exact-more: #6ba7fa;
+  --tier-simulation-more: #5bbcb7;
+  --tier-approximation-more: #ee8c9a;
+  --tier-diffusion-more: #d67bdd;
+  --tier-bound-more: #c19d4d;
+  --series-1-more: #74abed;
+  --series-2-more: #e48b67;
+  --series-3-more: #5ebb9b;
+  --series-4-more: #d9aa4d;
+  --series-5-more: #e285a7;
+  --series-6-more: #6db66d;
+  --series-7-more: #b1aaf0;
+  --series-8-more: #ee9595;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --tier-exact-more: #6ba7fa;
+    --tier-simulation-more: #5bbcb7;
+    --tier-approximation-more: #ee8c9a;
+    --tier-diffusion-more: #d67bdd;
+    --tier-bound-more: #c19d4d;
+    --series-1-more: #74abed;
+    --series-2-more: #e48b67;
+    --series-3-more: #5ebb9b;
+    --series-4-more: #d9aa4d;
+    --series-5-more: #e285a7;
+    --series-6-more: #6db66d;
+    --series-7-more: #b1aaf0;
+    --series-8-more: #ee9595;
+  }
+}
+:root[data-contrast="more"] {
+  --tier-exact: var(--tier-exact-more);
+  --tier-simulation: var(--tier-simulation-more);
+  --tier-approximation: var(--tier-approximation-more);
+  --tier-diffusion: var(--tier-diffusion-more);
+  --tier-bound: var(--tier-bound-more);
+  --series-1: var(--series-1-more);
+  --series-2: var(--series-2-more);
+  --series-3: var(--series-3-more);
+  --series-4: var(--series-4-more);
+  --series-5: var(--series-5-more);
+  --series-6: var(--series-6-more);
+  --series-7: var(--series-7-more);
+  --series-8: var(--series-8-more);
+}
+@media (prefers-contrast: more) {
+  :root:not([data-contrast]) {
+    --tier-exact: var(--tier-exact-more);
+    --tier-simulation: var(--tier-simulation-more);
+    --tier-approximation: var(--tier-approximation-more);
+    --tier-diffusion: var(--tier-diffusion-more);
+    --tier-bound: var(--tier-bound-more);
+    --series-1: var(--series-1-more);
+    --series-2: var(--series-2-more);
+    --series-3: var(--series-3-more);
+    --series-4: var(--series-4-more);
+    --series-5: var(--series-5-more);
+    --series-6: var(--series-6-more);
+    --series-7: var(--series-7-more);
+    --series-8: var(--series-8-more);
+  }
+}
+/* ---------- end Charts, Increase Contrast ---------- */
+
+/* ---------- Pointer targets (2.1, WCAG 2.5.8; docs/ACCESSIBILITY.md) ----------
+ * The dense bars keep their 20–22 px controls, which pass by spacing: a 24 px circle on each
+ * reaches no neighbour. The few that are smaller than that in both directions, or sit beside
+ * another small one, answer the pointer over a 24 px square without looking any bigger.
+ */
+.tabbar-button, .canvas-statusbar .pane-window-btn, .results-filter-clear, .toast-close, .insp-glossary-btn { position: relative; }
+.tabbar-button::after, .canvas-statusbar .pane-window-btn::after, .results-filter-clear::after, .toast-close::after, .insp-glossary-btn::after, .canvas-problem-badge::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+}
+/* ---------- end Pointer targets ---------- */

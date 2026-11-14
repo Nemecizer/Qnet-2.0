@@ -1,0 +1,253 @@
+{
+  "completedAt" : "2026-11-11T04:55:56Z",
+  "elapsedSeconds" : 1.1042059659957886,
+  "failureMessage" : "The truncated CTMC returned estimates, but its boundary-mass and refinement checks did not converge.",
+  "id" : "E811904D-FAB3-41EF-98D4-1D3620DBEF78",
+  "measurements" : [
+    {
+      "estimate" : 2.33333327838,
+      "id" : "5CB47EBE-8381-43D0-B564-AA6AA4EF2C68",
+      "metric" : "Mean number in system",
+      "stationID" : "1EA5D945-A8FE-4026-9B40-F78369F6FDDA",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.7,
+      "id" : "D43626C3-C819-4D30-9F44-7ADD57384812",
+      "metric" : "Server utilization",
+      "stationID" : "1EA5D945-A8FE-4026-9B40-F78369F6FDDA",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0,
+      "id" : "D1E4B5AD-DD97-4C09-8BD4-BD75326A6CDA",
+      "metric" : "External departure rate",
+      "stationID" : "1EA5D945-A8FE-4026-9B40-F78369F6FDDA",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 2.33333327831,
+      "id" : "9324C003-5945-41B8-BE04-7C121AEF0D82",
+      "metric" : "Mean number in system",
+      "stationID" : "3A8845FE-6084-4B63-B474-2FE42F64FFED",
+      "stationName" : "S2",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.7,
+      "id" : "AD854D61-2C9D-48B0-A138-E6732DE5E98B",
+      "metric" : "Server utilization",
+      "stationID" : "3A8845FE-6084-4B63-B474-2FE42F64FFED",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.999999999283,
+      "id" : "FBFD72F3-9361-438F-9EA4-BAA99CDA7B62",
+      "metric" : "External departure rate",
+      "stationID" : "3A8845FE-6084-4B63-B474-2FE42F64FFED",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    }
+  ],
+  "method" : {
+    "displayName" : "Adaptive Truncated CTMC",
+    "fidelity" : "Queueing approximation",
+    "identifier" : "queue.infinite-truncated-ctmc",
+    "implementation" : "truncated_ctmc",
+    "layer" : "Queueing process",
+    "shortName" : "Truncated CTMC"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "1EA5D945-A8FE-4026-9B40-F78369F6FDDA",
+      "3A8845FE-6084-4B63-B474-2FE42F64FFED"
+    ],
+    "networkFingerprint" : "ca9cc3f06af1066d6f3c5a0496fe6417a535705bb5208a9274e3cb3756c6cead",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "1FB829CC-F9CC-4662-BA52-1408AE0849C2",
+          "id" : "95D0ED69-A441-4632-ADDE-EEF45B284E8E",
+          "routingProbability" : 1,
+          "toNodeID" : "19324AF1-98D5-4169-846A-ACF4C5873EFC"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "19324AF1-98D5-4169-846A-ACF4C5873EFC",
+          "id" : "1F1F0E01-ABEC-4207-B716-59582F515004",
+          "routingProbability" : 1,
+          "toNodeID" : "1EA5D945-A8FE-4026-9B40-F78369F6FDDA"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "1EA5D945-A8FE-4026-9B40-F78369F6FDDA",
+          "id" : "30AF7BAE-9054-46CE-B0D7-EF7FB4A2EF15",
+          "routingProbability" : 0.7,
+          "toNodeID" : "E1B944AA-CC5A-40D2-86AF-0E16241C94A8"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "1EA5D945-A8FE-4026-9B40-F78369F6FDDA",
+          "id" : "9EEA3EDD-0C9A-4DE3-8859-BA41045A0444",
+          "routingProbability" : 0.3,
+          "toNodeID" : "19324AF1-98D5-4169-846A-ACF4C5873EFC"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E1B944AA-CC5A-40D2-86AF-0E16241C94A8",
+          "id" : "A62B4618-2340-40F0-BFED-CEFED746F58C",
+          "routingProbability" : 1,
+          "toNodeID" : "3A8845FE-6084-4B63-B474-2FE42F64FFED"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "3A8845FE-6084-4B63-B474-2FE42F64FFED",
+          "id" : "EAC4C3E5-A328-4935-881F-E32EDB53A172",
+          "routingProbability" : 1,
+          "toNodeID" : "4562A781-3811-4D84-9075-C492A1260CF1"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=1.0",
+          "id" : "1FB829CC-F9CC-4662-BA52-1408AE0849C2",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "19324AF1-98D5-4169-846A-ACF4C5873EFC",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            200,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=2.0408163265306123",
+          "id" : "1EA5D945-A8FE-4026-9B40-F78369F6FDDA",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            300,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "E1B944AA-CC5A-40D2-86AF-0E16241C94A8",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            400,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.4285714285714286",
+          "id" : "3A8845FE-6084-4B63-B474-2FE42F64FFED",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            500,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "4562A781-3811-4D84-9075-C492A1260CF1",
+          "kind" : "sink",
+          "name" : "Sink",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "OpenJackson.d2.feedback.p30.inf.bnet",
+    "parameters" : {
+      "boundary mass tolerance" : "1e-8",
+      "engine" : "C",
+      "initial total-population cap" : "8",
+      "maximum states" : "200000",
+      "maximum total-population cap" : "64",
+      "process" : "open single-class M\/M\/c network",
+      "runtime" : "C engine; QNET_SOLVER_ROOT: \/Users\/nobody\/Library\/Caches\/qnet\/solvers\/stage\/Resources\/bin\/infinite\/BNAtc\/bna_tc",
+      "successive refinement tolerance" : "1e-7",
+      "truncation evidence" : "heuristic"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/OpenJackson.d2.feedback.p30.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Solving adaptive truncated CTMC (C) ...  [ ]                                                       0.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                       0.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                       0.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                       0.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [done]                                                    0.9s\nAdaptive truncated CTMC\nModel layer: queueing process\nEvidence: truncation diagnostics are heuristic; certificates are identified separately\nHeuristic converged: no\nSelected total cap: 64\nSelected states: 2145\n\nNode 1 S1: E[N]=2.33333327838 utilization=0.7 departure=0\nNode 2 S2: E[N]=2.33333327831 utilization=0.7 departure=0.999999999283\n\ngenerator residual = 4.40398936124e-13\ntruncation boundary mass = 7.13559804963e-10\nsuccessive refinement relative change = 3.20721571933e-06\nFoster-Lyapunov certificate: unavailable for this model\nElapsed time: 0.942s\n\n",
+  "runEvidence" : {
+    "convergenceNote" : "Truncation criteria met: no (heuristic)",
+    "discretization" : "total-population cap 64",
+    "refinementDelta" : 3.20721571933e-06,
+    "residual" : 4.40398936124e-13
+  },
+  "startedAt" : "2026-11-11T04:55:55Z",
+  "status" : "partial",
+  "warnings" : [
+    "The state-space cap was reached before the truncation checks passed."
+  ]
+}

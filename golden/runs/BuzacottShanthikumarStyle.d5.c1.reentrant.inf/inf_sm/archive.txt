@@ -1,0 +1,35 @@
+[Threads] Using 18 CPU cores (OpenMP)
+Running spectral method ...  [                              ]  starting ...[KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m                 ]  1283/2572    ( 49%)         [KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m         ]  1899/2572    ( 73%)         [KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m     ]  2290/2572    ( 89%)         [KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m   ]  2441/2572    ( 94%)         [KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  2572/2572    (100%)     1.2s
+
+Network load: rho_max = 0.6667 at S2  (moderate load — SRBM/FEM are heavy-traffic limits; expect deviation from simulation)
+Routing graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference
+──  Open Jackson network — exact M/M/s product form  ──
+           Spectral       Exact E[N]  (Jackson)
+           ========       ============
+
+rho_1      0.500 (+0.0%)  0.500
+rho_2      0.667 (+0.0%)  0.667
+rho_3      0.667 (+0.0%)  0.667
+rho_4      0.500 (+0.0%)  0.500
+rho_5      0.500 (+0.0%)  0.500
+
+Gamma_1    1.000 (+0.0%)  1.000
+Gamma_2    1.333 (+0.0%)  1.333
+Gamma_3    1.333 (+0.0%)  1.333
+Gamma_4    1.000 (+0.0%)  1.000
+Gamma_5    1.000 (+0.0%)  1.000
+
+sojourn_1  1.000 (+0.0%)  1.000
+sojourn_2  1.500 (+0.0%)  1.500
+sojourn_3  1.500 (+0.0%)  1.500
+sojourn_4  1.000 (+0.0%)  1.000
+sojourn_5  1.000 (+0.0%)  1.000
+
+E[Q_1]     1.000 (+0.0%)  1.000
+E[Q_2]     2.000 (+0.0%)  2.000
+E[Q_3]     2.000 (+0.0%)  2.000
+E[Q_4]     1.000 (+0.0%)  1.000
+E[Q_5]     1.000 (+0.0%)  1.000
+
+Elapsed time: 1.210s
+

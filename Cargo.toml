@@ -1,0 +1,15 @@
+# Qnet's Rust: the thin app (src-tauri), the model, analysis and exporters (core, from P1), the
+# command-line tool (cli, from P1), and the solver runner (runner, P3).
+[workspace]
+resolver = "2"
+members = ["src-tauri", "core", "runner", "cli"]
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+# float_roundtrip: every double parses to the value it was written from (a document's canvasScale
+# crosses IPC as JSON and must save back unchanged, src-tauri/src/documents.rs).
+serde_json = { version = "1", features = ["float_roundtrip"] }
+
+[profile.release]
+codegen-units = 1
+lto = "thin"

@@ -1,0 +1,22 @@
+[Threads] Using 18 CPU cores (OpenMP)
+Running spectral method ...  [                              ]  starting ...[KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  88/88        (100%)     0.1s
+
+Network load: rho_max = 0.8000 at S1  (moderate load — SRBM/FEM are heavy-traffic limits; expect deviation from simulation)
+Routing graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference
+           Spectral
+           ========
+
+rho_1      0.800
+rho_2      0.700
+
+Gamma_1    3.000
+Gamma_2    2.000
+
+sojourn_1  2.146
+sojourn_2  1.962
+
+E[Q_1]     6.438
+E[Q_2]     3.924
+
+Elapsed time: 0.129s
+

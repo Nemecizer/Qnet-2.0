@@ -1,0 +1,60 @@
+/* The Canvas Outline (new in 2.1, docs/ACCESSIBILITY.md): a non-modal dialog over the canvas's
+   top-left corner. Every control here is at least 24 px tall (WCAG 2.5.8). */
+.canvas-outline {
+  position: fixed;
+  z-index: var(--z-popover);
+  width: 560px;
+  max-width: calc(100vw - 2 * var(--sp-4));
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-pop);
+  color: var(--text);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+}
+:root[data-contrast="more"] .canvas-outline { border-width: 1.5px; }
+@media (prefers-contrast: more) { :root:not([data-contrast]) .canvas-outline { border-width: 1.5px; } }
+.canvas-outline-head { display: flex; align-items: center; gap: var(--sp-4); padding: var(--sp-3) var(--sp-3) var(--sp-3) var(--sp-5); border-bottom: 1px solid var(--hairline); }
+.canvas-outline-head h2 { margin: 0; font-size: var(--fs-base); font-weight: var(--fw-semibold); }
+.canvas-outline-summary { flex: 1; color: var(--muted); font-size: var(--fs-sm); }
+.canvas-outline-close { width: var(--ctl-md); height: var(--ctl-md); }
+.canvas-outline-body { overflow-y: auto; min-height: 0; padding: var(--sp-4) var(--sp-5) var(--sp-5); display: flex; flex-direction: column; gap: var(--sp-3); }
+.canvas-outline-body h3 { margin: var(--sp-3) 0 0; font-size: var(--fs-sm); font-weight: var(--fw-semibold); color: var(--text-2); }
+.canvas-outline-add, .canvas-outline-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-3); }
+.canvas-outline-add-label { color: var(--text-2); font-size: var(--fs-sm); margin-right: var(--sp-2); }
+.canvas-outline-empty { margin: 0; color: var(--muted); }
+.canvas-outline-caption { margin: 0; color: var(--muted); font-size: var(--fs-sm); }
+.canvas-outline-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+.canvas-outline-table th, .canvas-outline-table td { padding: var(--sp-1) var(--sp-3); text-align: left; vertical-align: middle; border-bottom: 1px solid var(--hairline); }
+.canvas-outline-table thead th { color: var(--muted); font-weight: var(--fw-medium); white-space: nowrap; }
+.canvas-outline-table tbody th { font-weight: var(--fw-regular); white-space: nowrap; }
+.canvas-outline-table tr[data-selected] { background: var(--sel); color: var(--sel-text); }
+.canvas-outline-table td[data-problems] { font-weight: var(--fw-semibold); }
+.canvas-outline-num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.canvas-outline-row {
+  min-height: var(--ctl-md);
+  min-width: var(--ctl-md);
+  padding: 0 var(--sp-3);
+  border: 0;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: var(--fw-medium);
+  text-align: left;
+  cursor: default;
+}
+.canvas-outline-row:hover { background: var(--hover); color: var(--text); }
+/* On the solid selection of Increase Contrast the blue ring would vanish: the ring takes the selection's ink. */
+.canvas-outline-table tr[data-selected] .canvas-outline-row:focus-visible { outline-color: var(--sel-text); }
+/* Selected is said twice over: the row's fill, and a mark before the name. */
+.canvas-outline-row[aria-pressed="true"]::before { content: "✓ "; }
+.canvas-outline-selection { display: flex; flex-direction: column; gap: var(--sp-3); margin-top: var(--sp-3); padding-top: var(--sp-3); border-top: 1px solid var(--hairline); }
+.canvas-outline-selection h3 { margin: 0; }
+.canvas-outline-selected { margin: 0; }
+.canvas-outline-linkto { display: inline-flex; align-items: center; gap: var(--sp-3); }
+.canvas-outline-problems { display: flex; flex-direction: column; gap: var(--sp-3); }
+.canvas-outline-problems .problem-text { display: flex; align-items: flex-start; gap: var(--sp-3); margin: 0; }

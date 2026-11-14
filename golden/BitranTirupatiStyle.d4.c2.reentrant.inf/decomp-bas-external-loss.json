@@ -1,0 +1,106 @@
+{
+  "blocking" : "bas_external_loss",
+  "classes" : [
+    {
+      "external_arrivals" : {
+        "s1" : 1
+      },
+      "id" : "c1",
+      "name" : "Class 1"
+    },
+    {
+      "external_arrivals" : {
+        "s4" : 1
+      },
+      "id" : "c2",
+      "name" : "Class 2"
+    }
+  ],
+  "name" : "BitranTirupatiStyle.d4.c2.reentrant.inf",
+  "routes" : [
+    {
+      "class" : "c1",
+      "from" : "s1",
+      "probability" : 1,
+      "to" : "s2"
+    },
+    {
+      "class" : "c1",
+      "from" : "s2",
+      "probability" : 1,
+      "to" : "s3"
+    },
+    {
+      "class" : "c2",
+      "from" : "s2",
+      "probability" : 1,
+      "to" : "s1"
+    },
+    {
+      "class" : "c1",
+      "from" : "s3",
+      "probability" : 1,
+      "to" : "s4"
+    },
+    {
+      "class" : "c2",
+      "from" : "s3",
+      "probability" : 1,
+      "to" : "s2"
+    },
+    {
+      "class" : "c2",
+      "from" : "s4",
+      "probability" : 1,
+      "to" : "s3"
+    }
+  ],
+  "schema_version" : 1,
+  "solver" : {
+    "damping" : 0.5,
+    "max_iterations" : 1000,
+    "tolerance" : 1e-10
+  },
+  "stations" : [
+    {
+      "capacity" : 25,
+      "id" : "s1",
+      "name" : "S1",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 4,
+        "c2" : 4
+      }
+    },
+    {
+      "capacity" : 25,
+      "id" : "s2",
+      "name" : "S2",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 4,
+        "c2" : 4
+      }
+    },
+    {
+      "capacity" : 25,
+      "id" : "s3",
+      "name" : "S3",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 4,
+        "c2" : 4
+      }
+    },
+    {
+      "capacity" : 25,
+      "id" : "s4",
+      "name" : "S4",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 4,
+        "c2" : 4
+      }
+    }
+  ]
+}

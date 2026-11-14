@@ -1,0 +1,26 @@
+[Threads] Using 18 CPU cores (OpenMP)
+Running simulation ...  [                              ]  starting ...[KRunning simulation ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  8/8          (100%)     0.1s
+
+Network load: rho_max = 0.8980 at S1  (near heavy-traffic — small O(1) deviation expected)
+Routing graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference
+           Simulation
+           ==========
+
+rho_1      0.901 ± 0.003
+rho_2      0.593 ± 0.003
+rho_3      0.358 ± 0.003
+
+Gamma_1    0.900 ± 0.004
+Gamma_2    0.593 ± 0.003
+Gamma_3    0.358 ± 0.003
+
+sojourn_1  8.886
+sojourn_2  1.906
+sojourn_3  1.354
+
+E[Q_1]     8.000 ± 0.506
+E[Q_2]     1.131 ± 0.009
+E[Q_3]     0.484 ± 0.006
+
+Elapsed time: 0.153s
+

@@ -1,0 +1,56 @@
+/* The main window's frame: top bar, the work area and the status bar. The pane layout's own styles
+   live with it (src/workspace/); these are the frame and the P5 canvas placeholder. */
+
+.app {
+  display: grid;
+  grid-template-rows: var(--topbar-h) 1fr auto;
+  /* minmax(0, …): an auto column takes its content's width as a floor, so a wide Shell line or
+     table kept the whole frame wider than a window that had since been made narrower. */
+  grid-template-columns: minmax(0, 1fr);
+  height: 100%;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  /* The traffic lights sit at the left of an overlay title bar: leave them their room. */
+  padding: 0 var(--sp-5) 0 84px;
+  background: var(--chrome);
+  border-bottom: 1px solid var(--hairline);
+  user-select: none;
+  -webkit-user-select: none;
+  min-width: 0;
+}
+.topbar-title { font-weight: var(--fw-semibold); font-size: var(--fs-md); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.work {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--surface);
+}
+.work .notice { margin: var(--sp-5) var(--sp-5) 0; }
+
+.statusbar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+  min-height: 22px;
+  padding: 0 var(--sp-5);
+  background: var(--chrome);
+  border-top: 1px solid var(--hairline);
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+
+.workspace { flex: 1; min-height: 0; display: flex; }
+.canvas-pane { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.canvas-placeholder {
+  flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--sp-3);
+  color: var(--text-2);
+}
+.canvas-placeholder-title { margin: 0; font-size: var(--fs-lg); color: var(--text); }
+.canvas-placeholder .muted { margin: 0; color: var(--muted); }
+.canvas-statusbar { min-height: 22px; border-top: 1px solid var(--hairline); }

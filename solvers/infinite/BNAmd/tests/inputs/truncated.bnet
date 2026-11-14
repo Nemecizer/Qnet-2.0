@@ -1,0 +1,98 @@
+{
+ "canvasScale": 1,
+ "infiniteBuffers": true,
+ "links": [
+  {
+   "customerClass": 0,
+   "fromNodeID": "N1",
+   "routingProbability": 1,
+   "toNodeID": "N3"
+  },
+  {
+   "customerClass": 0,
+   "fromNodeID": "N3",
+   "routingProbability": 1,
+   "toNodeID": "N4"
+  },
+  {
+   "customerClass": 0,
+   "fromNodeID": "N4",
+   "routingProbability": 0.5,
+   "toNodeID": "N5"
+  },
+  {
+   "customerClass": 0,
+   "fromNodeID": "N4",
+   "routingProbability": 0.5,
+   "toNodeID": "N7"
+  },
+  {
+   "customerClass": 0,
+   "fromNodeID": "N5",
+   "routingProbability": 1,
+   "toNodeID": "N6"
+  },
+  {
+   "customerClass": 0,
+   "fromNodeID": "N6",
+   "routingProbability": 0.5,
+   "toNodeID": "N3"
+  },
+  {
+   "customerClass": 0,
+   "fromNodeID": "N6",
+   "routingProbability": 0.5,
+   "toNodeID": "N7"
+  },
+  {
+   "customerClass": 1,
+   "fromNodeID": "N2",
+   "routingProbability": 1,
+   "toNodeID": "N3"
+  },
+  {
+   "customerClass": 1,
+   "fromNodeID": "N3",
+   "routingProbability": 1,
+   "toNodeID": "N4"
+  },
+  {
+   "customerClass": 1,
+   "fromNodeID": "N4",
+   "routingProbability": 0.2,
+   "toNodeID": "N5"
+  },
+  {
+   "customerClass": 1,
+   "fromNodeID": "N4",
+   "routingProbability": 0.8,
+   "toNodeID": "N7"
+  },
+  {
+   "customerClass": 1,
+   "fromNodeID": "N5",
+   "routingProbability": 1,
+   "toNodeID": "N6"
+  },
+  {
+   "customerClass": 1,
+   "fromNodeID": "N6",
+   "routingProbability": 0.2,
+   "toNodeID": "N3"
+  },
+  {
+   "customerClass": 1,
+   "fromNodeID": "N6",
+   "routingProbability": 0.8,
+   "toNodeID": "N7"
+  }
+ ],
+ "nodes": [
+  {
+   "bufferSize": 1,
+   "distribution": "exponential",
+   "distributionParameters": "rate=0.5",
+   "id": "N1",
+   "kind": "source",
+   "name": "Src1",
+   "numberOfServers": 

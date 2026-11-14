@@ -1,0 +1,32 @@
+{
+  "id": "E05c",
+  "title": "2-D box, independent coordinates, unequal sides and drifts",
+  "evidence": "derived_exact",
+  "source": "Plans.md section 4, E05 (tensor product)",
+  "model": {
+    "domain": "box",
+    "dimension": 2,
+    "drift": [-1.0, 0.5],
+    "covariance": [
+      [1.0, 0.0],
+      [0.0, 2.0]
+    ],
+    "reflection": [
+      [1.0, 0.0],
+      [0.0, 1.0]
+    ],
+    "upper_bounds": [2.0, 3.0],
+    "upper_reflection": [
+      [-1.0, 0.0],
+      [0.0, -1.0]
+    ]
+  },
+  "expected": {
+    "mean": [0.4626852792724519, 1.8616507503666044],
+    "second_moment": [0.3880558378173557, 4.138349249633396],
+    "covariance_offdiagonal_zero": true,
+    "boundary_rates": [1.018657360363774, 0.14360845839443412],
+    "upper_boundary_rates": [0.018657360363774047, 0.643608458394434]
+  },
+  "notes": "Coordinate 2 drifts upward, so its mass piles against the upper face. Distinct K_i and drifts catch a solver that swaps axes or faces."
+}

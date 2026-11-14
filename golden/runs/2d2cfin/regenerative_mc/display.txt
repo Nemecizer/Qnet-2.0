@@ -1,0 +1,33 @@
+[A[2KRunning regenerative simulation (C) ...  [ ]                                                       0.0s[KRunning regenerative simulation (C) ...  [done]                                                    0.0s
+Regenerative Monte Carlo
+Model layer: queueing process (simulation)
+Evidence: regenerative ratio confidence intervals; asymptotic, not finite-sample, and they describe sampling error only
+Model: 2d2cfin.bnet
+
+Complete empty-to-empty cycles: 500
+Stopping reason: precision_target_met
+Precision target met: yes
+
+Node                   E[N]         E[Q]  utilisation   throughput
+------------------------------------------------------------------
+s1                   11.470       10.520        0.950        0.950
+s2                    9.649        8.717        0.932        0.933
+
+Quantity                               estimate   std error              95% interval  eff. cycles
+--------------------------------------------------------------------------------------------------
+Mean number in system                    21.119       0.247    [20.633, 21.606]        101.500
+External blocking probability             0.031       0.002      [0.028, 0.034]         99.600
+Departure rate                            0.950       0.002      [0.946, 0.953]        101.500
+E[N] at s1                               11.470       0.181    [11.115, 11.826]        101.500
+utilisation at s1                         0.950       0.002      [0.946, 0.954]        101.500
+E[N] at s1, class c1                      5.744       0.090      [5.568, 5.921]        101.500
+E[N] at s1, class c2                      5.726       0.094      [5.541, 5.911]        101.500
+E[N] at s2                                9.649       0.171      [9.313, 9.985]        101.500
+utilisation at s2                         0.932       0.002      [0.928, 0.936]        101.500
+E[N] at s2, class c1                      4.831       0.086      [4.662, 5.000]        101.500
+E[N] at s2, class c2                      4.818       0.087      [4.647, 4.990]        101.500
+
+Uncertainty uses complete regenerative cycles, not individual events.
+
+Elapsed time: 0.052s
+

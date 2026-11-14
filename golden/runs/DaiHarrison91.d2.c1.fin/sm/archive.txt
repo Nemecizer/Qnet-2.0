@@ -1,0 +1,22 @@
+[Threads] Using 18 CPU cores (OpenMP)
+Running spectral method ...  [                              ]  starting ...[KRunning spectral method ...  [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  132/132      (100%)     0.2s
+
+Network load: rho_max = 1.0000 at S1  (heavy-traffic regime — analytical methods are most accurate here)
+Buffer regime: K*(1-rho) = 0.00 at S1 (K=25, rho=1.000) — small for the heavy-traffic limit (target ~1-5); SRBM may overstate E[X] / understate loss by 10-20%
+           Spectral
+           ========
+
+rho_1      0.986
+rho_2      0.980
+
+Gamma_1    0.986
+Gamma_2    0.980
+
+sojourn_1  14.284
+sojourn_2  12.755
+
+E[X_1]     14.080
+E[X_2]     12.500
+
+Elapsed time: 0.282s
+

@@ -1,0 +1,241 @@
+{
+  "canvasPanOffset" : [
+    0,
+    0
+  ],
+  "canvasScale" : 1,
+  "infiniteBuffers" : true,
+  "links" : [
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "E6DE6ACD-6C84-4B2F-97A1-FAA02ADF1EEB",
+      "id" : "EC168157-CEBC-4FFA-89A5-65DC91190DF2",
+      "routingProbability" : 0.4464579736978687,
+      "toNodeID" : "8E2605AC-9B75-43A4-94E8-E4DB20FEB55D"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "E6DE6ACD-6C84-4B2F-97A1-FAA02ADF1EEB",
+      "id" : "89840710-9884-4A00-A307-B1B73C962C2A",
+      "routingProbability" : 0.3794620506672674,
+      "toNodeID" : "1057439C-08B4-4450-8069-4A4217D289B8"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "E6DE6ACD-6C84-4B2F-97A1-FAA02ADF1EEB",
+      "id" : "AFBC6378-8CB2-4A96-B30D-D057D41852FA",
+      "routingProbability" : 0.17407997563486388,
+      "toNodeID" : "BF33A23D-BD3F-40D2-BBAC-1E8DFDCE6BFA"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "BE1F5D7F-AA30-462C-8BDF-93177BF2B070",
+      "id" : "B9510813-218E-4252-8E2F-7DB22DC97C6B",
+      "routingProbability" : 0.07373569931734554,
+      "toNodeID" : "1057439C-08B4-4450-8069-4A4217D289B8"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "BE1F5D7F-AA30-462C-8BDF-93177BF2B070",
+      "id" : "C736B9E1-9636-49E7-8A51-D2FD0E8D8201",
+      "routingProbability" : 0.25232188145732065,
+      "toNodeID" : "BF33A23D-BD3F-40D2-BBAC-1E8DFDCE6BFA"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "BE1F5D7F-AA30-462C-8BDF-93177BF2B070",
+      "id" : "809A39AF-32A1-4E82-B615-B85893A667C7",
+      "routingProbability" : 0.6739424192253338,
+      "toNodeID" : "E3F98DF5-FC52-408D-98AE-0F6583FB86FF"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "9F98B056-781F-49AE-B570-8F71602810EA",
+      "id" : "967D906C-EA01-4C15-86C4-F5885B6FD99C",
+      "routingProbability" : 0.1745941244561603,
+      "toNodeID" : "BF33A23D-BD3F-40D2-BBAC-1E8DFDCE6BFA"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "9F98B056-781F-49AE-B570-8F71602810EA",
+      "id" : "6FC66FE5-1261-4CF1-8FC3-7D894B932163",
+      "routingProbability" : 0.8254058755438397,
+      "toNodeID" : "E3F98DF5-FC52-408D-98AE-0F6583FB86FF"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "E67D04DC-3C06-41F6-9273-048BD6AFF0CF",
+      "id" : "7AA2A6C9-DE15-49FB-BAE6-EF3F7C336702",
+      "routingProbability" : 1,
+      "toNodeID" : "E3F98DF5-FC52-408D-98AE-0F6583FB86FF"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "8E2605AC-9B75-43A4-94E8-E4DB20FEB55D",
+      "id" : "06E54054-7044-489F-9A56-B2F46BDD5682",
+      "routingProbability" : 1,
+      "toNodeID" : "BE1F5D7F-AA30-462C-8BDF-93177BF2B070"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "1057439C-08B4-4450-8069-4A4217D289B8",
+      "id" : "922AE15A-7AA4-49C7-BE9B-DD6A5F478114",
+      "routingProbability" : 1,
+      "toNodeID" : "9F98B056-781F-49AE-B570-8F71602810EA"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "BF33A23D-BD3F-40D2-BBAC-1E8DFDCE6BFA",
+      "id" : "B6464405-F1E3-472C-80C3-22E5FBE09CED",
+      "routingProbability" : 1,
+      "toNodeID" : "E67D04DC-3C06-41F6-9273-048BD6AFF0CF"
+    }
+  ],
+  "nodes" : [
+    {
+      "bufferSize" : 1,
+      "distribution" : "poisson",
+      "distributionParameters" : "lambda=2.359069",
+      "id" : "E6DE6ACD-6C84-4B2F-97A1-FAA02ADF1EEB",
+      "kind" : "source",
+      "name" : "Src1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        80,
+        220
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "8E2605AC-9B75-43A4-94E8-E4DB20FEB55D",
+      "kind" : "buffer",
+      "name" : "B1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        200,
+        220
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "1057439C-08B4-4450-8069-4A4217D289B8",
+      "kind" : "buffer",
+      "name" : "B2",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        330,
+        220
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "BF33A23D-BD3F-40D2-BBAC-1E8DFDCE6BFA",
+      "kind" : "buffer",
+      "name" : "B3",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        460,
+        220
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "erlang",
+      "distributionParameters" : "k=2,rate=2.3405",
+      "id" : "BE1F5D7F-AA30-462C-8BDF-93177BF2B070",
+      "kind" : "station",
+      "name" : "S1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        265,
+        220
+      ],
+      "serviceDistributions" : {
+        "0" : {
+          "distribution" : "erlang",
+          "distributionParameters" : "k=2,rate=2.3405"
+        }
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "gamma",
+      "distributionParameters" : "shape=1.679,scale=0.551",
+      "id" : "9F98B056-781F-49AE-B570-8F71602810EA",
+      "kind" : "station",
+      "name" : "S2",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        395,
+        220
+      ],
+      "serviceDistributions" : {
+        "0" : {
+          "distribution" : "gamma",
+          "distributionParameters" : "shape=1.679,scale=0.551"
+        }
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "erlang",
+      "distributionParameters" : "k=2,rate=1.8806",
+      "id" : "E67D04DC-3C06-41F6-9273-048BD6AFF0CF",
+      "kind" : "station",
+      "name" : "S3",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        525,
+        220
+      ],
+      "serviceDistributions" : {
+        "0" : {
+          "distribution" : "erlang",
+          "distributionParameters" : "k=2,rate=1.8806"
+        }
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "E3F98DF5-FC52-408D-98AE-0F6583FB86FF",
+      "kind" : "sink",
+      "name" : "Sink1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        630,
+        220
+      ],
+      "serviceDistributions" : {
+
+      }
+    }
+  ]
+}

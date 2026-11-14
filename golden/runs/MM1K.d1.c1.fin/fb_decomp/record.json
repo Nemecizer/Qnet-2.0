@@ -1,0 +1,206 @@
+{
+  "completedAt" : "2026-11-11T04:55:49Z",
+  "elapsedSeconds" : 0.5439490079879761,
+  "id" : "39F3109E-F5D8-49A3-A7DA-7DEB07FB72E7",
+  "measurements" : [
+    {
+      "estimate" : 0.9,
+      "id" : "81D17FB2-A4FF-413C-89F5-C0D61757FDF4",
+      "metric" : "Offered arrival rate",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.860641,
+      "id" : "7AC90F6B-4C23-4FF2-8D63-DC45E7CE1C0A",
+      "metric" : "Throughput",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.0437324,
+      "id" : "D9B829ED-8F64-4CD0-8580-E691283D47A9",
+      "metric" : "Full probability",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "probability"
+    },
+    {
+      "estimate" : 4.2769,
+      "id" : "E864C964-171F-4EA5-9371-01C4CC6453AB",
+      "metric" : "Mean number in system",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 3.41626,
+      "id" : "0BC47AC7-7066-4BD1-9A95-CE10B23DD871",
+      "metric" : "Mean queue length",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.860641,
+      "id" : "606508FB-E4A9-408F-A3E5-7FC07706FED2",
+      "metric" : "Server utilization",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 3.96944,
+      "id" : "520B4C61-7FFF-4357-A71C-3BF98E6E33F4",
+      "metric" : "Mean waiting time",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 4.96944,
+      "id" : "186D5F15-ECD6-4DB4-9DAB-B7AEB21D7471",
+      "metric" : "Mean sojourn time",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "unit" : "time"
+    }
+  ],
+  "method" : {
+    "displayName" : "Finite-Buffer Decomposition",
+    "fidelity" : "Queueing approximation",
+    "identifier" : "queue-approx.finite-decomposition",
+    "implementation" : "fBNAdecomp",
+    "layer" : "Queue approximation",
+    "shortName" : "FB Decomp"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Finite capacity",
+    "exportStationIDs" : [
+      "EE000001-0001-0001-0001-000000000003"
+    ],
+    "networkFingerprint" : "4a61f9da5223f27e8e2ed5351813d746071f68158092d346416cfbfbc9bb1e9b",
+    "networkSnapshot" : {
+      "infiniteBuffers" : false,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000001",
+          "id" : "EE000001-0001-0001-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000002",
+          "id" : "EE000001-0001-0001-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000003",
+          "id" : "EE000001-0001-0001-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000004"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.9",
+          "id" : "EE000001-0001-0001-0001-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            220,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            340,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000004",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "MM1K.d1.c1.fin.bnet",
+    "parameters" : {
+      "BAS is approximation" : "true",
+      "blocking" : "BAS + external loss approximation",
+      "damping" : "0.5",
+      "fixed-point tolerance" : "1e-10",
+      "maximum iterations" : "1000",
+      "runtime" : "QNET_SOLVER_ROOT: \/Users\/nobody\/Library\/Caches\/qnet\/solvers\/stage\/Resources\/bin\/finite\/fBNAdecomp\/fbna_decomp.py; Python runtime: \/opt\/homebrew\/bin\/python3"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/MM1K.d1.c1.fin.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Solving finite decomposition ...  [ ]                                                       0.0s\r\u001b[KSolving finite decomposition ...  [done]                                                    0.2s\nFINITE-BUFFER M\/M\/c\/K DECOMPOSITION\n====================================\nNetwork: MM1K.d1.c1.fin.bnet\nStatus: converged\nBlocking: bas_external_loss\nSemantics: Internal transfers wait upstream; external arrivals that see a full station are lost. Downstream blocking uses an independence\/frozen-server approximation.\nConvergence: iterations=30 residual=8.14579e-11 tolerance=1e-10 damping=0.5\nNetwork flow: external=0.9 external_loss=0.0393591 internal_loss=0 exit=0.860641 residual=1.11e-16\n\nS1 S1: offered=0.9 throughput=0.860641 P(full)=0.0437324 E[N]=4.2769 E[Q]=3.41626 util=0.860641 W=3.96944 T=4.96944\n  c1: offered=0.9 throughput=0.860641 E[N]=4.2769 T=4.96944\n\nWarnings:\n  - BAS results are an independence\/frozen-server approximation, not an exact blocking-after-service solution.\nElapsed time: 0.274s\n\n",
+  "runEvidence" : {
+    "residual" : 8.14579e-11
+  },
+  "startedAt" : "2026-11-11T04:55:48Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

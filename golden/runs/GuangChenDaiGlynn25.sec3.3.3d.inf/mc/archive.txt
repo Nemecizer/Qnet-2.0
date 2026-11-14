@@ -1,0 +1,25 @@
+Running multi-class SRBM (research, mesh=auto) ... done.
+
+Network load: rho_max = 0.8980 at S1  (near heavy-traffic — small O(1) deviation expected)
+Routing graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference
+           Multi-Class SRBM
+           ================
+
+rho_1      0.898
+rho_2      0.592
+rho_3      0.357
+
+Gamma_1    0.898
+Gamma_2    0.592
+Gamma_3    0.357
+
+sojourn_1  0.471
+sojourn_2  0.519
+sojourn_3  0.634
+
+E[X_1]     0.423
+E[X_2]     0.307
+E[X_3]     0.227
+
+Elapsed time: 7.837s
+

@@ -1,0 +1,242 @@
+{
+  "blocking" : "bas",
+  "classes" : [
+    {
+      "external_arrivals" : {
+        "s1" : 1
+      },
+      "id" : "c1",
+      "name" : "Class 1"
+    }
+  ],
+  "name" : "15stationtandem.inf.bnet",
+  "routes" : [
+    {
+      "class" : "c1",
+      "from" : "s1",
+      "probability" : 1,
+      "to" : "s2"
+    },
+    {
+      "class" : "c1",
+      "from" : "s2",
+      "probability" : 1,
+      "to" : "s3"
+    },
+    {
+      "class" : "c1",
+      "from" : "s3",
+      "probability" : 1,
+      "to" : "s4"
+    },
+    {
+      "class" : "c1",
+      "from" : "s4",
+      "probability" : 1,
+      "to" : "s5"
+    },
+    {
+      "class" : "c1",
+      "from" : "s5",
+      "probability" : 1,
+      "to" : "s6"
+    },
+    {
+      "class" : "c1",
+      "from" : "s6",
+      "probability" : 1,
+      "to" : "s7"
+    },
+    {
+      "class" : "c1",
+      "from" : "s7",
+      "probability" : 1,
+      "to" : "s8"
+    },
+    {
+      "class" : "c1",
+      "from" : "s8",
+      "probability" : 1,
+      "to" : "s9"
+    },
+    {
+      "class" : "c1",
+      "from" : "s9",
+      "probability" : 1,
+      "to" : "s10"
+    },
+    {
+      "class" : "c1",
+      "from" : "s10",
+      "probability" : 1,
+      "to" : "s12"
+    },
+    {
+      "class" : "c1",
+      "from" : "s11",
+      "probability" : 1,
+      "to" : "s14"
+    },
+    {
+      "class" : "c1",
+      "from" : "s12",
+      "probability" : 1,
+      "to" : "s11"
+    },
+    {
+      "class" : "c1",
+      "from" : "s13",
+      "probability" : 1,
+      "to" : "s15"
+    },
+    {
+      "class" : "c1",
+      "from" : "s14",
+      "probability" : 1,
+      "to" : "s13"
+    }
+  ],
+  "schema_version" : 1,
+  "solver" : {
+    "damping" : 0.5,
+    "max_iterations" : 1000,
+    "tolerance" : 1e-10
+  },
+  "stations" : [
+    {
+      "capacity" : 2,
+      "id" : "s1",
+      "name" : "S1",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.1111111
+      }
+    },
+    {
+      "capacity" : 2,
+      "id" : "s2",
+      "name" : "S2",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.111111111
+      }
+    },
+    {
+      "capacity" : 2,
+      "id" : "s3",
+      "name" : "S3",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.1111111
+      }
+    },
+    {
+      "capacity" : 2,
+      "id" : "s4",
+      "name" : "S4",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.1111111
+      }
+    },
+    {
+      "capacity" : 2,
+      "id" : "s5",
+      "name" : "S5",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.1111111
+      }
+    },
+    {
+      "capacity" : 2,
+      "id" : "s6",
+      "name" : "S6",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.1111111
+      }
+    },
+    {
+      "capacity" : 2,
+      "id" : "s7",
+      "name" : "S7",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.1111111
+      }
+    },
+    {
+      "capacity" : 2,
+      "id" : "s8",
+      "name" : "S8",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.1111111
+      }
+    },
+    {
+      "capacity" : 2,
+      "id" : "s9",
+      "name" : "S9",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.1111111
+      }
+    },
+    {
+      "capacity" : 2,
+      "id" : "s10",
+      "name" : "S10",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.1111111
+      }
+    },
+    {
+      "capacity" : 2,
+      "id" : "s11",
+      "name" : "S11",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.1111111
+      }
+    },
+    {
+      "capacity" : 2,
+      "id" : "s12",
+      "name" : "S12",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.1111111
+      }
+    },
+    {
+      "capacity" : 2,
+      "id" : "s13",
+      "name" : "S13",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.1111111
+      }
+    },
+    {
+      "capacity" : 2,
+      "id" : "s14",
+      "name" : "S14",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.1111111
+      }
+    },
+    {
+      "capacity" : 2,
+      "id" : "s15",
+      "name" : "S15",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.1111111
+      }
+    }
+  ]
+}

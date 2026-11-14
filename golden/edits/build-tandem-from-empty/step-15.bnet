@@ -1,0 +1,94 @@
+{
+  "canvasPanOffset" : [
+    0,
+    0
+  ],
+  "canvasScale" : 1,
+  "infiniteBuffers" : false,
+  "links" : [
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "E369B435-7FCB-408A-8412-8A0A00762C3E",
+      "id" : "F581C6B8-7F2B-4665-B512-095D63D05008",
+      "routingProbability" : 1,
+      "toNodeID" : "0C30C160-525D-4C4B-8351-2D9B0B46F0C1"
+    },
+    {
+      "customerClass" : 0,
+      "fromNodeID" : "0C30C160-525D-4C4B-8351-2D9B0B46F0C1",
+      "id" : "96B2DEF5-15DE-46F5-8B21-869BBB50C208",
+      "routingProbability" : 1,
+      "toNodeID" : "4BFC6D9E-39DD-4FEC-9CA2-E51DC65CAA65"
+    }
+  ],
+  "nodes" : [
+    {
+      "bufferSize" : 1,
+      "distribution" : "poisson",
+      "distributionParameters" : "lambda=1.0",
+      "id" : "E369B435-7FCB-408A-8412-8A0A00762C3E",
+      "kind" : "source",
+      "name" : "Src1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        100,
+        200
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "0C30C160-525D-4C4B-8351-2D9B0B46F0C1",
+      "kind" : "buffer",
+      "name" : "B1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        230,
+        200
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.1111111",
+      "id" : "4BFC6D9E-39DD-4FEC-9CA2-E51DC65CAA65",
+      "kind" : "station",
+      "name" : "S1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        360,
+        200
+      ],
+      "serviceDistributions" : {
+
+      }
+    },
+    {
+      "bufferSize" : 1,
+      "distribution" : "exponential",
+      "distributionParameters" : "rate=1.0",
+      "id" : "988C5C36-A9D9-497C-A180-C8603263CA96",
+      "kind" : "sink",
+      "name" : "Sink1",
+      "numberOfServers" : 1,
+      "picture" : "",
+      "position" : [
+        490,
+        200
+      ],
+      "serviceDistributions" : {
+
+      }
+    }
+  ]
+}

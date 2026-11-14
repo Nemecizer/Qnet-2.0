@@ -1,0 +1,737 @@
+{
+  "completedAt" : "2026-11-11T04:40:04Z",
+  "elapsedSeconds" : 0.7509009838104248,
+  "failureMessage" : "The regenerative simulation returned estimates, but its requested precision target was not met.",
+  "id" : "94278DCD-41CD-4F08-A051-CC3EA79BA5AC",
+  "measurements" : [
+    {
+      "estimate" : 9.27137580816773,
+      "id" : "EB59E3DB-F1EF-4C63-8C84-9F2F36240BA0",
+      "metric" : "Mean number in system",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "FAEF03D0-352F-473C-8AE8-B4FFCFA531F3",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 8.897254193490426,
+        "standardError" : 0.17935195133341272,
+        "upperBound" : 9.645497422845036
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 8.370491750351519,
+      "id" : "990419F8-C649-47D7-BADF-5FE997E38038",
+      "metric" : "Mean queue length",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "FAEF03D0-352F-473C-8AE8-B4FFCFA531F3",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 7.998790911233263,
+        "standardError" : 0.1781914441527999,
+        "upperBound" : 8.742192589469775
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.900884057816278,
+      "id" : "42E8F3C9-4F33-480E-94FF-CEB9CEBCAF2A",
+      "metric" : "Server utilization",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "FAEF03D0-352F-473C-8AE8-B4FFCFA531F3",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.8983371306499351,
+        "standardError" : 0.0012209836033710128,
+        "upperBound" : 0.9034309849826209
+      },
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 1.0000874234652846,
+      "id" : "68709CC8-7662-4FE9-804F-FC6A3A4EA044",
+      "metric" : "Service completion rate",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "FAEF03D0-352F-473C-8AE8-B4FFCFA531F3",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.9981425340742964,
+        "standardError" : 0.0009323698330080342,
+        "upperBound" : 1.0020323128562727
+      },
+      "unit" : "customers \/ time"
+    },
+    {
+      "customerClass" : 0,
+      "estimate" : 9.27137580816773,
+      "id" : "4C8B8436-288A-41C3-85A3-E8BA20896053",
+      "metric" : "Mean number in system",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "FAEF03D0-352F-473C-8AE8-B4FFCFA531F3",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 8.897254193490426,
+        "standardError" : 0.17935195133341272,
+        "upperBound" : 9.645497422845036
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 8.888418796234648,
+      "id" : "B9369EE6-8543-47B1-81D8-CE5F551830C6",
+      "metric" : "Mean number in system",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "4A66260F-893B-4F2B-A84F-A0A0260CBE0C",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 8.623467656439114,
+        "standardError" : 0.12701619491118715,
+        "upperBound" : 9.153369936030181
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 7.9890371138603715,
+      "id" : "FFF55155-0238-489D-AC1C-C812765A67C3",
+      "metric" : "Mean queue length",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "4A66260F-893B-4F2B-A84F-A0A0260CBE0C",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 7.72577733909637,
+        "standardError" : 0.12620536333417723,
+        "upperBound" : 8.252296888624372
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.8993816823744099,
+      "id" : "574C62D2-1681-431D-818D-BC260C6C135F",
+      "metric" : "Server utilization",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "4A66260F-893B-4F2B-A84F-A0A0260CBE0C",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.897482279181211,
+        "standardError" : 0.0009105639869617429,
+        "upperBound" : 0.9012810855676087
+      },
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 1.0000874234652846,
+      "id" : "CDAF1A43-0FD2-4A82-BA35-18368D4EA75C",
+      "metric" : "Service completion rate",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "4A66260F-893B-4F2B-A84F-A0A0260CBE0C",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.9981425340742964,
+        "standardError" : 0.0009323698330080342,
+        "upperBound" : 1.0020323128562727
+      },
+      "unit" : "customers \/ time"
+    },
+    {
+      "customerClass" : 0,
+      "estimate" : 8.888418796234648,
+      "id" : "9A222D0D-94E8-42C3-B9DE-99D4A7042D13",
+      "metric" : "Mean number in system",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "4A66260F-893B-4F2B-A84F-A0A0260CBE0C",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 8.623467656439114,
+        "standardError" : 0.12701619491118715,
+        "upperBound" : 9.153369936030181
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 9.023225196976139,
+      "id" : "5C7B3646-3D53-4269-8204-90B0DB9821E8",
+      "metric" : "Mean number in system",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "6E7FCC18-DCDD-43BB-84E0-EB95CB3FF6C5",
+      "stationName" : "S3",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 8.704758856117193,
+        "standardError" : 0.15267110326231717,
+        "upperBound" : 9.341691537835084
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 8.122749446712467,
+      "id" : "E47941CD-C745-4705-A3FE-AFE3827D799A",
+      "metric" : "Mean queue length",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "6E7FCC18-DCDD-43BB-84E0-EB95CB3FF6C5",
+      "stationName" : "S3",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 7.806643338541427,
+        "standardError" : 0.15153962001844756,
+        "upperBound" : 8.438855554883506
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.9004757502636178,
+      "id" : "7A4550B8-1392-4513-B2E6-B958155B1202",
+      "metric" : "Server utilization",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "6E7FCC18-DCDD-43BB-84E0-EB95CB3FF6C5",
+      "stationName" : "S3",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.8977931359627518,
+        "standardError" : 0.0012860313081622737,
+        "upperBound" : 0.9031583645644838
+      },
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 1.0000874234652846,
+      "id" : "A0F23D80-0B25-4194-B5A7-7D12887D30D8",
+      "metric" : "Service completion rate",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "6E7FCC18-DCDD-43BB-84E0-EB95CB3FF6C5",
+      "stationName" : "S3",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.9981425340742964,
+        "standardError" : 0.0009323698330080342,
+        "upperBound" : 1.0020323128562727
+      },
+      "unit" : "customers \/ time"
+    },
+    {
+      "customerClass" : 0,
+      "estimate" : 9.023225196976139,
+      "id" : "8F6B06CA-1BFF-4598-8DB2-250765F0D2C1",
+      "metric" : "Mean number in system",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "6E7FCC18-DCDD-43BB-84E0-EB95CB3FF6C5",
+      "stationName" : "S3",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 8.704758856117193,
+        "standardError" : 0.15267110326231717,
+        "upperBound" : 9.341691537835084
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 9.051627443889338,
+      "id" : "41C9A03F-1CC3-44AD-BDF0-9D5A0AD512F5",
+      "metric" : "Mean number in system",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "72FFE7AD-6B8D-408E-A32C-F7DA952E4737",
+      "stationName" : "S4",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 8.859084290932763,
+        "standardError" : 0.09230418356992119,
+        "upperBound" : 9.244170596845912
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 8.150934269608706,
+      "id" : "C93D982A-801C-427A-B096-09FB7875BD81",
+      "metric" : "Mean queue length",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "72FFE7AD-6B8D-408E-A32C-F7DA952E4737",
+      "stationName" : "S4",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 7.960089662150665,
+        "standardError" : 0.09148990971447171,
+        "upperBound" : 8.341778877066748
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.900693174280768,
+      "id" : "8A3CAD82-A71F-49C9-93DA-6A27B1006E1F",
+      "metric" : "Server utilization",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "72FFE7AD-6B8D-408E-A32C-F7DA952E4737",
+      "stationName" : "S4",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.8987065055138523,
+        "standardError" : 0.000952398647981885,
+        "upperBound" : 0.9026798430476837
+      },
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 1.0000874234652846,
+      "id" : "4D43C1DC-AE76-4755-AE25-6BACA79BA585",
+      "metric" : "Service completion rate",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "72FFE7AD-6B8D-408E-A32C-F7DA952E4737",
+      "stationName" : "S4",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.9981425340742964,
+        "standardError" : 0.0009323698330080342,
+        "upperBound" : 1.0020323128562727
+      },
+      "unit" : "customers \/ time"
+    },
+    {
+      "customerClass" : 0,
+      "estimate" : 9.051627443889338,
+      "id" : "DDF31D39-A776-4FD1-A1A7-6BF27B9E74F5",
+      "metric" : "Mean number in system",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "72FFE7AD-6B8D-408E-A32C-F7DA952E4737",
+      "stationName" : "S4",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 8.859084290932763,
+        "standardError" : 0.09230418356992119,
+        "upperBound" : 9.244170596845912
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 8.860755911415062,
+      "id" : "3D2F4341-0777-4119-A0A7-A15A1F4A4379",
+      "metric" : "Mean number in system",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "BED4172E-6C16-4C92-AEC0-57C697892A49",
+      "stationName" : "S5",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 8.676813593961182,
+        "standardError" : 0.08818098787635918,
+        "upperBound" : 9.044698228868942
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 7.960679847578785,
+      "id" : "3C3D2752-4FBD-4757-8E28-E4AA10E5466B",
+      "metric" : "Mean queue length",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "BED4172E-6C16-4C92-AEC0-57C697892A49",
+      "stationName" : "S5",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 7.777809068535599,
+        "standardError" : 0.08766729794948243,
+        "upperBound" : 8.14355062662197
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.9000760638363212,
+      "id" : "694BB0F3-FE1B-4542-8D4F-BDE4C0608DF5",
+      "metric" : "Server utilization",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "BED4172E-6C16-4C92-AEC0-57C697892A49",
+      "stationName" : "S5",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.8984761263304032,
+        "standardError" : 0.000767001697951674,
+        "upperBound" : 0.9016760013422392
+      },
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 1.0000874234652846,
+      "id" : "E69DD5BA-D973-49AB-8694-8C6BB18145A2",
+      "metric" : "Service completion rate",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "BED4172E-6C16-4C92-AEC0-57C697892A49",
+      "stationName" : "S5",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.9981425340742964,
+        "standardError" : 0.0009323698330080342,
+        "upperBound" : 1.0020323128562727
+      },
+      "unit" : "customers \/ time"
+    },
+    {
+      "customerClass" : 0,
+      "estimate" : 8.860755911415062,
+      "id" : "69B55573-6C01-4261-9A3D-65DA31E31E5E",
+      "metric" : "Mean number in system",
+      "note" : "Effective complete cycles: 11.5438",
+      "stationID" : "BED4172E-6C16-4C92-AEC0-57C697892A49",
+      "stationName" : "S5",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 8.676813593961182,
+        "standardError" : 0.08818098787635918,
+        "upperBound" : 9.044698228868942
+      },
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Regenerative Monte Carlo",
+    "fidelity" : "Queue simulation",
+    "identifier" : "queue.regenerative-mc",
+    "implementation" : "regenerative_mc",
+    "layer" : "Queueing process",
+    "shortName" : "Regen MC"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "FAEF03D0-352F-473C-8AE8-B4FFCFA531F3",
+      "4A66260F-893B-4F2B-A84F-A0A0260CBE0C",
+      "6E7FCC18-DCDD-43BB-84E0-EB95CB3FF6C5",
+      "72FFE7AD-6B8D-408E-A32C-F7DA952E4737",
+      "BED4172E-6C16-4C92-AEC0-57C697892A49"
+    ],
+    "networkFingerprint" : "57efaa5119fc7e22db4ff3b86d9511d838041ded327a5ef69af0fe53847ee12f",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "BE552689-CECF-4715-9AE2-AFF76B83E5B4",
+          "id" : "5CD8AAB1-AC5A-49DD-AB64-33CE84086F3F",
+          "routingProbability" : 1,
+          "toNodeID" : "31C51491-B62D-4406-8904-D10522E81424"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "31C51491-B62D-4406-8904-D10522E81424",
+          "id" : "41DEA410-F45C-4472-A2F0-8D5F6D014C42",
+          "routingProbability" : 1,
+          "toNodeID" : "FAEF03D0-352F-473C-8AE8-B4FFCFA531F3"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "FAEF03D0-352F-473C-8AE8-B4FFCFA531F3",
+          "id" : "3F4B95CA-1C9A-4633-A001-22D07A50AF29",
+          "routingProbability" : 1,
+          "toNodeID" : "5CFB26B3-131F-45A9-A5AF-A97CE720F592"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "5CFB26B3-131F-45A9-A5AF-A97CE720F592",
+          "id" : "2FEF231E-7C08-42FE-8BB8-A11001AB4274",
+          "routingProbability" : 1,
+          "toNodeID" : "4A66260F-893B-4F2B-A84F-A0A0260CBE0C"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "4A66260F-893B-4F2B-A84F-A0A0260CBE0C",
+          "id" : "4A79DF1B-C780-4034-A211-778E6FC5FFB4",
+          "routingProbability" : 1,
+          "toNodeID" : "963D1C3D-E813-4ECA-8148-615D0921A4B4"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "963D1C3D-E813-4ECA-8148-615D0921A4B4",
+          "id" : "53CC17B0-3E53-420E-8260-AD95C2DAC834",
+          "routingProbability" : 1,
+          "toNodeID" : "6E7FCC18-DCDD-43BB-84E0-EB95CB3FF6C5"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "6E7FCC18-DCDD-43BB-84E0-EB95CB3FF6C5",
+          "id" : "C006B197-96CD-44D0-B3EC-D089DAA225B0",
+          "routingProbability" : 1,
+          "toNodeID" : "6C2C2139-0509-4B98-A4C9-398DF9C7F189"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "6C2C2139-0509-4B98-A4C9-398DF9C7F189",
+          "id" : "E3447DE9-7B13-4AC1-91D6-5A6BD3DF7C9C",
+          "routingProbability" : 1,
+          "toNodeID" : "72FFE7AD-6B8D-408E-A32C-F7DA952E4737"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "72FFE7AD-6B8D-408E-A32C-F7DA952E4737",
+          "id" : "BB629BEA-FA7F-49BB-83AF-5687E0BA9F48",
+          "routingProbability" : 1,
+          "toNodeID" : "3D1965B2-C980-4D39-A4B9-CAB8AE22319F"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "3D1965B2-C980-4D39-A4B9-CAB8AE22319F",
+          "id" : "49D3E79C-EA11-4F3B-91F6-8F5B044B6151",
+          "routingProbability" : 1,
+          "toNodeID" : "BED4172E-6C16-4C92-AEC0-57C697892A49"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "BED4172E-6C16-4C92-AEC0-57C697892A49",
+          "id" : "D31FB334-0C25-4C76-BD92-2A0EF38797AF",
+          "routingProbability" : 1,
+          "toNodeID" : "E616E92B-A0D8-45C0-8836-F4A868D190E7"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "BE552689-CECF-4715-9AE2-AFF76B83E5B4",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            14.890861742424192,
+            124.5859375
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "31C51491-B62D-4406-8904-D10522E81424",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            107.34611742424238,
+            124.5859375
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.1111111",
+          "id" : "FAEF03D0-352F-473C-8AE8-B4FFCFA531F3",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "person.fill",
+          "position" : [
+            199.80137310606057,
+            124.5859375
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.1111111"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "5CFB26B3-131F-45A9-A5AF-A97CE720F592",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            292.25662878787875,
+            124.5859375
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.111111111",
+          "id" : "4A66260F-893B-4F2B-A84F-A0A0260CBE0C",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            381.6189236111111,
+            124.5859375
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.111111111"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "963D1C3D-E813-4ECA-8148-615D0921A4B4",
+          "kind" : "buffer",
+          "name" : "B3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            477.1671401515151,
+            124.5859375
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.1111111",
+          "id" : "6E7FCC18-DCDD-43BB-84E0-EB95CB3FF6C5",
+          "kind" : "station",
+          "name" : "S3",
+          "numberOfServers" : 1,
+          "picture" : "cpu.fill",
+          "position" : [
+            569.6223958333334,
+            124.5859375
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.1111111"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "6C2C2139-0509-4B98-A4C9-398DF9C7F189",
+          "kind" : "buffer",
+          "name" : "B4",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            662.0776515151514,
+            124.5859375
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.1111111",
+          "id" : "72FFE7AD-6B8D-408E-A32C-F7DA952E4737",
+          "kind" : "station",
+          "name" : "S4",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            754.5329071969696,
+            124.5859375
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "3D1965B2-C980-4D39-A4B9-CAB8AE22319F",
+          "kind" : "buffer",
+          "name" : "B5",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            846.9881628787879,
+            124.5859375
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.1111111",
+          "id" : "BED4172E-6C16-4C92-AEC0-57C697892A49",
+          "kind" : "station",
+          "name" : "S5",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            939.4434185606061,
+            124.5859375
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "E616E92B-A0D8-45C0-8836-F4A868D190E7",
+          "kind" : "sink",
+          "name" : "Sink2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            1031.898674242424,
+            124.5859375
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "5stationtandem.inf.bnet",
+    "parameters" : {
+      "IID unit" : "complete empty-to-empty cycle",
+      "absolute half-width" : "0.05",
+      "buffer regime" : "infinite",
+      "confidence" : "0.95",
+      "engine" : "C",
+      "estimated empty-system probability" : "9.999996391000454e-06",
+      "interval" : "asymptotic regenerative-ratio t",
+      "maximum cycles" : "20000",
+      "maximum wall seconds" : "30",
+      "minimum cycles" : "500",
+      "relative half-width" : "0.1",
+      "runtime" : "C engine; QNET_SOLVER_ROOT: \/Users\/nobody\/Library\/Caches\/qnet\/solvers\/stage\/Resources\/bin\/infinite\/BNArmc\/bna_rmc",
+      "stream" : "0"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "seed" : 12345,
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/5stationtandem.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Running regenerative simulation (C) ...  [ ]                                                       0.0s\r\u001b[KRunning regenerative simulation (C) ...  [\/]                                                       0.2s\r\u001b[KRunning regenerative simulation (C) ...  [-]                                                       0.4s\r\u001b[KRunning regenerative simulation (C) ...  [done]                                                    0.6s\nRegenerative Monte Carlo\nModel layer: queueing process (simulation)\nEvidence: regenerative ratio confidence intervals; asymptotic, not finite-sample, and they describe sampling error only\nModel: 5stationtandem.inf.bnet\n\nComplete empty-to-empty cycles: 21\nStopping reason: maximum_events\nPrecision target met: no\n\nNode                   E[N]         E[Q]  utilisation   throughput\n------------------------------------------------------------------\ns1                 9.271376     8.370492     0.900884     1.000087\ns2                 8.888419     7.989037     0.899382     1.000087\ns3                 9.023225     8.122749     0.900476     1.000087\ns4                 9.051627     8.150934     0.900693     1.000087\ns5                 8.860756     7.960680     0.900076     1.000087\n\nQuantity                               estimate   std error              95% interval  eff. cycles\n--------------------------------------------------------------------------------------------------\nMean number in system                 45.095403    0.489460    [44.074407, 46.116399]         11.5\nExternal blocking probability          0.000000    0.000000      [0.000000, 0.000000]         11.6\nDeparture rate                         1.000087    0.000932      [0.998143, 1.002032]         11.5\nE[N] at s1                             9.271376    0.179352      [8.897254, 9.645497]         11.5\nutilisation at s1                      0.900884    0.001221      [0.898337, 0.903431]         11.5\nE[N] at s1, class c1                   9.271376    0.179352      [8.897254, 9.645497]         11.5\nE[N] at s2                             8.888419    0.127016      [8.623468, 9.153370]         11.5\nutilisation at s2                      0.899382    0.000911      [0.897482, 0.901281]         11.5\nE[N] at s2, class c1                   8.888419    0.127016      [8.623468, 9.153370]         11.5\nE[N] at s3                             9.023225    0.152671      [8.704759, 9.341692]         11.5\nutilisation at s3                      0.900476    0.001286      [0.897793, 0.903158]         11.5\nE[N] at s3, class c1                   9.023225    0.152671      [8.704759, 9.341692]         11.5\nE[N] at s4                             9.051627    0.092304      [8.859084, 9.244171]         11.5\nutilisation at s4                      0.900693    0.000952      [0.898707, 0.902680]         11.5\nE[N] at s4, class c1                   9.051627    0.092304      [8.859084, 9.244171]         11.5\nE[N] at s5                             8.860756    0.088181      [8.676814, 9.044698]         11.5\nutilisation at s5                      0.900076    0.000767      [0.898476, 0.901676]         11.5\nE[N] at s5, class c1                   8.860756    0.088181      [8.676814, 9.044698]         11.5\n\nUncertainty uses complete regenerative cycles, not individual events.\n\nQNET_NODE_METRIC_V1 node_id=s1 metric=mean_number class_id=- estimate=9.2713758081677309 standard_error=0.17935195133341272 ci_confidence=0.94999999999999996 ci_low=8.8972541934904257 ci_high=9.6454974228450361 ci_half_width=0.37412161467730459 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s1 metric=mean_queue class_id=- estimate=8.370491750351519 standard_error=0.17819144415279989 ci_confidence=0.94999999999999996 ci_low=7.9987909112332627 ci_high=8.7421925894697754 ci_half_width=0.37170083911825663 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s1 metric=utilization class_id=- estimate=0.90088405781627801 standard_error=0.0012209836033710128 ci_confidence=0.94999999999999996 ci_low=0.89833713064993514 ci_high=0.90343098498262087 ci_half_width=0.0025469271663428909 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s1 metric=service_completion_rate class_id=- estimate=1.0000874234652846 standard_error=0.00093236983300803425 ci_confidence=0.94999999999999996 ci_low=0.99814253407429643 ci_high=1.0020323128562727 ci_half_width=0.0019448893909881344 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s1 metric=mean_number_class class_id=c1 estimate=9.2713758081677309 standard_error=0.17935195133341272 ci_confidence=0.94999999999999996 ci_low=8.8972541934904257 ci_high=9.6454974228450361 ci_half_width=0.37412161467730459 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s2 metric=mean_number class_id=- estimate=8.8884187962346477 standard_error=0.12701619491118715 ci_confidence=0.94999999999999996 ci_low=8.6234676564391144 ci_high=9.153369936030181 ci_half_width=0.26495113979553248 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s2 metric=mean_queue class_id=- estimate=7.9890371138603715 standard_error=0.12620536333417723 ci_confidence=0.94999999999999996 ci_low=7.7257773390963704 ci_high=8.2522968886243717 ci_half_width=0.26325977476400086 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s2 metric=utilization class_id=- estimate=0.89938168237440985 standard_error=0.00091056398696174289 ci_confidence=0.94999999999999996 ci_low=0.89748227918121104 ci_high=0.90128108556760866 ci_half_width=0.0018994031931988638 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s2 metric=service_completion_rate class_id=- estimate=1.0000874234652846 standard_error=0.00093236983300803425 ci_confidence=0.94999999999999996 ci_low=0.99814253407429643 ci_high=1.0020323128562727 ci_half_width=0.0019448893909881344 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s2 metric=mean_number_class class_id=c1 estimate=8.8884187962346477 standard_error=0.12701619491118715 ci_confidence=0.94999999999999996 ci_low=8.6234676564391144 ci_high=9.153369936030181 ci_half_width=0.26495113979553248 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s3 metric=mean_number class_id=- estimate=9.0232251969761386 standard_error=0.15267110326231717 ci_confidence=0.94999999999999996 ci_low=8.7047588561171931 ci_high=9.341691537835084 ci_half_width=0.31846634085894537 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s3 metric=mean_queue class_id=- estimate=8.1227494467124668 standard_error=0.15153962001844756 ci_confidence=0.94999999999999996 ci_low=7.8066433385414271 ci_high=8.4388555548835065 ci_half_width=0.31610610817103957 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s3 metric=utilization class_id=- estimate=0.90047575026361781 standard_error=0.0012860313081622737 ci_confidence=0.94999999999999996 ci_low=0.89779313596275179 ci_high=0.90315836456448384 ci_half_width=0.0026826143008660016 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s3 metric=service_completion_rate class_id=- estimate=1.0000874234652846 standard_error=0.00093236983300803425 ci_confidence=0.94999999999999996 ci_low=0.99814253407429643 ci_high=1.0020323128562727 ci_half_width=0.0019448893909881344 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s3 metric=mean_number_class class_id=c1 estimate=9.0232251969761386 standard_error=0.15267110326231717 ci_confidence=0.94999999999999996 ci_low=8.7047588561171931 ci_high=9.341691537835084 ci_half_width=0.31846634085894537 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s4 metric=mean_number class_id=- estimate=9.0516274438893376 standard_error=0.092304183569921192 ci_confidence=0.94999999999999996 ci_low=8.8590842909327634 ci_high=9.2441705968459118 ci_half_width=0.19254315295657368 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s4 metric=mean_queue class_id=- estimate=8.1509342696087064 standard_error=0.091489909714471712 ci_confidence=0.94999999999999996 ci_low=7.9600896621506649 ci_high=8.3417788770667478 ci_half_width=0.19084460745804183 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s4 metric=utilization class_id=- estimate=0.90069317428076801 standard_error=0.00095239864798188497 ci_confidence=0.94999999999999996 ci_low=0.89870650551385234 ci_high=0.90267984304768367 ci_half_width=0.0019866687669156382 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s4 metric=service_completion_rate class_id=- estimate=1.0000874234652846 standard_error=0.00093236983300803425 ci_confidence=0.94999999999999996 ci_low=0.99814253407429643 ci_high=1.0020323128562727 ci_half_width=0.0019448893909881344 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s4 metric=mean_number_class class_id=c1 estimate=9.0516274438893376 standard_error=0.092304183569921192 ci_confidence=0.94999999999999996 ci_low=8.8590842909327634 ci_high=9.2441705968459118 ci_half_width=0.19254315295657368 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s5 metric=mean_number class_id=- estimate=8.8607559114150618 standard_error=0.088180987876359182 ci_confidence=0.94999999999999996 ci_low=8.6768135939611817 ci_high=9.0446982288689419 ci_half_width=0.18394231745387932 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s5 metric=mean_queue class_id=- estimate=7.9606798475787848 standard_error=0.087667297949482428 ci_confidence=0.94999999999999996 ci_low=7.7778090685355989 ci_high=8.1435506266219697 ci_half_width=0.18287077904318574 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s5 metric=utilization class_id=- estimate=0.90007606383632122 standard_error=0.00076700169795167401 ci_confidence=0.94999999999999996 ci_low=0.89847612633040319 ci_high=0.90167600134223924 ci_half_width=0.0015999375059180428 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s5 metric=service_completion_rate class_id=- estimate=1.0000874234652846 standard_error=0.00093236983300803425 ci_confidence=0.94999999999999996 ci_low=0.99814253407429643 ci_high=1.0020323128562727 ci_half_width=0.0019448893909881344 effective_cycles=11.543845299015915\nQNET_NODE_METRIC_V1 node_id=s5 metric=mean_number_class class_id=c1 estimate=8.8607559114150618 standard_error=0.088180987876359182 ci_confidence=0.94999999999999996 ci_low=8.6768135939611817 ci_high=9.0446982288689419 ci_half_width=0.18394231745387932 effective_cycles=11.543845299015915\nElapsed time: 0.599s\n\n",
+  "runEvidence" : {
+    "convergenceNote" : "Sequential fixed-width target met: no",
+    "discretization" : "21 complete regenerative cycles"
+  },
+  "startedAt" : "2026-11-11T04:40:03Z",
+  "status" : "partial",
+  "warnings" : [
+    "The run stopped at a safeguard before every requested precision target was met."
+  ]
+}

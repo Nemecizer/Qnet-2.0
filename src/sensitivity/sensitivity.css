@@ -1,0 +1,27 @@
+/* Results ▸ Sensitivity (src/sensitivity/). Tokens only (src/styles.css). */
+.sensitivity-view .btn:disabled { color: var(--btn-disabled-fg); }
+.sensitivity-tier { flex: none; display: flex; align-items: center; flex-wrap: wrap; gap: var(--sp-2) var(--sp-3); margin: 0; max-width: 880px; font-size: var(--fs-sm); color: var(--text-2); }
+.sensitivity-tier strong { color: var(--text); font-weight: var(--fw-semibold); }
+.sensitivity-value { font-variant-numeric: tabular-nums; }
+.sensitivity-experimental { padding: 0 var(--sp-2); border: 1px solid var(--border); border-radius: var(--r-sm); font-size: var(--fs-xs); color: var(--text-2); }
+.sensitivity-bottleneck { flex: none; margin: 0; max-width: 880px; font-size: var(--fs-md); color: var(--text); }
+.sensitivity-section { flex: none; max-width: 880px; padding: var(--sp-5) var(--sp-6); border: 1px solid var(--hairline); border-radius: var(--r-lg); background: var(--surface); }
+.sensitivity-section h3 { margin: 0 0 var(--sp-3); font-size: var(--fs-md); font-weight: var(--fw-semibold); color: var(--text); }
+.sensitivity-readings { margin: 0; padding: 0 0 0 var(--sp-5); display: flex; flex-direction: column; gap: var(--sp-2); font-size: var(--fs-sm); line-height: 1.5; color: var(--text); }
+.sensitivity-target { display: flex; align-items: center; flex-wrap: wrap; gap: var(--sp-3); margin-bottom: var(--sp-3); font-size: var(--fs-sm); color: var(--text-2); }
+.sensitivity-target input { width: 64px; height: var(--ctl-sm); text-align: right; font-variant-numeric: tabular-nums; }
+.sensitivity-target-line { margin: 0 0 var(--sp-3); font-size: var(--fs-sm); color: var(--text); }
+.sensitivity-problem { margin: 0; font-size: var(--fs-sm); color: var(--warn-text); }
+.sensitivity-options { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.sensitivity-options li { display: flex; align-items: center; flex-wrap: wrap; gap: var(--sp-2) var(--sp-4); padding: var(--sp-3) 0; border-top: 1px solid var(--hairline); font-size: var(--fs-sm); }
+.sensitivity-options li:first-child { border-top: 0; }
+.sensitivity-option-what { flex: 1 1 260px; min-width: 0; color: var(--text); font-variant-numeric: tabular-nums; }
+.sensitivity-option-change { flex: none; min-width: 64px; text-align: right; font-weight: var(--fw-semibold); color: var(--text); font-variant-numeric: tabular-nums; }
+.sensitivity-option-gives { flex: none; color: var(--text-2); font-variant-numeric: tabular-nums; }
+.sensitivity-option-actions { flex: none; display: flex; gap: var(--sp-2); }
+.sensitivity-option-actions .btn { height: var(--ctl-xs); padding: 0 var(--sp-3); font-size: var(--fs-sm); }
+.sensitivity-options li[data-feasible="false"] .sensitivity-option-what { color: var(--text-2); }
+.sensitivity-option-why { flex: 1 1 260px; color: var(--text-2); }
+.sensitivity-subhead { margin: var(--sp-4) 0 var(--sp-1); font-size: var(--fs-xs); font-weight: var(--fw-semibold); color: var(--text-2); }
+.sensitivity-footnote { margin: var(--sp-3) 0 0; font-size: var(--fs-xs); color: var(--text-2); }
+.sensitivity-table td[data-note] { color: var(--muted); font-style: italic; text-align: left; white-space: normal; }

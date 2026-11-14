@@ -1,0 +1,23 @@
+/* The archetype gallery (0.90.34 ArchetypeGallerySheet): tiles on the left, knobs on the right. Tokens only. */
+.qn-arch-columns { display: flex; gap: 0; min-height: 0; flex: 1; }
+.qn-arch-gallery { flex: 1; min-width: 0; overflow: auto; padding: var(--sp-3) var(--sp-3) var(--sp-3) 0; display: flex; flex-direction: column; gap: var(--sp-4); border-right: 1px solid var(--hairline); }
+.qn-arch-knobs { flex: 1; min-width: 0; overflow: auto; padding: 0 0 0 var(--sp-4); display: flex; flex-direction: column; gap: var(--sp-3); }
+.qn-arch-group { display: flex; flex-direction: column; gap: var(--sp-2); }
+.qn-arch-tile {
+  display: flex; flex-direction: column; gap: 4px; padding: var(--sp-2);
+  border-radius: var(--r-md); outline: none; cursor: default;
+  box-shadow: inset 0 0 0 2px transparent;
+}
+.qn-arch-tile:hover { background: var(--hover); }
+.qn-arch-tile[data-on] { background: var(--sel-inactive); }
+.qn-arch-tile:focus-visible, .qn-arch-tile:focus { box-shadow: inset 0 0 0 2px var(--accent); }
+.qn-arch-title { font-weight: var(--fw-semibold); color: var(--text); }
+.qn-arch-route { color: var(--text-2); font-size: var(--fs-sm); line-height: 1.4; }
+.qn-arch-thumb { width: 100%; height: 56px; }
+.qn-arch-edge { fill: none; stroke: var(--text-2); stroke-width: 1; }
+.qn-arch-edge.ink { stroke: var(--canvas-node-stroke); }
+.qn-arch-node { stroke: var(--canvas-node-stroke); stroke-width: 1; }
+.qn-arch-node.station, .qn-arch-fill.station { fill: var(--canvas-station-fill); }
+.qn-arch-node.source { fill: var(--canvas-source-fill); }
+.qn-arch-node.sink { fill: var(--canvas-sink-fill); }
+.qn-arch-fill.buffer { fill: var(--canvas-buffer-fill); stroke: none; }

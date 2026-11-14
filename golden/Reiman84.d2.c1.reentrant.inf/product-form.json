@@ -1,0 +1,57 @@
+{
+  "classes" : [
+    {
+      "external_arrival_rates" : {
+        "s1" : 0.5
+      },
+      "id" : "c1",
+      "routing" : [
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s2"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s1"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 0.3333333333333333,
+              "station" : "s1"
+            }
+          ],
+          "exit_probability" : 0.6666666666666667,
+          "from_station" : "s2"
+        }
+      ]
+    }
+  ],
+  "description" : "Exact open FCFS BCMP/Jackson model exported from Qnet; M/M/c local factors are normalized analytically without state-space truncation.",
+  "model_type" : "open_bcmp",
+  "name" : "Reiman84.d2.c1.reentrant.inf",
+  "schema_version" : 1,
+  "solver" : {
+    "max_servers" : 100000
+  },
+  "stations" : [
+    {
+      "id" : "s1",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.6666666666666666
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s2",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.6666666666666666
+      },
+      "type" : "fcfs"
+    }
+  ]
+}

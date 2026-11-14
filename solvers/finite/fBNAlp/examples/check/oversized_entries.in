@@ -1,0 +1,31 @@
+# Six stations at 12 grid points and degree 6: 2,985,984 grid points and 924 basis functions,
+# each within an int, but the evaluation matrix has 2,759,049,216 entries, which is not.
+
+dimension   6
+grid_n      12
+basis_m     6
+grid_type   uniform
+solver      highs
+
+drift
+  -1 -1 -1 -1 -1 -1
+
+covariance
+  1.0 0.0 0.0 0.0 0.0 0.0
+  0.0 1.0 0.0 0.0 0.0 0.0
+  0.0 0.0 1.0 0.0 0.0 0.0
+  0.0 0.0 0.0 1.0 0.0 0.0
+  0.0 0.0 0.0 0.0 1.0 0.0
+  0.0 0.0 0.0 0.0 0.0 1.0
+
+reflection_form  minus_only
+reflection
+  1.0 0.0 0.0 0.0 0.0 0.0
+  0.0 1.0 0.0 0.0 0.0 0.0
+  0.0 0.0 1.0 0.0 0.0 0.0
+  0.0 0.0 0.0 1.0 0.0 0.0
+  0.0 0.0 0.0 0.0 1.0 0.0
+  0.0 0.0 0.0 0.0 0.0 1.0
+
+upper_bounds
+  10 10 10 10 10 10

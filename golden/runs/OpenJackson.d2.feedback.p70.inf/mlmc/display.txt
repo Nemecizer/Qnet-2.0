@@ -1,0 +1,60 @@
+[A[2KRunning SRBM MLMC (γ=0.050, ε=0.010) ... 
+SRBM MLMC replication 1 diagnostics:
+Sigma nnz ratio: L has 3 non-zeros of 2^2 = 4  (75.00%); using SPARSE CSC path
+R     nnz ratio: 3 non-zeros of 2^2 = 4  (75.00%); using SPARSE CSC LCP column update
+Dimension d   = 2
+gamma         = 0.050
+epsilon       = 0.010
+seed          = 2454886589211414945
+T             = 27.222
+L (levels)    = 3
+N (samples)   = 25260
+ratio (1/gam) = 20
+backend       = openmp
+threads       = 18
+
+antithetic    = off
+adaptive      = off
+
+  Completed 1263 / 25260 (5%)
+  Completed 2526 / 25260 (10%)
+  Completed 3789 / 25260 (15%)
+  Completed 5052 / 25260 (20%)
+  Completed 6315 / 25260 (25%)
+  Completed 7578 / 25260 (30%)
+  Completed 8841 / 25260 (35%)
+  Completed 10104 / 25260 (40%)
+  Completed 11367 / 25260 (45%)
+  Completed 12630 / 25260 (50%)
+  Completed 13893 / 25260 (55%)
+  Completed 15156 / 25260 (60%)
+  Completed 16419 / 25260 (65%)
+  Completed 17682 / 25260 (70%)
+  Completed 18945 / 25260 (75%)
+  Completed 20208 / 25260 (80%)
+  Completed 21471 / 25260 (85%)
+  Completed 22734 / 25260 (90%)
+  Completed 23997 / 25260 (95%)
+  Completed 25260 / 25260 (100%)
+done.
+
+SRBM MLMC (Blanchet-Chen-Glynn-Si)
+==============================================
+# Dimension: 2
+# gamma=0.050  epsilon=0.010  T=27.222  L=3  N=25260  seed=2454886589211414945
+# backend=openmp  threads=18  elapsed=1.256s
+# antithetic=off adaptive=off
+# Replications: 1 (independent top-level streams)
+# Replication seeds: 2454886589211414945
+# Replication 1: seed=2454886589211414945 N=25260 stop=fixed-count
+#
+
+Per-Station Mean Queue Length (L_i = mu_i * E[Y_i]):
+  L_1 =     2.329  ±  0.067 (95%)    (workload E[Y_1] =  0.489 ± 0.014, mu_i = 4.762)
+  L_2 =     2.280  ±  0.054 (95%)    (workload E[Y_2] =  1.596 ± 0.038, mu_i = 1.429)
+
+Average queue length: 2.305 (no joint CI: one run does not identify cross-station covariance)
+Total Gaussian RVs (summed over replications): 152501796
+QNET_MLMC_STATUS_V1 adaptive=no precision_met=na cap_hits=0
+Elapsed time: 1.348s
+

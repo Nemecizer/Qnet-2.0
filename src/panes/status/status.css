@@ -1,0 +1,187 @@
+/* The Status pane, its flag bar and popovers (src/panes/status/). Tokens only (src/styles.css).
+   The pane's text size is the setting status.fontSize, set on the root as --status-fs. */
+
+.status-pane {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  background: var(--surface);
+}
+.status-pane:focus { outline: none; }
+
+.status-count {
+  min-width: 18px;
+  padding: 0 var(--sp-2);
+  border-radius: 9px;
+  background: var(--surface-3);
+  color: var(--text-2);
+  font-size: var(--fs-xs);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+.status-stepper { display: inline-flex; }
+.status-pane .icon-btn:disabled { color: var(--btn-disabled-fg); background: transparent; }
+.status-pane .icon-btn[data-danger]:not(:disabled):hover { color: var(--crit-text); }
+
+/* Flag bar: three equal pills; a lit pill takes its tint in its ink, never a green surface. */
+.status-flagbar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sp-4);
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--surface);
+  border-bottom: 1px solid var(--hairline);
+}
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  min-width: 0;
+  height: 22px;
+  padding: 0 var(--sp-3);
+  border: 1px solid var(--hairline);
+  border-radius: 11px;
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.status-pill:hover { background: var(--hover); }
+.status-pill > span:first-of-type { overflow: hidden; text-overflow: ellipsis; }
+.status-pill[data-on] { font-weight: var(--fw-semibold); background: var(--surface-3); border-color: var(--border); }
+.status-pill[data-on][data-tint="good"] { color: var(--good-text); }
+.status-pill[data-on][data-tint="warn"] { color: var(--warn-text); background: var(--warn-bg); border-color: var(--warning-border); }
+.status-pill[data-on][data-tint="crit"] { color: var(--crit-text); background: var(--crit-bg); border-color: var(--critical); }
+.status-pill-badge {
+  min-width: 16px;
+  padding: 0 var(--sp-2);
+  border-radius: 8px;
+  border: 1px solid var(--warning-border);
+  background: var(--surface);
+  color: var(--warn-text);
+  font-size: var(--fs-2xs);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Filter row: the severity filter and the search field. */
+.status-filter-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  height: 32px;
+  padding: 0 var(--sp-4);
+  border-bottom: 1px solid var(--hairline);
+  background: var(--chrome);
+}
+/* .status-segmented is styles.css's segmented control (shared with the Results views). */
+.status-search {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex: 1;
+  min-width: 0;
+  height: 22px;
+  padding: 0 var(--sp-3);
+  border: 1px solid var(--field-border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  color: var(--muted);
+}
+.status-search input {
+  flex: 1;
+  min-width: 0;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+}
+.status-search input:focus-visible { outline: none; }
+.status-search-count { flex: none; color: var(--muted); font-size: var(--fs-xs); font-variant-numeric: tabular-nums; }
+.status-search-clear { display: grid; place-items: center; flex: none; padding: 0; border: 0; background: transparent; color: var(--muted); }
+.status-search-clear:hover { color: var(--text); }
+
+/* The list. */
+.status-list-well { position: relative; flex: 1; min-height: 0; }
+.status-list {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  padding: var(--sp-2) 0;
+  font-family: var(--mono);
+  font-size: var(--status-fs, var(--fs-mono));
+}
+.status-list:focus-visible { outline-offset: -2px; }
+.status-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-4);
+  padding: var(--sp-1) var(--sp-4);
+  user-select: text;
+  -webkit-user-select: text;
+}
+.status-row[aria-selected="true"] { background: var(--sel-inactive); }
+.status-list:focus .status-row[aria-selected="true"] { background: var(--sel); color: var(--sel-text); }
+.status-row-icon { flex: none; width: 16px; display: inline-grid; place-items: center; align-self: center; }
+.status-row[data-severity="info"] .status-row-icon { color: var(--muted); }
+.status-row[data-severity="success"] .status-row-icon { color: var(--good-text); }
+.status-row[data-severity="warning"] .status-row-icon { color: var(--warn-text); }
+.status-row[data-severity="error"] .status-row-icon { color: var(--crit-text); }
+.status-row-time { flex: none; color: var(--muted); font-size: 0.92em; white-space: nowrap; }
+.status-row-text { flex: 1; min-width: 0; color: var(--text); white-space: pre-wrap; overflow-wrap: anywhere; }
+.status-row[data-severity="error"] .status-row-text { color: var(--crit-text); }
+/* A line's action (actions.ts), such as a failed run's "Show Report…". */
+.status-row-action { flex: none; align-self: center; padding: 0 var(--sp-3); border: 0; border-radius: var(--r-sm); background: transparent; color: var(--accent-text); font-family: var(--font); font-size: var(--fs-sm); white-space: nowrap; text-decoration: underline; text-underline-offset: 2px; }
+.status-row-action:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.status-list:focus .status-row[aria-selected="true"] .status-row-action { color: inherit; }
+.status-match { background: color-mix(in srgb, var(--accent) 22%, transparent); color: inherit; border-radius: 2px; }
+.status-empty { position: absolute; inset: 0; padding: var(--sp-6); pointer-events: none; }
+.status-empty .btn { pointer-events: auto; }
+
+/* Menus and popovers. */
+.status-menu { z-index: var(--z-popover); }
+.status-popover {
+  position: fixed;
+  z-index: var(--z-popover);
+  width: min(360px, calc(100vw - 16px));
+  max-height: calc(100vh - 16px);
+  overflow-y: auto;
+  padding: var(--sp-5);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-pop);
+  color: var(--text);
+  font-size: var(--fs-base);
+}
+.status-popover:focus { outline: none; }
+.status-popover-body { display: flex; flex-direction: column; gap: var(--sp-3); }
+.status-popover-title { display: flex; align-items: center; gap: var(--sp-3); font-size: var(--fs-md); }
+.status-popover-title[data-tint="good"] svg { color: var(--good-text); }
+.status-popover-title[data-tint="warn"] svg { color: var(--warn-text); }
+.status-popover-title[data-tint="crit"] svg { color: var(--crit-text); }
+.status-popover-title[data-tint="muted"] svg { color: var(--muted); }
+.status-popover-trailing { color: var(--muted); font-size: var(--fs-sm); }
+.status-popover p { margin: 0; }
+.status-subhead { font-weight: var(--fw-semibold); }
+.status-callout { font-size: var(--fs-base); }
+.status-caption { display: block; color: var(--muted); font-size: var(--fs-sm); }
+.status-prewrap { white-space: pre-wrap; }
+.status-mono, .status-number { font-family: var(--mono); font-size: var(--fs-mono); }
+.status-rule { width: 100%; margin: var(--sp-1) 0; border: 0; border-top: 1px solid var(--hairline); }
+.status-means { border-collapse: collapse; font-family: var(--mono); font-size: var(--fs-mono); }
+.status-means th { color: var(--muted); font-family: var(--font); font-size: var(--fs-sm); font-weight: var(--fw-medium); text-align: left; }
+.status-means th, .status-means td { padding: 1px var(--sp-6) 1px 0; }
+.status-means .num { text-align: right; font-variant-numeric: tabular-nums; }
+.status-glossary { display: inline-grid; vertical-align: middle; color: var(--muted); }
+.status-inline-warning { display: flex; gap: var(--sp-2); align-items: baseline; color: var(--warn-text); font-size: var(--fs-sm); }
+.status-criteria, .status-warning-list { display: flex; flex-direction: column; gap: var(--sp-3); margin: 0; padding: 0; list-style: none; }
+.status-criteria li, .status-warning-list li { display: flex; gap: var(--sp-3); align-items: flex-start; }
+.status-criteria li > span:last-child { display: flex; flex-direction: column; }
+.status-criterion-mark[data-ok="true"] { color: var(--good-text); }
+.status-criterion-mark[data-ok="false"] { color: var(--crit-text); }
+.status-warning-list { max-height: 264px; overflow-y: auto; }
+.status-warning-list svg { flex: none; margin-top: 3px; color: var(--warn-text); }

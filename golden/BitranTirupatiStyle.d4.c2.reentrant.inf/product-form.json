@@ -1,0 +1,139 @@
+{
+  "classes" : [
+    {
+      "external_arrival_rates" : {
+        "s1" : 1
+      },
+      "id" : "c1",
+      "routing" : [
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s2"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s1"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s3"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s2"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s4"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s3"
+        },
+        {
+          "destinations" : [
+
+          ],
+          "exit_probability" : 1,
+          "from_station" : "s4"
+        }
+      ]
+    },
+    {
+      "external_arrival_rates" : {
+        "s4" : 1
+      },
+      "id" : "c2",
+      "routing" : [
+        {
+          "destinations" : [
+
+          ],
+          "exit_probability" : 1,
+          "from_station" : "s1"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s1"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s2"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s2"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s3"
+        },
+        {
+          "destinations" : [
+            {
+              "probability" : 1,
+              "station" : "s3"
+            }
+          ],
+          "exit_probability" : 0,
+          "from_station" : "s4"
+        }
+      ]
+    }
+  ],
+  "description" : "Exact open FCFS BCMP/Jackson model exported from Qnet; M/M/c local factors are normalized analytically without state-space truncation.",
+  "model_type" : "open_bcmp",
+  "name" : "BitranTirupatiStyle.d4.c2.reentrant.inf",
+  "schema_version" : 1,
+  "solver" : {
+    "max_servers" : 100000
+  },
+  "stations" : [
+    {
+      "id" : "s1",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.25,
+        "c2" : 0.25
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s2",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.25,
+        "c2" : 0.25
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s3",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.25,
+        "c2" : 0.25
+      },
+      "type" : "fcfs"
+    },
+    {
+      "id" : "s4",
+      "servers" : 1,
+      "service_times" : {
+        "c1" : 0.25,
+        "c2" : 0.25
+      },
+      "type" : "fcfs"
+    }
+  ]
+}

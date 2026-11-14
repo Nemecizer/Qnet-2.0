@@ -1,0 +1,24 @@
+Fitting adaptive low-rank BAR ...  [ ]                                                       0.0s[KFitting adaptive low-rank BAR ...  [/]                                                       0.2s[KFitting adaptive low-rank BAR ...  [-]                                                       0.5s[KFitting adaptive low-rank BAR ...  [\]                                                       0.7s[KFitting adaptive low-rank BAR ...  [|]                                                       0.9s[KFitting adaptive low-rank BAR ...  [/]                                                       1.1s[KFitting adaptive low-rank BAR ...  [-]                                                       1.3s[KFitting adaptive low-rank BAR ...  [\]                                                       1.6s[KFitting adaptive low-rank BAR ...  [|]                                                       1.8s[KFitting adaptive low-rank BAR ...  [done]                                                    2.0s
+Adaptive low-rank BAR analysis
+Model layer: stationary orthant SRBM diffusion
+Claim: adaptive low-rank BAR approximation (not a certified moment bound)
+Rank: 12  converged: no
+
+E[Z_1] = 1.318050347    Var[Z_1] = 1.952842609
+E[Z_2] = 1.942219761    Var[Z_2] = 4.558693228
+E[Z_3] = 3.21259034    Var[Z_3] = 14.50248592
+E[Z_4] = 8.231192204    Var[Z_4] = 93.0482028
+
+Held-out relative BAR RMS = 0.00220157
+Held-out relative BAR max = 0.00717539
+Skew-symmetry residual    = 0.267859
+Simplex mass error        = 1.11e-16
+WARNING: The requested refinement criteria were not met before max_rank; increase max_rank/log_rate_span or cross-check with another method.
+WARNING: Held-out BAR residuals test the fitted transform but do not bound error in the reported moments.
+
+  L_1 = 1.446817    (workload E[Z_1] = 1.318050, mu_i = 1.097695)
+  L_2 = 2.021559    (workload E[Z_2] = 1.942220, mu_i = 1.040850)
+  L_3 = 1.746518    (workload E[Z_3] = 3.212590, mu_i = 0.543648)
+  L_4 = 5.332810    (workload E[Z_4] = 8.231192, mu_i = 0.647878)
+Elapsed time: 2.032s
+

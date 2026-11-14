@@ -1,0 +1,46 @@
+/* The About window: a centred column in a fixed 400 × 392 panel that scrolls when the text is
+   large (0.90.34 AboutQnetWindow.swift `AboutQnetView`, ABOUT-006), and the Acknowledgements list
+   that opens over it. Tokens only. */
+
+.about { position: relative; height: 100%; overflow-y: auto; background: var(--surface); color: var(--text); }
+.about-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: var(--sp-7);
+  text-align: center;
+}
+.about-icon { width: 96px; height: 96px; margin-bottom: var(--sp-6); }
+.about-name { margin: 0 0 var(--sp-4); font-size: var(--fs-xl); font-weight: var(--fw-semibold); }
+.about-version { margin: 0; font-size: var(--fs-md); font-variant-numeric: tabular-nums; user-select: text; -webkit-user-select: text; cursor: auto; }
+.about-built { margin: var(--sp-2) 0 0; font-size: var(--fs-sm); color: var(--text-2); font-variant-numeric: tabular-nums; }
+.about-description { margin: var(--sp-6) 0 var(--sp-4); max-width: 336px; font-size: var(--fs-md); color: var(--text-2); }
+.about-copyright { margin: 0; font-size: var(--fs-sm); color: var(--text-2); }
+.about-spring { flex: 1; min-height: var(--sp-6); }
+.about-links { display: flex; align-items: center; gap: var(--sp-6); width: 100%; }
+.about-link { padding: 0; border: none; background: transparent; color: var(--accent-text); font-size: var(--fs-base); cursor: pointer; }
+.about-link:hover { text-decoration: underline; }
+
+.about-ack {
+  position: absolute;
+  left: var(--sp-6);
+  right: var(--sp-6);
+  bottom: 56px;
+  max-height: calc(100% - 80px);
+  overflow-y: auto;
+  padding: var(--sp-6);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-pop);
+  text-align: left;
+}
+.about-ack h2 { margin: 0 0 var(--sp-4); font-size: var(--fs-md); font-weight: var(--fw-semibold); }
+.about-ack-lead { margin: 0 0 var(--sp-4); font-size: var(--fs-md); color: var(--text-2); }
+.about-ack-list { margin: 0; display: flex; flex-direction: column; gap: var(--sp-2); }
+.about-ack-row { display: grid; grid-template-columns: 96px 1fr; gap: var(--sp-4); align-items: baseline; }
+.about-ack-row dt { font-weight: var(--fw-semibold); }
+.about-ack-row dd { margin: 0; font-size: var(--fs-md); color: var(--text-2); }
+.about-ack-foot { display: flex; justify-content: flex-end; margin-top: var(--sp-5); }

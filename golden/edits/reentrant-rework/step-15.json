@@ -1,0 +1,53 @@
+{
+ "step": 15,
+ "op": {
+  "node": "Sink1",
+  "op": "nodeClick"
+ },
+ "status": [
+  {
+   "text": "Linked S3 -> Sink1 [Class 2]. Chain complete at Sink1 — click a node to start another.",
+   "severity": "info"
+  },
+  {
+   "text": "Routing from S3 for Class 2 now sums to 2 — set the probabilities in the Inspector.",
+   "severity": "info"
+  }
+ ],
+ "selectedNodeID": {
+  "index": 9,
+  "name": "Sink1"
+ },
+ "selectedNodeIDs": [],
+ "selectedLinkID": {
+  "index": 13,
+  "from": "S3",
+  "to": "Sink1",
+  "customerClass": 1
+ },
+ "pendingLinkStartID": null,
+ "activeLinkSourceID": null,
+ "activeCustomerClass": 1,
+ "selectedTool": "addLink",
+ "toolBeforeStickyPan": null,
+ "canUndo": true,
+ "canRedo": false,
+ "undoActionName": "Add Link",
+ "redoActionName": "",
+ "snapToGrid": false,
+ "snapSuspended": false,
+ "classFilter": null,
+ "canvasScale": 1,
+ "canvasPanOffset": [0, 0],
+ "infiniteBuffers": true,
+ "nodeCount": 10,
+ "linkCount": 14,
+ "numberOfCustomerClasses": 4,
+ "canPaste": false,
+ "hasUnsavedChanges": true,
+ "multiSelectRect": null,
+ "isDraggingNode": false,
+ "parameterEditorTarget": null,
+ "linkParameterEditorTarget": null,
+ "pendingFitOnAppear": false
+}

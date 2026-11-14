@@ -1,0 +1,265 @@
+{
+  "completedAt" : "2026-11-11T04:54:22Z",
+  "elapsedSeconds" : 5.601927995681763,
+  "failureMessage" : "The maximum mixture rank was reached before the adaptive BAR validation criteria passed.",
+  "id" : "C30807B0-5C06-4E8C-B8C2-F5D28267FFE5",
+  "measurements" : [
+    {
+      "estimate" : 6.888749027,
+      "id" : "4EB8C2F0-6ACD-41F7-B2BA-E37604E730FF",
+      "metric" : "Mean workload",
+      "stationID" : "A1AAAAAA-3200-0001-0000-000000000003",
+      "stationName" : "S1",
+      "unit" : "work"
+    },
+    {
+      "estimate" : 61.66135564,
+      "id" : "108709F4-031D-4254-97D7-8A153B2CF60D",
+      "metric" : "Workload variance",
+      "stationID" : "A1AAAAAA-3200-0001-0000-000000000003",
+      "stationName" : "S1",
+      "unit" : "work²"
+    },
+    {
+      "estimate" : 6.936086536,
+      "id" : "A4AE3243-DA93-40FD-8E31-DE4ECD0DDE00",
+      "metric" : "Mean workload",
+      "stationID" : "A1AAAAAA-3200-0001-0000-000000000005",
+      "stationName" : "S2",
+      "unit" : "work"
+    },
+    {
+      "estimate" : 62.49487118,
+      "id" : "180CD451-7260-4B82-8060-154D412DC28A",
+      "metric" : "Workload variance",
+      "stationID" : "A1AAAAAA-3200-0001-0000-000000000005",
+      "stationName" : "S2",
+      "unit" : "work²"
+    },
+    {
+      "estimate" : 6.888749,
+      "id" : "04922176-2CAE-4DC9-A76A-505D421FD81B",
+      "metric" : "Mean queue length",
+      "stationID" : "A1AAAAAA-3200-0001-0000-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 6.936087,
+      "id" : "94B2C37C-C53C-4818-98C6-7965EC935D6C",
+      "metric" : "Mean queue length",
+      "stationID" : "A1AAAAAA-3200-0001-0000-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Adaptive Low-Rank BAR",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.adaptive-low-rank-bar",
+    "implementation" : "adaptive_srbm",
+    "layer" : "SRBM diffusion",
+    "shortName" : "Low-Rank BAR"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "A1AAAAAA-3200-0001-0000-000000000003",
+      "A1AAAAAA-3200-0001-0000-000000000005"
+    ],
+    "networkFingerprint" : "d027330ee88b8827fdcba6682c446ec3e99bebe70d5bd97c9bfa8e2d4877251f",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000001",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000001",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000001",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000002",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000002",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000003",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000004",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000003",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000005",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000006"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000004",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000006",
+          "routingProbability" : 1,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000005",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000007",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1AAAAAA-3200-0001-0000-000000000005",
+          "id" : "A1AAAAAA-3200-0002-0000-000000000008",
+          "routingProbability" : 0.5,
+          "toNodeID" : "A1AAAAAA-3200-0001-0000-000000000006"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.9",
+          "id" : "A1AAAAAA-3200-0001-0000-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            250
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1AAAAAA-3200-0001-0000-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            220,
+            180
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "erlang",
+          "distributionParameters" : "k=2,rate=2.0",
+          "id" : "A1AAAAAA-3200-0001-0000-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            340,
+            180
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1AAAAAA-3200-0001-0000-000000000004",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            220,
+            320
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "erlang",
+          "distributionParameters" : "k=2,rate=2.0",
+          "id" : "A1AAAAAA-3200-0001-0000-000000000005",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            340,
+            320
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1AAAAAA-3200-0001-0000-000000000006",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            500,
+            250
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "GuangChenDaiGlynn25.sec3.2.2d.inf.bnet",
+    "parameters" : {
+      "BAR tolerance" : "2e-5",
+      "certified error bound" : "false except exact product form",
+      "held-out BAR points" : "max(32, 6 × dimension)",
+      "maximum mixture rank" : "12",
+      "model layer" : "stationary orthant SRBM",
+      "moment-change tolerance" : "2e-3",
+      "runtime" : "QNET_SOLVER_ROOT: \/Users\/nobody\/Library\/Caches\/qnet\/solvers\/stage\/Resources\/bin\/infinite\/BNAalr\/low_rank_bar.py; Python runtime: \/opt\/homebrew\/bin\/python3",
+      "training BAR points" : "max(64, 6 × dimension)"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/GuangChenDaiGlynn25.sec3.2.2d.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Fitting adaptive low-rank BAR ...  [ ]                                                       0.0s\r\u001b[KFitting adaptive low-rank BAR ...  [\/]                                                       0.2s\r\u001b[KFitting adaptive low-rank BAR ...  [-]                                                       0.5s\r\u001b[KFitting adaptive low-rank BAR ...  [\\]                                                       0.7s\r\u001b[KFitting adaptive low-rank BAR ...  [|]                                                       1.0s\r\u001b[KFitting adaptive low-rank BAR ...  [\/]                                                       1.2s\r\u001b[KFitting adaptive low-rank BAR ...  [-]                                                       1.4s\r\u001b[KFitting adaptive low-rank BAR ...  [\\]                                                       1.7s\r\u001b[KFitting adaptive low-rank BAR ...  [|]                                                       1.9s\r\u001b[KFitting adaptive low-rank BAR ...  [\/]                                                       2.2s\r\u001b[KFitting adaptive low-rank BAR ...  [-]                                                       2.4s\r\u001b[KFitting adaptive low-rank BAR ...  [\\]                                                       2.6s\r\u001b[KFitting adaptive low-rank BAR ...  [|]                                                       2.9s\r\u001b[KFitting adaptive low-rank BAR ...  [\/]                                                       3.1s\r\u001b[KFitting adaptive low-rank BAR ...  [-]                                                       3.3s\r\u001b[KFitting adaptive low-rank BAR ...  [\\]                                                       3.6s\r\u001b[KFitting adaptive low-rank BAR ...  [|]                                                       3.8s\r\u001b[KFitting adaptive low-rank BAR ...  [\/]                                                       4.1s\r\u001b[KFitting adaptive low-rank BAR ...  [-]                                                       4.3s\r\u001b[KFitting adaptive low-rank BAR ...  [\\]                                                       4.5s\r\u001b[KFitting adaptive low-rank BAR ...  [|]                                                       4.8s\r\u001b[KFitting adaptive low-rank BAR ...  [\/]                                                       5.0s\r\u001b[KFitting adaptive low-rank BAR ...  [done]                                                    5.2s\nAdaptive low-rank BAR analysis\nModel layer: stationary orthant SRBM diffusion\nClaim: adaptive low-rank BAR approximation (not a certified moment bound)\nRank: 12  converged: no\n\nE[Z_1] = 6.888749027    Var[Z_1] = 61.66135564\nE[Z_2] = 6.936086536    Var[Z_2] = 62.49487118\n\nHeld-out relative BAR RMS = 0.000544655\nHeld-out relative BAR max = 0.00111216\nSkew-symmetry residual    = 0.272727\nSimplex mass error        = 1.39e-17\nWARNING: The requested refinement criteria were not met before max_rank; increase max_rank\/log_rate_span or cross-check with another method.\nWARNING: Held-out BAR residuals test the fitted transform but do not bound error in the reported moments.\n\n  L_1 = 6.888749    (workload E[Z_1] = 6.888749, mu_i = 1.000000)\n  L_2 = 6.936087    (workload E[Z_2] = 6.936087, mu_i = 1.000000)\nElapsed time: 5.355s\n\n",
+  "runEvidence" : {
+    "convergenceNote" : "Adaptive BAR criteria met: no",
+    "discretization" : "mixture rank 12",
+    "residual" : 0.000544655
+  },
+  "startedAt" : "2026-11-11T04:54:16Z",
+  "status" : "partial",
+  "warnings" : [
+    "The maximum mixture rank was reached before both adaptive criteria passed."
+  ]
+}

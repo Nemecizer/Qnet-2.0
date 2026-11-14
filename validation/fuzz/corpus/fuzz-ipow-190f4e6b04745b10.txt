@@ -1,0 +1,7 @@
+0.90.34's mc_solver (sanitizer build): bna_fm.h:142 signed overflow in ipow(4, 8) with 8 stations
+arguments: -n 1
+made from: KumarSeidman90.d2.c4.reentrant.inf.bnet by m_names (seed 20261112, case 192)
+the fixed solver: exit 1
+mc_solver: this network is too large for the multi-class finite-element solver at this mesh.
+  8 stations with 1 mesh elements per station need 21,474,836,480 matrix entries; the solver can hold at most 2,147,483,647.
+  No mesh is small enough for 8 stations. Use a method made for larger networks, such as QNA or simulation.

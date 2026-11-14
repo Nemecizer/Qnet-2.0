@@ -1,0 +1,220 @@
+/* The Welcome view (src/welcome/Welcome.tsx): a page over the work area of a blank tab. Colours
+   and sizes come from the tokens in src/styles.css; the example diagrams are the canvas's own. */
+
+.qn-welcome {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  background: var(--surface-2);
+  color: var(--text);
+}
+.qn-welcome-scroll { flex: 1; min-width: 0; overflow: auto; }
+.qn-welcome-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-7);
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--sp-8) var(--sp-7) var(--sp-7);
+}
+
+.qn-welcome-head { display: flex; align-items: flex-start; gap: var(--sp-6); }
+.qn-welcome-head > div { flex: 1; min-width: 0; }
+.qn-welcome-head h1 { margin: 0; font-size: var(--fs-xl); font-weight: var(--fw-semibold); letter-spacing: -0.01em; }
+.qn-welcome-head p { margin: var(--sp-3) 0 0; max-width: 62ch; color: var(--text-2); font-size: var(--fs-md); line-height: var(--lh-body); }
+.qn-welcome-close { flex: none; width: var(--ctl-lg); height: var(--ctl-lg); }
+
+.qn-welcome h2 {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.qn-welcome-top { display: grid; grid-template-columns: minmax(280px, 380px) minmax(0, 1fr); gap: var(--sp-7); align-items: start; }
+.qn-welcome-start, .qn-welcome-recent { display: flex; flex-direction: column; gap: var(--sp-4); min-width: 0; }
+
+/* The start actions: large, one per row, the first in the accent. */
+.qn-welcome-action {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+  min-height: 56px;
+  padding: var(--sp-4) var(--sp-6);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  color: var(--text);
+  text-align: left;
+  cursor: default;
+}
+.qn-welcome-action > span { display: flex; flex-direction: column; gap: var(--sp-1); min-width: 0; }
+.qn-welcome-action strong { font-size: var(--fs-md); font-weight: var(--fw-semibold); }
+.qn-welcome-action small { color: var(--text-2); font-size: var(--fs-sm); }
+.qn-welcome-action svg { flex: none; color: var(--accent); }
+.qn-welcome-action:hover:not(:disabled) { background: var(--hover); }
+.qn-welcome-action.primary { border-color: var(--accent-fill); background: var(--accent-fill); color: var(--on-accent); }
+.qn-welcome-action.primary small, .qn-welcome-action.primary svg { color: var(--on-accent); }
+.qn-welcome-action.primary:hover:not(:disabled) { background: color-mix(in srgb, var(--accent-fill) 90%, var(--text)); }
+.qn-welcome-action:disabled { opacity: 0.6; }
+.qn-welcome-action:not(.primary):hover:not(:disabled) { border-color: var(--border); }
+
+/* Recent files. */
+.qn-welcome-recent-list { display: flex; flex-direction: column; margin: 0; padding: var(--sp-2); list-style: none; border: 1px solid var(--hairline); border-radius: var(--r-lg); background: var(--surface); }
+.qn-welcome-recent-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-5);
+  width: 100%;
+  padding: var(--sp-3) var(--sp-4);
+  border: 0;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  cursor: default;
+}
+.qn-welcome-recent-item:hover:not(:disabled) { background: var(--hover); }
+.qn-welcome-recent-name { flex: none; max-width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: var(--fw-medium); }
+.qn-welcome-recent-dir { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; direction: rtl; text-align: left; color: var(--muted); font-size: var(--fs-sm); }
+
+/* Designed empty states: what will be here, and what to do. */
+.qn-welcome-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  min-height: 136px;
+  padding: var(--sp-6);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-lg);
+  color: var(--muted);
+  text-align: center;
+}
+/* The app's empty state (styles.css): the same quiet 28px icon, title and sentence. The icon is
+   drawn here, as a mask in the muted ink, because this page's markup has none. */
+.qn-welcome-empty::before {
+  content: "";
+  flex: none;
+  width: 28px;
+  height: 28px;
+  background: var(--muted);
+  -webkit-mask: var(--qn-empty-icon) center / contain no-repeat;
+  mask: var(--qn-empty-icon) center / contain no-repeat;
+}
+.qn-welcome-empty[data-empty="recent"] { --qn-empty-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 6v6l4 2'/%3E%3C/svg%3E"); }
+.qn-welcome-empty[data-empty="examples"], .qn-welcome-empty[data-empty="match"] { --qn-empty-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E"); }
+.qn-welcome-empty[data-empty="loading"]::before { display: none; }
+.qn-welcome-empty strong { margin-top: var(--sp-2); color: var(--text); font-size: var(--fs-md); font-weight: var(--fw-semibold); line-height: var(--lh-tight); }
+.qn-welcome-empty span { max-width: 44ch; line-height: var(--lh-body); }
+.qn-welcome-empty .btn { margin-top: var(--sp-4); }
+
+/* The gallery. */
+.qn-welcome-examples { display: flex; flex-direction: column; gap: var(--sp-5); min-width: 0; }
+.qn-welcome-examples-head { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-4) var(--sp-5); }
+.qn-welcome-count { color: var(--muted); font-size: var(--fs-sm); }
+.qn-welcome-spacer { flex: 1; }
+.qn-welcome-filters { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.qn-welcome-chip {
+  height: var(--ctl-sm);
+  padding: 0 var(--sp-5);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--text-2);
+  font-size: var(--fs-sm);
+  cursor: default;
+}
+.qn-welcome-chip:hover { background: var(--hover); }
+/* A chosen chip is a selection (as the Agreement view's open method), not a second primary. */
+.qn-welcome-chip[aria-pressed="true"] { border-color: var(--accent); background: var(--sel); color: var(--sel-text); }
+.qn-welcome-search {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  width: 200px;
+  height: var(--ctl-sm);
+  padding: 0 var(--sp-3);
+  border: 1px solid var(--field-border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  color: var(--muted);
+}
+.qn-welcome-search input { flex: 1; min-width: 0; height: 100%; padding: 0; border: 0; outline: 0; background: transparent; color: var(--text); font: inherit; }
+.qn-welcome-search input::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+.qn-welcome-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(224px, 1fr)); gap: var(--sp-5); }
+.qn-welcome-cell { display: flex; min-width: 0; }
+.qn-welcome-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--sp-3);
+  min-width: 0;
+  padding: var(--sp-4);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  color: var(--text);
+  text-align: left;
+  cursor: default;
+}
+.qn-welcome-card:hover:not(:disabled) { border-color: var(--border); background: var(--surface); box-shadow: var(--shadow-raised); }
+.qn-welcome-card:disabled { opacity: 0.6; }
+.qn-welcome-thumb {
+  display: grid;
+  place-items: center;
+  align-self: stretch;
+  height: 112px;
+  overflow: hidden;
+  border-radius: var(--r-md);
+  background: var(--canvas-bg);
+  box-shadow: inset 0 0 0 1px var(--hairline);
+}
+.qn-welcome-thumb svg { display: block; flex: none; pointer-events: none; }
+.qn-welcome-card-name { font-weight: var(--fw-semibold); overflow-wrap: anywhere; }
+.qn-welcome-card-text { color: var(--text-2); font-size: var(--fs-sm); line-height: var(--lh-body); }
+
+.qn-welcome-foot { display: flex; padding-top: var(--sp-5); border-top: 1px solid var(--hairline); color: var(--text-2); }
+.qn-welcome-foot label { display: inline-flex; align-items: center; gap: var(--sp-3); }
+
+@media (max-width: 760px) {
+  .qn-welcome-top { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Motion: the page fades in, and a card answers the pointer. Both end at once under reduced
+   motion (styles.css). */
+.qn-welcome { animation: qn-welcome-in var(--dur-2) var(--ease); }
+.qn-welcome-card, .qn-welcome-action, .qn-welcome-chip { transition: background-color var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease); }
+@keyframes qn-welcome-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* The toolbar's Solve button (src/welcome/SolveButton.tsx): the one primary control in the top bar. */
+.solve-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  height: var(--ctl-bar);
+  margin-right: var(--sp-4);
+  padding: 0 var(--sp-5) 0 var(--sp-4);
+  border: 1px solid var(--accent-fill);
+  border-radius: var(--r-md);
+  background: var(--accent-fill);
+  color: var(--on-accent);
+  font-weight: var(--fw-semibold);
+  cursor: default;
+}
+.solve-btn:hover:not([aria-disabled="true"]) { background: color-mix(in srgb, var(--accent-fill) 90%, var(--text)); }
+.solve-btn[aria-disabled="true"] { border-color: var(--hairline); background: var(--btn-disabled-bg); color: var(--btn-disabled-fg); }
+.solve-btn[aria-busy="true"] { border-color: var(--border); background: var(--surface-3); color: var(--text-2); }
+.solve-btn { transition: background-color var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease); }
+.solve-btn[aria-busy="true"] svg { animation: solve-spin var(--dur-spin) linear infinite; }
+@keyframes solve-spin {
+  to { transform: rotate(360deg); }
+}

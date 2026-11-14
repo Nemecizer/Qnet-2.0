@@ -1,0 +1,26 @@
+[Threads] Single-threaded (analytical solver)
+Running QNA ...  [ ]                                                       0.0s[KRunning QNA ...  [done]                                                    0.0s
+
+Network load: rho_max = 0.9600 at S1  (heavy-traffic regime — analytical methods are most accurate here)
+──  Asymptotic product form — GCDG 2025 Cor. 3 (lower-triangular R, feed-forward)  ──
+           QNA             Asymptotic E[X]
+           ===             ============
+
+rho_1      0.960 (+0.0%)   0.960
+rho_2      0.960 (+0.0%)   0.960
+rho_3      0.933 (+0.0%)   0.933
+
+Gamma_1    1.067 (+0.0%)   1.067
+Gamma_2    1.067 (+0.0%)   1.067
+Gamma_3    1.067 (+0.0%)   1.067
+
+sojourn_1  23.702 (+0.0%)  17.891
+sojourn_2  12.807 (+0.0%)  5.391
+sojourn_3  8.522 (+0.0%)   9.725
+
+E[Q_1]     25.282 (+0.0%)  19.083
+E[Q_2]     13.661 (+0.0%)  5.750
+E[Q_3]     9.090 (+0.0%)   10.373
+
+Elapsed time: 0.025s
+

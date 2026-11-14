@@ -1,0 +1,247 @@
+{
+  "completedAt" : "2026-11-11T04:56:16Z",
+  "elapsedSeconds" : 0.45858895778656006,
+  "id" : "5012A03F-1C3D-40AA-A80B-8CC2FFB6F366",
+  "measurements" : [
+    {
+      "estimate" : 0.6,
+      "id" : "0BD22F3A-22AC-4BE9-B625-CEC270407A88",
+      "metric" : "Utilization",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.6,
+      "id" : "217480AC-B73A-4995-9664-ECE46B9A5DC7",
+      "metric" : "Utilization",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.6,
+      "id" : "D7DBA410-FAF9-4E6B-8C5F-5539504A2D6C",
+      "metric" : "Throughput",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.6,
+      "id" : "2A8CD80F-3A44-4662-8C4D-BFD4686D619B",
+      "metric" : "Throughput",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 1.75,
+      "id" : "6B68DD03-3488-49B3-B7D5-D6467CC50F3F",
+      "metric" : "Mean sojourn time",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 2.257,
+      "id" : "165E9597-76B3-4BE6-8366-6E12507469E8",
+      "metric" : "Mean sojourn time",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 1.05,
+      "id" : "5C55D35D-408B-471C-9A99-4281AE3DB6D4",
+      "metric" : "Mean number in system",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 1.354,
+      "id" : "5BEC0B57-363A-4509-9012-9BC492D323E9",
+      "metric" : "Mean number in system",
+      "stationID" : "E5F6A7B8-5555-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Whitt QNA",
+    "fidelity" : "Queueing approximation",
+    "identifier" : "queue-approx.qna",
+    "implementation" : "BNAqna",
+    "layer" : "Queue approximation",
+    "shortName" : "QNA"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "E5F6A7B8-5555-1111-1111-000000000003",
+      "E5F6A7B8-5555-1111-1111-000000000005"
+    ],
+    "networkFingerprint" : "970f64f77082d22568879f39589973df8add60ca88dade2b264619e9e596a0fb",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E5F6A7B8-5555-1111-1111-000000000001",
+          "id" : "E5F6A7B8-5555-1111-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "E5F6A7B8-5555-1111-1111-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E5F6A7B8-5555-1111-1111-000000000002",
+          "id" : "E5F6A7B8-5555-1111-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "E5F6A7B8-5555-1111-1111-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E5F6A7B8-5555-1111-1111-000000000003",
+          "id" : "E5F6A7B8-5555-1111-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "E5F6A7B8-5555-1111-1111-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E5F6A7B8-5555-1111-1111-000000000004",
+          "id" : "E5F6A7B8-5555-1111-2222-000000000004",
+          "routingProbability" : 1,
+          "toNodeID" : "E5F6A7B8-5555-1111-1111-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "E5F6A7B8-5555-1111-1111-000000000005",
+          "id" : "E5F6A7B8-5555-1111-2222-000000000005",
+          "routingProbability" : 1,
+          "toNodeID" : "E5F6A7B8-5555-1111-1111-000000000006"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.6",
+          "id" : "E5F6A7B8-5555-1111-1111-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "E5F6A7B8-5555-1111-1111-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            190,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "constant",
+          "distributionParameters" : "value=1.0",
+          "id" : "E5F6A7B8-5555-1111-1111-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            280,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "E5F6A7B8-5555-1111-1111-000000000004",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            370,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "E5F6A7B8-5555-1111-1111-000000000005",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "E5F6A7B8-5555-1111-1111-000000000006",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            550,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "Schwerer01.d2.c1.inf.bnet",
+    "parameters" : {
+
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/Schwerer01.d2.c1.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] Single-threaded (analytical solver)\nRunning QNA ...  [ ]                                                       0.0s\r\u001b[KRunning QNA ...  [done]                                                    0.0s\n\nNetwork load: rho_max = 0.6000 at S1  (moderate load — SRBM\/FEM are heavy-traffic limits; expect deviation from simulation)\n──  Asymptotic product form — GCDG 2025 Cor. 3 (lower-triangular R, feed-forward)  ──\n           QNA            Asymptotic E[X]\n           ===            ============\n\nrho_1      0.600 (+0.0%)  0.600\nrho_2      0.600 (+0.0%)  0.600\n\nGamma_1    0.600 (+0.0%)  0.600\nGamma_2    0.600 (+0.0%)  0.600\n\nsojourn_1  1.750 (+0.0%)  1.250\nsojourn_2  2.257 (+0.0%)  2.500\n\nE[Q_1]     1.050 (+0.0%)  0.750\nE[Q_2]     1.354 (+0.0%)  1.500\n\nElapsed time: 0.079s\n\n",
+  "startedAt" : "2026-11-11T04:56:16Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

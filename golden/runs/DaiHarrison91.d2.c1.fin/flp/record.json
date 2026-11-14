@@ -1,0 +1,251 @@
+{
+  "completedAt" : "2026-11-11T04:52:15Z",
+  "elapsedSeconds" : 0.7563040256500244,
+  "id" : "6E525422-B2AE-4DC9-9046-739D97910183",
+  "measurements" : [
+    {
+      "estimate" : 0.985,
+      "id" : "0F47E0B7-D930-4136-AAAE-B55285D66F54",
+      "metric" : "Utilization",
+      "stationID" : "A1B2C3D4-1111-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.98,
+      "id" : "26A85EC1-0390-4EF1-B6B8-C4AB8DC713A7",
+      "metric" : "Utilization",
+      "stationID" : "A1B2C3D4-1111-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.985,
+      "id" : "7048F740-87B1-4B3F-9098-4658C261BEAB",
+      "metric" : "Throughput",
+      "stationID" : "A1B2C3D4-1111-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.98,
+      "id" : "9AC43C54-EC1D-4147-A71A-A54848AB56E3",
+      "metric" : "Throughput",
+      "stationID" : "A1B2C3D4-1111-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 14.361,
+      "id" : "8E2E7A55-F293-4083-9D6F-B91EEC094499",
+      "metric" : "Mean sojourn time",
+      "stationID" : "A1B2C3D4-1111-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 12.755,
+      "id" : "F361FB15-6FC8-4AD2-B533-97D02AEDFFD3",
+      "metric" : "Mean sojourn time",
+      "stationID" : "A1B2C3D4-1111-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 14.153,
+      "id" : "5F83AD61-F464-45DB-833B-AA5E8648FE4B",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "A1B2C3D4-1111-1111-1111-000000000003",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 12.5,
+      "id" : "95A4F084-9F6C-45CE-B455-98FE61A776FB",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "A1B2C3D4-1111-1111-1111-000000000005",
+      "stationName" : "S2",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "BAR Linear Program",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.lp",
+    "implementation" : "BNAlp\/fBNAlp",
+    "layer" : "SRBM diffusion",
+    "shortName" : "LP"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Finite capacity",
+    "exportStationIDs" : [
+      "A1B2C3D4-1111-1111-1111-000000000003",
+      "A1B2C3D4-1111-1111-1111-000000000005"
+    ],
+    "networkFingerprint" : "1079d852f04b3c634dc86a241a9409a6f422fcd7f12e6e6d222b27a23ff6430e",
+    "networkSnapshot" : {
+      "infiniteBuffers" : false,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1B2C3D4-1111-1111-1111-000000000001",
+          "id" : "A1B2C3D4-1111-1111-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "A1B2C3D4-1111-1111-1111-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1B2C3D4-1111-1111-1111-000000000002",
+          "id" : "A1B2C3D4-1111-1111-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "A1B2C3D4-1111-1111-1111-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1B2C3D4-1111-1111-1111-000000000003",
+          "id" : "A1B2C3D4-1111-1111-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "A1B2C3D4-1111-1111-1111-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1B2C3D4-1111-1111-1111-000000000004",
+          "id" : "A1B2C3D4-1111-1111-2222-000000000004",
+          "routingProbability" : 1,
+          "toNodeID" : "A1B2C3D4-1111-1111-1111-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "A1B2C3D4-1111-1111-1111-000000000005",
+          "id" : "A1B2C3D4-1111-1111-2222-000000000005",
+          "routingProbability" : 1,
+          "toNodeID" : "A1B2C3D4-1111-1111-1111-000000000006"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=1.0",
+          "id" : "A1B2C3D4-1111-1111-1111-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1B2C3D4-1111-1111-1111-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            190,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "constant",
+          "distributionParameters" : "value=1.0",
+          "id" : "A1B2C3D4-1111-1111-1111-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            280,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1B2C3D4-1111-1111-1111-000000000004",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            370,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1B2C3D4-1111-1111-1111-000000000005",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "A1B2C3D4-1111-1111-1111-000000000006",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            550,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "DaiHarrison91.d2.c1.fin.bnet",
+    "parameters" : {
+      "basis normalization" : "false",
+      "basis size" : "auto",
+      "grid size" : "auto",
+      "grid type" : "uniform",
+      "solver" : "highs"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/DaiHarrison91.d2.c1.fin.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] Single-threaded (analytical solver)\nRunning finite LP method (highs) ...  [ ]                                                       0.0s\r\u001b[KRunning finite LP method (highs) ...  [done]                                                    0.2s\n\nNetwork load: rho_max = 1.0000 at S1  (heavy-traffic regime — analytical methods are most accurate here)\nBuffer regime: K*(1-rho) = 0.00 at S1 (K=25, rho=1.000) — small for the heavy-traffic limit (target ~1-5); SRBM may overstate E[X] \/ understate loss by 10-20%\n           Finite LP\n           =========\n\nrho_1      0.985\nrho_2      0.980\n\nGamma_1    0.985\nGamma_2    0.980\n\nsojourn_1  14.361\nsojourn_2  12.755\n\nE[X_1]     14.153\nE[X_2]     12.500\n\nElapsed time: 0.380s\n\n",
+  "startedAt" : "2026-11-11T04:52:14Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

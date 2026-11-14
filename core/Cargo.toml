@@ -1,0 +1,16 @@
+[package]
+name = "qnet-core"
+version = "2.1.2"
+description = "Qnet's model, .bnet files, analysis, exporters and result parser"
+edition = "2021"
+authors = ["Dr Joseph Edward Nemec"]
+license = "MIT"
+publish = false
+
+[lib]
+name = "qnet_core"
+
+[dependencies]
+# cfmt.rs: C's printf for the "%10.5f"-style numbers 0.90.34 wrote with String(format:), and libm's
+# tgamma, which Rust's std doesn't offer. Already in the build through Tauri.
+libc = "0.2"

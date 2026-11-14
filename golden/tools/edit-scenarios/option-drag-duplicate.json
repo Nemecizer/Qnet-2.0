@@ -1,0 +1,21 @@
+{
+ "description": "The ⌥-drag duplicate path: one node, a group with its internal link, an ⌥-drag of an unselected node (it becomes the selection first), Escape during an ⌥-drag (not a cancel), and the undo names \"Duplicate and Move Node(s)\" against a plain move's.",
+ "start": "Tandem2.MM1.K5.fin",
+ "steps": [
+  {"op": "dragNode", "node": "S1", "by": [0, 120], "option": true},
+  {"op": "undo"},
+  {"op": "redo"},
+  {"op": "marquee", "from": [400, 120], "to": [620, 260]},
+  {"op": "dragNode", "node": "S2", "by": [30, 150], "option": true},
+  {"op": "setSnapToGrid", "value": true},
+  {"op": "dragNode", "node": "B1", "by": [13, 211], "option": true},
+  {"op": "dragNode", "node": "B1", "by": [13, 211]},
+  {"op": "undo"},
+  {"op": "dragNode", "node": "Src1", "by": [0, -90], "option": true, "escape": true},
+  {"op": "undo"},
+  {"op": "undo"},
+  {"op": "undo"},
+  {"op": "redo"},
+  {"op": "redo"}
+ ]
+}

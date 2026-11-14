@@ -1,0 +1,31 @@
+[A[2KRunning regenerative simulation (C) ...  [ ]                                                       0.0s[KRunning regenerative simulation (C) ...  [done]                                                    0.0s
+Regenerative Monte Carlo
+Model layer: queueing process (simulation)
+Evidence: regenerative ratio confidence intervals; asymptotic, not finite-sample, and they describe sampling error only
+Model: Tandem2.MM1.K5.fin.bnet
+
+Complete empty-to-empty cycles: 500
+Stopping reason: precision_target_met
+Precision target met: yes
+
+Node                   E[N]         E[Q]  utilisation   throughput
+------------------------------------------------------------------
+s1                    1.439        0.799        0.640        0.659
+s2                    1.530        0.876        0.653        0.626
+
+Quantity                               estimate   std error              95% interval  eff. cycles
+--------------------------------------------------------------------------------------------------
+Mean number in system                     2.968       0.086      [2.800, 3.136]        184.800
+External blocking probability             0.053       0.006      [0.042, 0.065]        153.400
+Departure rate                            0.659       0.009      [0.640, 0.677]        184.800
+E[N] at s1                                1.439       0.055      [1.331, 1.546]        184.800
+utilisation at s1                         0.640       0.012      [0.616, 0.664]        184.800
+E[N] at s1, class c1                      1.439       0.055      [1.331, 1.546]        184.800
+E[N] at s2                                1.530       0.056      [1.420, 1.639]        184.800
+utilisation at s2                         0.653       0.012      [0.629, 0.677]        184.800
+E[N] at s2, class c1                      1.530       0.056      [1.420, 1.639]        184.800
+
+Uncertainty uses complete regenerative cycles, not individual events.
+
+Elapsed time: 0.073s
+

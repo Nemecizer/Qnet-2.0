@@ -1,0 +1,84 @@
+{
+  "blocking" : "loss",
+  "classes" : [
+    {
+      "external_arrivals" : {
+        "s1" : 0.5
+      },
+      "id" : "c1",
+      "name" : "Class 1"
+    },
+    {
+      "external_arrivals" : {
+        "s2" : 0.5
+      },
+      "id" : "c2",
+      "name" : "Class 2"
+    }
+  ],
+  "name" : "Whitt83Style.d3.c2.reentrant.inf",
+  "routes" : [
+    {
+      "class" : "c1",
+      "from" : "s1",
+      "probability" : 1,
+      "to" : "s2"
+    },
+    {
+      "class" : "c1",
+      "from" : "s2",
+      "probability" : 0.90000000000000002,
+      "to" : "s3"
+    },
+    {
+      "class" : "c1",
+      "from" : "s2",
+      "probability" : 0.10000000000000001,
+      "to" : "s1"
+    },
+    {
+      "class" : "c2",
+      "from" : "s2",
+      "probability" : 1,
+      "to" : "s3"
+    }
+  ],
+  "schema_version" : 1,
+  "solver" : {
+    "damping" : 0.5,
+    "max_iterations" : 1000,
+    "tolerance" : 1e-10
+  },
+  "stations" : [
+    {
+      "capacity" : 25,
+      "id" : "s1",
+      "name" : "S1",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 2,
+        "c2" : 2
+      }
+    },
+    {
+      "capacity" : 25,
+      "id" : "s2",
+      "name" : "S2",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 2,
+        "c2" : 2
+      }
+    },
+    {
+      "capacity" : 25,
+      "id" : "s3",
+      "name" : "S3",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 2,
+        "c2" : 2
+      }
+    }
+  ]
+}

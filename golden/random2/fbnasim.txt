@@ -1,0 +1,47 @@
+# fBNA Queueing Network Export
+# Generated: 11/10/26, 14:11:07
+
+# num_classes
+3
+
+# dimension
+4
+
+# arrival_distributions
+poisson lambda=0.803542
+poisson lambda=0.527231
+poisson lambda=0.039785
+
+# arrival_stations
+1 2 3
+
+# servers_per_station
+1 1 1 1
+
+# buffer_sizes
+1 1 1 1
+
+# service_distributions
+uniform min=0.603,max=1.219 | uniform min=0.603,max=1.219 | uniform min=0.603,max=1.219
+erlang k=2,rate=2.0817 | erlang k=2,rate=2.0817 | erlang k=2,rate=2.0817
+gamma shape=3.273,scale=0.562 | gamma shape=3.273,scale=0.562 | gamma shape=3.273,scale=0.562
+gamma shape=2.940,scale=0.525 | gamma shape=2.940,scale=0.525 | gamma shape=2.940,scale=0.525
+
+# routing_matrix_class_1
+0.000000 0.292081 0.206808 0.212706
+0.000000 0.000000 0.251993 0.348349
+0.000000 0.000000 0.000000 0.368764
+0.000000 0.000000 0.000000 0.000000
+
+# routing_matrix_class_2
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.251993 0.348349
+0.000000 0.000000 0.000000 0.368764
+0.000000 0.000000 0.000000 0.000000
+
+# routing_matrix_class_3
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 0.368764
+0.000000 0.000000 0.000000 0.000000
+

@@ -1,0 +1,300 @@
+{
+  "completedAt" : "2026-11-11T04:56:55Z",
+  "elapsedSeconds" : 0.4025459289550781,
+  "id" : "8497BE2B-5BFC-4562-8EA5-99E989FB5CB6",
+  "measurements" : [
+    {
+      "estimate" : 0.686,
+      "id" : "267955D6-FD19-4BED-B3AC-0B73CF418305",
+      "metric" : "Utilization",
+      "stationID" : "EE000002-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.683,
+        "upperBound" : 0.6890000000000001
+      },
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.653,
+      "id" : "FD30C9D3-C5DB-4DDB-B5A8-B1A5219D8CB8",
+      "metric" : "Utilization",
+      "stationID" : "EE000002-0001-0001-0001-000000000005",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.651,
+        "upperBound" : 0.655
+      },
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.654,
+      "id" : "96E43AB1-7856-42A2-A424-908317C53CCE",
+      "metric" : "Throughput",
+      "stationID" : "EE000002-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.652,
+        "upperBound" : 0.656
+      },
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 0.654,
+      "id" : "0244A784-28E6-430F-B478-3BF5CE19662E",
+      "metric" : "Throughput",
+      "stationID" : "EE000002-0001-0001-0001-000000000005",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.652,
+        "upperBound" : 0.656
+      },
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 2.526,
+      "id" : "44EB3A9B-267F-455D-9675-545E59B11005",
+      "metric" : "Mean sojourn time",
+      "stationID" : "EE000002-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 2.502,
+        "upperBound" : 2.55
+      },
+      "unit" : "time"
+    },
+    {
+      "estimate" : 2.379,
+      "id" : "AB9C3C36-CEE9-4027-A286-9FDCEDA51CC4",
+      "metric" : "Mean sojourn time",
+      "stationID" : "EE000002-0001-0001-0001-000000000005",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 2.358,
+        "upperBound" : 2.4
+      },
+      "unit" : "time"
+    },
+    {
+      "estimate" : 1.651,
+      "id" : "B5D9D6A0-CC04-4D66-B2E2-12C0FA4D3377",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "EE000002-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 1.6360000000000001,
+        "upperBound" : 1.666
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 1.555,
+      "id" : "76F8684A-0952-48E2-AF64-1F4392B483FD",
+      "metric" : "Mean reported occupancy",
+      "stationID" : "EE000002-0001-0001-0001-000000000005",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 1.543,
+        "upperBound" : 1.567
+      },
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Monte Carlo",
+    "fidelity" : "Queue simulation",
+    "identifier" : "queue.des",
+    "implementation" : "BNAsim\/fBNAsim",
+    "layer" : "Queueing process",
+    "shortName" : "Monte Carlo"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Finite capacity",
+    "exportStationIDs" : [
+      "EE000002-0001-0001-0001-000000000003",
+      "EE000002-0001-0001-0001-000000000005"
+    ],
+    "networkFingerprint" : "c93f46d5c2576d3de41c0e0499810e1dbc2b52918cf8dacfbe616acf3bec680a",
+    "networkSnapshot" : {
+      "infiniteBuffers" : false,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000002-0001-0001-0001-000000000001",
+          "id" : "EE000002-0001-0001-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000002-0001-0001-0001-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000002-0001-0001-0001-000000000002",
+          "id" : "EE000002-0001-0001-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000002-0001-0001-0001-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000002-0001-0001-0001-000000000003",
+          "id" : "EE000002-0001-0001-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000002-0001-0001-0001-000000000004"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000002-0001-0001-0001-000000000004",
+          "id" : "EE000002-0001-0001-2222-000000000004",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000002-0001-0001-0001-000000000005"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000002-0001-0001-0001-000000000005",
+          "id" : "EE000002-0001-0001-2222-000000000005",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000002-0001-0001-0001-000000000006"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.7",
+          "id" : "EE000002-0001-0001-0001-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 4,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000002-0001-0001-0001-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            220,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000002-0001-0001-0001-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            340,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 4,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000002-0001-0001-0001-000000000004",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000002-0001-0001-0001-000000000005",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            580,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000002-0001-0001-0001-000000000006",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            700,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "Tandem2.MM1.K5.fin.bnet",
+    "parameters" : {
+      "blocking" : "BAS+ext-loss",
+      "fixed seed" : "true",
+      "parallelism" : "2",
+      "replications" : "8",
+      "simulation time" : "200000",
+      "warm-up" : "10000"
+    },
+    "replicationSeeds" : [
+      12345,
+      12345,
+      12346,
+      12346,
+      12347,
+      12347,
+      12348,
+      12348
+    ],
+    "seed" : 12345,
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/Tandem2.MM1.K5.fin.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] Using 18 CPU cores (OpenMP)\nRunning simulation ...  [                              ]  starting ...\r\u001b[KRunning simulation ...  [\u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m \u001b[7m \u001b[27m ]  8\/8          (100%)     0.1s\n\nNetwork load: rho_max = 0.7000 at S1  (moderate load — SRBM\/FEM are heavy-traffic limits; expect deviation from simulation)\n           Simulation\n           ==========\n\nrho_1      0.686 ± 0.003\nrho_2      0.653 ± 0.002\n\nGamma_1    0.654 ± 0.002\nGamma_2    0.654 ± 0.002\n\nsojourn_1  2.526 ± 0.024\nsojourn_2  2.379 ± 0.021\n\nE[X_1]     1.651 ± 0.015\nE[X_2]     1.555 ± 0.012\n\nElapsed time: 0.148s\n\n",
+  "startedAt" : "2026-11-11T04:56:55Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

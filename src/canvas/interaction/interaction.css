@@ -1,0 +1,38 @@
+/* The interactive canvas: the clip area with the drawing and its overlays, the legacy scrollers
+   along the right and bottom with their corner filler, the Find Node panel. Tokens only. */
+
+.canvas-view {
+  flex: 1; min-height: 0; min-width: 0;
+  display: grid; grid-template-columns: minmax(0, 1fr) 15px; grid-template-rows: minmax(0, 1fr) 15px;
+}
+.canvas-clip { position: relative; grid-column: 1; grid-row: 1; min-width: 0; min-height: 0; overflow: hidden; }
+.canvas-surface {
+  position: absolute; inset: 0; overflow: hidden; outline: none; touch-action: none; user-select: none;
+  -webkit-user-select: none; color: var(--text);
+}
+.canvas-surface > svg { display: block; }
+/* The P4 placeholder's centring doesn't apply to the drawn canvas. */
+.canvas-surface.canvas-placeholder { display: block; gap: 0; }
+
+/* NSScroller, legacy style: always visible, grey and empty while the content fits. */
+.canvas-scroller { position: relative; background: var(--surface-2); }
+.canvas-scroller-v { grid-column: 2; grid-row: 1; border-left: 1px solid var(--hairline); }
+.canvas-scroller-h { grid-column: 1; grid-row: 2; border-top: 1px solid var(--hairline); }
+.canvas-scroller-knob { position: absolute; border-radius: var(--r-sm); background: var(--border); }
+.canvas-scroller-v .canvas-scroller-knob { left: 3px; right: 3px; min-height: 18px; }
+.canvas-scroller-h .canvas-scroller-knob { top: 3px; bottom: 3px; min-width: 18px; }
+.canvas-scroller[data-enabled] .canvas-scroller-knob:hover { background: var(--field-border); }
+.canvas-scroller-corner { grid-column: 2; grid-row: 2; background: var(--surface-2); border-left: 1px solid var(--hairline); border-top: 1px solid var(--hairline); }
+
+/* Find Node (a compact panel window in DSSheet's chrome). */
+.find-node { display: flex; flex-direction: column; height: 100vh; background: var(--surface); color: var(--text); font-size: var(--fs-base); }
+.find-node-header { padding: var(--sp-6) var(--sp-6) var(--sp-4); border-bottom: 1px solid var(--hairline); }
+.find-node-header h2 { margin: 0 0 var(--sp-2); font-size: var(--fs-lg); font-weight: var(--fw-semibold); }
+.find-node-header p { margin: 0; color: var(--muted); }
+.find-node-body { flex: 1; min-height: 0; overflow: auto; display: flex; flex-direction: column; gap: var(--sp-4); padding: var(--sp-6); }
+.find-node-field { width: 100%; }
+.find-node-summary { margin: 0; color: var(--text-2); font-size: var(--fs-sm); font-variant-numeric: tabular-nums; }
+.find-node-matches { list-style: none; margin: 0; padding: var(--sp-4); display: flex; flex-direction: column; gap: var(--sp-2); border-radius: var(--r-md); background: var(--surface-2); }
+.find-node-matches li { display: flex; align-items: center; gap: var(--sp-4); }
+.find-node-footer { display: flex; justify-content: flex-end; gap: var(--sp-4); padding: var(--sp-5) var(--sp-6); border-top: 1px solid var(--hairline); }
+.find-node-footer .btn { min-width: 78px; }

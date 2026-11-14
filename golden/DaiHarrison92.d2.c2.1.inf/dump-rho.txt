@@ -1,0 +1,14 @@
+d=2, K=2, infiniteBuffers=true
+S1: α=0.927083  μ_eff=1.561404  c=1.561404  ρ=0.593750
+S2: α=0.385417  μ_eff=1.761905  c=1.761905  ρ=0.218750
+class 1: α=[0.6667 0.3333 ]  μ=[2.0000 2.0000 ]  λ_ext=0.5000
+class 2: α=[0.2604 0.0521 ]  μ=[1.0000 1.0000 ]  λ_ext=0.2500
+aggregatedP (2×2):
+  S1: 0.0000 0.4157 
+  S2: 0.4595 0.0000 
+hasRoutingCycles = true
+SRBM existence: holds — R is a nonsingular M-matrix, so it is completely-S and the SRBM exists and is unique in law.
+SRBM recurrence: holds — positive recurrent: R is an M-matrix and R⁻¹θ < 0 (Harrison–Williams 1987).
+AnalyticalTractability.assess(allowGCDG=true)  → kind=asymptotic2D, isTractable=true, detail='Asymptotic product form — GCDG 2025 Cor. 2 (d = 2, P-matrix R)'
+  means(Asymptotic E[X]): S1=1.1527 S2=0.3005
+AnalyticalTractability.assess(allowGCDG=false) → kind=none, isTractable=false, detail=''

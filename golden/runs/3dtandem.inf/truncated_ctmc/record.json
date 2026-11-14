@@ -1,0 +1,328 @@
+{
+  "completedAt" : "2026-11-11T04:40:35Z",
+  "elapsedSeconds" : 37.51857793331146,
+  "failureMessage" : "The truncated CTMC returned estimates, but its boundary-mass and refinement checks did not converge.",
+  "id" : "7AD9CE7F-75E0-4521-BBA4-E0BB1CBAB125",
+  "measurements" : [
+    {
+      "estimate" : 8.47556234089,
+      "id" : "5B4E7D7A-C4AB-42B9-A00A-F63286F4F27C",
+      "metric" : "Mean number in system",
+      "stationID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.900000009,
+      "id" : "D07699E4-60B0-4EF0-88EE-8EB9C61C02E9",
+      "metric" : "Server utilization",
+      "stationID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0,
+      "id" : "67363778-E150-4B4E-AC49-C5A92E55A065",
+      "metric" : "External departure rate",
+      "stationID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 8.47556234052,
+      "id" : "0FA57FBF-6C42-4BAE-9889-808F699C006D",
+      "metric" : "Mean number in system",
+      "stationID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+      "stationName" : "S2",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.900000009,
+      "id" : "98CCDF39-4FF8-4AC2-A73A-83A312E15191",
+      "metric" : "Server utilization",
+      "stationID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0,
+      "id" : "775AB9D2-9566-41B3-9478-610C12590530",
+      "metric" : "External departure rate",
+      "stationID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 8.47556234132,
+      "id" : "2E58A1D3-5EA9-44DB-9EA4-2C5BD6C036C3",
+      "metric" : "Mean number in system",
+      "stationID" : "3AE28E1C-103C-492D-B554-DF8F95AE3D64",
+      "stationName" : "S3",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.900000009,
+      "id" : "B03662A6-2396-4CE2-A9E5-3C74D0C73F67",
+      "metric" : "Server utilization",
+      "stationID" : "3AE28E1C-103C-492D-B554-DF8F95AE3D64",
+      "stationName" : "S3",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.997390853202,
+      "id" : "7D8F58CF-98BA-4EAD-BEE2-14D219FC8BF0",
+      "metric" : "External departure rate",
+      "stationID" : "3AE28E1C-103C-492D-B554-DF8F95AE3D64",
+      "stationName" : "S3",
+      "unit" : "customers \/ time"
+    }
+  ],
+  "method" : {
+    "displayName" : "Adaptive Truncated CTMC",
+    "fidelity" : "Queueing approximation",
+    "identifier" : "queue.infinite-truncated-ctmc",
+    "implementation" : "truncated_ctmc",
+    "layer" : "Queueing process",
+    "shortName" : "Truncated CTMC"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+      "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+      "3AE28E1C-103C-492D-B554-DF8F95AE3D64"
+    ],
+    "networkFingerprint" : "286d9562090650294a6485a696f7d0719131527749152d7ebfcb4b3ad2d31226",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "96C1EAB7-4224-45CA-814E-BF7D993EDE48",
+          "id" : "6292589A-290D-4064-857D-C6F2195C498D",
+          "routingProbability" : 1,
+          "toNodeID" : "4F0B3AB0-43B1-43C0-B9D7-784D24A67C23"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "4F0B3AB0-43B1-43C0-B9D7-784D24A67C23",
+          "id" : "34825D04-9042-478A-B6EF-6DB1F0975E31",
+          "routingProbability" : 1,
+          "toNodeID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+          "id" : "40A8F8BE-E38C-4897-9DEA-C19D2C9B2D76",
+          "routingProbability" : 1,
+          "toNodeID" : "5F5D2535-E251-448C-8012-89B4030E8546"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "5F5D2535-E251-448C-8012-89B4030E8546",
+          "id" : "008B528A-57E3-4A58-9559-0C700354FF27",
+          "routingProbability" : 1,
+          "toNodeID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+          "id" : "3944DAEC-10D6-479E-82FA-B05414DA759C",
+          "routingProbability" : 1,
+          "toNodeID" : "C93B6AFC-EA57-42BA-9861-C206B4884E44"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C93B6AFC-EA57-42BA-9861-C206B4884E44",
+          "id" : "D8F5CE05-3AA7-4B5C-8F04-390104DDD352",
+          "routingProbability" : 1,
+          "toNodeID" : "3AE28E1C-103C-492D-B554-DF8F95AE3D64"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "3AE28E1C-103C-492D-B554-DF8F95AE3D64",
+          "id" : "89A1867E-0BC1-484C-A201-AC8D4DD70E7E",
+          "routingProbability" : 1,
+          "toNodeID" : "FD05C4B5-03A5-4B57-B0F4-401A5059E407"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=1.0",
+          "id" : "96C1EAB7-4224-45CA-814E-BF7D993EDE48",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            183.45099431818176,
+            149.3018465909091
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "4F0B3AB0-43B1-43C0-B9D7-784D24A67C23",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            271.45099431818176,
+            149.3018465909091
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.1111111",
+          "id" : "D10598BD-AAD6-464A-98D5-57ABE91D94ED",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            359.45099431818176,
+            149.3018465909091
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.1111111"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "5F5D2535-E251-448C-8012-89B4030E8546",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            447.45099431818176,
+            149.3018465909091
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.1111111",
+          "id" : "30E0C906-3664-4540-AFCC-57F0A5F0DC5D",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            535.4509943181818,
+            149.3018465909091
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.1111111"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C93B6AFC-EA57-42BA-9861-C206B4884E44",
+          "kind" : "buffer",
+          "name" : "B3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            623.4509943181818,
+            149.3018465909091
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.1111111",
+          "id" : "3AE28E1C-103C-492D-B554-DF8F95AE3D64",
+          "kind" : "station",
+          "name" : "S3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            711.4509943181818,
+            149.3018465909091
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.1111111"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "FD05C4B5-03A5-4B57-B0F4-401A5059E407",
+          "kind" : "sink",
+          "name" : "Sink2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            799.4509943181818,
+            149.3018465909091
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "3dtandem.inf.bnet",
+    "parameters" : {
+      "boundary mass tolerance" : "1e-8",
+      "engine" : "C",
+      "initial total-population cap" : "8",
+      "maximum states" : "200000",
+      "maximum total-population cap" : "64",
+      "process" : "open single-class M\/M\/c network",
+      "runtime" : "C engine; QNET_SOLVER_ROOT: \/Users\/nobody\/Library\/Caches\/qnet\/solvers\/stage\/Resources\/bin\/infinite\/BNAtc\/bna_tc",
+      "successive refinement tolerance" : "1e-7",
+      "truncation evidence" : "heuristic"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/3dtandem.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Solving adaptive truncated CTMC (C) ...  [ ]                                                       0.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                       0.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                       0.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                       0.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                       0.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                       1.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                       1.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                       1.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                       1.8s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                       2.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                       2.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                       2.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                       2.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                       2.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                       3.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                       3.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                       3.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                       3.8s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                       4.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                       4.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                       4.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                       4.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                       4.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                       5.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                       5.4s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                       5.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                       5.8s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                       6.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                       6.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                       6.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                       6.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                       6.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                       7.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                       7.4s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                       7.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                       7.8s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                       8.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                       8.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                       8.4s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                       8.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                       8.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                       9.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                       9.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                       9.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                       9.8s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      10.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      10.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      10.4s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      10.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      10.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      11.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      11.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      11.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      11.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      12.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      12.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      12.4s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      12.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      12.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      13.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      13.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      13.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      13.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      14.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      14.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      14.4s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      14.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      14.8s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      15.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      15.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      15.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      15.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      16.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      16.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      16.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      16.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      16.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      17.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      17.4s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      17.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      17.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      18.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      18.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      18.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      18.8s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      19.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      19.4s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      19.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      19.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      20.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      20.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      20.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      20.8s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      21.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      21.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      21.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      21.8s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      22.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      22.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      22.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      22.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      23.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      23.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      23.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      23.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      23.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      24.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      24.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      24.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      25.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      25.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      25.4s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      25.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      25.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      26.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      26.4s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      26.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      26.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      27.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      27.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      27.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      27.8s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      28.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      28.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      28.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      28.8s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      29.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      29.4s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      29.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      29.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      30.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      30.4s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      30.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      30.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      31.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      31.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      31.6s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      31.8s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      32.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      32.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      32.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      32.8s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      33.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      33.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      33.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      33.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      34.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      34.3s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      34.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      34.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      35.0s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      35.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      35.5s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      35.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      35.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      36.2s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [|]                                                      36.4s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\/]                                                      36.7s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [-]                                                      36.9s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [\\]                                                      37.1s\r\u001b[KSolving adaptive truncated CTMC (C) ...  [done]                                                   37.3s\nAdaptive truncated CTMC\nModel layer: queueing process\nEvidence: truncation diagnostics are heuristic; certificates are identified separately\nHeuristic converged: no\nSelected total cap: 64\nSelected states: 47905\n\nNode 1 S1: E[N]=8.47556234089 utilization=0.900000009 departure=0\nNode 2 S2: E[N]=8.47556234052 utilization=0.900000009 departure=0\nNode 3 S3: E[N]=8.47556234132 utilization=0.900000009 departure=0.997390853202\n\ngenerator residual = 4.31707088606e-13\ntruncation boundary mass = 0.0026091467978\nsuccessive refinement relative change = 0.106787092508\nFoster-Lyapunov certificate: unavailable for this model\nElapsed time: 37.373s\n\n",
+  "runEvidence" : {
+    "convergenceNote" : "Truncation criteria met: no (heuristic)",
+    "discretization" : "total-population cap 64",
+    "refinementDelta" : 0.106787092508,
+    "residual" : 4.31707088606e-13
+  },
+  "startedAt" : "2026-11-11T04:39:58Z",
+  "status" : "partial",
+  "warnings" : [
+    "The state-space cap was reached before the truncation checks passed."
+  ]
+}

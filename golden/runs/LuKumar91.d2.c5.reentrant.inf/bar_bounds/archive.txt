@@ -1,0 +1,13 @@
+Constructing BAR moment bounds ...  [ ]                                                       0.0s[KConstructing BAR moment bounds ...  [done]                                                    0.1s
+error: no performance bounds were produced: CVXPY is not installed. The relaxation can still be exported as JSON; install cvxpy with an SDP-capable solver to obtain numerical candidates.
+Model: LuKumar91.d2.c5.reentrant.inf.bnet (2 dimensions)
+Method: bar_moment_sdp_outer_relaxation
+Certified: no
+Backend status: unavailable
+Backend detail: CVXPY is not installed. The relaxation can still be exported as JSON; install cvxpy with an SDP-capable solver to obtain numerical candidates.
+  mean_workload_1: lower=None (not_solved), upper=None (not_solved)
+  mean_workload_2: lower=None (not_solved), upper=None (not_solved)
+Targets with numerical values: 0/2
+Relaxation: 25 moments, 21 equalities, 7 PSD blocks
+Elapsed time: 0.184s
+

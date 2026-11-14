@@ -1,0 +1,47 @@
+NETWORK ANALYSIS — Brownian Heavy-Traffic Reliability
+=====================================================
+
+NETWORK SUMMARY
+---------------
+Stations:         4
+Customer classes: 1
+Buffer model:     infinite
+
+KEY PRIMITIVES
+--------------
+  Station   servers    μ_eff        α          ρ   c²_s_eff   buffer
+  S1              1   1.0977   0.8035     0.7320     0.0381        ∞
+  S2              1   1.0409   0.7619     0.7320     0.5000        ∞
+  S3              1   0.5436   0.3980     0.7320     0.3055        ∞
+  S4              1   0.6479   0.5831     0.9000     0.3401        ∞
+
+  Class       λ (ext)     c²_a
+  C1           1.3706   1.0000
+
+OVERALL RELIABILITY ASSESSMENT
+------------------------------
+Score: 85 / 100  (HIGH)
+Findings: 0 critical, 1 warning, 0 info
+
+The network sits comfortably inside the assumptions of heavy-traffic SRBM theory. E[X] estimates should be within ~5–10% of simulation for most primitives.
+
+FINDINGS (grouped by severity)
+------------------------------
+
+[WARNING ] 1. Station 1 has near-deterministic service (c²_s = 0.038)
+  Why:     With very low service-time variance, the two-moment SRBM OVERESTIMATES queue length compared to simulation. The true distribution has negligible tail; the diffusion's Gaussian smoothing adds spurious variance.
+  Fix:     If service really is deterministic, use a D/G/1 or simulation. Otherwise, increase the service-distribution variance (e.g. replace a Constant with an Erlang or Gamma) so c²_s ≳ 0.2.
+  Affects: E[X_1], sojourn_1
+
+PERFORMANCE METRIC RELIABILITY
+------------------------------
+  E[X_i] (queue length):          MODERATE    service SCV is extreme — expect bias in E[X]
+  Throughput (Γ_i):               HIGH        Γ = α; derived exactly from traffic equations
+  Utilization (ρ_i):              HIGH        ρ = α / (s·μ); derived exactly from primitives
+  Sojourn time:                   MODERATE    sojourn = E[X]/Γ; inherits E[X] reliability
+  Per-class W, T, N:              MODERATE    Little's law applied to E[X]; inherits its reliability
+
+TOP ACTIONABLE SUGGESTIONS
+--------------------------
+1. If service really is deterministic, use a D/G/1 or simulation. Otherwise, increase the service-distribution variance (e.g. replace a Constant with an Erlang or Gamma) so c²_s ≳ 0.2.
+

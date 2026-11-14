@@ -1,0 +1,2752 @@
+{
+ "file": "GuangChenDaiGlynn25.sec3.1.2d.inf.bnet",
+ "numberFormat": "%.17g",
+ "viewportSize": [1200, 800],
+ "documentCanvasScale": 1,
+ "documentCanvasPanOffset": [0, 0],
+ "infiniteBuffers": true,
+ "nodes": [
+  {
+   "index": 0,
+   "id": "A1AAAAAA-3100-0001-0000-000000000001",
+   "name": "Src1",
+   "kind": "source",
+   "position": [100, 200],
+   "outlineSize": [46, 46],
+   "boundingRadius": 25,
+   "worldRect": {
+    "x": 77,
+    "y": 177,
+    "width": 46,
+    "height": 46
+   },
+   "labelRect": {
+    "x": 62,
+    "y": 227,
+    "width": 76,
+    "height": 36
+   },
+   "labelBlockHeight": 36,
+   "detailText": "Poisson",
+   "rateText": "λ=0.9 · SCV=1",
+   "utilisation": null,
+   "utilisationBadgeText": null
+  },
+  {
+   "index": 1,
+   "id": "A1AAAAAA-3100-0001-0000-000000000002",
+   "name": "B2",
+   "kind": "buffer",
+   "position": [200, 200],
+   "outlineSize": [52, 44],
+   "boundingRadius": 28,
+   "worldRect": {
+    "x": 174,
+    "y": 178,
+    "width": 52,
+    "height": 44
+   },
+   "labelRect": {
+    "x": 162,
+    "y": 226,
+    "width": 76,
+    "height": 24
+   },
+   "labelBlockHeight": 24,
+   "detailText": null,
+   "rateText": null,
+   "utilisation": null,
+   "utilisationBadgeText": null
+  },
+  {
+   "index": 2,
+   "id": "A1AAAAAA-3100-0001-0000-000000000003",
+   "name": "S2",
+   "kind": "station",
+   "position": [300, 200],
+   "outlineSize": [48, 48],
+   "boundingRadius": 26,
+   "worldRect": {
+    "x": 276,
+    "y": 176,
+    "width": 48,
+    "height": 48
+   },
+   "labelRect": {
+    "x": 262,
+    "y": 228,
+    "width": 76,
+    "height": 36
+   },
+   "labelBlockHeight": 36,
+   "detailText": "Erlang",
+   "rateText": "μ=1 · SCV=0.5",
+   "utilisation": 0.90000000000000002,
+   "utilisationBadgeText": "ρ 0.9"
+  },
+  {
+   "index": 3,
+   "id": "A1AAAAAA-3100-0001-0000-000000000004",
+   "name": "B1",
+   "kind": "buffer",
+   "position": [400, 300],
+   "outlineSize": [52, 44],
+   "boundingRadius": 28,
+   "worldRect": {
+    "x": 374,
+    "y": 278,
+    "width": 52,
+    "height": 44
+   },
+   "labelRect": {
+    "x": 362,
+    "y": 326,
+    "width": 76,
+    "height": 24
+   },
+   "labelBlockHeight": 24,
+   "detailText": null,
+   "rateText": null,
+   "utilisation": null,
+   "utilisationBadgeText": null
+  },
+  {
+   "index": 4,
+   "id": "A1AAAAAA-3100-0001-0000-000000000005",
+   "name": "S1",
+   "kind": "station",
+   "position": [500, 300],
+   "outlineSize": [48, 48],
+   "boundingRadius": 26,
+   "worldRect": {
+    "x": 476,
+    "y": 276,
+    "width": 48,
+    "height": 48
+   },
+   "labelRect": {
+    "x": 462,
+    "y": 328,
+    "width": 76,
+    "height": 36
+   },
+   "labelBlockHeight": 36,
+   "detailText": "Erlang",
+   "rateText": "μ=1 · SCV=0.5",
+   "utilisation": 0.45000000000000001,
+   "utilisationBadgeText": "ρ 0.45"
+  },
+  {
+   "index": 5,
+   "id": "A1AAAAAA-3100-0001-0000-000000000006",
+   "name": "Sink1",
+   "kind": "sink",
+   "position": [600, 200],
+   "outlineSize": [48, 48],
+   "boundingRadius": 26,
+   "worldRect": {
+    "x": 576,
+    "y": 176,
+    "width": 48,
+    "height": 48
+   },
+   "labelRect": {
+    "x": 562,
+    "y": 228,
+    "width": 76,
+    "height": 13
+   },
+   "labelBlockHeight": 13,
+   "detailText": null,
+   "rateText": null,
+   "utilisation": null,
+   "utilisationBadgeText": null
+  }
+ ],
+ "links": [
+  {
+   "index": 0,
+   "id": "A1AAAAAA-3100-0002-0000-000000000001",
+   "fromIndex": 0,
+   "toIndex": 1,
+   "from": "Src1",
+   "to": "B2",
+   "customerClass": 0,
+   "toCustomerClass": null,
+   "routingProbability": 1,
+   "isSelfLoop": false,
+   "bundleIndex": 0,
+   "bundleCount": 1,
+   "offsetWorld": 0,
+   "selfLoopExtraRadiusWorld": null,
+   "hasOpposite": false,
+   "baseBulge": 0,
+   "lockSide": false,
+   "bulge": 0,
+   "bulgeSide": 0,
+   "bulgeKind": "straight"
+  },
+  {
+   "index": 1,
+   "id": "A1AAAAAA-3100-0002-0000-000000000002",
+   "fromIndex": 1,
+   "toIndex": 2,
+   "from": "B2",
+   "to": "S2",
+   "customerClass": 0,
+   "toCustomerClass": null,
+   "routingProbability": 1,
+   "isSelfLoop": false,
+   "bundleIndex": 0,
+   "bundleCount": 1,
+   "offsetWorld": 0,
+   "selfLoopExtraRadiusWorld": null,
+   "hasOpposite": false,
+   "baseBulge": 0,
+   "lockSide": false,
+   "bulge": 0,
+   "bulgeSide": 0,
+   "bulgeKind": "straight"
+  },
+  {
+   "index": 2,
+   "id": "A1AAAAAA-3100-0002-0000-000000000003",
+   "fromIndex": 2,
+   "toIndex": 3,
+   "from": "S2",
+   "to": "B1",
+   "customerClass": 0,
+   "toCustomerClass": null,
+   "routingProbability": 0.5,
+   "isSelfLoop": false,
+   "bundleIndex": 0,
+   "bundleCount": 1,
+   "offsetWorld": 0,
+   "selfLoopExtraRadiusWorld": null,
+   "hasOpposite": false,
+   "baseBulge": 0,
+   "lockSide": false,
+   "bulge": 0,
+   "bulgeSide": 0,
+   "bulgeKind": "straight"
+  },
+  {
+   "index": 3,
+   "id": "A1AAAAAA-3100-0002-0000-000000000004",
+   "fromIndex": 2,
+   "toIndex": 5,
+   "from": "S2",
+   "to": "Sink1",
+   "customerClass": 0,
+   "toCustomerClass": null,
+   "routingProbability": 0.5,
+   "isSelfLoop": false,
+   "bundleIndex": 0,
+   "bundleCount": 1,
+   "offsetWorld": 0,
+   "selfLoopExtraRadiusWorld": null,
+   "hasOpposite": false,
+   "baseBulge": 0,
+   "lockSide": false,
+   "bulge": 0,
+   "bulgeSide": 0,
+   "bulgeKind": "straight"
+  },
+  {
+   "index": 4,
+   "id": "A1AAAAAA-3100-0002-0000-000000000005",
+   "fromIndex": 3,
+   "toIndex": 4,
+   "from": "B1",
+   "to": "S1",
+   "customerClass": 0,
+   "toCustomerClass": null,
+   "routingProbability": 1,
+   "isSelfLoop": false,
+   "bundleIndex": 0,
+   "bundleCount": 1,
+   "offsetWorld": 0,
+   "selfLoopExtraRadiusWorld": null,
+   "hasOpposite": false,
+   "baseBulge": 0,
+   "lockSide": false,
+   "bulge": 0,
+   "bulgeSide": 0,
+   "bulgeKind": "straight"
+  },
+  {
+   "index": 5,
+   "id": "A1AAAAAA-3100-0002-0000-000000000006",
+   "fromIndex": 4,
+   "toIndex": 5,
+   "from": "S1",
+   "to": "Sink1",
+   "customerClass": 0,
+   "toCustomerClass": null,
+   "routingProbability": 1,
+   "isSelfLoop": false,
+   "bundleIndex": 0,
+   "bundleCount": 1,
+   "offsetWorld": 0,
+   "selfLoopExtraRadiusWorld": null,
+   "hasOpposite": false,
+   "baseBulge": 0,
+   "lockSide": false,
+   "bulge": 0,
+   "bulgeSide": 0,
+   "bulgeKind": "straight"
+  }
+ ],
+ "routePlanBowedCount": 0,
+ "contentBounds": {
+  "x": 100,
+  "y": 200,
+  "width": 500,
+  "height": 100
+ },
+ "zoomToFit": {
+  "margin": 88,
+  "scale": 2.048,
+  "pan": [-116.80000000000007, -112],
+  "fittingScale": 2.048,
+  "fittingPan": [-116.80000000000007, -112]
+ },
+ "exportContentRect": {
+  "x": 46,
+  "y": 160,
+  "width": 608,
+  "height": 220
+ },
+ "exportMargin": 24,
+ "views": [
+  {
+   "name": "identity",
+   "scale": 1,
+   "pan": [0, 0],
+   "viewportSize": [1200, 800],
+   "visibleWorldRect": {
+    "x": 0,
+    "y": 0,
+    "width": 1200,
+    "height": 800
+   },
+   "grid": {
+    "cell": 28,
+    "major": 112,
+    "minorAlpha": 1,
+    "majorAlpha": 1,
+    "minorDotCount": 1247,
+    "majorLineCount": 19,
+    "minorFirstX": 0,
+    "minorFirstY": 0,
+    "majorFirstX": 0,
+    "majorFirstY": 0
+   },
+   "chipsShown": true,
+   "nodes": [
+    {
+     "index": 0,
+     "displayCentre": [100, 200],
+     "bodyDisplaySize": [46, 46],
+     "displayRect": {
+      "x": 77,
+      "y": 177,
+      "width": 46,
+      "height": 46
+     },
+     "labelDisplayRect": {
+      "x": 62,
+      "y": 227,
+      "width": 76,
+      "height": 36
+     },
+     "hitSlopLocal": 3,
+     "strokeWidth": 2,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": true,
+     "labelBlockDisplayWidth": 76,
+     "nameFontSize": 10,
+     "detailFontSize": 8
+    },
+    {
+     "index": 1,
+     "displayCentre": [200, 200],
+     "bodyDisplaySize": [52, 44],
+     "displayRect": {
+      "x": 174,
+      "y": 178,
+      "width": 52,
+      "height": 44
+     },
+     "labelDisplayRect": {
+      "x": 162,
+      "y": 226,
+      "width": 76,
+      "height": 24
+     },
+     "hitSlopLocal": 3,
+     "strokeWidth": 2,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 76,
+     "nameFontSize": 10,
+     "detailFontSize": 8
+    },
+    {
+     "index": 2,
+     "displayCentre": [300, 200],
+     "bodyDisplaySize": [48, 48],
+     "displayRect": {
+      "x": 276,
+      "y": 176,
+      "width": 48,
+      "height": 48
+     },
+     "labelDisplayRect": {
+      "x": 262,
+      "y": 228,
+      "width": 76,
+      "height": 36
+     },
+     "hitSlopLocal": 3,
+     "strokeWidth": 2,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": true,
+     "labelBlockDisplayWidth": 76,
+     "nameFontSize": 10,
+     "detailFontSize": 8
+    },
+    {
+     "index": 3,
+     "displayCentre": [400, 300],
+     "bodyDisplaySize": [52, 44],
+     "displayRect": {
+      "x": 374,
+      "y": 278,
+      "width": 52,
+      "height": 44
+     },
+     "labelDisplayRect": {
+      "x": 362,
+      "y": 326,
+      "width": 76,
+      "height": 24
+     },
+     "hitSlopLocal": 3,
+     "strokeWidth": 2,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 76,
+     "nameFontSize": 10,
+     "detailFontSize": 8
+    },
+    {
+     "index": 4,
+     "displayCentre": [500, 300],
+     "bodyDisplaySize": [48, 48],
+     "displayRect": {
+      "x": 476,
+      "y": 276,
+      "width": 48,
+      "height": 48
+     },
+     "labelDisplayRect": {
+      "x": 462,
+      "y": 328,
+      "width": 76,
+      "height": 36
+     },
+     "hitSlopLocal": 3,
+     "strokeWidth": 2,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": true,
+     "labelBlockDisplayWidth": 76,
+     "nameFontSize": 10,
+     "detailFontSize": 8
+    },
+    {
+     "index": 5,
+     "displayCentre": [600, 200],
+     "bodyDisplaySize": [48, 48],
+     "displayRect": {
+      "x": 576,
+      "y": 176,
+      "width": 48,
+      "height": 48
+     },
+     "labelDisplayRect": {
+      "x": 562,
+      "y": 228,
+      "width": 76,
+      "height": 13
+     },
+     "hitSlopLocal": 3,
+     "strokeWidth": 2,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 76,
+     "nameFontSize": 10,
+     "detailFontSize": 8
+    }
+   ],
+   "links": [
+    {
+     "index": 0,
+     "visible": true,
+     "drawOrder": 0,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 2,
+     "arrowLength": 10,
+     "wingSpread": 5.3170943166147877,
+     "start": [124.49919128417969, 200],
+     "base": [162.49993896484375, 200],
+     "tip": [172.49993896484375, 200],
+     "wingLeft": [162.49993896484375, 205.3170943166148],
+     "wingRight": [162.49993896484375, 194.6829056833852],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [143.49956512451172, 189],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [124.49919128417969, 200],
+      [162.49993896484375, 200],
+      [172.49993896484375, 200]
+     ]
+    },
+    {
+     "index": 1,
+     "visible": true,
+     "drawOrder": 1,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 2,
+     "arrowLength": 10,
+     "wingSpread": 5.3170943166147877,
+     "start": [227.50006103515625, 200],
+     "base": [264.49990844726562, 200],
+     "tip": [274.49990844726562, 200],
+     "wingLeft": [264.49990844726562, 205.3170943166148],
+     "wingRight": [264.49990844726562, 194.6829056833852],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [245.99998474121094, 189],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [227.50006103515625, 200],
+      [264.49990844726562, 200],
+      [274.49990844726562, 200]
+     ]
+    },
+    {
+     "index": 2,
+     "visible": true,
+     "drawOrder": 2,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 2,
+     "arrowLength": 10,
+     "wingSpread": 5.3170943166147877,
+     "start": [318.03128765781628, 218.03128765781628],
+     "base": [369.86902513558306, 269.86902513558306],
+     "tip": [376.94009294744853, 276.94009294744853],
+     "wingLeft": [366.10927168809627, 273.62877858306985],
+     "wingRight": [373.62877858306985, 266.10927168809627],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [351.72833098975167, 236.17198180364764],
+     "chipPolicy": "declutter",
+     "chipText": "0.5",
+     "chipFontSize": 9,
+     "polyline": [
+      [318.03128765781628, 218.03128765781628],
+      [369.86902513558306, 269.86902513558306],
+      [376.94009294744853, 276.94009294744853]
+     ]
+    },
+    {
+     "index": 3,
+     "visible": true,
+     "drawOrder": 3,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 2,
+     "arrowLength": 10,
+     "wingSpread": 5.3170943166147877,
+     "start": [325.50009155273438, 200],
+     "base": [564.49990844726562, 200],
+     "tip": [574.49990844726562, 200],
+     "wingLeft": [564.49990844726562, 205.3170943166148],
+     "wingRight": [564.49990844726562, 194.6829056833852],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [445, 189],
+     "chipPolicy": "declutter",
+     "chipText": "0.5",
+     "chipFontSize": 9,
+     "polyline": [
+      [325.50009155273438, 200],
+      [564.49990844726562, 200],
+      [574.49990844726562, 200]
+     ]
+    },
+    {
+     "index": 4,
+     "visible": true,
+     "drawOrder": 4,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 2,
+     "arrowLength": 10,
+     "wingSpread": 5.3170943166147877,
+     "start": [427.50006103515625, 300],
+     "base": [464.49990844726562, 300],
+     "tip": [474.49990844726562, 300],
+     "wingLeft": [464.49990844726562, 305.31709431661477],
+     "wingRight": [464.49990844726562, 294.68290568338523],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [445.99998474121094, 289],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [427.50006103515625, 300],
+      [464.49990844726562, 300],
+      [474.49990844726562, 300]
+     ]
+    },
+    {
+     "index": 5,
+     "visible": true,
+     "drawOrder": 5,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 2,
+     "arrowLength": 10,
+     "wingSpread": 5.3170943166147877,
+     "start": [518.03128765781628, 281.96871234218372],
+     "base": [570.21168103702541, 229.78831896297464],
+     "tip": [577.28274884889083, 222.71725115110917],
+     "wingLeft": [573.9714344845122, 233.5480724104614],
+     "wingRight": [566.45192758953863, 226.02856551548788],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [536.34330975436887, 248.10034105952715],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [518.03128765781628, 281.96871234218372],
+      [570.21168103702541, 229.78831896297464],
+      [577.28274884889083, 222.71725115110917]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "document",
+   "scale": 1,
+   "pan": [0, 0],
+   "viewportSize": [1200, 800],
+   "visibleWorldRect": {
+    "x": 0,
+    "y": 0,
+    "width": 1200,
+    "height": 800
+   },
+   "grid": {
+    "cell": 28,
+    "major": 112,
+    "minorAlpha": 1,
+    "majorAlpha": 1,
+    "minorDotCount": 1247,
+    "majorLineCount": 19,
+    "minorFirstX": 0,
+    "minorFirstY": 0,
+    "majorFirstX": 0,
+    "majorFirstY": 0
+   },
+   "chipsShown": true,
+   "nodes": [
+    {
+     "index": 0,
+     "displayCentre": [100, 200],
+     "bodyDisplaySize": [46, 46],
+     "displayRect": {
+      "x": 77,
+      "y": 177,
+      "width": 46,
+      "height": 46
+     },
+     "labelDisplayRect": {
+      "x": 62,
+      "y": 227,
+      "width": 76,
+      "height": 36
+     },
+     "hitSlopLocal": 3,
+     "strokeWidth": 2,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": true,
+     "labelBlockDisplayWidth": 76,
+     "nameFontSize": 10,
+     "detailFontSize": 8
+    },
+    {
+     "index": 1,
+     "displayCentre": [200, 200],
+     "bodyDisplaySize": [52, 44],
+     "displayRect": {
+      "x": 174,
+      "y": 178,
+      "width": 52,
+      "height": 44
+     },
+     "labelDisplayRect": {
+      "x": 162,
+      "y": 226,
+      "width": 76,
+      "height": 24
+     },
+     "hitSlopLocal": 3,
+     "strokeWidth": 2,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 76,
+     "nameFontSize": 10,
+     "detailFontSize": 8
+    },
+    {
+     "index": 2,
+     "displayCentre": [300, 200],
+     "bodyDisplaySize": [48, 48],
+     "displayRect": {
+      "x": 276,
+      "y": 176,
+      "width": 48,
+      "height": 48
+     },
+     "labelDisplayRect": {
+      "x": 262,
+      "y": 228,
+      "width": 76,
+      "height": 36
+     },
+     "hitSlopLocal": 3,
+     "strokeWidth": 2,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": true,
+     "labelBlockDisplayWidth": 76,
+     "nameFontSize": 10,
+     "detailFontSize": 8
+    },
+    {
+     "index": 3,
+     "displayCentre": [400, 300],
+     "bodyDisplaySize": [52, 44],
+     "displayRect": {
+      "x": 374,
+      "y": 278,
+      "width": 52,
+      "height": 44
+     },
+     "labelDisplayRect": {
+      "x": 362,
+      "y": 326,
+      "width": 76,
+      "height": 24
+     },
+     "hitSlopLocal": 3,
+     "strokeWidth": 2,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 76,
+     "nameFontSize": 10,
+     "detailFontSize": 8
+    },
+    {
+     "index": 4,
+     "displayCentre": [500, 300],
+     "bodyDisplaySize": [48, 48],
+     "displayRect": {
+      "x": 476,
+      "y": 276,
+      "width": 48,
+      "height": 48
+     },
+     "labelDisplayRect": {
+      "x": 462,
+      "y": 328,
+      "width": 76,
+      "height": 36
+     },
+     "hitSlopLocal": 3,
+     "strokeWidth": 2,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": true,
+     "labelBlockDisplayWidth": 76,
+     "nameFontSize": 10,
+     "detailFontSize": 8
+    },
+    {
+     "index": 5,
+     "displayCentre": [600, 200],
+     "bodyDisplaySize": [48, 48],
+     "displayRect": {
+      "x": 576,
+      "y": 176,
+      "width": 48,
+      "height": 48
+     },
+     "labelDisplayRect": {
+      "x": 562,
+      "y": 228,
+      "width": 76,
+      "height": 13
+     },
+     "hitSlopLocal": 3,
+     "strokeWidth": 2,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 76,
+     "nameFontSize": 10,
+     "detailFontSize": 8
+    }
+   ],
+   "links": [
+    {
+     "index": 0,
+     "visible": true,
+     "drawOrder": 0,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 2,
+     "arrowLength": 10,
+     "wingSpread": 5.3170943166147877,
+     "start": [124.49919128417969, 200],
+     "base": [162.49993896484375, 200],
+     "tip": [172.49993896484375, 200],
+     "wingLeft": [162.49993896484375, 205.3170943166148],
+     "wingRight": [162.49993896484375, 194.6829056833852],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [143.49956512451172, 189],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [124.49919128417969, 200],
+      [162.49993896484375, 200],
+      [172.49993896484375, 200]
+     ]
+    },
+    {
+     "index": 1,
+     "visible": true,
+     "drawOrder": 1,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 2,
+     "arrowLength": 10,
+     "wingSpread": 5.3170943166147877,
+     "start": [227.50006103515625, 200],
+     "base": [264.49990844726562, 200],
+     "tip": [274.49990844726562, 200],
+     "wingLeft": [264.49990844726562, 205.3170943166148],
+     "wingRight": [264.49990844726562, 194.6829056833852],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [245.99998474121094, 189],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [227.50006103515625, 200],
+      [264.49990844726562, 200],
+      [274.49990844726562, 200]
+     ]
+    },
+    {
+     "index": 2,
+     "visible": true,
+     "drawOrder": 2,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 2,
+     "arrowLength": 10,
+     "wingSpread": 5.3170943166147877,
+     "start": [318.03128765781628, 218.03128765781628],
+     "base": [369.86902513558306, 269.86902513558306],
+     "tip": [376.94009294744853, 276.94009294744853],
+     "wingLeft": [366.10927168809627, 273.62877858306985],
+     "wingRight": [373.62877858306985, 266.10927168809627],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [351.72833098975167, 236.17198180364764],
+     "chipPolicy": "declutter",
+     "chipText": "0.5",
+     "chipFontSize": 9,
+     "polyline": [
+      [318.03128765781628, 218.03128765781628],
+      [369.86902513558306, 269.86902513558306],
+      [376.94009294744853, 276.94009294744853]
+     ]
+    },
+    {
+     "index": 3,
+     "visible": true,
+     "drawOrder": 3,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 2,
+     "arrowLength": 10,
+     "wingSpread": 5.3170943166147877,
+     "start": [325.50009155273438, 200],
+     "base": [564.49990844726562, 200],
+     "tip": [574.49990844726562, 200],
+     "wingLeft": [564.49990844726562, 205.3170943166148],
+     "wingRight": [564.49990844726562, 194.6829056833852],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [445, 189],
+     "chipPolicy": "declutter",
+     "chipText": "0.5",
+     "chipFontSize": 9,
+     "polyline": [
+      [325.50009155273438, 200],
+      [564.49990844726562, 200],
+      [574.49990844726562, 200]
+     ]
+    },
+    {
+     "index": 4,
+     "visible": true,
+     "drawOrder": 4,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 2,
+     "arrowLength": 10,
+     "wingSpread": 5.3170943166147877,
+     "start": [427.50006103515625, 300],
+     "base": [464.49990844726562, 300],
+     "tip": [474.49990844726562, 300],
+     "wingLeft": [464.49990844726562, 305.31709431661477],
+     "wingRight": [464.49990844726562, 294.68290568338523],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [445.99998474121094, 289],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [427.50006103515625, 300],
+      [464.49990844726562, 300],
+      [474.49990844726562, 300]
+     ]
+    },
+    {
+     "index": 5,
+     "visible": true,
+     "drawOrder": 5,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 2,
+     "arrowLength": 10,
+     "wingSpread": 5.3170943166147877,
+     "start": [518.03128765781628, 281.96871234218372],
+     "base": [570.21168103702541, 229.78831896297464],
+     "tip": [577.28274884889083, 222.71725115110917],
+     "wingLeft": [573.9714344845122, 233.5480724104614],
+     "wingRight": [566.45192758953863, 226.02856551548788],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [536.34330975436887, 248.10034105952715],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [518.03128765781628, 281.96871234218372],
+      [570.21168103702541, 229.78831896297464],
+      [577.28274884889083, 222.71725115110917]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "scale0.3",
+   "scale": 0.29999999999999999,
+   "pan": [40, -25],
+   "viewportSize": [1200, 800],
+   "visibleWorldRect": {
+    "x": -133.33333333333334,
+    "y": 83.333333333333343,
+    "width": 4000.0000000000005,
+    "height": 2666.6666666666665
+   },
+   "grid": {
+    "cell": 8.4000000000000004,
+    "major": 33.600000000000001,
+    "minorAlpha": 0,
+    "majorAlpha": 1,
+    "minorDotCount": 0,
+    "majorLineCount": 60,
+    "minorFirstX": 6.3999999999999986,
+    "minorFirstY": 0.20000000000000107,
+    "majorFirstX": 6.3999999999999986,
+    "majorFirstY": 8.6000000000000014
+   },
+   "chipsShown": false,
+   "nodes": [
+    {
+     "index": 0,
+     "displayCentre": [70, 35],
+     "bodyDisplaySize": [13.799999999999999, 13.799999999999999],
+     "displayRect": {
+      "x": 63.099999999999994,
+      "y": 28.100000000000001,
+      "width": 13.799999999999999,
+      "height": 13.799999999999999
+     },
+     "labelDisplayRect": {
+      "x": 58.599999999999994,
+      "y": 43.099999999999994,
+      "width": 22.800000000000001,
+      "height": 10.799999999999999
+     },
+     "hitSlopLocal": 10,
+     "strokeWidth": 1,
+     "nameRowShown": false,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 1,
+     "displayCentre": [100, 35],
+     "bodyDisplaySize": [15.6, 13.199999999999999],
+     "displayRect": {
+      "x": 92.199999999999989,
+      "y": 28.399999999999999,
+      "width": 15.6,
+      "height": 13.199999999999999
+     },
+     "labelDisplayRect": {
+      "x": 88.599999999999994,
+      "y": 42.799999999999997,
+      "width": 22.800000000000001,
+      "height": 7.1999999999999993
+     },
+     "hitSlopLocal": 10,
+     "strokeWidth": 1,
+     "nameRowShown": false,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 2,
+     "displayCentre": [130, 35],
+     "bodyDisplaySize": [14.399999999999999, 14.399999999999999],
+     "displayRect": {
+      "x": 122.8,
+      "y": 27.799999999999997,
+      "width": 14.399999999999999,
+      "height": 14.399999999999999
+     },
+     "labelDisplayRect": {
+      "x": 118.59999999999999,
+      "y": 43.399999999999991,
+      "width": 22.800000000000001,
+      "height": 10.799999999999999
+     },
+     "hitSlopLocal": 10,
+     "strokeWidth": 1,
+     "nameRowShown": false,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 3,
+     "displayCentre": [160, 65],
+     "bodyDisplaySize": [15.6, 13.199999999999999],
+     "displayRect": {
+      "x": 152.19999999999999,
+      "y": 58.399999999999991,
+      "width": 15.6,
+      "height": 13.199999999999999
+     },
+     "labelDisplayRect": {
+      "x": 148.59999999999999,
+      "y": 72.799999999999997,
+      "width": 22.800000000000001,
+      "height": 7.1999999999999993
+     },
+     "hitSlopLocal": 10,
+     "strokeWidth": 1,
+     "nameRowShown": false,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 4,
+     "displayCentre": [190, 65],
+     "bodyDisplaySize": [14.399999999999999, 14.399999999999999],
+     "displayRect": {
+      "x": 182.79999999999998,
+      "y": 57.799999999999997,
+      "width": 14.399999999999999,
+      "height": 14.399999999999999
+     },
+     "labelDisplayRect": {
+      "x": 178.59999999999999,
+      "y": 73.399999999999991,
+      "width": 22.800000000000001,
+      "height": 10.799999999999999
+     },
+     "hitSlopLocal": 10,
+     "strokeWidth": 1,
+     "nameRowShown": false,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 5,
+     "displayCentre": [220, 35],
+     "bodyDisplaySize": [14.399999999999999, 14.399999999999999],
+     "displayRect": {
+      "x": 212.79999999999998,
+      "y": 27.799999999999997,
+      "width": 14.399999999999999,
+      "height": 14.399999999999999
+     },
+     "labelDisplayRect": {
+      "x": 208.59999999999999,
+      "y": 43.399999999999991,
+      "width": 22.800000000000001,
+      "height": 3.8999999999999999
+     },
+     "hitSlopLocal": 10,
+     "strokeWidth": 1,
+     "nameRowShown": false,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    }
+   ],
+   "links": [
+    {
+     "index": 0,
+     "visible": true,
+     "drawOrder": 0,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [78.399757385253906, 35],
+     "base": [84.699981689453125, 35],
+     "tip": [90.699981689453125, 35],
+     "wingLeft": [84.699981689453125, 38.190256589968875],
+     "wingRight": [84.699981689453125, 31.809743410031128],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [81.549869537353516, 25],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [78.399757385253906, 35],
+      [84.699981689453125, 35],
+      [90.699981689453125, 35]
+     ]
+    },
+    {
+     "index": 1,
+     "visible": true,
+     "drawOrder": 1,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [109.30001831054688, 35],
+     "base": [115.29997253417969, 35],
+     "tip": [121.29997253417969, 35],
+     "wingLeft": [115.29997253417969, 38.190256589968875],
+     "wingRight": [115.29997253417969, 31.809743410031128],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [112.29999542236328, 25],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [109.30001831054688, 35],
+      [115.29997253417969, 35],
+      [121.29997253417969, 35]
+     ]
+    },
+    {
+     "index": 2,
+     "visible": true,
+     "drawOrder": 2,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [136.15184841759077, 41.151848417590756],
+     "base": [148.09692507686941, 53.096925076869404],
+     "tip": [152.3395657639887, 57.339565763988688],
+     "wingLeft": [145.84107300837735, 55.352777145361465],
+     "wingRight": [150.35277714536147, 50.841073008377343],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [149.19545455909557, 40.053318935364601],
+     "chipPolicy": "never",
+     "chipText": "0.5",
+     "chipFontSize": 9,
+     "polyline": [
+      [136.15184841759077, 41.151848417590756],
+      [148.09692507686941, 53.096925076869404],
+      [152.3395657639887, 57.339565763988688]
+     ]
+    },
+    {
+     "index": 3,
+     "visible": true,
+     "drawOrder": 3,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [138.70002746582031, 35],
+     "base": [205.29997253417969, 35],
+     "tip": [211.29997253417969, 35],
+     "wingLeft": [205.29997253417969, 38.190256589968875],
+     "wingRight": [205.29997253417969, 31.809743410031128],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [172, 25],
+     "chipPolicy": "never",
+     "chipText": "0.5",
+     "chipFontSize": 9,
+     "polyline": [
+      [138.70002746582031, 35],
+      [205.29997253417969, 35],
+      [211.29997253417969, 35]
+     ]
+    },
+    {
+     "index": 4,
+     "visible": true,
+     "drawOrder": 4,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [169.30001831054688, 65],
+     "base": [175.29997253417969, 65],
+     "tip": [181.29997253417969, 65],
+     "wingLeft": [175.29997253417969, 68.190256589968868],
+     "wingRight": [175.29997253417969, 61.809743410031125],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [172.29999542236328, 55],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [169.30001831054688, 65],
+      [175.29997253417969, 65],
+      [181.29997253417969, 65]
+     ]
+    },
+    {
+     "index": 5,
+     "visible": true,
+     "drawOrder": 5,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [196.15184841759077, 58.848151582409244],
+     "base": [208.1997218473021, 46.800278152697906],
+     "tip": [212.44236253442139, 42.557637465578622],
+     "wingLeft": [210.45557391579416, 49.056130221189967],
+     "wingRight": [205.94386977881004, 44.544426084205845],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [195.10471732058096, 45.753147055688103],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [196.15184841759077, 58.848151582409244],
+      [208.1997218473021, 46.800278152697906],
+      [212.44236253442139, 42.557637465578622]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "scale0.4",
+   "scale": 0.40000000000000002,
+   "pan": [-12.5, 33],
+   "viewportSize": [1200, 800],
+   "visibleWorldRect": {
+    "x": 31.25,
+    "y": -82.5,
+    "width": 3000,
+    "height": 2000
+   },
+   "grid": {
+    "cell": 11.200000000000001,
+    "major": 44.800000000000004,
+    "minorAlpha": 0,
+    "majorAlpha": 1,
+    "minorDotCount": 0,
+    "majorLineCount": 45,
+    "minorFirstX": 9.9000000000000021,
+    "minorFirstY": 10.599999999999998,
+    "majorFirstX": 32.300000000000004,
+    "majorFirstY": 33
+   },
+   "chipsShown": false,
+   "nodes": [
+    {
+     "index": 0,
+     "displayCentre": [27.5, 113],
+     "bodyDisplaySize": [18.400000000000002, 18.400000000000002],
+     "displayRect": {
+      "x": 18.300000000000001,
+      "y": 103.8,
+      "width": 18.400000000000002,
+      "height": 18.400000000000002
+     },
+     "labelDisplayRect": {
+      "x": 12.300000000000001,
+      "y": 123.80000000000001,
+      "width": 30.400000000000002,
+      "height": 14.4
+     },
+     "hitSlopLocal": 7.5,
+     "strokeWidth": 1,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 1,
+     "displayCentre": [67.5, 113],
+     "bodyDisplaySize": [20.800000000000001, 17.600000000000001],
+     "displayRect": {
+      "x": 57.100000000000009,
+      "y": 104.2,
+      "width": 20.800000000000001,
+      "height": 17.600000000000001
+     },
+     "labelDisplayRect": {
+      "x": 52.299999999999997,
+      "y": 123.40000000000001,
+      "width": 30.400000000000002,
+      "height": 9.6000000000000014
+     },
+     "hitSlopLocal": 7.5,
+     "strokeWidth": 1,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 2,
+     "displayCentre": [107.5, 113],
+     "bodyDisplaySize": [19.200000000000003, 19.200000000000003],
+     "displayRect": {
+      "x": 97.900000000000006,
+      "y": 103.40000000000001,
+      "width": 19.200000000000003,
+      "height": 19.200000000000003
+     },
+     "labelDisplayRect": {
+      "x": 92.300000000000011,
+      "y": 124.2,
+      "width": 30.400000000000002,
+      "height": 14.4
+     },
+     "hitSlopLocal": 7.5,
+     "strokeWidth": 1,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 3,
+     "displayCentre": [147.5, 153],
+     "bodyDisplaySize": [20.800000000000001, 17.600000000000001],
+     "displayRect": {
+      "x": 137.09999999999999,
+      "y": 144.19999999999999,
+      "width": 20.800000000000001,
+      "height": 17.600000000000001
+     },
+     "labelDisplayRect": {
+      "x": 132.30000000000001,
+      "y": 163.40000000000001,
+      "width": 30.400000000000002,
+      "height": 9.6000000000000014
+     },
+     "hitSlopLocal": 7.5,
+     "strokeWidth": 1,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 4,
+     "displayCentre": [187.5, 153],
+     "bodyDisplaySize": [19.200000000000003, 19.200000000000003],
+     "displayRect": {
+      "x": 177.90000000000001,
+      "y": 143.40000000000001,
+      "width": 19.200000000000003,
+      "height": 19.200000000000003
+     },
+     "labelDisplayRect": {
+      "x": 172.30000000000001,
+      "y": 164.20000000000002,
+      "width": 30.400000000000002,
+      "height": 14.4
+     },
+     "hitSlopLocal": 7.5,
+     "strokeWidth": 1,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 5,
+     "displayCentre": [227.5, 113],
+     "bodyDisplaySize": [19.200000000000003, 19.200000000000003],
+     "displayRect": {
+      "x": 217.90000000000001,
+      "y": 103.40000000000001,
+      "width": 19.200000000000003,
+      "height": 19.200000000000003
+     },
+     "labelDisplayRect": {
+      "x": 212.30000000000001,
+      "y": 124.2,
+      "width": 30.400000000000002,
+      "height": 5.2000000000000002
+     },
+     "hitSlopLocal": 7.5,
+     "strokeWidth": 1,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    }
+   ],
+   "links": [
+    {
+     "index": 0,
+     "visible": true,
+     "drawOrder": 0,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [38.199676513671875, 113],
+     "base": [49.5999755859375, 113],
+     "tip": [55.5999755859375, 113],
+     "wingLeft": [49.5999755859375, 116.19025658996887],
+     "wingRight": [49.5999755859375, 109.80974341003113],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [43.899826049804688, 103],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [38.199676513671875, 113],
+      [49.5999755859375, 113],
+      [55.5999755859375, 113]
+     ]
+    },
+    {
+     "index": 1,
+     "visible": true,
+     "drawOrder": 1,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [79.4000244140625, 113],
+     "base": [90.39996337890625, 113],
+     "tip": [96.39996337890625, 113],
+     "wingLeft": [90.39996337890625, 116.19025658996887],
+     "wingRight": [90.39996337890625, 109.80974341003113],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [84.899993896484375, 103],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [79.4000244140625, 113],
+      [90.39996337890625, 113],
+      [96.39996337890625, 113]
+     ]
+    },
+    {
+     "index": 2,
+     "visible": true,
+     "drawOrder": 2,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [115.3489111661944, 120.8489111661944],
+     "base": [133.39700038879224, 138.89700038879224],
+     "tip": [137.63964107591153, 143.13964107591153],
+     "wingLeft": [131.14114832030018, 141.1528524572843],
+     "wingRight": [135.6528524572843, 136.64114832030018],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [131.44402358935878, 122.80188796562783],
+     "chipPolicy": "never",
+     "chipText": "0.5",
+     "chipFontSize": 9,
+     "polyline": [
+      [115.3489111661944, 120.8489111661944],
+      [133.39700038879224, 138.89700038879224],
+      [137.63964107591153, 143.13964107591153]
+     ]
+    },
+    {
+     "index": 3,
+     "visible": true,
+     "drawOrder": 3,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [118.60003662109375, 113],
+     "base": [210.39996337890625, 113],
+     "tip": [216.39996337890625, 113],
+     "wingLeft": [210.39996337890625, 116.19025658996887],
+     "wingRight": [210.39996337890625, 109.80974341003113],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [164.5, 103],
+     "chipPolicy": "never",
+     "chipText": "0.5",
+     "chipFontSize": 9,
+     "polyline": [
+      [118.60003662109375, 113],
+      [210.39996337890625, 113],
+      [216.39996337890625, 113]
+     ]
+    },
+    {
+     "index": 4,
+     "visible": true,
+     "drawOrder": 4,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [159.4000244140625, 153],
+     "base": [170.39996337890625, 153],
+     "tip": [176.39996337890625, 153],
+     "wingLeft": [170.39996337890625, 156.19025658996887],
+     "wingRight": [170.39996337890625, 149.80974341003113],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [164.89999389648438, 143],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [159.4000244140625, 153],
+      [170.39996337890625, 153],
+      [176.39996337890625, 153]
+     ]
+    },
+    {
+     "index": 5,
+     "visible": true,
+     "drawOrder": 5,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [195.3489111661944, 145.1510888338056],
+     "base": [213.53406274936916, 126.96593725063084],
+     "tip": [217.77670343648845, 122.72329656351155],
+     "wingLeft": [215.78991481786122, 129.22178931912291],
+     "wingRight": [211.27821068087709, 124.71008518213878],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [197.37041914591629, 128.98744523035276],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [195.3489111661944, 145.1510888338056],
+      [213.53406274936916, 126.96593725063084],
+      [217.77670343648845, 122.72329656351155]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "scale0.5",
+   "scale": 0.5,
+   "pan": [120.5, 60.25],
+   "viewportSize": [1200, 800],
+   "visibleWorldRect": {
+    "x": -241,
+    "y": -120.5,
+    "width": 2400,
+    "height": 1600
+   },
+   "grid": {
+    "cell": 14,
+    "major": 56,
+    "minorAlpha": 0,
+    "majorAlpha": 1,
+    "minorDotCount": 0,
+    "majorLineCount": 37,
+    "minorFirstX": 8.5,
+    "minorFirstY": 4.25,
+    "majorFirstX": 8.5,
+    "majorFirstY": 4.25
+   },
+   "chipsShown": true,
+   "nodes": [
+    {
+     "index": 0,
+     "displayCentre": [170.5, 160.25],
+     "bodyDisplaySize": [23, 23],
+     "displayRect": {
+      "x": 159,
+      "y": 148.75,
+      "width": 23,
+      "height": 23
+     },
+     "labelDisplayRect": {
+      "x": 151.5,
+      "y": 173.75,
+      "width": 38,
+      "height": 18
+     },
+     "hitSlopLocal": 6,
+     "strokeWidth": 1,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 1,
+     "displayCentre": [220.5, 160.25],
+     "bodyDisplaySize": [26, 22],
+     "displayRect": {
+      "x": 207.5,
+      "y": 149.25,
+      "width": 26,
+      "height": 22
+     },
+     "labelDisplayRect": {
+      "x": 201.5,
+      "y": 173.25,
+      "width": 38,
+      "height": 12
+     },
+     "hitSlopLocal": 6,
+     "strokeWidth": 1,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 2,
+     "displayCentre": [270.5, 160.25],
+     "bodyDisplaySize": [24, 24],
+     "displayRect": {
+      "x": 258.5,
+      "y": 148.25,
+      "width": 24,
+      "height": 24
+     },
+     "labelDisplayRect": {
+      "x": 251.5,
+      "y": 174.25,
+      "width": 38,
+      "height": 18
+     },
+     "hitSlopLocal": 6,
+     "strokeWidth": 1,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 3,
+     "displayCentre": [320.5, 210.25],
+     "bodyDisplaySize": [26, 22],
+     "displayRect": {
+      "x": 307.5,
+      "y": 199.25,
+      "width": 26,
+      "height": 22
+     },
+     "labelDisplayRect": {
+      "x": 301.5,
+      "y": 223.25,
+      "width": 38,
+      "height": 12
+     },
+     "hitSlopLocal": 6,
+     "strokeWidth": 1,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 4,
+     "displayCentre": [370.5, 210.25],
+     "bodyDisplaySize": [24, 24],
+     "displayRect": {
+      "x": 358.5,
+      "y": 198.25,
+      "width": 24,
+      "height": 24
+     },
+     "labelDisplayRect": {
+      "x": 351.5,
+      "y": 224.25,
+      "width": 38,
+      "height": 18
+     },
+     "hitSlopLocal": 6,
+     "strokeWidth": 1,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    },
+    {
+     "index": 5,
+     "displayCentre": [420.5, 160.25],
+     "bodyDisplaySize": [24, 24],
+     "displayRect": {
+      "x": 408.5,
+      "y": 148.25,
+      "width": 24,
+      "height": 24
+     },
+     "labelDisplayRect": {
+      "x": 401.5,
+      "y": 174.25,
+      "width": 38,
+      "height": 6.5
+     },
+     "hitSlopLocal": 6,
+     "strokeWidth": 1,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 56,
+     "nameFontSize": 9,
+     "detailFontSize": 8
+    }
+   ],
+   "links": [
+    {
+     "index": 0,
+     "visible": true,
+     "drawOrder": 0,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [183.49959564208984, 160.25],
+     "base": [199.99996948242188, 160.25],
+     "tip": [205.99996948242188, 160.25],
+     "wingLeft": [199.99996948242188, 163.44025658996887],
+     "wingRight": [199.99996948242188, 157.05974341003113],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [191.74978256225586, 150.25],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [183.49959564208984, 160.25],
+      [199.99996948242188, 160.25],
+      [205.99996948242188, 160.25]
+     ]
+    },
+    {
+     "index": 1,
+     "visible": true,
+     "drawOrder": 1,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [235.00003051757812, 160.25],
+     "base": [250.99995422363281, 160.25],
+     "tip": [256.99995422363281, 160.25],
+     "wingLeft": [250.99995422363281, 163.44025658996887],
+     "wingRight": [250.99995422363281, 157.05974341003113],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [242.99999237060547, 150.25],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [235.00003051757812, 160.25],
+      [250.99995422363281, 160.25],
+      [256.99995422363281, 160.25]
+     ]
+    },
+    {
+     "index": 2,
+     "visible": true,
+     "drawOrder": 2,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [280.04597391479803, 169.79597391479805],
+     "base": [304.19707570071512, 193.94707570071506],
+     "tip": [308.43971638783438, 198.18971638783435],
+     "wingLeft": [301.94122363222306, 196.20292776920712],
+     "wingRight": [306.45292776920718, 191.691223632223],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [299.19259261962208, 174.80045699589107],
+     "chipPolicy": "declutter",
+     "chipText": "0.5",
+     "chipFontSize": 9,
+     "polyline": [
+      [280.04597391479803, 169.79597391479805],
+      [304.19707570071512, 193.94707570071506],
+      [308.43971638783438, 198.18971638783435]
+     ]
+    },
+    {
+     "index": 3,
+     "visible": true,
+     "drawOrder": 3,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [284.00004577636719, 160.25],
+     "base": [400.99995422363281, 160.25],
+     "tip": [406.99995422363281, 160.25],
+     "wingLeft": [400.99995422363281, 163.44025658996887],
+     "wingRight": [400.99995422363281, 157.05974341003113],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [342.5, 150.25],
+     "chipPolicy": "declutter",
+     "chipText": "0.5",
+     "chipFontSize": 9,
+     "polyline": [
+      [284.00004577636719, 160.25],
+      [400.99995422363281, 160.25],
+      [406.99995422363281, 160.25]
+     ]
+    },
+    {
+     "index": 4,
+     "visible": true,
+     "drawOrder": 4,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [335.00003051757812, 210.25],
+     "base": [350.99995422363281, 210.25],
+     "tip": [356.99995422363281, 210.25],
+     "wingLeft": [350.99995422363281, 213.44025658996887],
+     "wingRight": [350.99995422363281, 207.05974341003113],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [342.99999237060547, 200.25],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [335.00003051757812, 210.25],
+      [350.99995422363281, 210.25],
+      [356.99995422363281, 210.25]
+     ]
+    },
+    {
+     "index": 5,
+     "visible": true,
+     "drawOrder": 5,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 1,
+     "arrowLength": 6,
+     "wingSpread": 3.1902565899688726,
+     "start": [380.04597391479803, 200.70402608520195],
+     "base": [404.36840365143627, 176.38159634856379],
+     "tip": [408.61104433855553, 172.1389556614445],
+     "wingLeft": [406.62425571992833, 178.63744841705585],
+     "wingRight": [402.11255158294421, 174.12574428007173],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [385.13612097125167, 181.47174340501738],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 9,
+     "polyline": [
+      [380.04597391479803, 200.70402608520195],
+      [404.36840365143627, 176.38159634856379],
+      [408.61104433855553, 172.1389556614445]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "scale2",
+   "scale": 2,
+   "pan": [-300, -150.75],
+   "viewportSize": [1200, 800],
+   "visibleWorldRect": {
+    "x": 150,
+    "y": 75.375,
+    "width": 600,
+    "height": 400
+   },
+   "grid": {
+    "cell": 56,
+    "major": 224,
+    "minorAlpha": 1,
+    "majorAlpha": 1,
+    "minorDotCount": 294,
+    "majorLineCount": 9,
+    "minorFirstX": 36,
+    "minorFirstY": 17.25,
+    "majorFirstX": 148,
+    "majorFirstY": 73.25
+   },
+   "chipsShown": true,
+   "nodes": [
+    {
+     "index": 0,
+     "displayCentre": [-100, 249.25],
+     "bodyDisplaySize": [92, 92],
+     "displayRect": {
+      "x": -146,
+      "y": 203.25,
+      "width": 92,
+      "height": 92
+     },
+     "labelDisplayRect": {
+      "x": -176,
+      "y": 303.25,
+      "width": 152,
+      "height": 72
+     },
+     "hitSlopLocal": 1.5,
+     "strokeWidth": 4,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": true,
+     "labelBlockDisplayWidth": 106.39999999999999,
+     "nameFontSize": 13,
+     "detailFontSize": 11
+    },
+    {
+     "index": 1,
+     "displayCentre": [100, 249.25],
+     "bodyDisplaySize": [104, 88],
+     "displayRect": {
+      "x": 48,
+      "y": 205.25,
+      "width": 104,
+      "height": 88
+     },
+     "labelDisplayRect": {
+      "x": 24,
+      "y": 301.25,
+      "width": 152,
+      "height": 48
+     },
+     "hitSlopLocal": 1.5,
+     "strokeWidth": 4,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 106.39999999999999,
+     "nameFontSize": 13,
+     "detailFontSize": 11
+    },
+    {
+     "index": 2,
+     "displayCentre": [300, 249.25],
+     "bodyDisplaySize": [96, 96],
+     "displayRect": {
+      "x": 252,
+      "y": 201.25,
+      "width": 96,
+      "height": 96
+     },
+     "labelDisplayRect": {
+      "x": 224,
+      "y": 305.25,
+      "width": 152,
+      "height": 72
+     },
+     "hitSlopLocal": 1.5,
+     "strokeWidth": 4,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": true,
+     "labelBlockDisplayWidth": 106.39999999999999,
+     "nameFontSize": 13,
+     "detailFontSize": 11
+    },
+    {
+     "index": 3,
+     "displayCentre": [500, 449.25],
+     "bodyDisplaySize": [104, 88],
+     "displayRect": {
+      "x": 448,
+      "y": 405.25,
+      "width": 104,
+      "height": 88
+     },
+     "labelDisplayRect": {
+      "x": 424,
+      "y": 501.25,
+      "width": 152,
+      "height": 48
+     },
+     "hitSlopLocal": 1.5,
+     "strokeWidth": 4,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 106.39999999999999,
+     "nameFontSize": 13,
+     "detailFontSize": 11
+    },
+    {
+     "index": 4,
+     "displayCentre": [700, 449.25],
+     "bodyDisplaySize": [96, 96],
+     "displayRect": {
+      "x": 652,
+      "y": 401.25,
+      "width": 96,
+      "height": 96
+     },
+     "labelDisplayRect": {
+      "x": 624,
+      "y": 505.25,
+      "width": 152,
+      "height": 72
+     },
+     "hitSlopLocal": 1.5,
+     "strokeWidth": 4,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": true,
+     "labelBlockDisplayWidth": 106.39999999999999,
+     "nameFontSize": 13,
+     "detailFontSize": 11
+    },
+    {
+     "index": 5,
+     "displayCentre": [900, 249.25],
+     "bodyDisplaySize": [96, 96],
+     "displayRect": {
+      "x": 852,
+      "y": 201.25,
+      "width": 96,
+      "height": 96
+     },
+     "labelDisplayRect": {
+      "x": 824,
+      "y": 305.25,
+      "width": 152,
+      "height": 26
+     },
+     "hitSlopLocal": 1.5,
+     "strokeWidth": 4,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 106.39999999999999,
+     "nameFontSize": 13,
+     "detailFontSize": 11
+    }
+   ],
+   "links": [
+    {
+     "index": 0,
+     "visible": true,
+     "drawOrder": 0,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 4,
+     "arrowLength": 20,
+     "wingSpread": 10.634188633229575,
+     "start": [-52.501617431640625, 249.25],
+     "base": [26.4998779296875, 249.25],
+     "tip": [46.4998779296875, 249.25],
+     "wingLeft": [26.4998779296875, 259.8841886332296],
+     "wingRight": [26.4998779296875, 238.61581136677043],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [-13.000869750976562, 236.25],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 12,
+     "polyline": [
+      [-52.501617431640625, 249.25],
+      [26.4998779296875, 249.25],
+      [46.4998779296875, 249.25]
+     ]
+    },
+    {
+     "index": 1,
+     "visible": true,
+     "drawOrder": 1,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 4,
+     "arrowLength": 20,
+     "wingSpread": 10.634188633229575,
+     "start": [153.5001220703125, 249.25],
+     "base": [230.49981689453125, 249.25],
+     "tip": [250.49981689453125, 249.25],
+     "wingLeft": [230.49981689453125, 259.8841886332296],
+     "wingRight": [230.49981689453125, 238.61581136677043],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [191.99996948242188, 236.25],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 12,
+     "polyline": [
+      [153.5001220703125, 249.25],
+      [230.49981689453125, 249.25],
+      [250.49981689453125, 249.25]
+     ]
+    },
+    {
+     "index": 2,
+     "visible": true,
+     "drawOrder": 2,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 4,
+     "arrowLength": 20,
+     "wingSpread": 10.634188633229575,
+     "start": [335.00191514385273, 284.25191514385273],
+     "base": [440.79871044294595, 390.04871044294595],
+     "tip": [454.9408460666769, 404.1908460666769],
+     "wingLeft": [433.27920354797243, 397.56821733791946],
+     "wingRight": [448.31821733791946, 382.52920354797243],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [397.09270094882447, 327.9579246379742],
+     "chipPolicy": "declutter",
+     "chipText": "0.5",
+     "chipFontSize": 12,
+     "polyline": [
+      [335.00191514385273, 284.25191514385273],
+      [440.79871044294595, 390.04871044294595],
+      [454.9408460666769, 404.1908460666769]
+     ]
+    },
+    {
+     "index": 3,
+     "visible": true,
+     "drawOrder": 3,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 4,
+     "arrowLength": 20,
+     "wingSpread": 10.634188633229575,
+     "start": [349.50018310546875, 249.25],
+     "base": [830.49981689453125, 249.25],
+     "tip": [850.49981689453125, 249.25],
+     "wingLeft": [830.49981689453125, 259.8841886332296],
+     "wingRight": [830.49981689453125, 238.61581136677043],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [590, 236.25],
+     "chipPolicy": "declutter",
+     "chipText": "0.5",
+     "chipFontSize": 12,
+     "polyline": [
+      [349.50018310546875, 249.25],
+      [830.49981689453125, 249.25],
+      [850.49981689453125, 249.25]
+     ]
+    },
+    {
+     "index": 4,
+     "visible": true,
+     "drawOrder": 4,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 4,
+     "arrowLength": 20,
+     "wingSpread": 10.634188633229575,
+     "start": [553.5001220703125, 449.25],
+     "base": [630.49981689453125, 449.25],
+     "tip": [650.49981689453125, 449.25],
+     "wingLeft": [630.49981689453125, 459.8841886332296],
+     "wingRight": [630.49981689453125, 438.6158113667704],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [591.99996948242188, 436.25],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 12,
+     "polyline": [
+      [553.5001220703125, 449.25],
+      [630.49981689453125, 449.25],
+      [650.49981689453125, 449.25]
+     ]
+    },
+    {
+     "index": 5,
+     "visible": true,
+     "drawOrder": 5,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 4,
+     "arrowLength": 20,
+     "wingSpread": 10.634188633229575,
+     "start": [735.00191514385278, 414.24808485614727],
+     "base": [841.4840222458306, 307.76597775416946],
+     "tip": [855.62615786956155, 293.6238421304385],
+     "wingLeft": [849.00352914080418, 315.28548464914297],
+     "wingRight": [833.96451535085703, 300.24647085919594],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [779.05058053941661, 351.81464314973323],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 12,
+     "polyline": [
+      [735.00191514385278, 414.24808485614727],
+      [841.4840222458306, 307.76597775416946],
+      [855.62615786956155, 293.6238421304385]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "zoomToFit",
+   "scale": 2.048,
+   "pan": [-116.80000000000007, -112],
+   "viewportSize": [1200, 800],
+   "visibleWorldRect": {
+    "x": 57.031250000000036,
+    "y": 54.6875,
+    "width": 585.93750000000011,
+    "height": 390.625
+   },
+   "grid": {
+    "cell": 57.344000000000001,
+    "major": 229.376,
+    "minorAlpha": 1,
+    "majorAlpha": 1,
+    "minorDotCount": 280,
+    "majorLineCount": 8,
+    "minorFirstX": 55.231999999999935,
+    "minorFirstY": 2.6880000000000024,
+    "majorFirstX": 112.57599999999994,
+    "majorFirstY": 117.376
+   },
+   "chipsShown": true,
+   "nodes": [
+    {
+     "index": 0,
+     "displayCentre": [87.999999999999943, 297.60000000000002],
+     "bodyDisplaySize": [94.207999999999998, 94.207999999999998],
+     "displayRect": {
+      "x": 40.89599999999993,
+      "y": 250.49599999999998,
+      "width": 94.207999999999998,
+      "height": 94.207999999999998
+     },
+     "labelDisplayRect": {
+      "x": 10.175999999999931,
+      "y": 352.89600000000002,
+      "width": 155.648,
+      "height": 73.728000000000009
+     },
+     "hitSlopLocal": 1.46484375,
+     "strokeWidth": 4.0960000000000001,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": true,
+     "labelBlockDisplayWidth": 106.39999999999999,
+     "nameFontSize": 13,
+     "detailFontSize": 11
+    },
+    {
+     "index": 1,
+     "displayCentre": [292.79999999999995, 297.60000000000002],
+     "bodyDisplaySize": [106.49600000000001, 90.111999999999995],
+     "displayRect": {
+      "x": 239.55199999999996,
+      "y": 252.54399999999998,
+      "width": 106.49600000000001,
+      "height": 90.111999999999995
+     },
+     "labelDisplayRect": {
+      "x": 214.97599999999994,
+      "y": 350.84800000000001,
+      "width": 155.648,
+      "height": 49.152000000000001
+     },
+     "hitSlopLocal": 1.46484375,
+     "strokeWidth": 4.0960000000000001,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 106.39999999999999,
+     "nameFontSize": 13,
+     "detailFontSize": 11
+    },
+    {
+     "index": 2,
+     "displayCentre": [497.59999999999991, 297.60000000000002],
+     "bodyDisplaySize": [98.304000000000002, 98.304000000000002],
+     "displayRect": {
+      "x": 448.44799999999998,
+      "y": 248.44799999999998,
+      "width": 98.304000000000002,
+      "height": 98.304000000000002
+     },
+     "labelDisplayRect": {
+      "x": 419.77599999999995,
+      "y": 354.94400000000002,
+      "width": 155.648,
+      "height": 73.728000000000009
+     },
+     "hitSlopLocal": 1.46484375,
+     "strokeWidth": 4.0960000000000001,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": true,
+     "labelBlockDisplayWidth": 106.39999999999999,
+     "nameFontSize": 13,
+     "detailFontSize": 11
+    },
+    {
+     "index": 3,
+     "displayCentre": [702.39999999999998, 502.39999999999998],
+     "bodyDisplaySize": [106.49600000000001, 90.111999999999995],
+     "displayRect": {
+      "x": 649.15199999999993,
+      "y": 457.34400000000005,
+      "width": 106.49600000000001,
+      "height": 90.111999999999995
+     },
+     "labelDisplayRect": {
+      "x": 624.57599999999991,
+      "y": 555.64800000000002,
+      "width": 155.648,
+      "height": 49.152000000000001
+     },
+     "hitSlopLocal": 1.46484375,
+     "strokeWidth": 4.0960000000000001,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 106.39999999999999,
+     "nameFontSize": 13,
+     "detailFontSize": 11
+    },
+    {
+     "index": 4,
+     "displayCentre": [907.19999999999993, 502.39999999999998],
+     "bodyDisplaySize": [98.304000000000002, 98.304000000000002],
+     "displayRect": {
+      "x": 858.048,
+      "y": 453.24800000000005,
+      "width": 98.304000000000002,
+      "height": 98.304000000000002
+     },
+     "labelDisplayRect": {
+      "x": 829.37599999999998,
+      "y": 559.74400000000003,
+      "width": 155.648,
+      "height": 73.728000000000009
+     },
+     "hitSlopLocal": 1.46484375,
+     "strokeWidth": 4.0960000000000001,
+     "nameRowShown": true,
+     "detailRowShown": true,
+     "rateRowShown": true,
+     "labelBlockDisplayWidth": 106.39999999999999,
+     "nameFontSize": 13,
+     "detailFontSize": 11
+    },
+    {
+     "index": 5,
+     "displayCentre": [1112, 297.60000000000002],
+     "bodyDisplaySize": [98.304000000000002, 98.304000000000002],
+     "displayRect": {
+      "x": 1062.848,
+      "y": 248.44799999999998,
+      "width": 98.304000000000002,
+      "height": 98.304000000000002
+     },
+     "labelDisplayRect": {
+      "x": 1034.1759999999999,
+      "y": 354.94400000000002,
+      "width": 155.648,
+      "height": 26.624000000000002
+     },
+     "hitSlopLocal": 1.46484375,
+     "strokeWidth": 4.0960000000000001,
+     "nameRowShown": true,
+     "detailRowShown": false,
+     "rateRowShown": false,
+     "labelBlockDisplayWidth": 106.39999999999999,
+     "nameFontSize": 13,
+     "detailFontSize": 11
+    }
+   ],
+   "links": [
+    {
+     "index": 0,
+     "visible": true,
+     "drawOrder": 0,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 4.0960000000000001,
+     "arrowLength": 20.48,
+     "wingSpread": 10.889409160427086,
+     "start": [136.60234374999993, 297.60000000000002],
+     "base": [217.57187499999995, 297.60000000000002],
+     "tip": [238.05187499999994, 297.60000000000002],
+     "wingLeft": [217.57187499999995, 308.4894091604271],
+     "wingRight": [217.57187499999995, 286.71059083957294],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [177.08710937499995, 284.50400000000002],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 12,
+     "polyline": [
+      [136.60234374999993, 297.60000000000002],
+      [217.57187499999995, 297.60000000000002],
+      [238.05187499999994, 297.60000000000002]
+     ]
+    },
+    {
+     "index": 1,
+     "visible": true,
+     "drawOrder": 1,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 4.0960000000000001,
+     "arrowLength": 20.48,
+     "wingSpread": 10.889409160427086,
+     "start": [347.54812499999997, 297.60000000000002],
+     "base": [426.46781249999987, 297.60000000000002],
+     "tip": [446.94781249999988, 297.60000000000002],
+     "wingLeft": [426.46781249999987, 308.4894091604271],
+     "wingRight": [426.46781249999987, 286.71059083957294],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [387.00796874999992, 284.50400000000002],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 12,
+     "polyline": [
+      [347.54812499999997, 297.60000000000002],
+      [426.46781249999987, 297.60000000000002],
+      [446.94781249999988, 297.60000000000002]
+     ]
+    },
+    {
+     "index": 2,
+     "visible": true,
+     "drawOrder": 2,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 4.0960000000000001,
+     "arrowLength": 20.48,
+     "wingSpread": 10.889409160427086,
+     "start": [533.41650526318244, 333.4165052631825],
+     "base": [641.80333533769942, 441.80333533769937],
+     "tip": [656.28488221639986, 456.28488221639986],
+     "wingLeft": [634.10336027724657, 449.50331039815228],
+     "wingRight": [649.50331039815228, 434.10336027724645],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [596.87019070686006, 378.34964989402192],
+     "chipPolicy": "declutter",
+     "chipText": "0.5",
+     "chipFontSize": 12,
+     "polyline": [
+      [533.41650526318244, 333.4165052631825],
+      [641.80333533769942, 441.80333533769937],
+      [656.28488221639986, 456.28488221639986]
+     ]
+    },
+    {
+     "index": 3,
+     "visible": true,
+     "drawOrder": 3,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 4.0960000000000001,
+     "arrowLength": 20.48,
+     "wingSpread": 10.889409160427086,
+     "start": [548.25218749999988, 297.60000000000002],
+     "base": [1040.8678124999999, 297.60000000000002],
+     "tip": [1061.3478124999999, 297.60000000000002],
+     "wingLeft": [1040.8678124999999, 308.4894091604271],
+     "wingRight": [1040.8678124999999, 286.71059083957294],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [794.55999999999995, 284.50400000000002],
+     "chipPolicy": "declutter",
+     "chipText": "0.5",
+     "chipFontSize": 12,
+     "polyline": [
+      [548.25218749999988, 297.60000000000002],
+      [1040.8678124999999, 297.60000000000002],
+      [1061.3478124999999, 297.60000000000002]
+     ]
+    },
+    {
+     "index": 4,
+     "visible": true,
+     "drawOrder": 4,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 4.0960000000000001,
+     "arrowLength": 20.48,
+     "wingSpread": 10.889409160427086,
+     "start": [757.14812499999994, 502.39999999999998],
+     "base": [836.06781249999995, 502.39999999999998],
+     "tip": [856.54781249999996, 502.39999999999998],
+     "wingLeft": [836.06781249999995, 513.28940916042711],
+     "wingRight": [836.06781249999995, 491.5105908395729],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [796.60796874999994, 489.30399999999997],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 12,
+     "polyline": [
+      [757.14812499999994, 502.39999999999998],
+      [836.06781249999995, 502.39999999999998],
+      [856.54781249999996, 502.39999999999998]
+     ]
+    },
+    {
+     "index": 5,
+     "visible": true,
+     "drawOrder": 5,
+     "parallelOffset": 0,
+     "selfLoopExtraRadius": null,
+     "bulge": 0,
+     "lineWidth": 4.0960000000000001,
+     "arrowLength": 20.48,
+     "wingSpread": 10.889409160427086,
+     "start": [943.01650526318247, 466.5834947368175],
+     "base": [1052.1050946238531, 357.49490537614679],
+     "tip": [1066.5866415025537, 343.01335849744629],
+     "wingLeft": [1059.8050696843061, 365.1948804365997],
+     "wingRight": [1044.4051195634001, 349.79493031569388],
+     "route": {
+      "type": "straight"
+     },
+     "labelAnchor": [988.30052953709878, 402.77892965006316],
+     "chipPolicy": "never",
+     "chipText": null,
+     "chipFontSize": 12,
+     "polyline": [
+      [943.01650526318247, 466.5834947368175],
+      [1052.1050946238531, 357.49490537614679],
+      [1066.5866415025537, 343.01335849744629]
+     ]
+    }
+   ]
+  }
+ ]
+}

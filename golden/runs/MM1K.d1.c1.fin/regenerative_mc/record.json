@@ -1,0 +1,226 @@
+{
+  "completedAt" : "2026-11-11T04:55:48Z",
+  "elapsedSeconds" : 0.4218740463256836,
+  "id" : "879A7378-3F7E-444C-AA56-C4080DFD7FC1",
+  "measurements" : [
+    {
+      "estimate" : 4.27817722859774,
+      "id" : "38E22ED7-3E17-4391-BD58-549A67847E79",
+      "metric" : "Mean number in system",
+      "note" : "Effective complete cycles: 646.096",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 4.077748714374055,
+        "standardError" : 0.10223184835443024,
+        "upperBound" : 4.478605742821426
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 3.416802143676229,
+      "id" : "EA7B00FB-00B9-4D84-933E-F8347367232A",
+      "metric" : "Mean queue length",
+      "note" : "Effective complete cycles: 646.096",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 3.2251901698501837,
+        "standardError" : 0.09773482743685574,
+        "upperBound" : 3.608414117502274
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 0.8613750849215263,
+      "id" : "BB46F364-B3AC-4257-88AA-FC7705F6F4D1",
+      "metric" : "Server utilization",
+      "note" : "Effective complete cycles: 646.096",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.8509434019296384,
+        "standardError" : 0.005320850867147477,
+        "upperBound" : 0.8718067679134142
+      },
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.8543288468213952,
+      "id" : "45187735-7B2D-41FD-BB11-0697E016573B",
+      "metric" : "Service completion rate",
+      "note" : "Effective complete cycles: 646.096",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 0.8460526926664581,
+        "standardError" : 0.004221388058493266,
+        "upperBound" : 0.8626050009763323
+      },
+      "unit" : "customers \/ time"
+    },
+    {
+      "customerClass" : 0,
+      "estimate" : 4.27817722859774,
+      "id" : "D78EF44B-4ADC-462D-A61C-25572703146A",
+      "metric" : "Mean number in system",
+      "note" : "Effective complete cycles: 646.096",
+      "stationID" : "EE000001-0001-0001-0001-000000000003",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 4.077748714374055,
+        "standardError" : 0.10223184835443024,
+        "upperBound" : 4.478605742821426
+      },
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Regenerative Monte Carlo",
+    "fidelity" : "Queue simulation",
+    "identifier" : "queue.regenerative-mc",
+    "implementation" : "regenerative_mc",
+    "layer" : "Queueing process",
+    "shortName" : "Regen MC"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Finite capacity",
+    "exportStationIDs" : [
+      "EE000001-0001-0001-0001-000000000003"
+    ],
+    "networkFingerprint" : "4a61f9da5223f27e8e2ed5351813d746071f68158092d346416cfbfbc9bb1e9b",
+    "networkSnapshot" : {
+      "infiniteBuffers" : false,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000001",
+          "id" : "EE000001-0001-0001-2222-000000000001",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000002"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000002",
+          "id" : "EE000001-0001-0001-2222-000000000002",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000003"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EE000001-0001-0001-0001-000000000003",
+          "id" : "EE000001-0001-0001-2222-000000000003",
+          "routingProbability" : 1,
+          "toNodeID" : "EE000001-0001-0001-0001-000000000004"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=0.9",
+          "id" : "EE000001-0001-0001-0001-000000000001",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000002",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            220,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000003",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            340,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EE000001-0001-0001-0001-000000000004",
+          "kind" : "sink",
+          "name" : "Sink1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            460,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "MM1K.d1.c1.fin.bnet",
+    "parameters" : {
+      "IID unit" : "complete empty-to-empty cycle",
+      "absolute half-width" : "0.05",
+      "buffer regime" : "finite loss on full",
+      "confidence" : "0.95",
+      "engine" : "C",
+      "interval" : "asymptotic regenerative-ratio t",
+      "maximum cycles" : "20000",
+      "maximum wall seconds" : "30",
+      "minimum cycles" : "500",
+      "relative half-width" : "0.1",
+      "runtime" : "C engine; QNET_SOLVER_ROOT: \/Users\/nobody\/Library\/Caches\/qnet\/solvers\/stage\/Resources\/bin\/infinite\/BNArmc\/bna_rmc",
+      "stream" : "0"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "seed" : 12345,
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/MM1K.d1.c1.fin.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Running regenerative simulation (C) ...  [ ]                                                       0.0s\r\u001b[KRunning regenerative simulation (C) ...  [done]                                                    0.1s\nRegenerative Monte Carlo\nModel layer: queueing process (simulation)\nEvidence: regenerative ratio confidence intervals; asymptotic, not finite-sample, and they describe sampling error only\nModel: MM1K.d1.c1.fin.bnet\n\nComplete empty-to-empty cycles: 4200\nStopping reason: precision_target_met\nPrecision target met: yes\n\nNode                   E[N]         E[Q]  utilisation   throughput\n------------------------------------------------------------------\ns1                 4.278177     3.416802     0.861375     0.854329\n\nQuantity                               estimate   std error              95% interval  eff. cycles\n--------------------------------------------------------------------------------------------------\nMean number in system                  4.278177    0.102232      [4.077749, 4.478606]        646.1\nExternal blocking probability          0.046949    0.003526      [0.040035, 0.053862]        556.3\nDeparture rate                         0.854329    0.004221      [0.846053, 0.862605]        646.1\nE[N] at s1                             4.278177    0.102232      [4.077749, 4.478606]        646.1\nutilisation at s1                      0.861375    0.005321      [0.850943, 0.871807]        646.1\nE[N] at s1, class c1                   4.278177    0.102232      [4.077749, 4.478606]        646.1\n\nAnalytic check available: M\/M\/1\/K\nUncertainty uses complete regenerative cycles, not individual events.\n\nQNET_NODE_METRIC_V1 node_id=s1 metric=mean_number class_id=- estimate=4.2781772285977402 standard_error=0.10223184835443024 ci_confidence=0.94999999999999996 ci_low=4.0777487143740547 ci_high=4.4786057428214257 ci_half_width=0.20042851422368538 effective_cycles=646.09561048288458\nQNET_NODE_METRIC_V1 node_id=s1 metric=mean_queue class_id=- estimate=3.4168021436762288 standard_error=0.097734827436855742 ci_confidence=0.94999999999999996 ci_low=3.2251901698501837 ci_high=3.6084141175022739 ci_half_width=0.19161197382604492 effective_cycles=646.09561048288458\nQNET_NODE_METRIC_V1 node_id=s1 metric=utilization class_id=- estimate=0.86137508492152626 standard_error=0.0053208508671474773 ci_confidence=0.94999999999999996 ci_low=0.85094340192963835 ci_high=0.87180676791341416 ci_half_width=0.010431682991887939 effective_cycles=646.09561048288458\nQNET_NODE_METRIC_V1 node_id=s1 metric=service_completion_rate class_id=- estimate=0.8543288468213952 standard_error=0.0042213880584932662 ci_confidence=0.94999999999999996 ci_low=0.84605269266645811 ci_high=0.8626050009763323 ci_half_width=0.0082761541549370606 effective_cycles=646.09561048288458\nQNET_NODE_METRIC_V1 node_id=s1 metric=mean_number_class class_id=c1 estimate=4.2781772285977402 standard_error=0.10223184835443024 ci_confidence=0.94999999999999996 ci_low=4.0777487143740547 ci_high=4.4786057428214257 ci_half_width=0.20042851422368538 effective_cycles=646.09561048288458\nElapsed time: 0.140s\n\n",
+  "runEvidence" : {
+    "convergenceNote" : "Sequential fixed-width target met: yes",
+    "discretization" : "4200 complete regenerative cycles"
+  },
+  "startedAt" : "2026-11-11T04:55:47Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

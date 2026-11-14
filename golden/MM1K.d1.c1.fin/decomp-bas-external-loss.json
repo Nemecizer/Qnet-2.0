@@ -1,0 +1,33 @@
+{
+  "blocking" : "bas_external_loss",
+  "classes" : [
+    {
+      "external_arrivals" : {
+        "s1" : 0.90000000000000002
+      },
+      "id" : "c1",
+      "name" : "Class 1"
+    }
+  ],
+  "name" : "MM1K.d1.c1.fin",
+  "routes" : [
+
+  ],
+  "schema_version" : 1,
+  "solver" : {
+    "damping" : 0.5,
+    "max_iterations" : 1000,
+    "tolerance" : 1e-10
+  },
+  "stations" : [
+    {
+      "capacity" : 11,
+      "id" : "s1",
+      "name" : "S1",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1
+      }
+    }
+  ]
+}

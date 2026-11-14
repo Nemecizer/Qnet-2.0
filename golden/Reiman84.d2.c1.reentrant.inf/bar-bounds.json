@@ -1,0 +1,50 @@
+{
+  "covariance" : [
+    [
+      0.66666666666666663,
+      -0.44444444444444442
+    ],
+    [
+      -0.44444444444444442,
+      0.66666666666666663
+    ]
+  ],
+  "drift" : [
+    -0.33333333333333331,
+    -1.1102230246251565e-16
+  ],
+  "model_type" : "orthant_srbm_bar_bounds",
+  "name" : "Reiman84.d2.c1.reentrant.inf",
+  "reflection" : [
+    [
+      1,
+      -0.33333333333333331
+    ],
+    [
+      -1,
+      1
+    ]
+  ],
+  "relaxation" : {
+    "max_psd_entries" : 5000000,
+    "max_variables" : 100000,
+    "order" : 2,
+    "targets" : [
+      {
+        "moment" : [
+          1,
+          0
+        ],
+        "name" : "mean_workload_1"
+      },
+      {
+        "moment" : [
+          0,
+          1
+        ],
+        "name" : "mean_workload_2"
+      }
+    ]
+  },
+  "schema_version" : 1
+}

@@ -1,0 +1,26 @@
+[A[2KRunning multi-class SRBM (research, mesh=auto) ... done.
+
+Network load: rho_max = 0.528 at S2  (moderate load — SRBM/FEM are heavy-traffic limits; expect deviation from simulation)
+Routing graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference
+──  SRBM skew-symmetric case — Harrison–Williams 1987 exact product form  ──
+           Multi-Class SRBM   Exact E[X]  (skew-sym)
+           ================   ============
+
+rho_1      0.278 (+0.0%)      0.278
+rho_2      0.528 (+0.0%)      0.528
+rho_3      0.500 (+0.0%)      0.500
+
+Gamma_1    0.556 (+0.0%)      0.556
+Gamma_2    1.056 (+0.0%)      1.056
+Gamma_3    1.000 (+0.0%)      1.000
+
+sojourn_1  33.554 (+4748.8%)  0.692
+sojourn_2  16.291 (+1438.3%)  1.059
+sojourn_3  8.896 (+789.6%)    1.000
+
+E[X_1]     18.641 (+4741.8%)  0.385
+E[X_2]     17.196 (+1438.1%)  1.118
+E[X_3]     8.896 (+789.6%)    1.000
+
+Elapsed time: 7.298s
+

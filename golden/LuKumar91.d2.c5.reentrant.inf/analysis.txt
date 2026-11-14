@@ -1,0 +1,64 @@
+NETWORK ANALYSIS — Brownian Heavy-Traffic Reliability
+=====================================================
+
+NETWORK SUMMARY
+---------------
+Stations:         2
+Customer classes: 3
+Buffer model:     infinite
+
+KEY PRIMITIVES
+--------------
+  Station   servers    μ_eff        α          ρ   c²_s_eff   buffer
+  S1              1   3.7500   3.0000     0.8000     2.5625        ∞
+  S2              1   2.8571   2.0000     0.7000     2.0204        ∞
+
+  Class       λ (ext)     c²_a
+  C1           1.0000   1.0000
+  C2           0.0000   1.0000
+  C3           0.0000   1.0000
+
+OVERALL RELIABILITY ASSESSMENT
+------------------------------
+Score: 64 / 100  (LOW)
+Findings: 0 critical, 2 warning, 2 info
+
+Several primitives violate the assumptions used by SRBM. Treat absolute E[X] values with caution — use them for relative comparisons only, and verify against simulation.
+
+FINDINGS (grouped by severity)
+------------------------------
+
+[WARNING ] 1. Station 1 services classes with very different speeds (ratio 6.0x)
+  Why:     Compound service-time aggregation (the new research flavor) computes E[S] and E[S²] from a mixture, but the stationary distribution of a multi-class FIFO queue is not fully characterized by two moments when class service times differ by more than ~5x. Expect 10–30% error on E[X] and per-class W.
+  Fix:     If possible, dedicate separate stations to the fast and slow classes. Or use priority queueing with a different analytical model.
+  Affects: E[X_1], per-class waiting times at station 1
+
+[WARNING ] 2. Station 2 services classes with very different speeds (ratio 6.0x)
+  Why:     Compound service-time aggregation (the new research flavor) computes E[S] and E[S²] from a mixture, but the stationary distribution of a multi-class FIFO queue is not fully characterized by two moments when class service times differ by more than ~5x. Expect 10–30% error on E[X] and per-class W.
+  Fix:     If possible, dedicate separate stations to the fast and slow classes. Or use priority queueing with a different analytical model.
+  Affects: E[X_2], per-class waiting times at station 2
+
+[INFO    ] 3. Station 2 is moderately loaded (ρ = 0.700)
+  Why:     Below ρ ≈ 0.7 the heavy-traffic approximation starts to noticeably overestimate queue length. Expect 10–20% error vs simulation.
+  Fix:     If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+  Affects: E[X_2]
+
+[INFO    ] 4. Routing has feedback cycles (i ↔ j)
+  Why:     Departure processes from station j feed back into station i whose departures in turn feed j. The Whitt superposition/departure approximations iterate to a fixed point; the fixed-point SCV is correct only in heavy traffic and converges slowly.
+  Fix:     Raise all ρ in the cycle toward 1 to tighten the heavy-traffic limit. For lightly-loaded feedback networks, simulation is more reliable.
+  Affects: E[X_i] for stations in the cycle
+
+PERFORMANCE METRIC RELIABILITY
+------------------------------
+  E[X_i] (queue length):          MODERATE    ρ below heavy-traffic regime — E[X] systematically biased
+  Throughput (Γ_i):               HIGH        Γ = α; derived exactly from traffic equations
+  Utilization (ρ_i):              HIGH        ρ = α / (s·μ); derived exactly from primitives
+  Sojourn time:                   MODERATE    sojourn = E[X]/Γ; inherits E[X] reliability
+  Per-class W, T, N:              MODERATE    Little's law applied to E[X]; inherits its reliability
+
+TOP ACTIONABLE SUGGESTIONS
+--------------------------
+1. If possible, dedicate separate stations to the fast and slow classes. Or use priority queueing with a different analytical model.
+2. If possible, dedicate separate stations to the fast and slow classes. Or use priority queueing with a different analytical model.
+3. If possible, run a Monte Carlo comparison; or raise ρ toward 0.85 to sit comfortably in the heavy-traffic regime.
+

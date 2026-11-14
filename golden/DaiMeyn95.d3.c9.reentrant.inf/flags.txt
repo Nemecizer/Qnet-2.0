@@ -1,0 +1,21 @@
+isAnalyticallyTractable=true
+tractabilityIsExact=true
+tractabilityTitle=This network is analytically tractable
+tractabilityDetail=SRBM skew-symmetric case — Harrison–Williams 1987 exact product form
+tractabilityMeansLabel=Exact E[X]  (skew-sym)
+tractabilityMeans=9.0000090000089372 9.000009000008923 0.42857142857142844
+hasFeedback=true
+feedbackQuality=yellow
+criterion=Per-station ρ < 0.85 | ok=false | max ρ = 0.900 — heavy traffic amplifies the per-class burstiness gap
+criterion=Service SCV in [0.5, 2] | ok=true | all stations within range
+criterion=Max re-entry probability < 0.5 | ok=false | largest cycle prob = 0.667 — heavy feedback inflates the per-class temporal correlation
+criterion=No class-transition amplification at high-ρ stations | ok=true | no station with ρ > 0.7 has class μ-ratio > 3
+feedbackDescription:
+Immediate feedback: S1 ↔ S2, S1 ↔ S3, S2 ↔ S3.
+Longer rework loop through: S1, S2, S3.
+tractabilityExplanation:
+The SRBM data (Γ, R) satisfy the Harrison–Williams (1987) skew-symmetry condition
+    2 Γ = R · diag(Γ/Rᵢᵢ) + diag(Γ/Rᵢᵢ) · R⊤,
+so the stationary distribution of Z is a product of independent exponentials with
+    E[Zₖ] = Γₖₖ / (2 Rₖₖ δₖ),   δ = −R⁻¹μ.
+status:

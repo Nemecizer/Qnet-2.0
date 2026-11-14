@@ -1,0 +1,230 @@
+{
+  "completedAt" : "2026-11-11T04:56:11Z",
+  "elapsedSeconds" : 1.5789389610290527,
+  "id" : "3333D592-9BF7-4EA1-9886-4A0D719F0874",
+  "measurements" : [
+    {
+      "estimate" : 2.3291,
+      "id" : "0CA3B01D-66BA-469B-A97E-DB71F9C11501",
+      "metric" : "Mean queue length",
+      "stationID" : "35E1B6F9-5466-4903-861E-7D5807C85A31",
+      "stationName" : "S1",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 2.2620999999999998,
+        "upperBound" : 2.3961
+      },
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 2.2804,
+      "id" : "14692ACB-79BF-47A5-95DD-DC0B81914B14",
+      "metric" : "Mean queue length",
+      "stationID" : "4B7B4EF6-A449-403E-98C1-EB400E88D7EF",
+      "stationName" : "S2",
+      "uncertainty" : {
+        "confidenceLevel" : 0.95,
+        "lowerBound" : 2.2259,
+        "upperBound" : 2.3349
+      },
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "SRBM MLMC",
+    "fidelity" : "SRBM simulation",
+    "identifier" : "srbm.mlmc",
+    "implementation" : "BNAmc",
+    "layer" : "SRBM diffusion",
+    "shortName" : "MLMC"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "35E1B6F9-5466-4903-861E-7D5807C85A31",
+      "4B7B4EF6-A449-403E-98C1-EB400E88D7EF"
+    ],
+    "networkFingerprint" : "789f777d4d57b10f0888529352e02393f32c8d5a6d9b82b2a0c4cf4edeff6576",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "16EF3453-20C2-4D6A-851A-0F7025F20AE9",
+          "id" : "7587D7D0-2F56-426D-9575-38F68B1A5065",
+          "routingProbability" : 1,
+          "toNodeID" : "2451DD16-3174-49D9-AD9F-48055E77C093"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "2451DD16-3174-49D9-AD9F-48055E77C093",
+          "id" : "3A65EF01-7CD1-4A6A-9182-A5E4B4C8A838",
+          "routingProbability" : 1,
+          "toNodeID" : "35E1B6F9-5466-4903-861E-7D5807C85A31"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "35E1B6F9-5466-4903-861E-7D5807C85A31",
+          "id" : "6C13A1C8-4B81-4E83-A84A-1539B9FA0C66",
+          "routingProbability" : 0.30000000000000004,
+          "toNodeID" : "CD053722-9F02-499A-9BF1-D827A450B7F7"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "35E1B6F9-5466-4903-861E-7D5807C85A31",
+          "id" : "ED16EF2F-BFA8-4B4C-B55E-0037EB36C0C9",
+          "routingProbability" : 0.7,
+          "toNodeID" : "2451DD16-3174-49D9-AD9F-48055E77C093"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "CD053722-9F02-499A-9BF1-D827A450B7F7",
+          "id" : "F7097EF3-CE2C-478A-9EDE-E0267041D50B",
+          "routingProbability" : 1,
+          "toNodeID" : "4B7B4EF6-A449-403E-98C1-EB400E88D7EF"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "4B7B4EF6-A449-403E-98C1-EB400E88D7EF",
+          "id" : "0256F1D6-2DB2-459E-A78B-008FF14AAAD7",
+          "routingProbability" : 1,
+          "toNodeID" : "C9F0C99E-2C83-48EA-BB72-E6D268C1DEFF"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=1.0",
+          "id" : "16EF3453-20C2-4D6A-851A-0F7025F20AE9",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            100,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "2451DD16-3174-49D9-AD9F-48055E77C093",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            200,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=4.761904761904762",
+          "id" : "35E1B6F9-5466-4903-861E-7D5807C85A31",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            300,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 24,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "CD053722-9F02-499A-9BF1-D827A450B7F7",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            400,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.4285714285714286",
+          "id" : "4B7B4EF6-A449-403E-98C1-EB400E88D7EF",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            500,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C9F0C99E-2C83-48EA-BB72-E6D268C1DEFF",
+          "kind" : "sink",
+          "name" : "Sink",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "OpenJackson.d2.feedback.p70.inf.bnet",
+    "parameters" : {
+      "adaptive" : "false",
+      "antithetic" : "false",
+      "backend" : "0",
+      "epsilon" : "0.01",
+      "gamma" : "0.05",
+      "levels L" : "3",
+      "path length T" : "27.22222222222221",
+      "replications" : "1",
+      "runtime" : "QNET_SOLVER_ROOT: \/Users\/nobody\/Library\/Caches\/qnet\/solvers\/stage\/Resources\/bin\/infinite\/BNAmc\/rbm_mlmc",
+      "sample plan" : "25260.0",
+      "threads" : "automatic"
+    },
+    "replicationSeeds" : [
+      2454886589211414945
+    ],
+    "seed" : 12345,
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/OpenJackson.d2.feedback.p70.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Running SRBM MLMC (γ=0.05, ε=0.01) ... \nSRBM MLMC replication 1 diagnostics:\nSigma nnz ratio: L has 3 non-zeros of 2^2 = 4  (75.00%); using SPARSE CSC path\nR     nnz ratio: 3 non-zeros of 2^2 = 4  (75.00%); using SPARSE CSC LCP column update\nDimension d   = 2\ngamma         = 0.05\nepsilon       = 0.01\nseed          = 2454886589211414945\nT             = 27.2222\nL (levels)    = 3\nN (samples)   = 25260\nratio (1\/gam) = 20\nbackend       = openmp\nthreads       = 18\n\nantithetic    = off\nadaptive      = off\n\n  Completed 1263 \/ 25260 (5%)\n  Completed 2526 \/ 25260 (10%)\n  Completed 3789 \/ 25260 (15%)\n  Completed 5052 \/ 25260 (20%)\n  Completed 6315 \/ 25260 (25%)\n  Completed 7578 \/ 25260 (30%)\n  Completed 8841 \/ 25260 (35%)\n  Completed 10104 \/ 25260 (40%)\n  Completed 11367 \/ 25260 (45%)\n  Completed 12630 \/ 25260 (50%)\n  Completed 13893 \/ 25260 (55%)\n  Completed 15156 \/ 25260 (60%)\n  Completed 16419 \/ 25260 (65%)\n  Completed 17682 \/ 25260 (70%)\n  Completed 18945 \/ 25260 (75%)\n  Completed 20208 \/ 25260 (80%)\n  Completed 21471 \/ 25260 (85%)\n  Completed 22734 \/ 25260 (90%)\n  Completed 23997 \/ 25260 (95%)\n  Completed 25260 \/ 25260 (100%)\ndone.\n\nSRBM MLMC (Blanchet-Chen-Glynn-Si)\n==============================================\n# Dimension: 2\n# gamma=0.0500  epsilon=0.0100  T=27.2222  L=3  N=25260  seed=2454886589211414945\n# backend=openmp  threads=18  elapsed=1.256s\n# antithetic=off adaptive=off\n# Replications: 1 (independent top-level streams)\n# Replication seeds: 2454886589211414945\n# Replication 1: seed=2454886589211414945 N=25260 stop=fixed-count\n#\n\nPer-Station Mean Queue Length (L_i = mu_i * E[Y_i]):\n  L_1 =     2.3291  ±  0.0670 (95%)    (workload E[Y_1] =  0.4891 ± 0.0141, mu_i = 4.7619)\n  L_2 =     2.2804  ±  0.0545 (95%)    (workload E[Y_2] =  1.5963 ± 0.0382, mu_i = 1.4286)\n\nAverage queue length: 2.3048 (no joint CI: one run does not identify cross-station covariance)\nTotal Gaussian RVs (summed over replications): 152501796\nQNET_MLMC_STATUS_V1 adaptive=no precision_met=na cap_hits=0\nElapsed time: 1.348s\n\n",
+  "runEvidence" : {
+    "convergenceNote" : "Fixed-sample MLMC plan"
+  },
+  "startedAt" : "2026-11-11T04:56:09Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

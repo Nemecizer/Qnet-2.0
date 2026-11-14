@@ -1,0 +1,51 @@
+NETWORK ANALYSIS — Brownian Heavy-Traffic Reliability
+=====================================================
+
+NETWORK SUMMARY
+---------------
+Stations:         2
+Customer classes: 1
+Buffer model:     infinite
+
+KEY PRIMITIVES
+--------------
+  Station   servers    μ_eff        α          ρ   c²_s_eff   buffer
+  S1              1   1.0000   0.4500     0.4500     0.5000        ∞
+  S2              1   1.0000   0.9000     0.9000     0.5000        ∞
+
+  Class       λ (ext)     c²_a
+  C1           0.9000   1.0000
+
+OVERALL RELIABILITY ASSESSMENT
+------------------------------
+Score: 70 / 100  (MODERATE)
+Findings: 0 critical, 2 warning, 0 info
+
+Some primitives sit near the edge of the heavy-traffic regime. E[X] estimates are probably directionally correct but may have 10–30% error. See the findings below for specifics.
+
+FINDINGS (grouped by severity)
+------------------------------
+
+[WARNING ] 1. Station 1 is lightly loaded (ρ = 0.450, below heavy-traffic regime)
+  Why:     SRBM is the heavy-traffic limit where ρ → 1. At low ρ the stationary distribution has a large atom at zero that the diffusion smooths out; the approximation systematically underestimates P(X=0) and overestimates mean queue length. Error ranges roughly 20–50% below ρ = 0.5.
+  Fix:     Raise α_1 (route more traffic through station 1) or reduce μ_1 (currently 1.0000) so that ρ_1 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+  Affects: E[X_1], sojourn_1, class waiting times
+
+[WARNING ] 2. Utilizations are unbalanced (ρ range 0.450 – 0.900, spread 0.45)
+  Why:     Balanced heavy-traffic theory (Harrison–Reiman) assumes every station simultaneously approaches ρ → 1. When one station dominates, the multi-dimensional SRBM degenerates toward the one-dimensional M/G/1 of the bottleneck, and non-bottleneck E[X_i] values are biased low.
+  Fix:     Balance capacities: either add servers / raise μ at the bottleneck, or combine stations whose load patterns resemble each other. Alternatively, accept that only the bottleneck's E[X] will be close to simulation.
+  Affects: E[X_i] for non-bottleneck stations
+
+PERFORMANCE METRIC RELIABILITY
+------------------------------
+  E[X_i] (queue length):          MODERATE    ρ below heavy-traffic regime — E[X] systematically biased
+  Throughput (Γ_i):               HIGH        Γ = α; derived exactly from traffic equations
+  Utilization (ρ_i):              HIGH        ρ = α / (s·μ); derived exactly from primitives
+  Sojourn time:                   MODERATE    sojourn = E[X]/Γ; inherits E[X] reliability
+  Per-class W, T, N:              MODERATE    Little's law applied to E[X]; inherits its reliability
+
+TOP ACTIONABLE SUGGESTIONS
+--------------------------
+1. Raise α_1 (route more traffic through station 1) or reduce μ_1 (currently 1.0000) so that ρ_1 is closer to 1. If the true load is this low, prefer an M/G/1 or M/G/s closed-form — SRBM is not the right model.
+2. Balance capacities: either add servers / raise μ at the bottleneck, or combine stations whose load patterns resemble each other. Alternatively, accept that only the bottleneck's E[X] will be close to simulation.
+

@@ -1,0 +1,24 @@
+[Threads] 18 CPU cores for parallel solvers (Sim/Spectral/FE); analytical solvers (QNA/SBD/LP) are single-threaded
+Running spectral method ...           [                              ]  starting ...[KRunning spectral method ...           [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  132/132      (100%)     0.1s
+Running finite element method ...     [                              ]  starting ...[KRunning finite element method ...     [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  100/100      (100%)     0.1s
+Running finite LP method (highs) ...  [ ]                                                       0.0s[KRunning finite LP method (highs) ...  [done]                                                    0.1s
+Running simulation ...                [                              ]  starting ...[KRunning simulation ...                [[7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m [7m [27m ]  8/8          (100%)     0.1s
+
+Network load: rho_max = 0.9000 at S2  (near heavy-traffic — small O(1) deviation expected)
+           Spectral       FE (Gauss)     Finite LP      Simulation                Average of Algorithms
+           ========       ==========     =========      ==========                =====================
+
+rho_1      0.911 (+1.8%)  0.911 (+1.8%)  0.911 (+1.8%)  0.895 ± 0.001 (+0.0%)     0.911 (+1.8%)
+rho_2      0.879 (+0.9%)  0.879 (+0.9%)  0.879 (+0.9%)  0.871 ± 0.002 (+0.0%)     0.879 (+0.9%)
+
+Gamma_1    0.990 (+2.3%)  0.990 (+2.3%)  0.990 (+2.3%)  0.968 ± 5.48e-04 (+0.0%)  0.990 (+2.3%)
+Gamma_2    0.977 (+0.9%)  0.977 (+0.9%)  0.977 (+0.9%)  0.968 ± 5.52e-04 (+0.0%)  0.977 (+0.9%)
+
+sojourn_1  4.571 (+2.9%)  4.560 (+2.7%)  4.552 (+2.5%)  4.442 ± 0.031 (+0.0%)     4.561 (+2.7%)
+sojourn_2  4.051 (-4.2%)  4.051 (-4.2%)  4.051 (-4.2%)  4.229 ± 0.081 (+0.0%)     4.051 (-4.2%)
+
+E[X_1]     4.524 (+5.2%)  4.514 (+4.9%)  4.505 (+4.7%)  4.302 ± 0.030 (+0.0%)     4.514 (+4.9%)
+E[X_2]     3.958 (-3.4%)  3.958 (-3.4%)  3.958 (-3.4%)  4.096 ± 0.078 (+0.0%)     3.958 (-3.4%)
+
+Elapsed time: 0.402s
+

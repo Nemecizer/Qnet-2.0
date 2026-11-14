@@ -1,0 +1,286 @@
+{
+  "completedAt" : "2026-11-11T04:44:31Z",
+  "elapsedSeconds" : 12.36336100101471,
+  "failureMessage" : "Linear Program exited with status 1. See the originating tab's Status pane and retained output.",
+  "id" : "4752B6D5-7BF0-456E-8D5F-A15EC35B90FB",
+  "measurements" : [
+
+  ],
+  "method" : {
+    "displayName" : "BAR Linear Program",
+    "fidelity" : "SRBM numerical result",
+    "identifier" : "srbm.lp",
+    "implementation" : "BNAlp\/fBNAlp",
+    "layer" : "SRBM diffusion",
+    "shortName" : "LP"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "822735B7-C29F-54D3-B6E2-E0514C44BB55",
+      "1D24A262-E004-5EB2-9124-C1185B09BF07",
+      "6165A012-20FE-5312-AC7F-79E67956BC27"
+    ],
+    "networkFingerprint" : "5d7acae93ca5b1e4d048ee7e9232ebaad63316fc9b3e7e8151180452c5001a8b",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "67BE255C-C791-5325-934C-2C7F397E5214",
+          "id" : "105C58E0-AEFC-5FBA-A659-BDD9932EECCE",
+          "routingProbability" : 1,
+          "toNodeID" : "08FE9097-D34B-54BC-A988-5833BD2B504A"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "08FE9097-D34B-54BC-A988-5833BD2B504A",
+          "id" : "7C936BE3-B556-5274-BA83-61D6EEED4ABD",
+          "routingProbability" : 1,
+          "toNodeID" : "822735B7-C29F-54D3-B6E2-E0514C44BB55"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "7BB1C61F-4433-5DB0-86C2-BADAE4B73297",
+          "id" : "52A319DD-8BD4-5E2D-872E-2E274AA53BB1",
+          "routingProbability" : 1,
+          "toNodeID" : "1D24A262-E004-5EB2-9124-C1185B09BF07"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "9913D1F2-7472-501C-992E-E100E0B669EF",
+          "id" : "296828FD-F9FE-54D2-86FE-5D8D54E6D0E7",
+          "routingProbability" : 1,
+          "toNodeID" : "6165A012-20FE-5312-AC7F-79E67956BC27"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "7BB1C61F-4433-5DB0-86C2-BADAE4B73297",
+          "id" : "81504C15-5DF7-51FC-958C-C88B30505FC1",
+          "routingProbability" : 1,
+          "toNodeID" : "1D24A262-E004-5EB2-9124-C1185B09BF07"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "08FE9097-D34B-54BC-A988-5833BD2B504A",
+          "id" : "9EED67E9-F9E7-5153-AE46-4BC54B3DC996",
+          "routingProbability" : 1,
+          "toNodeID" : "822735B7-C29F-54D3-B6E2-E0514C44BB55"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "822735B7-C29F-54D3-B6E2-E0514C44BB55",
+          "id" : "23B52E8C-C6E0-51AB-8E53-6C5B3499AFBF",
+          "routingProbability" : 1,
+          "toNodeID" : "7BB1C61F-4433-5DB0-86C2-BADAE4B73297"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "1D24A262-E004-5EB2-9124-C1185B09BF07",
+          "id" : "69615FDC-1F9B-5E01-A273-D894CDEB8A3D",
+          "routingProbability" : 1,
+          "toNodeID" : "9913D1F2-7472-501C-992E-E100E0B669EF"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "6165A012-20FE-5312-AC7F-79E67956BC27",
+          "id" : "6A1F5A08-A30C-5883-8C44-622C51C3D54F",
+          "routingProbability" : 1,
+          "toCustomerClass" : 1,
+          "toNodeID" : "7BB1C61F-4433-5DB0-86C2-BADAE4B73297"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "1D24A262-E004-5EB2-9124-C1185B09BF07",
+          "id" : "AC3829F8-80EB-5B44-B23E-22ABFCAB096A",
+          "routingProbability" : 1,
+          "toNodeID" : "08FE9097-D34B-54BC-A988-5833BD2B504A"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "822735B7-C29F-54D3-B6E2-E0514C44BB55",
+          "id" : "3E79A483-A8E9-50A4-829C-FD7CC40CE490",
+          "routingProbability" : 1,
+          "toNodeID" : "6F2EEE70-D5A7-56A6-83D4-D7ED3CA7868E"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=1.0",
+          "id" : "67BE255C-C791-5325-934C-2C7F397E5214",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            200,
+            60
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "08FE9097-D34B-54BC-A988-5833BD2B504A",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            440,
+            120
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "7BB1C61F-4433-5DB0-86C2-BADAE4B73297",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            440,
+            280
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "9913D1F2-7472-501C-992E-E100E0B669EF",
+          "kind" : "buffer",
+          "name" : "B3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            440,
+            440
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "822735B7-C29F-54D3-B6E2-E0514C44BB55",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            120
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=100.000000"
+            },
+            "1" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.123596"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "1D24A262-E004-5EB2-9124-C1185B09BF07",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            280
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.136364"
+            },
+            "1" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=100.000000"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "6165A012-20FE-5312-AC7F-79E67956BC27",
+          "kind" : "station",
+          "name" : "S3",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            440
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=100.000000"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "6F2EEE70-D5A7-56A6-83D4-D7ED3CA7868E",
+          "kind" : "sink",
+          "name" : "Sink",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            820,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "Bramson94.d3.c5.reentrant.inf.bnet",
+    "parameters" : {
+      "basis normalization" : "false",
+      "basis size" : "5",
+      "grid size" : "25",
+      "grid type" : "exponential",
+      "multi-level" : "false",
+      "smoothness" : "0.0",
+      "solver" : "automatic"
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/Bramson94.d3.c5.reentrant.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "Running Linear Program (BNAlp, Saure-Glynn-Zeevi 2008)\nauto-scaled for d=3: grid_n=25, basis_m=5\n\nHiGHS: run_status=-1, model_status=0\nLP solve failed!\nSRBM Parameters:\n  dimension     = 3\n  grid_n        = 25\n  basis_m       = 5\n  grid_type     = 0 (0=exp, 1=dya, 2=expran)\n  max_moments   = 4\n  solver        = (default)\n  output_prefix = srbm_out\n  drift         = -0.0444 43.9944 -0.9888\n  covariance:\n       1.7779  -1.1661   0.0043\n      -1.1661   1.7383  -0.0174\n       0.0043  -0.0174   0.0003\n  reflection:\n       1.0000  -0.5056   0.0000\n      -0.4944   1.0000 -44.5000\n       0.0000  -0.0112   1.0000\n  grid_spacing  = 0.0000 0.0000 0.0000\n  tightness K   = 100000 100000 100000 100000 100000 100000 100000\n  smoothness_w  = 0 (disabled)\n  basis_norm    = 0 (raw monomials)\n  Auto rho      = 0.1994 0.2187 1.9800\n  Effective grid_spacing (rho\/4) = 0.0498 0.0547 0.4950\n\n[Parse] 0.001 s\n[Grid]  15625 points, 0.004 s\n  Face 1 boundary: 625 points\n  Face 2 boundary: 625 points\n  Face 3 boundary: 625 points\n[Index] 56 basis functions, 0.000 s\n[Basis] 0.000 s\n[Eval interior] 0.003 s\n[Eval boundary] 0.000 s\n[Build LP] 120 rows, 17501 cols, 1827988 nnz, 0.050 s\n[Solve] Using solver: highs\n\nSolver exited with code 1.\n",
+  "startedAt" : "2026-11-11T04:44:19Z",
+  "status" : "failed",
+  "warnings" : [
+
+  ]
+}

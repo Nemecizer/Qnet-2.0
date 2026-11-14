@@ -1,0 +1,63 @@
+{
+  "classes" : [
+    {
+      "external_arrival_rates" : {
+        "s1" : 0.7
+      },
+      "id" : "c1",
+      "routing" : {
+        "s1" : {
+          "s2" : 1
+        },
+        "s2" : {
+
+        }
+      }
+    }
+  ],
+  "initial_jobs" : {
+
+  },
+  "name" : "Tandem2.MM1.K5.fin",
+  "nodes" : [
+    {
+      "capacity" : 5,
+      "id" : "s1",
+      "servers" : 1,
+      "service_rate" : 1
+    },
+    {
+      "capacity" : 5,
+      "id" : "s2",
+      "servers" : 1,
+      "service_rate" : 1
+    }
+  ],
+  "process" : "open_markovian_queueing_network",
+  "random" : {
+    "base_seed" : 20260904,
+    "stream" : 0
+  },
+  "rare_event" : {
+    "method" : "none"
+  },
+  "schema_version" : 1,
+  "stopping" : {
+    "absolute_half_width" : 0.02,
+    "check_every_cycles" : 50,
+    "confidence" : 0.95,
+    "maximum_cycle_time" : 10000000,
+    "maximum_cycles" : 100000,
+    "maximum_events" : 10000000,
+    "maximum_events_per_cycle" : 2000000,
+    "maximum_simulated_time" : 1000000000,
+    "maximum_wall_seconds" : 120,
+    "minimum_cycles" : 200,
+    "minimum_effective_cycles" : 30,
+    "minimum_positive_cycles" : 5,
+    "monitored_metrics" : [
+      "mean_number_in_system"
+    ],
+    "relative_half_width" : 0.05
+  }
+}

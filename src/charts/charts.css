@@ -1,0 +1,6 @@
+/* A chart (src/charts/ChartShell.tsx). Tokens only (src/styles.css); the drawing itself is coloured
+   by `var(--token)` attributes in the SVG. */
+.chart { margin: 0; min-width: 0; }
+.chart svg { display: block; max-width: 100%; border-radius: var(--r-sm); font-variant-numeric: tabular-nums; }
+.chart svg:focus-visible { outline-offset: var(--sp-2); }
+.chart-caption { margin-top: var(--sp-4); max-width: 72ch; color: var(--text-2); font-size: var(--fs-xs); }

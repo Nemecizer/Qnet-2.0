@@ -1,0 +1,97 @@
+{
+  "blocking" : "loss",
+  "classes" : [
+    "c1",
+    "c2",
+    "c3"
+  ],
+  "external_arrivals" : [
+    {
+      "class" : "c1",
+      "rate" : 0.45000000000000001,
+      "station" : "s1"
+    },
+    {
+      "class" : "c2",
+      "rate" : 0.40000000000000002,
+      "station" : "s2"
+    },
+    {
+      "class" : "c3",
+      "rate" : 0.41999999999999998,
+      "station" : "s3"
+    }
+  ],
+  "name" : "Schwerer01.d3.c3.inf",
+  "routing" : [
+    {
+      "destinations" : [
+        {
+          "exit" : true,
+          "probability" : 1
+        }
+      ],
+      "from_class" : "c1",
+      "from_station" : "s1"
+    },
+    {
+      "destinations" : [
+        {
+          "exit" : true,
+          "probability" : 1
+        }
+      ],
+      "from_class" : "c2",
+      "from_station" : "s2"
+    },
+    {
+      "destinations" : [
+        {
+          "exit" : true,
+          "probability" : 1
+        }
+      ],
+      "from_class" : "c3",
+      "from_station" : "s3"
+    }
+  ],
+  "schema_version" : 1,
+  "service_discipline" : "fcfs",
+  "solver" : {
+    "max_iterations" : 200000,
+    "max_states" : 200000,
+    "tolerance" : 9.9999999999999998e-13
+  },
+  "stations" : [
+    {
+      "capacity" : 11,
+      "id" : "s1",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1,
+        "c2" : 1,
+        "c3" : 1
+      }
+    },
+    {
+      "capacity" : 11,
+      "id" : "s2",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1,
+        "c2" : 1,
+        "c3" : 1
+      }
+    },
+    {
+      "capacity" : 11,
+      "id" : "s3",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1,
+        "c2" : 1,
+        "c3" : 1
+      }
+    }
+  ]
+}

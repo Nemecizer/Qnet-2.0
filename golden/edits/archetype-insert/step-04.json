@@ -1,0 +1,62 @@
+{
+ "step": 4,
+ "op": {
+  "archetype": "mmcStation",
+  "op": "insertArchetype",
+  "parameters": {
+   "servers": 3,
+   "targetRho": 0.80000000000000004
+  }
+ },
+ "status": [
+  {
+   "text": "Insert M/M/c Station: added 4 nodes and 3 links. 1 station, 4 nodes, 3 links, λ = 1.000, ρ = 0.800 at every station. Its traffic is Class 2, because the canvas already had a source.",
+   "severity": "info"
+  }
+ ],
+ "selectedNodeID": null,
+ "selectedNodeIDs": [
+  {
+   "index": 6,
+   "name": "Src2"
+  },
+  {
+   "index": 7,
+   "name": "B3"
+  },
+  {
+   "index": 8,
+   "name": "S3"
+  },
+  {
+   "index": 9,
+   "name": "Sink2"
+  }
+ ],
+ "selectedLinkID": null,
+ "pendingLinkStartID": null,
+ "activeLinkSourceID": null,
+ "activeCustomerClass": 0,
+ "selectedTool": "select",
+ "toolBeforeStickyPan": null,
+ "canUndo": true,
+ "canRedo": false,
+ "undoActionName": "Insert M/M/c Station",
+ "redoActionName": "",
+ "snapToGrid": false,
+ "snapSuspended": false,
+ "classFilter": null,
+ "canvasScale": 1,
+ "canvasPanOffset": [0, 0],
+ "infiniteBuffers": true,
+ "nodeCount": 10,
+ "linkCount": 8,
+ "numberOfCustomerClasses": 2,
+ "canPaste": false,
+ "hasUnsavedChanges": true,
+ "multiSelectRect": null,
+ "isDraggingNode": false,
+ "parameterEditorTarget": null,
+ "linkParameterEditorTarget": null,
+ "pendingFitOnAppear": true
+}

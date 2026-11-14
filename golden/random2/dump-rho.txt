@@ -1,0 +1,17 @@
+d=4, K=1, infiniteBuffers=true
+S1: α=0.803542  μ_eff=1.097695  c=1.097695  ρ=0.732026
+S2: α=0.761930  μ_eff=1.040850  c=1.040850  ρ=0.732026
+S3: α=0.397965  μ_eff=0.543648  c=0.543648  ρ=0.732026
+S4: α=0.583090  μ_eff=0.647878  c=0.647878  ρ=0.900000
+class 1: α=[0.8035 0.7619 0.3980 0.5831 ]  μ=[1.0977 1.0409 0.5436 0.6479 ]  λ_ext=1.3706
+aggregatedP (4×4):
+  S1: 0.0000 0.2921 0.2068 0.2127 
+  S2: 0.0000 0.0000 0.2520 0.3483 
+  S3: 0.0000 0.0000 0.0000 0.3688 
+  S4: 0.0000 0.0000 0.0000 0.0000 
+hasRoutingCycles = false
+SRBM existence: holds — R is a nonsingular M-matrix, so it is completely-S and the SRBM exists and is unique in law.
+SRBM recurrence: holds — positive recurrent: R is an M-matrix and R⁻¹θ < 0 (Harrison–Williams 1987).
+AnalyticalTractability.assess(allowGCDG=true)  → kind=asymptoticLowerTriangular, isTractable=true, detail='Asymptotic product form — GCDG 2025 Cor. 3 (lower-triangular R, feed-forward)'
+  means(Asymptotic E[X]): S1=1.4179 S2=2.0488 S3=1.7832 S4=6.0306
+AnalyticalTractability.assess(allowGCDG=false) → kind=none, isTractable=false, detail=''

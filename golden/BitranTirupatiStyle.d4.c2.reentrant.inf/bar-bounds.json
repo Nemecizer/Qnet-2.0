@@ -1,0 +1,106 @@
+{
+  "covariance" : [
+    [
+      0.25,
+      -0.125,
+      0,
+      0
+    ],
+    [
+      -0.125,
+      0.25,
+      -0.125,
+      0
+    ],
+    [
+      0,
+      -0.125,
+      0.25,
+      -0.125
+    ],
+    [
+      0,
+      0,
+      -0.125,
+      0.25
+    ]
+  ],
+  "drift" : [
+    -0.25,
+    0,
+    0,
+    -0.25
+  ],
+  "model_type" : "orthant_srbm_bar_bounds",
+  "name" : "BitranTirupatiStyle.d4.c2.reentrant.inf",
+  "reflection" : [
+    [
+      1,
+      -0.5,
+      0,
+      0
+    ],
+    [
+      -0.5,
+      1,
+      -0.5,
+      0
+    ],
+    [
+      0,
+      -0.5,
+      1,
+      -0.5
+    ],
+    [
+      0,
+      0,
+      -0.5,
+      1
+    ]
+  ],
+  "relaxation" : {
+    "max_psd_entries" : 5000000,
+    "max_variables" : 100000,
+    "order" : 2,
+    "targets" : [
+      {
+        "moment" : [
+          1,
+          0,
+          0,
+          0
+        ],
+        "name" : "mean_workload_1"
+      },
+      {
+        "moment" : [
+          0,
+          1,
+          0,
+          0
+        ],
+        "name" : "mean_workload_2"
+      },
+      {
+        "moment" : [
+          0,
+          0,
+          1,
+          0
+        ],
+        "name" : "mean_workload_3"
+      },
+      {
+        "moment" : [
+          0,
+          0,
+          0,
+          1
+        ],
+        "name" : "mean_workload_4"
+      }
+    ]
+  },
+  "schema_version" : 1
+}

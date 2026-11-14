@@ -1,0 +1,40 @@
+NETWORK ANALYSIS — Brownian Heavy-Traffic Reliability
+=====================================================
+
+NETWORK SUMMARY
+---------------
+Stations:         4
+Customer classes: 2
+Buffer model:     infinite
+
+KEY PRIMITIVES
+--------------
+  Station   servers    μ_eff        α          ρ   c²_s_eff   buffer
+  S1              1   1.0281   0.9253     0.9000     0.6081        ∞
+  S2              1   0.9706   0.8735     0.9000     0.7621        ∞
+  S3              1   0.8967   0.8070     0.9000     0.7374        ∞
+  S4              1   0.9904   0.8913     0.9000     0.4990        ∞
+
+  Class       λ (ext)     c²_a
+  C1           1.3599   1.0000
+  C2           1.3189   1.0000
+
+OVERALL RELIABILITY ASSESSMENT
+------------------------------
+Score: 100 / 100  (HIGH)
+Findings: 0 critical, 0 warning, 0 info
+
+The network sits comfortably inside the assumptions of heavy-traffic SRBM theory. E[X] estimates should be within ~5–10% of simulation for most primitives.
+
+FINDINGS
+--------
+No issues detected — all checks passed.
+
+PERFORMANCE METRIC RELIABILITY
+------------------------------
+  E[X_i] (queue length):          HIGH        primitives inside heavy-traffic sweet spot
+  Throughput (Γ_i):               HIGH        Γ = α; derived exactly from traffic equations
+  Utilization (ρ_i):              HIGH        ρ = α / (s·μ); derived exactly from primitives
+  Sojourn time:                   HIGH        sojourn = E[X]/Γ; inherits E[X] reliability
+  Per-class W, T, N:              HIGH        Little's law applied to E[X]; inherits its reliability
+

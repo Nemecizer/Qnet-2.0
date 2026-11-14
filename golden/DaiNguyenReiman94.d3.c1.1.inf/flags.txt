@@ -1,0 +1,20 @@
+isAnalyticallyTractable=true
+tractabilityIsExact=true
+tractabilityTitle=This network is analytically tractable
+tractabilityDetail=Open Jackson network — exact M/M/s product form
+tractabilityMeansLabel=Exact E[N]  (Jackson)
+tractabilityMeans=2.0769230769230775 9.0000000000000018 0.81818181818181812
+hasFeedback=true
+feedbackQuality=yellow
+criterion=Per-station ρ < 0.85 | ok=false | max ρ = 0.900 — heavy traffic amplifies the per-class burstiness gap
+criterion=Service SCV in [0.5, 2] | ok=true | all stations within range
+criterion=Max re-entry probability < 0.5 | ok=true | largest cycle prob = 0.500 — vacuous for single-class Markovian network (Jackson is exact)
+criterion=No class-transition amplification at high-ρ stations | ok=true | single-class network — N/A
+feedbackDescription:
+Immediate feedback: S1 ↔ S2, S2 ↔ S3.
+Longer rework loop through: S1, S2, S3.
+tractabilityExplanation:
+All inter-arrival and service distributions are exponential, buffers are infinite, and there is a single customer class. By Jackson's theorem the stationary joint distribution of station populations factorises; each station i behaves as an independent M/M/sᵢ queue with
+    ρᵢ = αᵢ / (sᵢ · μᵢ)  < 1
+    E[Nᵢ] = closed-form M/M/sᵢ mean (Erlang-C for sᵢ > 1, ρᵢ/(1−ρᵢ) for sᵢ = 1).
+status:

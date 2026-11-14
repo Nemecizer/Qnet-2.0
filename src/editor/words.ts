@@ -1,0 +1,42 @@
+// The words of the Edit menu's document commands (0.90.34 QnetCommands.swift `editMenu`, its
+// `.help` texts and QnetGUIApp `clearCanvasWithConfirmation`). Status sentences the editor
+// writes are 0.90.34's own and live beside the code in editor.ts, where the replays check them.
+export const editorWords = {
+  undo: "Undo",
+  redo: "Redo",
+  cut: "Cut",
+  copy: "Copy",
+  paste: "Paste",
+  duplicate: "Duplicate",
+  delete: "Delete",
+  deleteLink: "Delete Selected Link",
+  selectAll: "Select All",
+  deselectAll: "Deselect All",
+  parameters: "Edit Parameters…",
+  clearCanvas: "Clear Canvas…",
+  undoTitle: (name: string) => (name.trim() ? `Undo ${name.trim()}` : "Undo"),
+  redoTitle: (name: string) => (name.trim() ? `Redo ${name.trim()}` : "Redo"),
+  nothingToUndo: "Nothing to undo",
+  nothingToRedo: "Nothing to redo",
+  noNodeSelection: "Select one or more nodes first",
+  noSelection: "Select a node or a link first",
+  noLinkSelection: "Select a link first",
+  noNetwork: "The canvas is empty",
+  inTextField: "A text field has the keyboard",
+  inShell: "The Shell has the keyboard",
+  nothingToOpen: "Select one node or one link first",
+  help: {
+    deselectAll: "Clear the canvas selection (Escape does the same on the canvas)",
+    deleteLink: "Remove the highlighted link (Delete removes whatever is selected, nodes included)",
+    parameters: "Edit the parameters of the selected node or link",
+    clearCanvas: "Remove every node and link from the active tab (asks first; undoable)",
+    copy: "Copy the selected nodes and the links between them",
+    paste: "Paste the copied nodes 60 pt from where they were copied",
+    duplicate: "Copy and paste the selected nodes in one step",
+  },
+  clearCanvasAlert: (title: string) => ({
+    title: "Clear the canvas?",
+    message: `Every node and link in “${title}” will be removed. This can be undone with Edit ▸ Undo.`,
+    confirmTitle: "Clear Canvas",
+  }),
+} as const;

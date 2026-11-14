@@ -1,0 +1,67 @@
+{
+  "blocking" : "loss",
+  "classes" : [
+    "c1"
+  ],
+  "external_arrivals" : [
+    {
+      "class" : "c1",
+      "rate" : 1,
+      "station" : "s1"
+    }
+  ],
+  "name" : "OpenJackson.d2.feedback.p70.inf",
+  "routing" : [
+    {
+      "destinations" : [
+        {
+          "class" : "c1",
+          "probability" : 0.30000000000000004,
+          "station" : "s2"
+        },
+        {
+          "class" : "c1",
+          "probability" : 0.69999999999999996,
+          "station" : "s1"
+        }
+      ],
+      "from_class" : "c1",
+      "from_station" : "s1"
+    },
+    {
+      "destinations" : [
+        {
+          "exit" : true,
+          "probability" : 1
+        }
+      ],
+      "from_class" : "c1",
+      "from_station" : "s2"
+    }
+  ],
+  "schema_version" : 1,
+  "service_discipline" : "fcfs",
+  "solver" : {
+    "max_iterations" : 200000,
+    "max_states" : 200000,
+    "tolerance" : 9.9999999999999998e-13
+  },
+  "stations" : [
+    {
+      "capacity" : 25,
+      "id" : "s1",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 4.7619047619047619
+      }
+    },
+    {
+      "capacity" : 25,
+      "id" : "s2",
+      "servers" : 1,
+      "service_rates" : {
+        "c1" : 1.4285714285714286
+      }
+    }
+  ]
+}

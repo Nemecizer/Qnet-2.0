@@ -1,0 +1,16 @@
+[package]
+name = "qnet-runner"
+version = "2.1.2"
+description = "Qnet's solver runtime: finding solvers, running them under supervision, and the results store"
+edition = "2021"
+authors = ["Dr Joseph Edward Nemec"]
+license = "MIT"
+publish = false
+
+[lib]
+name = "qnet_runner"
+
+[dependencies]
+qnet-core = { path = "../core" }
+# Process groups and signals for the supervisor (setpgid, killpg), and stat for the probe cache.
+libc = "0.2"

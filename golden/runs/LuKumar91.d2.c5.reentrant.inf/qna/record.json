@@ -1,0 +1,309 @@
+{
+  "completedAt" : "2026-11-11T04:55:34Z",
+  "elapsedSeconds" : 0.4338918924331665,
+  "id" : "3BB9EE33-30D3-4501-9C84-162A74D3C0FB",
+  "measurements" : [
+    {
+      "estimate" : 0.8,
+      "id" : "ACE8A997-8171-4A8C-9110-811FAFF55B30",
+      "metric" : "Utilization",
+      "stationID" : "C3698AF2-BCD0-5528-9018-9CF649426C88",
+      "stationName" : "S1",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 0.7,
+      "id" : "E03E0D73-1C8D-42BE-9409-C1D4ED94BAB6",
+      "metric" : "Utilization",
+      "stationID" : "465DCD3C-834C-50AB-AE8E-6844E1C767BA",
+      "stationName" : "S2",
+      "unit" : "ratio"
+    },
+    {
+      "estimate" : 3,
+      "id" : "004C4C0F-FB69-45F4-9FD8-54237BDD365A",
+      "metric" : "Throughput",
+      "stationID" : "C3698AF2-BCD0-5528-9018-9CF649426C88",
+      "stationName" : "S1",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 2,
+      "id" : "4B4096C5-67B5-49A6-9FAA-A20D18E7A24A",
+      "metric" : "Throughput",
+      "stationID" : "465DCD3C-834C-50AB-AE8E-6844E1C767BA",
+      "stationName" : "S2",
+      "unit" : "customers \/ time"
+    },
+    {
+      "estimate" : 2.167,
+      "id" : "80AF1C9F-5C61-4E6B-948E-177B678669D1",
+      "metric" : "Mean sojourn time",
+      "stationID" : "C3698AF2-BCD0-5528-9018-9CF649426C88",
+      "stationName" : "S1",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 1.583,
+      "id" : "74FE6A83-7129-4A3A-B42D-09ED4EC9BB76",
+      "metric" : "Mean sojourn time",
+      "stationID" : "465DCD3C-834C-50AB-AE8E-6844E1C767BA",
+      "stationName" : "S2",
+      "unit" : "time"
+    },
+    {
+      "estimate" : 6.5,
+      "id" : "EDA95C30-39FE-4544-867B-51EC7AF6C55E",
+      "metric" : "Mean number in system",
+      "stationID" : "C3698AF2-BCD0-5528-9018-9CF649426C88",
+      "stationName" : "S1",
+      "unit" : "customers"
+    },
+    {
+      "estimate" : 3.167,
+      "id" : "AC5792E4-6C2B-4AAA-BDC8-4C6E35D26DD3",
+      "metric" : "Mean number in system",
+      "stationID" : "465DCD3C-834C-50AB-AE8E-6844E1C767BA",
+      "stationName" : "S2",
+      "unit" : "customers"
+    }
+  ],
+  "method" : {
+    "displayName" : "Whitt QNA",
+    "fidelity" : "Queueing approximation",
+    "identifier" : "queue-approx.qna",
+    "implementation" : "BNAqna",
+    "layer" : "Queue approximation",
+    "shortName" : "QNA"
+  },
+  "provenance" : {
+    "applicationVersion" : "0.90.34.09.04.2026.1534",
+    "bufferRegime" : "Infinite capacity",
+    "exportStationIDs" : [
+      "C3698AF2-BCD0-5528-9018-9CF649426C88",
+      "465DCD3C-834C-50AB-AE8E-6844E1C767BA"
+    ],
+    "networkFingerprint" : "5f9abcf8d6e8f065b5933eb78601074c3c23f06ea04c3b3b01d7014f741177df",
+    "networkSnapshot" : {
+      "infiniteBuffers" : true,
+      "links" : [
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "D8D574A8-C421-54D3-8E9B-F716F4EDEC7F",
+          "id" : "6D7FA2F5-81F6-5D19-9AEF-721B764A8187",
+          "routingProbability" : 1,
+          "toNodeID" : "EEAB8B15-C625-5D4F-AD0A-FC2B404AB272"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "EEAB8B15-C625-5D4F-AD0A-FC2B404AB272",
+          "id" : "248B9DA1-A19F-5AB9-BCC1-27C2C94294A4",
+          "routingProbability" : 1,
+          "toNodeID" : "C3698AF2-BCD0-5528-9018-9CF649426C88"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "52D16E21-0D45-557E-B2CE-CD30BC0BC8F7",
+          "id" : "DE8ADCA0-5EF9-5594-ACFA-710CBBBC3C82",
+          "routingProbability" : 1,
+          "toNodeID" : "465DCD3C-834C-50AB-AE8E-6844E1C767BA"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "EEAB8B15-C625-5D4F-AD0A-FC2B404AB272",
+          "id" : "F4F84DFE-AC2F-58A7-A709-5CBD7EA2E5F6",
+          "routingProbability" : 1,
+          "toNodeID" : "C3698AF2-BCD0-5528-9018-9CF649426C88"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "52D16E21-0D45-557E-B2CE-CD30BC0BC8F7",
+          "id" : "F46D72DD-2393-50A3-83A2-70ED810CC366",
+          "routingProbability" : 1,
+          "toNodeID" : "465DCD3C-834C-50AB-AE8E-6844E1C767BA"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "EEAB8B15-C625-5D4F-AD0A-FC2B404AB272",
+          "id" : "089302F0-58F8-5373-964E-1D5D722FB4C0",
+          "routingProbability" : 1,
+          "toNodeID" : "C3698AF2-BCD0-5528-9018-9CF649426C88"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "C3698AF2-BCD0-5528-9018-9CF649426C88",
+          "id" : "FFB3EC12-361A-5D49-8066-97F789E53BFC",
+          "routingProbability" : 1,
+          "toNodeID" : "52D16E21-0D45-557E-B2CE-CD30BC0BC8F7"
+        },
+        {
+          "customerClass" : 0,
+          "fromNodeID" : "465DCD3C-834C-50AB-AE8E-6844E1C767BA",
+          "id" : "B8E4424C-5B35-509D-8933-75DADAB83070",
+          "routingProbability" : 1,
+          "toCustomerClass" : 1,
+          "toNodeID" : "EEAB8B15-C625-5D4F-AD0A-FC2B404AB272"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "C3698AF2-BCD0-5528-9018-9CF649426C88",
+          "id" : "D70C0F49-1A44-5915-B98E-ED9D5CC5E669",
+          "routingProbability" : 1,
+          "toNodeID" : "52D16E21-0D45-557E-B2CE-CD30BC0BC8F7"
+        },
+        {
+          "customerClass" : 1,
+          "fromNodeID" : "465DCD3C-834C-50AB-AE8E-6844E1C767BA",
+          "id" : "CA5F1744-71E3-5729-BF82-20910F827131",
+          "routingProbability" : 1,
+          "toCustomerClass" : 2,
+          "toNodeID" : "EEAB8B15-C625-5D4F-AD0A-FC2B404AB272"
+        },
+        {
+          "customerClass" : 2,
+          "fromNodeID" : "C3698AF2-BCD0-5528-9018-9CF649426C88",
+          "id" : "CBA433E6-2AFE-55C5-9FE4-F361D2E9CE39",
+          "routingProbability" : 1,
+          "toNodeID" : "CFAAAC3E-28ED-5A06-8E4A-70C4B95223F6"
+        }
+      ],
+      "nodes" : [
+        {
+          "bufferSize" : 1,
+          "distribution" : "poisson",
+          "distributionParameters" : "lambda=1.0",
+          "id" : "D8D574A8-C421-54D3-8E9B-F716F4EDEC7F",
+          "kind" : "source",
+          "name" : "Src1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            200,
+            60
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "EEAB8B15-C625-5D4F-AD0A-FC2B404AB272",
+          "kind" : "buffer",
+          "name" : "B1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            440,
+            120
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 10,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "52D16E21-0D45-557E-B2CE-CD30BC0BC8F7",
+          "kind" : "buffer",
+          "name" : "B2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            440,
+            280
+          ],
+          "serviceDistributions" : {
+
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "C3698AF2-BCD0-5528-9018-9CF649426C88",
+          "kind" : "station",
+          "name" : "S1",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            120
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=10.000000"
+            },
+            "1" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=10.000000"
+            },
+            "2" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.666667"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "465DCD3C-834C-50AB-AE8E-6844E1C767BA",
+          "kind" : "station",
+          "name" : "S2",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            600,
+            280
+          ],
+          "serviceDistributions" : {
+            "0" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=1.666667"
+            },
+            "1" : {
+              "distribution" : "exponential",
+              "distributionParameters" : "rate=10.000000"
+            }
+          }
+        },
+        {
+          "bufferSize" : 1,
+          "distribution" : "exponential",
+          "distributionParameters" : "rate=1.0",
+          "id" : "CFAAAC3E-28ED-5A06-8E4A-70C4B95223F6",
+          "kind" : "sink",
+          "name" : "Sink",
+          "numberOfServers" : 1,
+          "picture" : "",
+          "position" : [
+            820,
+            200
+          ],
+          "serviceDistributions" : {
+
+          }
+        }
+      ]
+    },
+    "networkTitle" : "LuKumar91.d2.c5.reentrant.inf.bnet",
+    "parameters" : {
+
+    },
+    "replicationSeeds" : [
+
+    ],
+    "sourceFileURL" : "file:\/\/\/Users\/nobody\/Library\/CloudStorage\/Dropbox\/0_CODE\/0_CLAUDE\/6_QNET20\/qnet\/examples\/LuKumar91.d2.c5.reentrant.inf.bnet",
+    "tabID" : "3D74ED26-FCA6-4409-BE8C-28C7C34F7D7A"
+  },
+  "rawOutput" : "[Threads] Single-threaded (analytical solver)\nRunning QNA ...  [ ]                                                       0.0s\r\u001b[KRunning QNA ...  [done]                                                    0.1s\n\nNetwork load: rho_max = 0.8000 at S1  (moderate load — SRBM\/FEM are heavy-traffic limits; expect deviation from simulation)\nRouting graph contains feedback (cycle or self-loop) — QNA may degrade under heavy load; use queue-process simulation with confidence intervals as the reference\n           QNA\n           ===\n\nrho_1      0.800\nrho_2      0.700\n\nGamma_1    3.000\nGamma_2    2.000\n\nsojourn_1  2.167\nsojourn_2  1.583\n\nE[Q_1]     6.500\nE[Q_2]     3.167\n\nElapsed time: 0.107s\n\n",
+  "startedAt" : "2026-11-11T04:55:33Z",
+  "status" : "completed",
+  "warnings" : [
+
+  ]
+}

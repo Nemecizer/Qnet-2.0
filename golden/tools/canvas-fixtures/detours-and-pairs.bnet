@@ -1,0 +1,257 @@
+{
+  "canvasPanOffset": [
+    37.5,
+    -12.25
+  ],
+  "canvasScale": 0.8125,
+  "infiniteBuffers": true,
+  "links": [
+    {
+      "customerClass": 0,
+      "fromNodeID": "FC000002-0000-4000-8000-000000000001",
+      "id": "FC000002-1111-4000-8000-000000000001",
+      "routingProbability": 0.5,
+      "toNodeID": "FC000002-0000-4000-8000-000000000007"
+    },
+    {
+      "customerClass": 0,
+      "fromNodeID": "FC000002-0000-4000-8000-000000000008",
+      "id": "FC000002-1111-4000-8000-000000000002",
+      "routingProbability": 1,
+      "toNodeID": "FC000002-0000-4000-8000-000000000011"
+    },
+    {
+      "customerClass": 0,
+      "fromNodeID": "FC000002-0000-4000-8000-000000000010",
+      "id": "FC000002-1111-4000-8000-000000000003",
+      "routingProbability": 1,
+      "toNodeID": "FC000002-0000-4000-8000-000000000009"
+    },
+    {
+      "customerClass": 0,
+      "fromNodeID": "FC000002-0000-4000-8000-000000000009",
+      "id": "FC000002-1111-4000-8000-000000000004",
+      "routingProbability": 0.4,
+      "toNodeID": "FC000002-0000-4000-8000-000000000010"
+    },
+    {
+      "customerClass": 1,
+      "fromNodeID": "FC000002-0000-4000-8000-000000000009",
+      "id": "FC000002-1111-4000-8000-000000000005",
+      "routingProbability": 0.6,
+      "toNodeID": "FC000002-0000-4000-8000-000000000010"
+    },
+    {
+      "customerClass": 1,
+      "fromNodeID": "FC000002-0000-4000-8000-000000000010",
+      "id": "FC000002-1111-4000-8000-000000000006",
+      "routingProbability": 1,
+      "toNodeID": "FC000002-0000-4000-8000-000000000009"
+    },
+    {
+      "customerClass": 0,
+      "fromNodeID": "FC000002-0000-4000-8000-000000000002",
+      "id": "FC000002-1111-4000-8000-000000000007",
+      "routingProbability": 1,
+      "toNodeID": "FC000002-0000-4000-8000-000000000006"
+    },
+    {
+      "customerClass": 0,
+      "fromNodeID": "FC000002-0000-4000-8000-000000000006",
+      "id": "FC000002-1111-4000-8000-000000000008",
+      "routingProbability": 0.2,
+      "toNodeID": "FC000002-0000-4000-8000-000000000002"
+    },
+    {
+      "customerClass": 0,
+      "fromNodeID": "FC000002-0000-4000-8000-000000000001",
+      "id": "FC000002-1111-4000-8000-000000000009",
+      "routingProbability": 0.5,
+      "toNodeID": "FC000002-0000-4000-8000-000000000004"
+    },
+    {
+      "customerClass": 0,
+      "fromNodeID": "FC000002-0000-4000-8000-000000000004",
+      "id": "FC000002-1111-4000-8000-000000000010",
+      "routingProbability": 1,
+      "toNodeID": "FC000002-0000-4000-8000-000000000007"
+    },
+    {
+      "customerClass": 0,
+      "fromNodeID": "FC000002-0000-4000-8000-000000000003",
+      "id": "FC000002-1111-4000-8000-000000000011",
+      "routingProbability": 1,
+      "toNodeID": "FC000002-0000-4000-8000-000000000005"
+    },
+    {
+      "customerClass": 0,
+      "fromNodeID": "FC000002-0000-4000-8000-000000000008",
+      "id": "FC000002-1111-4000-8000-000000000012",
+      "routingProbability": 1,
+      "toNodeID": "FC000002-0000-4000-8000-000000000009"
+    },
+    {
+      "customerClass": 0,
+      "fromNodeID": "FC000002-0000-4000-8000-000000000011",
+      "id": "FC000002-1111-4000-8000-000000000013",
+      "routingProbability": 1,
+      "toNodeID": "FC000002-0000-4000-8000-000000000010"
+    }
+  ],
+  "nodes": [
+    {
+      "bufferSize": 10,
+      "distribution": "poisson",
+      "distributionParameters": "lambda=1.0",
+      "id": "FC000002-0000-4000-8000-000000000001",
+      "kind": "source",
+      "name": "Src1",
+      "numberOfServers": 1,
+      "position": [
+        80,
+        300
+      ],
+      "serviceDistributions": {}
+    },
+    {
+      "bufferSize": 10,
+      "distribution": "exponential",
+      "distributionParameters": "rate=1.1111111",
+      "id": "FC000002-0000-4000-8000-000000000002",
+      "kind": "station",
+      "name": "S1",
+      "numberOfServers": 1,
+      "position": [
+        400,
+        100
+      ],
+      "serviceDistributions": {}
+    },
+    {
+      "bufferSize": 10,
+      "distribution": "exponential",
+      "distributionParameters": "rate=1.1111111",
+      "id": "FC000002-0000-4000-8000-000000000003",
+      "kind": "station",
+      "name": "S2",
+      "numberOfServers": 1,
+      "position": [
+        400,
+        200
+      ],
+      "serviceDistributions": {}
+    },
+    {
+      "bufferSize": 10,
+      "distribution": "exponential",
+      "distributionParameters": "rate=1.1111111",
+      "id": "FC000002-0000-4000-8000-000000000004",
+      "kind": "station",
+      "name": "S3",
+      "numberOfServers": 1,
+      "position": [
+        400,
+        300
+      ],
+      "serviceDistributions": {}
+    },
+    {
+      "bufferSize": 10,
+      "distribution": "exponential",
+      "distributionParameters": "rate=1.1111111",
+      "id": "FC000002-0000-4000-8000-000000000005",
+      "kind": "station",
+      "name": "S4",
+      "numberOfServers": 1,
+      "position": [
+        400,
+        400
+      ],
+      "serviceDistributions": {}
+    },
+    {
+      "bufferSize": 10,
+      "distribution": "exponential",
+      "distributionParameters": "rate=1.1111111",
+      "id": "FC000002-0000-4000-8000-000000000006",
+      "kind": "station",
+      "name": "S5",
+      "numberOfServers": 1,
+      "position": [
+        400,
+        500
+      ],
+      "serviceDistributions": {}
+    },
+    {
+      "bufferSize": 10,
+      "distribution": "exponential",
+      "distributionParameters": "rate=1.0",
+      "id": "FC000002-0000-4000-8000-000000000007",
+      "kind": "sink",
+      "name": "Sink1",
+      "numberOfServers": 1,
+      "position": [
+        720,
+        300
+      ],
+      "serviceDistributions": {}
+    },
+    {
+      "bufferSize": 10,
+      "distribution": "exponential",
+      "distributionParameters": "rate=1.0",
+      "id": "FC000002-0000-4000-8000-000000000008",
+      "kind": "buffer",
+      "name": "B1",
+      "numberOfServers": 1,
+      "position": [
+        240,
+        130
+      ],
+      "serviceDistributions": {}
+    },
+    {
+      "bufferSize": 10,
+      "distribution": "exponential",
+      "distributionParameters": "rate=1.0",
+      "id": "FC000002-0000-4000-8000-000000000009",
+      "kind": "buffer",
+      "name": "B2",
+      "numberOfServers": 1,
+      "position": [
+        560,
+        470
+      ],
+      "serviceDistributions": {}
+    },
+    {
+      "bufferSize": 10,
+      "distribution": "exponential",
+      "distributionParameters": "rate=1.1111111",
+      "id": "FC000002-0000-4000-8000-000000000010",
+      "kind": "station",
+      "name": "S6",
+      "numberOfServers": 1,
+      "position": [
+        240,
+        520
+      ],
+      "serviceDistributions": {}
+    },
+    {
+      "bufferSize": 10,
+      "distribution": "exponential",
+      "distributionParameters": "rate=1.1111111",
+      "id": "FC000002-0000-4000-8000-000000000011",
+      "kind": "station",
+      "name": "S7",
+      "numberOfServers": 1,
+      "position": [
+        560,
+        140
+      ],
+      "serviceDistributions": {}
+    }
+  ]
+}

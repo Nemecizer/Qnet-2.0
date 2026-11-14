@@ -1,0 +1,21 @@
+/* Movable panels in DSSheet chrome (the diagram export options, the archetype gallery). Tokens only. */
+.qn-panel-form {
+  display: flex; flex-direction: column; gap: var(--sp-4, 14px);
+  height: 100vh; box-sizing: border-box; padding: 18px 20px 14px;
+  background: var(--surface); color: var(--text);
+}
+.qn-panel-content { flex: 1; min-height: 0; overflow: auto; display: flex; flex-direction: column; gap: var(--sp-3, 12px); }
+.qn-panel-footer { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.qn-panel-footer .btn { min-width: 78px; }
+.qn-panel-summary { color: var(--text-2); font-size: var(--fs-sm, 11px); font-variant-numeric: tabular-nums; max-width: 60%; }
+.qn-segmented {
+  display: inline-flex; flex: none; padding: 1px;
+  border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface-2);
+}
+.qn-segmented button {
+  height: 20px; padding: 0 var(--sp-4); border: 0; border-radius: var(--r-sm);
+  background: transparent; color: var(--text-2); font-size: var(--fs-sm);
+}
+.qn-segmented button[data-on] { background: var(--surface); color: var(--text); box-shadow: 0 0 0 0.5px var(--border); }
+.qn-check { display: inline-flex; align-items: center; gap: 6px; }
+.qn-check input:disabled + span { opacity: 0.4; }

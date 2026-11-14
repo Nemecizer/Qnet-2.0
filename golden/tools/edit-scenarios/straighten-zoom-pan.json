@@ -1,0 +1,33 @@
+{
+ "description": "Network ▸ Straighten Network and Straighten and Fit to Window (both undoable, both rewrite positions) on a two-class finite example, and the view commands: zoom in / out about the viewport centre, Set Zoom, zoom about a point, Zoom to Fit, Zoom to Selection, Actual Size, scroll pans, a Pan-tool drag, sticky pan from a double-click and the click that ends it; none of the view commands touch the undo stack.",
+ "start": "2d2cfin",
+ "steps": [
+  {"op": "straightenNetwork"},
+  {"op": "undo"},
+  {"op": "zoomIn"},
+  {"op": "zoomIn"},
+  {"op": "zoomOut"},
+  {"op": "setZoom", "scale": 0.05},
+  {"op": "setZoom", "scale": 9},
+  {"op": "zoomAbout", "scale": 1.5, "about": [100, 50]},
+  {"op": "zoomToFit"},
+  {"op": "nodeClick", "node": "S2"},
+  {"op": "zoomToFitSelection"},
+  {"op": "resetZoom"},
+  {"op": "pan", "by": [-40, 25.5]},
+  {"op": "setTool", "tool": "pan"},
+  {"op": "panDrag", "by": [120, -30]},
+  {"op": "setTool", "tool": "select"},
+  {"op": "canvasDoubleClick", "at": [900, 600]},
+  {"op": "panDrag", "by": [-60, 0]},
+  {"op": "panDrag", "by": [1, 1]},
+  {"op": "fitNetworkToWindow"},
+  {"op": "undo"},
+  {"op": "redo"},
+  {"op": "straightenNetwork"},
+  {"op": "clear"},
+  {"op": "straightenNetwork"},
+  {"op": "fitNetworkToWindow"},
+  {"op": "undo"}
+ ]
+}

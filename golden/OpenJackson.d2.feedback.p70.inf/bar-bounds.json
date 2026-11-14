@@ -1,0 +1,50 @@
+{
+  "covariance" : [
+    [
+      0.088199999999999987,
+      -0.14699999999999999
+    ],
+    [
+      -0.14699999999999999,
+      0.97999999999999987
+    ]
+  ],
+  "drift" : [
+    -0.090000000000000024,
+    0
+  ],
+  "model_type" : "orthant_srbm_bar_bounds",
+  "name" : "OpenJackson.d2.feedback.p70.inf",
+  "reflection" : [
+    [
+      0.30000000000000004,
+      0
+    ],
+    [
+      -1,
+      1
+    ]
+  ],
+  "relaxation" : {
+    "max_psd_entries" : 5000000,
+    "max_variables" : 100000,
+    "order" : 2,
+    "targets" : [
+      {
+        "moment" : [
+          1,
+          0
+        ],
+        "name" : "mean_workload_1"
+      },
+      {
+        "moment" : [
+          0,
+          1
+        ],
+        "name" : "mean_workload_2"
+      }
+    ]
+  },
+  "schema_version" : 1
+}

@@ -1,0 +1,29 @@
+{
+ "description": "Editing a multi-class re-entrant example: delete a station and its links, undo, add a station and route it into the network with the Link tool (class chosen from the incoming classes), give it a self-loop, straighten, and save / reopen.",
+ "start": "KumarSeidman90.d2.c4.reentrant.inf",
+ "steps": [
+  {"op": "nodeClick", "node": "S2"},
+  {"op": "deleteKey"},
+  {"op": "undo"},
+  {"op": "setTool", "tool": "addBuffer"},
+  {"op": "canvasClick", "at": [720, 420]},
+  {"op": "setTool", "tool": "addStation"},
+  {"op": "canvasClick", "at": [840, 420]},
+  {"op": "setTool", "tool": "addSink"},
+  {"op": "canvasClick", "at": [960, 420]},
+  {"op": "setTool", "tool": "addLink"},
+  {"op": "nodeClick", "node": "S2"},
+  {"op": "nodeClick", "node": "B3"},
+  {"op": "nodeClick", "node": "S3"},
+  {"op": "nodeClick", "node": "S3"},
+  {"op": "nodeClick", "node": "Sink1"},
+  {"op": "nodeClick", "node": "S2"},
+  {"op": "nodeClick", "node": "B3"},
+  {"op": "setTool", "tool": "select"},
+  {"op": "linkSheet", "link": {"from": "S3", "to": "S3"}, "probability": "0.2"},
+  {"op": "linkSheet", "link": {"from": "S3", "to": "Sink1"}, "balance": true},
+  {"op": "straightenNetwork"},
+  {"op": "zoomToFit"},
+  {"op": "undo"}
+ ]
+}

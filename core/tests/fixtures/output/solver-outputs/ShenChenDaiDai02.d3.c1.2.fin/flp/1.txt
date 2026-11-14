@@ -1,0 +1,65 @@
+SRBM Parameters:
+  dimension     = 3
+  grid_n        = 12
+  basis_m       = 4
+  grid_type     = uniform
+  max_moments   = 4
+  solver        = highs
+  output_prefix = OUTPUT_PREFIX
+  drift         = 0.1000 0.1000 0.1000
+  upper_bounds  = 21.0000 26.0000 26.0000
+  covariance:
+       1.2250  -0.2250   0.0000
+      -0.2250   1.1250  -0.9000
+       0.0000  -0.9000   2.7000
+  reflection (lower):
+       1.0000   0.0000   0.0000
+       0.0000   1.0000   0.0000
+       0.0000   0.0000   1.0000
+  reflection (upper):
+      -1.0000   1.0000   0.0000
+       0.0000  -1.0000   1.0000
+       0.0000   0.0000  -1.0000
+  tightness K   = (auto: 100000)
+  smoothness_w  = 0 (disabled)
+  basis_norm    = 0 (raw monomials)
+
+[Parse] 0.000 s
+[Grid]  1728 points, 0.002 s
+  Face 1: lower=144 upper=144
+  Face 2: lower=144 upper=144
+  Face 3: lower=144 upper=144
+[Index] 35 basis functions, 0.000 s
+[Basis] 0.000 s
+[Eval interior] 0.000 s
+[Eval boundary] 0.000 s
+[Build LP] 84 rows, 2593 cols, 147912 nnz, 0.003 s
+[Solve] Using solver: highs
+[Solve] Optimal u* = 0.0000000000e+00, 3.146 s
+
+Moments:
+  Order     E[Z_1^k]      E[Z_2^k]      E[Z_3^k]    
+  k=1         18.416081     23.136887     16.795399
+  k=2        345.628119    542.114236    334.204601
+  k=3       6568.921461  12807.618142   6944.403355
+  k=4      125946.161551  304945.759158  149487.752363
+
+Output files:
+  Wrote OUTPUT_PREFIX_marginal_1.csv (12 points)
+  Wrote OUTPUT_PREFIX_marginal_2.csv (12 points)
+  Wrote OUTPUT_PREFIX_marginal_3.csv (12 points)
+  Wrote OUTPUT_PREFIX_distribution.csv (1728 points)
+
+[Total] 3.156 s
+rho_1 = 0.999437
+rho_2 = 0.999992
+rho_3 = 0.981644
+Gamma_1 = 0.899493
+Gamma_2 = 0.899992
+Gamma_3 = 0.883479
+sojourn_1 = 20.473844
+sojourn_2 = 25.707868
+sojourn_3 = 19.010519
+E[X_1] = 18.416081
+E[X_2] = 23.136887
+E[X_3] = 16.795399
